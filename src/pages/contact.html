@@ -1,0 +1,66 @@
+<!-- title: Contact Forbes Riley | desc: Book Forbes Riley to speak, ask about trainings and events, or reach the team. | nav: contact -->
+<section class="wrap page-hero">
+  <p class="eyebrow">Contact</p>
+  <h1>Let&rsquo;s talk.</h1>
+  <p class="lede">Book Forbes to speak, ask about a training or event, or send a media request. The team replies within two business days.</p>
+</section>
+
+<section class="section-tight">
+  <div class="wrap contact-grid">
+    <form class="form" id="contact-form" action="https://formspree.io/f/your-form-id" method="post">
+      <div class="row">
+        <label>First name<input id="c-first" name="first" type="text" autocomplete="given-name" required></label>
+        <label>Last name<input id="c-last" name="last" type="text" autocomplete="family-name" required></label>
+      </div>
+      <label>Email<input id="c-email" name="email" type="email" autocomplete="email" required></label>
+      <label>Phone (optional)<input id="c-phone" name="phone" type="tel" autocomplete="tel"></label>
+      <label>I&rsquo;m interested in
+        <select id="c-topic" name="topic" required>
+          <option value="">Choose one</option>
+          <option>Booking Forbes to speak</option>
+          <option>Pitch training or coaching</option>
+          <option>Forbes Factor Live, FRedX or Momentum X</option>
+          <option>Media, interview or press request</option>
+          <option>Hosting or product launch</option>
+          <option>SpinGym wholesale, trainer certification or ambassador</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Tell us more<textarea id="c-msg" name="message" placeholder="For speaking: date, city, audience size and format." required></textarea></label>
+      <button class="btn btn-gold" type="submit">Send message</button>
+      <p class="fine" style="font-size:.8rem;color:var(--mute)">By sending you agree to be contacted about your request. We never share your details.</p>
+    </form>
+
+    <aside class="contact-aside">
+      <div>
+        <h3>Email</h3>
+        <p>support@teamforbesriley.com</p>
+      </div>
+      <div>
+        <h3>Speaking &amp; bookings</h3>
+        <p>Forbes Riley Media, Inc.<br>Forbes Riley Studios<br>St. Petersburg, Florida</p>
+      </div>
+      <div>
+        <h3>Free first step</h3>
+        <p>Not sure where to start? Take the free Pitch Secrets Masterclass and you&rsquo;ll know within an hour.</p>
+        <a class="link" href="https://pitchsecretstraining.com" target="_blank" rel="noopener">pitchsecretstraining.com</a>
+      </div>
+      <div>
+        <h3>Follow Forbes</h3>
+        <p><a href="https://www.facebook.com/forbesriley" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.instagram.com/forbesriley" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.youtube.com/forbesriley" target="_blank" rel="noopener">YouTube</a></p>
+      </div>
+      <img src="img/portrait-teaching.jpg" alt="Forbes Riley seated, smiling">
+    </aside>
+  </div>
+</section>
+
+<script>
+  // Until a form endpoint is connected, acknowledge in place so nothing is lost silently.
+  var cf = document.getElementById('contact-form');
+  if (cf && cf.action.indexOf('your-form-id') !== -1) {
+    cf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      cf.innerHTML = '<p class="thanks">Thanks! Your message is ready to send. Connect this form to Formspree, Netlify Forms or your CRM in src/pages/contact.html to deliver it to support@teamforbesriley.com.</p>';
+    });
+  }
+</script>

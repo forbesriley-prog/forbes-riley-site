@@ -174,8 +174,9 @@ def generate():
     sorted_posts = sorted(posts, key=lambda p: p["date"], reverse=True)
     for i, p in enumerate(sorted_posts):
         title = H.unescape(p["title"]["rendered"])
-        body = sanitize(p["content"]["rendered"])
-        hero = featured_img(p)
+        override = ROOT / "src" / "overrides" / f"{p['slug']}.html"
+        body = override.read_text() if override.exists() else sanitize(p["content"]["rendered"])
+        hero = None if override.exists() else featured_img(p)
         if hero and hero == first_image(p["content"]["rendered"]):
             hero = None  # already the first picture in the body
         catlinks = " &middot; ".join(f'<a href="journal.html#cat-{slugify(c)}">{H.escape(c)}</a>' for c in post_cats(p)) or "Journal"

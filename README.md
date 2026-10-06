@@ -4,6 +4,12 @@ Static brand site rebuilt from the Forbes Factor Website Archive (Drive). Ten de
 plus every one of the old site's 263 blog posts (Journal, searchable) and all 77 old pages (Old site archive),
 so nothing from forbesfactor.com is lost.
 
+## Live
+
+https://forbesriley-prog.github.io/forbes-riley-site/ (GitHub Pages, repo github.com/forbesriley-prog/forbes-riley-site, served from `docs/`).
+To publish changes: `python3 build.py && rm -rf docs && cp -R dist docs && touch docs/.nojekyll`, commit, push.
+To use the real domain: repo Settings > Pages > Custom domain, then point the domain's DNS at GitHub Pages.
+
 ## Build
 
     python3 build.py        # -> dist/  (deploy this folder to Vercel, Netlify, GitHub Pages, any host)

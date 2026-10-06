@@ -8,15 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&family=Pinyon+Script&display=swap">
-<link rel="stylesheet" href="style.css?v=96a8d49a">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="style.css?v=cc3a37fd">
 </head>
 <body class="page-journal-celebrating-elaine-jack-lalanne">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap bar">
     <a class="brand" href="index.html" aria-label="Forbes Riley home">
-      <span class="brand-name">Forbes Riley</span>
-      <span class="brand-tag">Health &middot; Wealth &middot; Happiness</span>
+      <img class="brand-logo" src="img/logo-signature-black.png" alt="Forbes Riley" width="448" height="188">
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
     <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
@@ -56,26 +56,23 @@
 <section class="signup" id="newsletter">
   <div class="wrap signup-grid">
     <div>
-      <p class="eyebrow">Free training</p>
-      <h2>Master your pitch</h2>
-      <p>Register free for the Pitch Secrets Masterclass and get Forbes&rsquo; notes, event dates and the occasional recipe in your inbox.</p>
+      <p class="eyebrow">Free &middot; live on Zoom every Sunday</p>
+      <h2>The Secret Pitch Formula</h2>
+      <p>Join Forbes live for the Pitch Secrets Masterclass. Over 80,000 people have learned the 7-second hook, the three pitch patterns behind $2.5 billion in sales, and how to close without sounding salesy. Free, with a gift worth $500 for registering.</p>
     </div>
-    <form class="signup-form" id="signup-form" action="https://pitchsecretstraining.com" method="get">
-      <label for="signup-name" class="sr-only">Your name</label>
-      <input id="signup-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
-      <label for="signup-email" class="sr-only">Email address</label>
-      <input id="signup-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
-      <button class="btn btn-gold" type="submit">Register free</button>
-      <p class="fine">Hosted at pitchsecretstraining.com. No spam, unsubscribe any time.</p>
-    </form>
+    <div class="signup-cta">
+      <a class="btn btn-gold btn-lg" href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Reserve my free seat</a>
+      <p class="fine">Sundays, 2 p.m. PT / 5 p.m. ET. Registration and the Zoom link are at pitchsecretstraining.com.</p>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <p class="brand-name">Forbes Riley</p>
-      <p class="script">Dream it. Believe it. Achieve it.</p>
+      <img class="foot-monogram" src="img/logo-monogram-gold.png" alt="" width="350" height="356">
+      <img class="foot-signature" src="img/logo-signature-white.png" alt="Forbes Riley" width="448" height="188">
+      <p class="foot-tag">The Queen of Pitch &middot; Health, Wealth &amp; Happiness</p>
       <p class="foot-contact">support@teamforbesriley.com<br>Forbes Riley Studios &middot; St. Petersburg, Florida</p>
     </div>
     <nav class="foot-nav" aria-label="Footer">
@@ -85,6 +82,7 @@
         <a href="work-with-forbes.html">Work with Forbes</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press &amp; media kit</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div>
         <p class="foot-head">Explore</p>
@@ -96,11 +94,12 @@
       </div>
       <div>
         <p class="foot-head">Connect</p>
+        <a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Pitch Secrets Masterclass</a>
+        <a href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Pitch Secrets A to Z book</a>
         <a href="https://shopforbesriley.com" target="_blank" rel="noopener">Shop</a>
-        <a href="https://www.facebook.com/forbesriley" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com/forbesriley" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/forbesriley" target="_blank" rel="noopener">YouTube</a>
-        <a href="contact.html">Contact</a>
+        <a href="https://www.instagram.com/forbes_riley/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/ForbesRileyFanPage" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@ForbesRileyFANpage" target="_blank" rel="noopener">YouTube</a>
       </div>
     </nav>
   </div>
@@ -110,18 +109,9 @@
   </div>
 </footer>
 <script>
-  // Close the mobile menu after a link is tapped.
   document.querySelectorAll('.nav a').forEach(function (a) {
     a.addEventListener('click', function () { var t = document.getElementById('nav-toggle'); if (t) t.checked = false; });
   });
-  // Signup form: the artifact preview cannot submit forms, so acknowledge in place there.
-  var f = document.getElementById('signup-form');
-  if (f && location.hostname.indexOf('claude') !== -1) {
-    f.addEventListener('submit', function (e) {
-      e.preventDefault();
-      f.innerHTML = '<p class="thanks">Thanks! On the live site this registers you at pitchsecretstraining.com.</p>';
-    });
-  }
 </script>
 
 </body>

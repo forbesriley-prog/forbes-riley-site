@@ -37,8 +37,17 @@ OUT.mkdir()
 shutil.copytree(SRC / "img", OUT / "img")
 (OUT / "style.css").write_text(css)
 
-for page in sorted((SRC / "pages").glob("*.html")):
-    text = page.read_text()
+import gen_archive
+sources = [(page.name, page.read_text()) for page in sorted((SRC / "pages").glob("*.html"))]
+sources += sorted(gen_archive.generate().items())
+if (SRC / "postimg").exists():
+    shutil.copytree(SRC / "postimg", OUT / "postimg")
+
+for name, text in sources:
+    class page:  # keep the old loop's variables
+        pass
+    page.name = name
+    page.stem = name[:-5]
     m = re.match(r"\s*<!--\s*title:\s*(.*?)\s*\|\s*desc:\s*(.*?)\s*\|\s*nav:\s*(\S*)\s*-->\s*", text, re.S)
     if not m:
         sys.exit(f"{page.name}: missing front-matter comment")
@@ -54,6 +63,6 @@ for page in sorted((SRC / "pages").glob("*.html")):
     else:
         html = f"<!doctype html>\n<html lang=\"en\">\n<head>\n{head}</head>\n<body class=\"page-{page.stem}\">\n{inner}\n</body>\n</html>\n"
     (OUT / page.name).write_text(html)
-    print("built", page.name)
+print("built", len(sources), "pages")
 
 print("->", OUT)

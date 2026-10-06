@@ -198,7 +198,8 @@ a.card:hover h3 { color: var(--gold-deep); }
 .checks li::before { content: ""; position: absolute; left: 0; top: .55em; width: .9rem; height: .5rem; border-left: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(-45deg); }
 .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.2rem; counter-reset: s; }
 .steps li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; counter-increment: s; }
-.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--display); font-size: 1.6rem; color: var(--gold); line-height: 1.1; }
+.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--display); font-size: 1.6rem; color: var(--gold); line-height: 1.1; grid-row: 1 / span 2; }
+.steps li > * { grid-column: 2; }
 .steps strong { display: block; }
 .steps p { color: var(--ink-soft); }
 

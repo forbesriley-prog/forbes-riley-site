@@ -15,8 +15,17 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 ARCH = ROOT / "archive"
 
-posts = json.load(open(ARCH / "posts.json"))
-pages = json.load(open(ARCH / "pages.json"))
+JUNK = re.compile(r"odd future|sugar plum|lorem ipsum|wes anderson|macaroon candy|meggings|jean shorts cred|dolor sit amet|construction of europe|realm of asia|natural beauty of asia|harmony of wild africa|human compassion binds|take an adventure|fellow travelers|biggest adventure of them all|avada|click edit button|consectetur", re.I)
+EXCLUDE_PAGES = {"typography", "tabs", "promotion-boxes", "home-version-18", "home-3-2-2-2-2", "test-blog-sidebar-mr"}
+
+
+def is_template(p):
+    t = H.unescape(p["title"]["rendered"]).strip()
+    return t.upper().startswith("#TEMPLATE") or not t or p["slug"] == "fitness-interview-honeycutt"
+
+
+posts = [p for p in json.load(open(ARCH / "posts.json")) if not is_template(p)]
+pages = [p for p in json.load(open(ARCH / "pages.json")) if p["slug"] not in EXCLUDE_PAGES and not is_template(p)]
 cats = {c["id"]: c for c in json.load(open(ARCH / "categories.json"))}
 featured = json.load(open(ARCH / "featured.json")) if (ARCH / "featured.json").exists() else {}
 
@@ -118,6 +127,12 @@ def sanitize(content):
     c = re.sub(r'\s(style|class|id|width|height|srcset|sizes|data-[\w-]+)="[^"]*"', "", c)
     c = re.sub(r"<(div|span|section)\b[^>]*>", "", c, flags=re.I)
     c = re.sub(r"</(div|span|section)>", "", c, flags=re.I)
+    # Theme CSS that leaked into the text, e.g. ".fusion-accordian #accordion-1 .panel-title a{...}"
+    c = re.sub(r"(?:[.#@][\w.#:>()\[\]=\"\'\s,-]*\{[^{}]*\}\s*)+", "", c)
+    # Designer filler ("Odd Future tote bag...", "Lorem ipsum...") left in real posts
+    c = re.sub(r"<(p|li|h[1-6]|blockquote)\b[^>]*>(?:(?!</\1>).)*?(?:odd future|sugar plum|lorem ipsum|wes anderson|macaroon candy|meggings|jean shorts cred|dolor sit amet|construction of europe|realm of asia|natural beauty of asia|harmony of wild africa|human compassion binds|take an adventure|fellow travelers|biggest adventure of them all|avada|click edit button|consectetur)(?:(?!</\1>).)*</\1>", "", c, flags=re.S | re.I)
+    c = re.sub(r"Explore All There Is To See|Stunning landscapes, historical cities and intriguing cultures\.?", "", c)
+    c = re.sub(r"\[contact-form-7[^\]]*\]", "", c)
     c = re.sub(r"<p>\s*(&nbsp;|\s)*</p>", "", c)
     c = re.sub(r"\n{3,}", "\n\n", c)
     return c.strip()

@@ -133,6 +133,7 @@ def sanitize(content):
     c = re.sub(r"<(p|li|h[1-6]|blockquote)\b[^>]*>(?:(?!</\1>).)*?(?:odd future|sugar plum|lorem ipsum|wes anderson|macaroon candy|meggings|jean shorts cred|dolor sit amet|construction of europe|realm of asia|natural beauty of asia|harmony of wild africa|human compassion binds|take an adventure|fellow travelers|biggest adventure of them all|avada|click edit button|consectetur)(?:(?!</\1>).)*</\1>", "", c, flags=re.S | re.I)
     c = re.sub(r"Explore All There Is To See|Stunning landscapes, historical cities and intriguing cultures\.?", "", c)
     c = re.sub(r"\[contact-form-7[^\]]*\]", "", c)
+    c = re.sub(r"(?:BUY AVADA NOW!?|Take The Biggest Adventure of Them All!?|Join 380\.000\+ Satisfied Avada Users[^<]*)", "", c, flags=re.I)
     c = re.sub(r"<p>\s*(&nbsp;|\s)*</p>", "", c)
     c = re.sub(r"\n{3,}", "\n\n", c)
     return c.strip()

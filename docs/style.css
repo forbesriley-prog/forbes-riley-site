@@ -142,6 +142,7 @@ em.script { font-style: normal; font-size: 1.15em; }
 .split img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; }
 .split img.wide { aspect-ratio: 4 / 3; }
 .split-copy { display: grid; gap: 1.3rem; }
+.sig-inline { width: 150px; height: auto; justify-self: start; }
 @media (max-width: 820px) { .split { grid-template-columns: 1fr; } .split.rev > :first-child { order: 0; } }
 
 /* Cards */

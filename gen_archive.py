@@ -207,7 +207,7 @@ def generate():
 
     # Journal index: every post, searchable, grouped by year
     all_cats = sorted({c for p in posts for c in post_cats(p)})
-    chips = "".join(f'<button type="button" data-f="{slugify(c)}" aria-pressed="false">{H.escape(c)}</button>' for c in all_cats)
+    chips = "".join(f'<option value="{slugify(c)}">{H.escape(c)}</option>' for c in all_cats)
     rows = []
     years = {}
     for p in sorted_posts:
@@ -237,9 +237,8 @@ def generate():
     <div class="journal-tools">
       <label class="sr-only" for="journal-search">Search stories</label>
       <input id="journal-search" type="search" placeholder="Search {len(posts)} stories…" autocomplete="off">
-      <div class="filter" role="group" aria-label="Filter by category">
-        <button type="button" data-f="all" aria-pressed="true">All</button>{chips}
-      </div>
+      <label class="sr-only" for="journal-cat">Category</label>
+      <select id="journal-cat"><option value="all">All categories</option>{chips}</select>
       <p class="caption" id="journal-count"></p>
     </div>
     {''.join(rows)}
@@ -249,7 +248,7 @@ def generate():
 <script>
 (function () {{
   var q = document.getElementById('journal-search');
-  var buttons = document.querySelectorAll('.filter button');
+  var sel = document.getElementById('journal-cat');
   var rows = document.querySelectorAll('.post-row');
   var years = document.querySelectorAll('.year');
   var count = document.getElementById('journal-count');
@@ -270,15 +269,9 @@ def generate():
     empty.hidden = shown > 0;
   }}
   q.addEventListener('input', apply);
-  buttons.forEach(function (b) {{
-    b.addEventListener('click', function () {{
-      cat = b.getAttribute('data-f');
-      buttons.forEach(function (x) {{ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }});
-      apply();
-    }});
-  }});
+  sel.addEventListener('change', function () {{ cat = sel.value; apply(); }});
   var h = location.hash.replace('#cat-', '');
-  if (h) {{ buttons.forEach(function (b) {{ if (b.getAttribute('data-f') === h) b.click(); }}); }}
+  if (h && sel.querySelector('option[value="' + h + '"]')) {{ sel.value = h; cat = h; }}
   apply();
 }})();
 </script>

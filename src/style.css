@@ -314,8 +314,11 @@ a.card:hover h3 { color: var(--gold-deep); }
 .post-nav a { text-decoration: none; font-family: var(--display); font-size: 1.05rem; font-weight: 600; display: grid; gap: .2rem; min-width: 0; }
 .post-nav a:last-child { text-align: right; }
 .post-nav small { font-family: var(--body); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
-.journal-tools { display: grid; gap: 1rem; margin-bottom: 2rem; }
-.journal-tools input { font: inherit; padding: .9rem 1.1rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; width: 100%; max-width: 32rem; color: var(--ink); }
+.journal-tools { display: grid; grid-template-columns: 1fr auto; gap: .8rem 1rem; align-items: center; margin-bottom: 1.5rem; max-width: 46rem; }
+.journal-tools input, .journal-tools select { font: inherit; padding: .9rem 1.1rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; width: 100%; color: var(--ink); }
+.journal-tools select { min-width: 14rem; }
+.journal-tools .caption { grid-column: 1 / -1; margin: 0; }
+@media (max-width: 560px) { .journal-tools { grid-template-columns: 1fr; } }
 .journal-tools .filter { margin-bottom: 0; }
 .year { font-size: 1.8rem; color: var(--gold-deep); margin: 2.5rem 0 1rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
 .post-list { display: grid; gap: 0; }

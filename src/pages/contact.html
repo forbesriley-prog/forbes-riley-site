@@ -7,7 +7,7 @@
 
 <section class="section-tight">
   <div class="wrap contact-grid">
-    <form class="form" id="contact-form" action="https://formspree.io/f/your-form-id" method="post">
+    <form class="form" id="contact-form" action="#" method="post">
       <div class="row">
         <label>First name<input id="c-first" name="first" type="text" autocomplete="given-name" required></label>
         <label>Last name<input id="c-last" name="last" type="text" autocomplete="family-name" required></label>
@@ -28,7 +28,7 @@
       </label>
       <label>Tell us more<textarea id="c-msg" name="message" placeholder="For speaking: date, city, audience size and format." required></textarea></label>
       <button class="btn btn-gold" type="submit">Send message</button>
-      <p class="fine" style="font-size:.8rem;color:var(--mute)">By sending you agree to be contacted about your request. We never share your details.</p>
+      <p class="fine" style="font-size:.8rem;color:var(--mute)">Sending opens a ready-to-send email to support@teamforbesriley.com in your mail app. Or write to that address directly.</p>
     </form>
 
     <aside class="contact-aside">
@@ -55,12 +55,22 @@
 </section>
 
 <script>
-  // Until a form endpoint is connected, acknowledge in place so nothing is lost silently.
+  // Deliver through the visitor's own mail app: builds a prefilled email to the team address.
   var cf = document.getElementById('contact-form');
-  if (cf && cf.action.indexOf('your-form-id') !== -1) {
-    cf.addEventListener('submit', function (e) {
-      e.preventDefault();
-      cf.innerHTML = '<p class="thanks">Thanks! Your message is ready to send. Connect this form to Formspree, Netlify Forms or your CRM in src/pages/contact.html to deliver it to support@teamforbesriley.com.</p>';
-    });
-  }
+  cf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+    var name = v('c-first') + ' ' + v('c-last');
+    var subject = 'Website request: ' + v('c-topic') + ' (' + name + ')';
+    var body = 'Name: ' + name + '
+Email: ' + v('c-email') + '
+Phone: ' + (v('c-phone') || 'n/a') + '
+Interested in: ' + v('c-topic') + '
+
+' + v('c-msg');
+    window.location.href = 'mailto:support@teamforbesriley.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var note = document.createElement('p'); note.className = 'thanks';
+    note.textContent = 'Your email draft is open in your mail app. Press send there and we will reply within two business days. If nothing opened, email support@teamforbesriley.com.';
+    cf.appendChild(note);
+  });
 </script>

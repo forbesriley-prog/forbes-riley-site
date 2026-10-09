@@ -28,6 +28,25 @@ posts = [p for p in json.load(open(ARCH / "posts.json")) if not is_template(p)]
 pages = [p for p in json.load(open(ARCH / "pages.json")) if p["slug"] not in EXCLUDE_PAGES and not is_template(p)]
 cats = {c["id"]: c for c in json.load(open(ARCH / "categories.json"))}
 featured = json.load(open(ARCH / "featured.json")) if (ARCH / "featured.json").exists() else {}
+comments = json.load(open(ARCH / "comments.json")) if (ARCH / "comments.json").exists() else []
+COMMENTS_BY_POST = {}
+for _c in sorted(comments, key=lambda c: c["date"]):
+    COMMENTS_BY_POST.setdefault(_c["post"], []).append(_c)
+
+
+def comments_html(post_id):
+    cs = COMMENTS_BY_POST.get(post_id)
+    if not cs:
+        return ""
+    items = []
+    for c in cs:
+        body = re.sub(r"<[^>]+>", "", c["content"]["rendered"]).strip()
+        body = re.sub(r"https?://\S+", "", body)  # no live links from old comments
+        body = H.escape(H.unescape(body)).replace("\n", "<br>")
+        items.append(f'<li><p class="c-meta"><strong>{H.escape(H.unescape(c["author_name"] or "Reader"))}</strong> &middot; {fmt_date(c["date"])}</p><p>{body}</p></li>')
+    n = len(cs)
+    return f'<section class="comments"><h2>{n} comment{"s" if n != 1 else ""} from the original site</h2><ul>{"".join(items)}</ul></section>'
+
 
 
 def featured_img(p):
@@ -199,6 +218,7 @@ def generate():
     <div class="prose-wide">
 {body if body else '<p class="caption">This post was a photo or video gallery on the old site. The images are in the archive.</p>'}
     </div>
+    {comments_html(p["id"])}
     {nav}
   </div>
 </article>
@@ -230,7 +250,7 @@ def generate():
 <section class="wrap page-hero">
   <p class="eyebrow">Journal</p>
   <h1>Join me. Explore and enjoy.</h1>
-  <p class="lede">All {len(posts)} stories from Forbes&rsquo; blog, brought over from the old site: travel with the twins, friends and mentors, SpinGym, business, health, recipes and behind the scenes.</p>
+  <p class="lede">Welcome to my Lifestyle Blogazine! An inspiring collection of fun and transformative content designed to empower your Health, Wealth &amp; Happiness. All {len(posts)} stories from the original Forbes Factor.</p>
 </section>
 {(ROOT / "src" / "partials" / "tiles.html").read_text()}
 <section class="section-tight">

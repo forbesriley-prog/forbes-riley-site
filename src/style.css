@@ -345,3 +345,19 @@ a.card:hover h3 { color: var(--gold-deep); }
 .tile img { width: 100%; height: auto; display: block; }
 .tile:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(27,22,25,.12); }
 .tiles-wrap { padding-top: 0; }
+
+/* The Forbes Factor band (home) */
+.factor { background: #fff; border-top: 1px solid var(--line); }
+.factor-banner { width: min(900px, 100%); height: auto; margin: 0 auto 1.5rem; display: block; }
+.factor-intro { text-align: center; max-width: 44rem; margin: 0 auto 2.2rem; display: grid; gap: .8rem; justify-items: center; }
+.factor-intro h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.factor-intro h2::after { content: ""; display: block; width: 3rem; height: 3px; background: #a73f9a; margin: .9rem auto 0; }
+.factor-cta { justify-content: center; margin-top: 2rem; }
+
+/* Reader comments carried over from the original site */
+.comments { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); max-width: 68ch; }
+.comments h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.comments ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.1rem; }
+.comments li { background: var(--cream); padding: 1rem 1.2rem; border-radius: var(--radius); }
+.comments .c-meta { font-size: .82rem; color: var(--mute); margin-bottom: .3rem; }
+.comments li p:last-child { color: var(--ink-soft); font-size: .97rem; }

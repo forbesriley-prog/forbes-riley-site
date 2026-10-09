@@ -336,3 +336,12 @@ a.card:hover h3 { color: var(--gold-deep); }
 .photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; max-height: none; }
 .photo-grid img:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
 @media (max-width: 560px) { .photo-grid { grid-template-columns: 1fr; } }
+
+/* Category tiles carried over from the original Forbes Factor home page */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; }
+@media (min-width: 700px) { .tiles { grid-template-columns: repeat(8, 1fr); } }
+@media (max-width: 420px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+.tile { display: block; background: #fff; border: 1px solid var(--line); border-radius: 3px; overflow: hidden; transition: transform .15s ease, box-shadow .15s ease; }
+.tile img { width: 100%; height: auto; display: block; }
+.tile:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(27,22,25,.12); }
+.tiles-wrap { padding-top: 0; }

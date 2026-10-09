@@ -232,6 +232,7 @@ def generate():
   <h1>Join me. Explore and enjoy.</h1>
   <p class="lede">All {len(posts)} stories from Forbes&rsquo; blog, brought over from the old site: travel with the twins, friends and mentors, SpinGym, business, health, recipes and behind the scenes.</p>
 </section>
+{(ROOT / "src" / "partials" / "tiles.html").read_text()}
 <section class="section-tight">
   <div class="wrap">
     <div class="journal-tools">
@@ -270,8 +271,12 @@ def generate():
   }}
   q.addEventListener('input', apply);
   sel.addEventListener('change', function () {{ cat = sel.value; apply(); }});
-  var h = location.hash.replace('#cat-', '');
-  if (h && sel.querySelector('option[value="' + h + '"]')) {{ sel.value = h; cat = h; }}
+  function fromHash(scroll) {{
+    var h = location.hash.replace('#cat-', '');
+    if (h && sel.querySelector('option[value="' + h + '"]')) {{ sel.value = h; cat = h; apply(); if (scroll) sel.scrollIntoView({{ block: 'start', behavior: 'smooth' }}); }}
+  }}
+  window.addEventListener('hashchange', function () {{ fromHash(true); }});
+  fromHash(false);
   apply();
 }})();
 </script>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&family=Pinyon+Script&display=swap">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="style.css?v=1529c6f1">
+<link rel="stylesheet" href="style.css?v=a0cafb4f">
 </head>
 <body class="page-journal">
 <a class="skip" href="#main">Skip to content</a>
@@ -41,6 +41,30 @@
   <h1>Join me. Explore and enjoy.</h1>
   <p class="lede">All 247 stories from Forbes&rsquo; blog, brought over from the old site: travel with the twins, friends and mentors, SpinGym, business, health, recipes and behind the scenes.</p>
 </section>
+<section class="section-tight tiles-wrap">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">From the original Forbes Factor</p><h2>Explore by category</h2></div></div>
+    <div class="tiles">
+      <a class="tile" href="journal.html#cat-what-s-new"><img src="img/tiles/whats-new.png" alt="What's New?" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="about.html"><img src="img/tiles/meet-forbes.png" alt="Meet Forbes" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="health.html"><img src="img/tiles/healthy-living.png" alt="Healthy Living" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="business.html"><img src="img/tiles/business.png" alt="Business" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-daily-inspiration"><img src="img/tiles/daily-inspiration.png" alt="Daily Inspiration" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="health.html#recipes"><img src="img/tiles/recipes.png" alt="Recipes" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-innovations"><img src="img/tiles/innovations.png" alt="Innovations" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-forbes-living-tv"><img src="img/tiles/forbes-living-tv.png" alt="Forbes Living TV" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="spingym.html"><img src="img/tiles/spingym.png" alt="SpinGym" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-giving-back"><img src="img/tiles/giving-back.png" alt="Giving Back" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-travel"><img src="img/tiles/travel.png" alt="Travel" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-my-life-in-video"><img src="img/tiles/videos.png" alt="Videos" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="work-with-forbes.html"><img src="img/tiles/sponsors.png" alt="Forbes' Sponsors" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="press.html"><img src="img/tiles/media-kit.png" alt="Media Kit" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="press.html#press"><img src="img/tiles/press.png" alt="Press" width="184" height="285" loading="lazy"></a>
+      <a class="tile" href="journal.html#cat-favorite-books"><img src="img/tiles/favorite-books.png" alt="Favorite Books" width="184" height="285" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
 <section class="section-tight">
   <div class="wrap">
     <div class="journal-tools">
@@ -79,8 +103,12 @@
   }
   q.addEventListener('input', apply);
   sel.addEventListener('change', function () { cat = sel.value; apply(); });
-  var h = location.hash.replace('#cat-', '');
-  if (h && sel.querySelector('option[value="' + h + '"]')) { sel.value = h; cat = h; }
+  function fromHash(scroll) {
+    var h = location.hash.replace('#cat-', '');
+    if (h && sel.querySelector('option[value="' + h + '"]')) { sel.value = h; cat = h; apply(); if (scroll) sel.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
+  }
+  window.addEventListener('hashchange', function () { fromHash(true); });
+  fromHash(false);
   apply();
 })();
 </script>

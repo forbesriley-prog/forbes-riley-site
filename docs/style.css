@@ -107,6 +107,8 @@ em.script { font-style: normal; font-size: 1.15em; }
 .hero { position: relative; isolation: isolate; color: var(--paper); background: var(--ink); overflow: hidden; }
 .hero-img { position: absolute; inset: 0; z-index: -2; }
 .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(20, 14, 18, .88) 0%, rgba(20, 14, 18, .62) 45%, rgba(20, 14, 18, .18) 100%); }
 .hero .wrap { padding-block: clamp(5rem, 12vw, 10rem) clamp(4rem, 9vw, 7rem); max-width: var(--wrap); }
 .hero-copy { max-width: 42rem; display: grid; gap: 1.4rem; }
@@ -396,3 +398,6 @@ figure.cap figcaption { font-size: .85rem; color: var(--mute); margin-top: .4rem
 .photo-wall img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s ease; }
 .photo-wall .ph:hover img { transform: scale(1.04); }
 .filter button small { font-weight: 400; opacity: .7; margin-left: .2rem; }
+
+.archive-links { margin-bottom: 2.5rem; }
+.archive-links .card h3 { font-size: 1.1rem; }

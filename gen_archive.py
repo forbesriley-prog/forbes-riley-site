@@ -265,7 +265,13 @@ def generate():
 {(ROOT / "src" / "partials" / "tiles.html").read_text()}
 <section class="section-tight">
   <div class="wrap">
-    <div class="journal-tools">
+    <div class="cards cards-4 archive-links">
+      <a class="card boxed" href="features.html"><span class="kicker">Features</span><h3>Press, videos &amp; celebrity SpinGymers</h3><p>{len(json.load(open(ARCH / "portfolio.json")))} features from the original site.</p></a>
+      <a class="card boxed" href="photos.html"><span class="kicker">Photo archive</span><h3>Every photo</h3><p>All the pictures from the old site, by year.</p></a>
+      <a class="card boxed" href="archive.html"><span class="kicker">Original pages</span><h3>The old site, page by page</h3><p>{len(pages)} pages kept exactly as they were.</p></a>
+      <a class="card boxed" href="#stories"><span class="kicker">Stories</span><h3>{len(posts)} blog posts</h3><p>Search below, or pick a category.</p></a>
+    </div>
+    <div class="journal-tools" id="stories">
       <label class="sr-only" for="journal-search">Search stories</label>
       <input id="journal-search" type="search" placeholder="Search {len(posts)} stories…" autocomplete="off">
       <label class="sr-only" for="journal-cat">Category</label>

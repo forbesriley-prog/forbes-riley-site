@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&family=Pinyon+Script&display=swap">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="style.css?v=6eac01f2">
+<link rel="stylesheet" href="style.css?v=fc0675b4">
 </head>
 <body class="page-index">
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +37,12 @@
 
 <main id="main">
 <section class="hero">
-  <div class="hero-img"><img src="img/hero-speaking.jpg" alt="Forbes Riley speaking to an audience with a microphone" fetchpriority="high"></div>
+  <div class="hero-img">
+    <img src="img/hero-speaking.jpg" alt="Forbes Riley speaking to an audience with a microphone" fetchpriority="high">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/hero-speaking.jpg" aria-hidden="true">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="wrap">
     <div class="hero-copy">
       <img class="hero-sig" src="img/logo-signature-gold.png" alt="Forbes Riley" width="1404" height="589">

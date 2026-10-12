@@ -47,6 +47,8 @@ sources = [(page.name, page.read_text()) for page in sorted((SRC / "pages").glob
 sources += sorted(gen_archive.generate().items())
 if (SRC / "postimg").exists():
     shutil.copytree(SRC / "postimg", OUT / "postimg")
+if (SRC / "video").exists():
+    shutil.copytree(SRC / "video", OUT / "video")
 if (SRC / "thumbs").exists():
     shutil.copytree(SRC / "thumbs", OUT / "thumbs")
 

@@ -209,7 +209,7 @@ def generate():
         html_body = f"""<!-- title: {H.escape(title)} | desc: {H.escape(text_excerpt(p, 150))} | nav: journal -->
 <article class="post">
   <header class="wrap post-head">
-    <p class="breadcrumb"><a href="journal.html">Journal</a> &nbsp;/&nbsp; {catlinks}</p>
+    <p class="breadcrumb"><a href="journal.html">Blogazine</a> &nbsp;/&nbsp; {catlinks}</p>
     <h1>{H.escape(title)}</h1>
     <p class="post-meta">By Forbes Riley &middot; <time datetime="{p['date'][:10]}">{fmt_date(p['date'])}</time></p>
   </header>
@@ -246,9 +246,9 @@ def generate():
                 f'<h3>{H.escape(title)}</h3><p>{H.escape(text_excerpt(p))}</p></span></a>'
             )
         rows.append("</div>")
-    out["journal.html"] = f"""<!-- title: Forbes Riley Journal | desc: Every story from Forbes Riley's blog, 2014 to 2019: travel, friends, SpinGym, business, health, recipes and behind the scenes. | nav: journal -->
+    out["journal.html"] = f"""<!-- title: Forbes Factor Blogazine | desc: Every story from Forbes Riley's blog, 2014 to 2019: travel, friends, SpinGym, business, health, recipes and behind the scenes. | nav: journal -->
 <section class="wrap page-hero">
-  <p class="eyebrow">Journal</p>
+  <p class="eyebrow">The Forbes Factor Blogazine</p>
   <h1>Join me. Explore and enjoy.</h1>
   <p class="lede">Welcome to my Lifestyle Blogazine! An inspiring collection of fun and transformative content designed to empower your Health, Wealth &amp; Happiness. All {len(posts)} stories from the original Forbes Factor.</p>
 </section>
@@ -327,7 +327,7 @@ def generate():
 <section class="wrap page-hero">
   <p class="eyebrow">Archive</p>
   <h1>Every page from the old site</h1>
-  <p class="lede">All {len(pages)} pages from forbesfactor.com, kept here so nothing is lost. Blog posts are in the <a class="link" href="journal.html">Journal</a>. Pages that have a new home say so at the top.</p>
+  <p class="lede">All {len(pages)} pages from forbesfactor.com, kept here so nothing is lost. Blog posts are in the <a class="link" href="journal.html">Blogazine</a>. Pages that have a new home say so at the top.</p>
 </section>
 <section class="section-tight"><div class="wrap post-list">{''.join(rows)}</div></section>
 """

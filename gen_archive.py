@@ -125,8 +125,6 @@ def rewrite_link(m):
             return f'<a href="{POST_FILE[slug]}">{inner}</a>'
         if slug in PAGE_REDIRECT:
             return f'<a href="{PAGE_REDIRECT[slug]}">{inner}</a>'
-        if slug in PAGE_FILE:
-            return f'<a href="{PAGE_FILE[slug]}">{inner}</a>'
         if "/wp-content/uploads/" in href:
             return inner  # link to an image file: keep the image, drop the link
         return inner
@@ -169,7 +167,9 @@ def sanitize(content):
 
 
 def text_excerpt(p, n=180):
-    t = re.sub(r"<[^>]+>", "", p["excerpt"]["rendered"] or p["content"]["rendered"])
+    raw = p["excerpt"]["rendered"] or p["content"]["rendered"]
+    raw = re.sub(r"[.#][\w.#:>()\[\]=\"\'\s,-]*\{[^{}]*\}", "", raw)
+    t = re.sub(r"<[^>]+>", "", raw)
     t = H.unescape(t).replace("[…]", "").replace("[...]", "").strip()
     t = re.sub(r"\s+", " ", t)
     return (t[: n - 1] + "…") if len(t) > n else t
@@ -265,10 +265,9 @@ def generate():
 {(ROOT / "src" / "partials" / "tiles.html").read_text()}
 <section class="section-tight">
   <div class="wrap">
-    <div class="cards cards-4 archive-links">
+    <div class="cards archive-links">
       <a class="card boxed" href="features.html"><span class="kicker">Features</span><h3>Press, videos &amp; celebrity SpinGymers</h3><p>{len(json.load(open(ARCH / "portfolio.json")))} features from the original site.</p></a>
       <a class="card boxed" href="photos.html"><span class="kicker">Photo archive</span><h3>Every photo</h3><p>All the pictures from the old site, by year.</p></a>
-      <a class="card boxed" href="archive.html"><span class="kicker">Original pages</span><h3>The old site, page by page</h3><p>{len(pages)} pages kept exactly as they were.</p></a>
       <a class="card boxed" href="#stories"><span class="kicker">Stories</span><h3>{len(posts)} blog posts</h3><p>Search below, or pick a category.</p></a>
     </div>
     <div class="journal-tools" id="stories">
@@ -318,35 +317,6 @@ def generate():
 </script>
 """
 
-    # Old pages
-    rows = []
-    for p in sorted(pages, key=lambda x: H.unescape(x["title"]["rendered"]).lower()):
-        title = H.unescape(p["title"]["rendered"])
-        body = sanitize(p["content"]["rendered"])
-        redirect = PAGE_REDIRECT.get(p["slug"])
-        note = f'<p class="caption">This page has a new home: <a href="{redirect}">{redirect.replace(".html", "").replace("-", " ")}</a>. The original is kept below for reference.</p>' if redirect else ""
-        out[PAGE_FILE[p["slug"]]] = f"""<!-- title: {H.escape(title)} | desc: Page from the original forbesfactor.com, kept in the archive. | nav: archive -->
-<article class="post">
-  <header class="wrap post-head">
-    <p class="breadcrumb"><a href="archive.html">Old site archive</a></p>
-    <h1>{H.escape(title)}</h1>
-    <p class="post-meta">Original page from forbesfactor.com &middot; last updated {fmt_date(p['date'])}</p>
-    {note}
-  </header>
-  <div class="wrap post-body"><div class="prose-wide">
-{body if body else '<p class="caption">This page was a slider or layout-only page on the old site, with no text of its own.</p>'}
-  </div></div>
-</article>
-"""
-        rows.append(f'<a class="post-row slim" href="{PAGE_FILE[p["slug"]]}"><span class="post-row-body"><h3>{H.escape(title)}</h3><p>{H.escape(text_excerpt(p, 140)) or "Layout-only page."}</p></span></a>')
-    out["archive.html"] = f"""<!-- title: Old Site Archive | desc: Every page from the original forbesfactor.com, kept for reference. | nav: archive -->
-<section class="wrap page-hero">
-  <p class="eyebrow">Archive</p>
-  <h1>Every page from the old site</h1>
-  <p class="lede">All {len(pages)} pages from forbesfactor.com, kept here so nothing is lost. Blog posts are in the <a class="link" href="journal.html">Blogazine</a>. Pages that have a new home say so at the top.</p>
-</section>
-<section class="section-tight"><div class="wrap post-list">{''.join(rows)}</div></section>
-"""
     out.update(generate_portfolio())
     out.update(generate_photos())
     return out

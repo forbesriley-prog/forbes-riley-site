@@ -29,6 +29,12 @@ pages = [p for p in json.load(open(ARCH / "pages.json")) if p["slug"] not in EXC
 cats = {c["id"]: c for c in json.load(open(ARCH / "categories.json"))}
 featured = json.load(open(ARCH / "featured.json")) if (ARCH / "featured.json").exists() else {}
 comments = json.load(open(ARCH / "comments.json")) if (ARCH / "comments.json").exists() else []
+CAPTIONS = {}
+if (ARCH / "media.json").exists():
+    for _m in json.load(open(ARCH / "media.json")):
+        _cap = re.sub(r"<[^>]+>", "", (_m.get("caption") or {}).get("rendered", "")).strip()
+        if len(_cap) > 3 and "pruvitnow" not in _cap:
+            CAPTIONS[_m["source_url"].split("/wp-content/uploads/")[-1]] = H.unescape(_cap)
 COMMENTS_BY_POST = {}
 for _c in sorted(comments, key=lambda c: c["date"]):
     COMMENTS_BY_POST.setdefault(_c["post"], []).append(_c)
@@ -104,7 +110,11 @@ def rewrite_img(m):
     if not loc:
         return ""  # third-party hotlinked image: drop
     a = alt.group(1) if alt else ""
-    return f'<img src="{loc}" alt="{H.escape(a)}" loading="lazy" onerror="this.remove()">'
+    cap = CAPTIONS.get(loc.replace("postimg/", ""))
+    img = f'<img src="{loc}" alt="{H.escape(a or cap or "")}" loading="lazy" onerror="this.closest(\'figure\') ? this.closest(\'figure\').remove() : this.remove()">'
+    if cap:
+        return f'<figure class="cap">{img}<figcaption>{H.escape(cap)}</figcaption></figure>'
+    return img
 
 
 def rewrite_link(m):

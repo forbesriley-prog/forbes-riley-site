@@ -331,11 +331,119 @@ def generate():
 </section>
 <section class="section-tight"><div class="wrap post-list">{''.join(rows)}</div></section>
 """
+    out.update(generate_portfolio())
     return out
 
 
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def generate_portfolio():
+    """Press clips, videos, celebrity SpinGym features and products from the old site's portfolio."""
+    out = {}
+    pf = ARCH / "portfolio.json"
+    if not pf.exists():
+        return out
+    items = [i for i in json.load(open(pf)) if not i["title"].upper().startswith("#TEMPLATE")]
+    NOISY = {"Forbes Living TV", "Infomercials", "Movies & TV", "Testimonials", "Home Shopping", "Behind the Scenes", "Innovations"}
+    for i in items:
+        real = [c for c in i["cats"] if c not in NOISY]
+        if not real:
+            blob = (i["title"] + " " + re.sub(r"<[^>]+>", " ", i.get("content") or "")).lower()
+            real = ["SpinGym Stories"] if "spingym" in blob or "spin gym" in blob else ["Features"]
+        i["cats"] = real
+    items.sort(key=lambda i: (i.get("date") or "0000"), reverse=True)
+    def local(u):
+        loc = local_img(u)
+        return loc if loc and (ROOT / "src" / loc).exists() else None
+    def card_img(i):
+        for u in i["images"]:
+            l = local(u)
+            if l:
+                return l
+        return None
+    files = {i["slug"]: f"feature-{i['slug']}.html" for i in items}
+    for idx, i in enumerate(items):
+        title = i["title"]
+        imgs = [l for l in (local(u) for u in i["images"]) if l]
+        body = sanitize(i.get("content") or "")
+        body = re.sub(r"<h\d[^>]*>\s*Project Description\s*</h\d>", "", body, flags=re.I)
+        vids = "".join(f'<p class="embed-card"><a href="https://www.youtube.com/watch?v={v}" target="_blank" rel="noopener">&#9654; Watch the video on YouTube</a></p>' for v in i.get("youtube", []))
+        gallery = ""
+        if imgs:
+            gallery = '<div class="photo-grid">' + "".join(f'<img src="{l}" alt="" loading="lazy" onerror="this.remove()">' for l in imgs[:24]) + "</div>"
+        cats = " &middot; ".join(f'<a href="features.html#cat-{slugify(c)}">{H.escape(c)}</a>' for c in i["cats"]) or "Features"
+        when = f' &middot; <time datetime="{i["date"]}">{fmt_date(i["date"])}</time>' if i.get("date") else ""
+        older = items[idx + 1] if idx + 1 < len(items) else None
+        newer = items[idx - 1] if idx > 0 else None
+        nav = '<nav class="post-nav" aria-label="More features">'
+        nav += f'<a href="{files[older["slug"]]}"><small>Older</small>{H.escape(older["title"])}</a>' if older else "<span></span>"
+        nav += f'<a href="{files[newer["slug"]]}"><small>Newer</small>{H.escape(newer["title"])}</a>' if newer else "<span></span>"
+        nav += "</nav>"
+        out[files[i["slug"]]] = f"""<!-- title: {H.escape(title)} | desc: {H.escape(title)} from the original Forbes Factor site. | nav: journal -->
+<article class="post">
+  <header class="wrap post-head">
+    <p class="breadcrumb"><a href="features.html">Features</a> &nbsp;/&nbsp; {cats}</p>
+    <h1>{H.escape(title)}</h1>
+    <p class="post-meta">From the original Forbes Factor{when}</p>
+  </header>
+  <div class="wrap post-body">
+    <div class="prose-wide">
+{body if body.strip() else ""}
+{vids}
+    </div>
+    {gallery if gallery else '<p class="caption">This feature was a photo gallery on the old site.</p>'}
+    {nav}
+  </div>
+</article>
+"""
+    all_cats = sorted({c for i in items for c in i["cats"]})
+    chips = "".join(f'<option value="{slugify(c)}">{H.escape(c)}</option>' for c in all_cats)
+    rows = []
+    for i in items:
+        th = card_img(i)
+        img = f'<img src="{th}" alt="" loading="lazy" onerror="this.remove()">' if th else '<span class="noimg"></span>'
+        txt = re.sub(r"<[^>]+>", " ", i.get("content") or "")
+        txt = re.sub(r"\s+", " ", H.unescape(txt)).replace("Project Description", "").strip()
+        rows.append(f'<a class="post-row" href="{files[i["slug"]]}" data-cats="{" ".join(slugify(c) for c in i["cats"])}" data-text="{H.escape((i["title"] + " " + txt[:300]).lower(), quote=True)}">{img}<span class="post-row-body"><span class="kicker">{H.escape(" · ".join(i["cats"]) or "Feature")}</span><h3>{H.escape(i["title"])}</h3><p>{H.escape(txt[:160] + ("…" if len(txt) > 160 else ""))}</p></span></a>')
+    out["features.html"] = f"""<!-- title: Forbes Factor Features | desc: Press clips, videos, celebrity SpinGym features and products from the original Forbes Factor site. | nav: journal -->
+<section class="wrap page-hero">
+  <p class="eyebrow">The Forbes Factor</p>
+  <h1>Press, videos &amp; celebrity SpinGymers</h1>
+  <p class="lede">{len(items)} features from the original site: magazine and TV press, Forbes&rsquo; videos, products she loves, and the celebrities, athletes, doctors and everyday heroes who picked up a SpinGym.</p>
+</section>
+<section class="section-tight">
+  <div class="wrap">
+    <div class="journal-tools">
+      <label class="sr-only" for="journal-search">Search features</label>
+      <input id="journal-search" type="search" placeholder="Search {len(items)} features…" autocomplete="off">
+      <label class="sr-only" for="journal-cat">Category</label>
+      <select id="journal-cat"><option value="all">All categories</option>{chips}</select>
+      <p class="caption" id="journal-count"></p>
+    </div>
+    <div class="post-list">{''.join(rows)}</div>
+    <p class="caption" id="journal-empty" hidden>Nothing matches. Try another word or category.</p>
+  </div>
+</section>
+<script>
+(function () {{
+  var q = document.getElementById('journal-search'), sel = document.getElementById('journal-cat');
+  var rows = document.querySelectorAll('.post-row'), count = document.getElementById('journal-count'), empty = document.getElementById('journal-empty');
+  var cat = 'all';
+  function apply() {{
+    var t = (q.value || '').toLowerCase().trim(), shown = 0;
+    rows.forEach(function (r) {{ var ok = (cat === 'all' || r.getAttribute('data-cats').split(' ').indexOf(cat) !== -1) && (!t || r.getAttribute('data-text').indexOf(t) !== -1); r.hidden = !ok; if (ok) shown++; }});
+    count.textContent = shown + ' of ' + rows.length + ' features'; empty.hidden = shown > 0;
+  }}
+  q.addEventListener('input', apply);
+  sel.addEventListener('change', function () {{ cat = sel.value; apply(); }});
+  function fromHash() {{ var h = location.hash.replace('#cat-', ''); if (h && sel.querySelector('option[value="' + h + '"]')) {{ sel.value = h; cat = h; apply(); }} }}
+  window.addEventListener('hashchange', fromHash); fromHash(); apply();
+}})();
+</script>
+"""
+    return out
 
 
 if __name__ == "__main__":

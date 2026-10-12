@@ -352,6 +352,8 @@ def generate_portfolio():
         if not real:
             blob = (i["title"] + " " + re.sub(r"<[^>]+>", " ", i.get("content") or "")).lower()
             real = ["SpinGym Stories"] if "spingym" in blob or "spin gym" in blob else ["Features"]
+        if i.get("youtube") and "Videos" not in real:
+            real.append("Videos")
         i["cats"] = real
     items.sort(key=lambda i: (i.get("date") or "0000"), reverse=True)
     def local(u):

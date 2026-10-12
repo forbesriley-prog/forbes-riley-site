@@ -39,6 +39,8 @@ if OUT.exists():
 OUT.mkdir()
 shutil.copytree(SRC / "img", OUT / "img")
 (OUT / "style.css").write_text(css)
+if (SRC / "CNAME").exists():
+    shutil.copy(SRC / "CNAME", OUT / "CNAME")  # custom domain for GitHub Pages
 
 import gen_archive
 sources = [(page.name, page.read_text()) for page in sorted((SRC / "pages").glob("*.html"))]

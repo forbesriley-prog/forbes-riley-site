@@ -249,7 +249,7 @@ def generate():
             title = H.unescape(p["title"]["rendered"])
             cs = post_cats(p)
             th = thumb(p)
-            img = f'<img src="{th}" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">' if th else '<span class="noimg"></span>'
+            img = f'<img src="{th}" alt="" loading="lazy" onerror="this.closest(\'.post-row\').classList.add(\'no-thumb\');this.remove()">' if th else '<span class="noimg"></span>'
             rows.append(
                 f'<a class="post-row" href="{POST_FILE[p["slug"]]}" data-cats="{" ".join(slugify(c) for c in cs)}" data-text="{H.escape((title + " " + text_excerpt(p, 400)).lower(), quote=True)}">'
                 f'{img}<span class="post-row-body"><span class="kicker">{H.escape(" · ".join(cs) or "Journal")} &middot; {fmt_date(p["date"])}</span>'
@@ -417,7 +417,7 @@ def generate_portfolio():
     rows = []
     for i in items:
         th = card_img(i)
-        img = f'<img src="{th}" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">' if th else '<span class="noimg"></span>'
+        img = f'<img src="{th}" alt="" loading="lazy" onerror="this.closest(\'.post-row\').classList.add(\'no-thumb\');this.remove()">' if th else '<span class="noimg"></span>'
         txt = re.sub(r"<[^>]+>", " ", i.get("content") or "")
         txt = re.sub(r"\s+", " ", H.unescape(txt)).replace("Project Description", "").strip()
         rows.append(f'<a class="post-row" href="{files[i["slug"]]}" data-cats="{" ".join(slugify(c) for c in i["cats"])}" data-text="{H.escape((i["title"] + " " + txt[:300]).lower(), quote=True)}">{img}<span class="post-row-body"><span class="kicker">{H.escape(" · ".join(i["cats"]) or "Feature")}</span><h3>{H.escape(i["title"])}</h3><p>{H.escape(txt[:160] + ("…" if len(txt) > 160 else ""))}</p></span></a>')

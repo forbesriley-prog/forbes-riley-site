@@ -358,6 +358,7 @@ def generate_portfolio():
     items = [i for i in json.load(open(pf)) if not i["title"].upper().startswith("#TEMPLATE")]
     NOISY = {"Forbes Living TV", "Infomercials", "Movies & TV", "Testimonials", "Home Shopping", "Behind the Scenes", "Innovations"}
     for i in items:
+        i["cats"] = sorted({re.sub(r"^[^A-Za-z0-9]+", "", c).strip() for c in i["cats"]} - {""})
         real = [c for c in i["cats"] if c not in NOISY]
         if not real:
             blob = (i["title"] + " " + re.sub(r"<[^>]+>", " ", i.get("content") or "")).lower()

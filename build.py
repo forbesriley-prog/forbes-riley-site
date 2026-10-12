@@ -45,6 +45,8 @@ sources = [(page.name, page.read_text()) for page in sorted((SRC / "pages").glob
 sources += sorted(gen_archive.generate().items())
 if (SRC / "postimg").exists():
     shutil.copytree(SRC / "postimg", OUT / "postimg")
+if (SRC / "thumbs").exists():
+    shutil.copytree(SRC / "thumbs", OUT / "thumbs")
 
 for name, text in sources:
     class page:  # keep the old loop's variables

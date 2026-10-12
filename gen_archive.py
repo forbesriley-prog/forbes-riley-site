@@ -342,6 +342,7 @@ def generate():
 <section class="section-tight"><div class="wrap post-list">{''.join(rows)}</div></section>
 """
     out.update(generate_portfolio())
+    out.update(generate_photos())
     return out
 
 
@@ -462,3 +463,69 @@ def generate_portfolio():
 if __name__ == "__main__":
     g = generate()
     print(len(g), "generated pages")
+
+
+def generate_photos():
+    """Photo archive: every usable image from the old site's media library, by year."""
+    from PIL import Image, ImageOps
+    base = ROOT / "src" / "postimg"
+    if not base.exists():
+        return {}
+    thumbs = ROOT / "src" / "thumbs"
+    photos = []
+    for f in sorted(base.rglob("*")):
+        if not f.is_file() or f.suffix.lower() not in (".jpg", ".jpeg", ".png", ".gif"):
+            continue
+        rel = f.relative_to(base).as_posix()
+        if "/" not in rel or not re.match(r"\d{4}/\d{2}/", rel):
+            continue
+        t = thumbs / (rel.rsplit(".", 1)[0] + ".jpg")
+        if not t.exists():
+            try:
+                im = ImageOps.exif_transpose(Image.open(f)).convert("RGB")
+                if im.width < 120 or im.height < 120:
+                    continue
+                im.thumbnail((360, 360))
+                t.parent.mkdir(parents=True, exist_ok=True)
+                im.save(t, quality=70, optimize=True)
+            except Exception:
+                continue
+        photos.append(rel)
+    byyear = {}
+    for rel in photos:
+        byyear.setdefault(rel[:4], []).append(rel)
+    years = sorted(byyear, reverse=True)
+    chips = "".join(f'<button type="button" data-f="{y}" aria-pressed="false">{y} <small>{len(byyear[y])}</small></button>' for y in years)
+    blocks = []
+    for y in years:
+        tiles = "".join(
+            f'<a class="ph" href="postimg/{rel}" target="_blank" rel="noopener" data-y="{y}" title="{H.escape(CAPTIONS.get(rel, ""))}"><img src="thumbs/{rel.rsplit(".", 1)[0]}.jpg" alt="{H.escape(CAPTIONS.get(rel, ""))}" loading="lazy" onerror="this.closest(\'a\').remove()"></a>'
+            for rel in byyear[y])
+        blocks.append(f'<h2 class="year" data-year="{y}">{y}</h2><div class="photo-wall" data-y="{y}">{tiles}</div>')
+    n = len(photos)
+    return {"photos.html": f"""<!-- title: Forbes Riley Photo Archive | desc: Every photo from the original Forbes Factor site, {n} of them, by year. | nav: journal -->
+<section class="wrap page-hero">
+  <p class="eyebrow">The Forbes Factor</p>
+  <h1>Photo archive</h1>
+  <p class="lede">Every photo from the original site, all {n} of them, newest first. Tap any picture to open it full size. Captions appear where Forbes wrote one.</p>
+</section>
+<section class="section-tight">
+  <div class="wrap">
+    <div class="filter" role="group" aria-label="Filter by year"><button type="button" data-f="all" aria-pressed="true">All years</button>{chips}</div>
+    {''.join(blocks)}
+  </div>
+</section>
+<script>
+(function () {{
+  var buttons = document.querySelectorAll('.filter button'), walls = document.querySelectorAll('.photo-wall'), years = document.querySelectorAll('.year');
+  buttons.forEach(function (b) {{
+    b.addEventListener('click', function () {{
+      var f = b.getAttribute('data-f');
+      buttons.forEach(function (x) {{ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }});
+      walls.forEach(function (w) {{ w.hidden = !(f === 'all' || w.getAttribute('data-y') === f); }});
+      years.forEach(function (y) {{ y.hidden = !(f === 'all' || y.getAttribute('data-year') === f); }});
+    }});
+  }});
+}})();
+</script>
+"""}

@@ -283,6 +283,23 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;margin:
 .lightbox iframe{width:100%;height:100%;border:0}
 .lightbox .x{position:absolute;top:20px;right:26px;color:var(--gold);font-size:34px;background:none;border:0;cursor:pointer}
 
+/* reel */
+.reel{background:radial-gradient(800px 500px at 20% 50%,#241709,#0b0b0b 65%);overflow:hidden}
+.reel .grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:center}
+.reel .hs{position:relative;max-width:380px;margin:0 auto}
+.reel .hs img{border-radius:14px;border:1px solid rgba(232,217,160,.45);box-shadow:0 40px 80px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.reel .hs:hover img{transform:rotate(0) scale(1.02)}
+.reel .hs .dust{inset:-10%;opacity:.8}
+.reel h2{font-size:clamp(28px,3.6vw,46px);text-transform:uppercase;line-height:1.1;color:var(--gold);margin:12px 0 16px}
+.reel p{color:var(--muted);font-size:18px;margin:0 0 26px}
+.vidbig{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;cursor:pointer;border:1px solid rgba(232,217,160,.3);box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.vidbig img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.vidbig:hover img{transform:scale(1.04)}
+.vidbig .p{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;background:rgba(232,217,160,.95);color:#1b1619;display:grid;place-items:center;padding-left:6px;font-size:30px;box-shadow:0 0 0 14px rgba(232,217,160,.2);animation:pulse 2s infinite;transition:transform .3s}
+.vidbig:hover .p{transform:translate(-50%,-50%) scale(1.08)}
+.vidbig .t{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;font-family:var(--display);font-size:16px;letter-spacing:.08em;color:var(--gold);background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}
+@media(max-width:900px){.reel .grid{grid-template-columns:1fr}.reel .hs{max-width:260px}}
+
 /* about */
 .about{background:var(--cream);color:var(--cream-ink);overflow:hidden}
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -360,6 +377,7 @@ footer a{color:var(--gold);text-decoration:none}
       <li><a href="#speaking">Speaking</a></li>
       <li><a href="#promise">Outcomes</a></li>
       <li><a href="#formula">Formula</a></li>
+      <li><a href="#reel">Reel</a></li>
       <li><a href="#courses">Trainings</a></li>
       <li><a href="#podcast">Podcast</a></li>
       <li><a href="#free">Free masterclass</a></li>
@@ -376,7 +394,7 @@ footer a{color:var(--gold);text-decoration:none}
       <h1 id="h1"><span class="w">Master</span> <span class="w">the</span> <span class="w">art</span> <span class="w">of</span> <span class="script w">Pitching</span></h1>
       <p class="iam">I am <b id="iam">the Queen of Pitch</b></p>
       <p class="lede"><strong>In life you don't get what you deserve. You get what you pitch for.</strong> I'm not here to motivate your audience for an hour. I'm here to hand them the one skill behind $2.5 billion in sales.</p>
-      <div class="btns"><a class="btn btn-gold" href="#book">Book Forbes to Speak</a><a class="btn btn-ghost" href="#free">Free masterclass</a></div>
+      <div class="btns"><a class="btn btn-gold" href="#book">Book Forbes to Speak</a><a class="btn btn-ghost" href="#reel" data-yt="t52E3asvjsw">&#9654;&nbsp; Watch the reel</a></div>
     </div>
     <div class="stage" data-parallax="0.08">
       <div class="glow gold"></div>
@@ -491,9 +509,11 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2">Every talk is built around one goal: your audience leaves able to do something they could not do when they walked in.</p>
     </div>
     <div class="talk-stack">
-      <article class="talk rv rv-r"><div><h3>The Secret Pitch Formula</h3><p>How to engage, excite and enroll anyone in your vision. The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs</div></div><div class="ico">E</div></article>
-      <article class="talk rv rv-r d1"><div><h3>Dream It. Believe It. Achieve It.</h3><p>You are the sum of the obstacles you overcome. From a father's unfinished dream to Broadway, to being told it would never work, to a million sold. A keynote on reinvention that ends with a plan, not a feeling.</p><div class="best">Best for: women's conferences, leadership summits, colleges, associations</div></div><div class="ico">&#10022;</div></article>
-      <article class="talk rv rv-r d2"><div><h3>Health, Wealth &amp; Happiness</h3><p>The wellness talk from the woman who introduced America to juicing and created SpinGym. Energy, mindset and the five-minute habits that hold up when life gets loud.</p><div class="best">Best for: corporate wellness, healthcare teams, fitness conventions</div></div><div class="ico">&#9829;</div></article>
+      <article class="talk rv rv-r"><div><h3>The Power of YES: How One Decision Can Change Everything</h3><p>A YES opens doors. From the pageant she didn't win to the product they said would never sell, the one decision behind every turning point in Forbes' life, and how your audience learns to make it on purpose.</p><div class="best">Best for: leadership summits, associations, women's conferences, colleges</div></div><div class="ico">1</div></article>
+      <article class="talk rv rv-r d1"><div><h3>Pitch Secrets: The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave the room.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs</div></div><div class="ico">2</div></article>
+      <article class="talk rv rv-r d2"><div><h3>The Human Advantage: Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words. They can't walk into a room. Presence, voice, story and the human connection that still closes every deal that matters.</p><div class="best">Best for: corporate events, tech and finance teams, industry conferences</div></div><div class="ico">3</div></article>
+      <article class="talk rv rv-r d3"><div><h3>Reinvent Yourself: The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold. Five careers, one person. What reinvention really costs, and the plan to do it on purpose instead of by accident.</p><div class="best">Best for: women's leadership, professionals in transition, personal-development events</div></div><div class="ico">4</div></article>
+      <article class="talk rv rv-r d4"><div><h3>The Voice of Influence: How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds. Posture, voice, story, ask: the mechanics of being heard.</p><div class="best">Best for: speakers, executives, healthcare and education leaders</div></div><div class="ico">5</div></article>
     </div>
     <div class="lists">
       <div class="rv"><h3>I speak to</h3><p>Entrepreneurs &middot; Sales teams &middot; Fortune 100 companies &middot; Women's groups &middot; Colleges &middot; Fitness and wellness conventions &middot; Healthcare teams &middot; Direct-response and home-shopping brands</p></div>
@@ -574,6 +594,22 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2">Hollywood, health and the business of the pitch. Tap an episode to watch it here.</p>
     </div>
     <div class="vids" id="vids"></div>
+  </div>
+</section>
+
+<section class="section reel" id="reel">
+  <div class="wrap grid">
+    <div class="hs rv rv-l" data-parallax="0.04">
+      <div class="dust"></div>
+      <img src="img/helms-headshot.jpg" alt="Forbes Riley headshot">
+    </div>
+    <div>
+      <p class="eyebrow rv">Meet Forbes Riley</p>
+      <h2 class="rv d1">Two minutes on stage with the Queen of Pitch</h2>
+      <p class="rv d2">Watch the keynote sizzle, then tell us about your room.</p>
+      <div class="vidbig rv d3" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg'" alt="Forbes Riley keynote sizzle reel"><div class="p">&#9654;</div><div class="t">Forbes Riley's Keynote Stage Sizzle</div></div>
+      <div class="btns rv d4" style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-gold" href="#book">Book Forbes</a><a class="btn btn-ghost" href="https://www.youtube.com/watch?v=t52E3asvjsw" target="_blank" rel="noopener">Open on YouTube</a></div>
+    </div>
   </div>
 </section>
 

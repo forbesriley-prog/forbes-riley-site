@@ -396,6 +396,29 @@ textarea{min-height:120px;resize:vertical}
 form .btn{width:100%;text-align:center;border:0;cursor:pointer}
 @media(max-width:900px){.book .grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
 
+/* ===== modern effects ===== */
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:95;opacity:.06;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>");animation:grain 1.2s steps(6) infinite;mix-blend-mode:overlay}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-1%)}80%{transform:translate(3%,3%)}}
+.cur,.cur2{position:fixed;left:0;top:0;pointer-events:none;z-index:200;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference}
+.cur{width:8px;height:8px;background:#f0d57a}
+.cur2{width:38px;height:38px;border:1.5px solid rgba(240,213,122,.9);transition:width .25s,height .25s,background .25s}
+body.hovering .cur2{width:64px;height:64px;background:rgba(240,213,122,.12)}
+@media(hover:none),(max-width:900px){.cur,.cur2{display:none}}
+.spot{position:absolute;inset:0;pointer-events:none;background:radial-gradient(520px 520px at var(--sx,-999px) var(--sy,-999px),rgba(240,213,122,.10),transparent 60%);z-index:1}
+.tilt{transform-style:preserve-3d;will-change:transform}
+.tilt .shine{position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(300px 200px at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),transparent 60%);opacity:0;transition:opacity .3s}
+.tilt:hover .shine{opacity:1}
+.chars .ch{display:inline-block;opacity:0;transform:translateY(.6em) rotate(6deg);transform-origin:bottom left}
+.pill{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);z-index:94;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(10,8,24,.75);border:1px solid rgba(240,213,122,.4);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1);color:#fff;font-size:14px;white-space:nowrap}
+.pill.on{transform:translate(-50%,0)}
+.pill img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top}
+.pill .btn{padding:10px 18px;font-size:12px}
+@media(max-width:900px){.pill span.t{display:none}.pill{right:22px;left:auto;transform:translate(0,120px)}.pill.on{transform:none}}
+.hero .stage,.hero .copy{will-change:transform,opacity}
+.gallery figure img{clip-path:inset(0 0 0 0)}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:300}
+
 /* footer + chat */
 footer{background:#05040f;border-top:1px solid rgba(232,217,160,.12);padding:50px 0;text-align:center;color:var(--muted);font-size:14px}
 footer img{height:54px;width:auto;margin:0 auto 18px}
@@ -409,9 +432,15 @@ footer a{color:var(--gold);text-decoration:none}
 .chat .fab{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f0dfa3,#c99a3a);display:grid;place-items:center;color:#1b1619;font-size:22px;box-shadow:0 14px 40px rgba(201,154,58,.45);text-decoration:none;transition:transform .3s}
 .chat .fab:hover{transform:scale(1.08)}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 </head>
 <body>
 <div id="progress"></div>
+<div class="grain" aria-hidden="true"></div><div class="cur" aria-hidden="true"></div><div class="cur2" aria-hidden="true"></div>
+<div class="pill" id="pill"><img src="img/helms-headshot.jpg" alt=""><span class="t">Bring Forbes to your stage</span><a class="btn btn-gold" href="#book">Book Forbes</a></div>
+<canvas id="confetti"></canvas>
 <nav class="nav" id="nav">
   <div class="wrap">
     <a href="#top"><img src="img/logo-signature-gold.png" alt="Forbes Riley"></a>
@@ -463,7 +492,7 @@ footer a{color:var(--gold);text-decoration:none}
 
 <section class="seen"><div class="wrap"><span class="lbl">As seen on</span><ul><li>ESPN</li><li>TLC</li><li>HSN</li><li>QVC</li><li>FOX</li><li>Discovery</li><li>ABC Family</li><li>WEtv</li><li>TEDx</li></ul></div></section>
 
-<section class="section reel" id="reel">
+<section class="section reel dark" id="reel">
   <div class="wrap grid">
     <div class="hs rv rv-l" data-parallax="0.04">
       <div class="dust"></div>
@@ -553,20 +582,20 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </section>
 
-<section class="section talks" id="speaking">
+<section class="section talks dark" id="speaking">
   <img class="peek" src="img/cut/black-crossed.png" alt="">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">Keynotes</p>
-      <h2 class="rv d1">What I bring to your stage</h2>
+      <h2 class="rv d1 chars">What I bring to your stage</h2>
       <p class="rv d2">Every talk is built around one goal: your audience leaves able to do something they could not do when they walked in.</p>
     </div>
     <div class="talk-stack">
-      <article class="talk rv rv-r"><div><h3>The Power of YES: How One Decision Can Change Everything</h3><p>A YES opens doors. From the pageant she didn't win to the product they said would never sell, the one decision behind every turning point in Forbes' life, and how your audience learns to make it on purpose.</p><div class="best">Best for: leadership summits, associations, women's conferences, colleges</div></div><div class="ico">1</div></article>
-      <article class="talk rv rv-r d1"><div><h3>Pitch Secrets: The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave the room.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs</div></div><div class="ico">2</div></article>
-      <article class="talk rv rv-r d2"><div><h3>The Human Advantage: Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words. They can't walk into a room. Presence, voice, story and the human connection that still closes every deal that matters.</p><div class="best">Best for: corporate events, tech and finance teams, industry conferences</div></div><div class="ico">3</div></article>
-      <article class="talk rv rv-r d3"><div><h3>Reinvent Yourself: The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold. Five careers, one person. What reinvention really costs, and the plan to do it on purpose instead of by accident.</p><div class="best">Best for: women's leadership, professionals in transition, personal-development events</div></div><div class="ico">4</div></article>
-      <article class="talk rv rv-r d4"><div><h3>The Voice of Influence: How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds. Posture, voice, story, ask: the mechanics of being heard.</p><div class="best">Best for: speakers, executives, healthcare and education leaders</div></div><div class="ico">5</div></article>
+      <article class="talk tilt rv rv-r"><div><h3>The Power of YES: How One Decision Can Change Everything</h3><p>A YES opens doors. From the pageant she didn't win to the product they said would never sell, the one decision behind every turning point in Forbes' life, and how your audience learns to make it on purpose.</p><div class="best">Best for: leadership summits, associations, women's conferences, colleges</div></div><div class="ico">1</div></article>
+      <article class="talk tilt rv rv-r d1"><div><h3>Pitch Secrets: The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave the room.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs</div></div><div class="ico">2</div></article>
+      <article class="talk tilt rv rv-r d2"><div><h3>The Human Advantage: Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words. They can't walk into a room. Presence, voice, story and the human connection that still closes every deal that matters.</p><div class="best">Best for: corporate events, tech and finance teams, industry conferences</div></div><div class="ico">3</div></article>
+      <article class="talk tilt rv rv-r d3"><div><h3>Reinvent Yourself: The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold. Five careers, one person. What reinvention really costs, and the plan to do it on purpose instead of by accident.</p><div class="best">Best for: women's leadership, professionals in transition, personal-development events</div></div><div class="ico">4</div></article>
+      <article class="talk tilt rv rv-r d4"><div><h3>The Voice of Influence: How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds. Posture, voice, story, ask: the mechanics of being heard.</p><div class="best">Best for: speakers, executives, healthcare and education leaders</div></div><div class="ico">5</div></article>
     </div>
     <div class="lists">
       <div class="rv"><h3>I speak to</h3><p>Entrepreneurs &middot; Sales teams &middot; Fortune 100 companies &middot; Women's groups &middot; Colleges &middot; Fitness and wellness conventions &middot; Healthcare teams &middot; Direct-response and home-shopping brands</p></div>
@@ -588,7 +617,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">The promise</p>
-      <h2 class="rv d1">Here's what I promise every room I walk into</h2>
+      <h2 class="rv d1 chars">Here's what I promise every room I walk into</h2>
     </div>
     <p class="intro rv d2">I take a stage seriously. When someone gives me their audience, I don't show up to entertain. I show up to put a skill in their hands that is still there when the event is over and the phone rings on Monday.</p>
     <div class="arc">
@@ -612,11 +641,11 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </section>
 
-<section class="section framework" id="formula">
+<section class="section framework dark" id="formula">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">The formula</p>
-      <h2 class="rv d1">The formula behind everything I teach</h2>
+      <h2 class="rv d1 chars">The formula behind everything I teach</h2>
       <p class="rv d2">It wasn't drawn on a whiteboard. It was built on live television with a clock running and a number on the screen. Tap a pillar.</p>
     </div>
     <div class="pillars">
@@ -628,31 +657,31 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </section>
 
-<section class="section courses" id="courses">
+<section class="section courses dark" id="courses">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">Trainings</p>
-      <h2 class="rv d1">Keep going after the keynote</h2>
+      <h2 class="rv d1 chars">Keep going after the keynote</h2>
       <p class="rv d2">Every path starts with the free masterclass. From there, pick the depth your people need.</p>
     </div>
     <div class="rail" id="rail">
-      <div class="course rv"><span class="num">01</span><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div>
-      <div class="course rv d1"><span class="num">02</span><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A modern, impactful way to communicate your value in under 30 seconds. It creates an emotional connection, shows impact and leaves your audience wanting more.</p><a href="https://pitchsecretstraining.com/ep2sm" target="_blank" rel="noopener">Read more</a></div>
-      <div class="course rv d2"><span class="num">03</span><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div>
-      <div class="course rv d3"><span class="num">04</span><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div>
-      <div class="course rv d4"><span class="num">05</span><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="#book">Read more</a></div>
-      <div class="course rv d5"><span class="num">06</span><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div>
-      <div class="course rv d5"><span class="num">07</span><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div>
+      <div class="course tilt rv"><span class="num">01</span><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div>
+      <div class="course tilt rv d1"><span class="num">02</span><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A modern, impactful way to communicate your value in under 30 seconds. It creates an emotional connection, shows impact and leaves your audience wanting more.</p><a href="https://pitchsecretstraining.com/ep2sm" target="_blank" rel="noopener">Read more</a></div>
+      <div class="course tilt rv d2"><span class="num">03</span><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div>
+      <div class="course tilt rv d3"><span class="num">04</span><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div>
+      <div class="course tilt rv d4"><span class="num">05</span><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="#book">Read more</a></div>
+      <div class="course tilt rv d5"><span class="num">06</span><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div>
+      <div class="course tilt rv d5"><span class="num">07</span><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div>
     </div>
     <div class="rail-nav"><button id="rl" aria-label="Scroll left">&#8592;</button><button id="rr" aria-label="Scroll right">&#8594;</button></div>
   </div>
 </section>
 
-<section class="section podcast" id="podcast">
+<section class="section podcast dark" id="podcast">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">Forbes Factor Podcast</p>
-      <h2 class="rv d1">Five million downloads and counting</h2>
+      <h2 class="rv d1 chars">Five million downloads and counting</h2>
       <p class="rv d2">Hollywood, health and the business of the pitch. Tap an episode to watch it here.</p>
     </div>
     <div class="vids" id="vids"></div>
@@ -704,7 +733,7 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </section>
 
-<section class="section book" id="book">
+<section class="section book dark" id="book">
   <div class="wrap grid">
     <div>
       <p class="eyebrow rv">Book Forbes</p>
@@ -798,7 +827,7 @@ footer a{color:var(--gold);text-decoration:none}
 
   /* podcast */
   var eps=[['kKqUF2d_zeU','Vivica A. Fox on her iconic career and Hollywood secrets'],['oycsjsxgpX4','Financial freedom and the success mindset with Sharon Lechter'],['luJN9LI5YoU','Mastering confidence and style with Emmy winner Brenda Cooper'],['Roo8yYJEXYU','Transform adversity into triumph with Cheryl Hunter'],['qBFyzuNFizo','Behind the scenes with award-winning producer Rob Rosen'],['FqtRuT4Iztw','Chaos to clarity: Richie McGinniss on the front lines'],['bGQ2wO-mGAk',"Business, innovation and success with Paul O'Mahony"],['ySYpNNmVZUU','Balancing hormones naturally with Justin Hai'],['AZeClNFStiA','Forbes Living: your guide to health, fitness and more']];
-  var vids=$('#vids');eps.forEach(function(e,i){var d=document.createElement('div');d.className='vid rv d'+(i%3+1);d.dataset.yt=e[0];d.innerHTML='<img src="https://i.ytimg.com/vi/'+e[0]+'/hqdefault.jpg" alt=""><div class="p">&#9654;</div><div class="t">'+e[1]+'</div>';vids.appendChild(d);io.observe(d)});
+  var vids=$('#vids');eps.forEach(function(e,i){var d=document.createElement('div');d.className='vid tilt rv d'+(i%3+1);d.dataset.yt=e[0];d.innerHTML='<img src="https://i.ytimg.com/vi/'+e[0]+'/hqdefault.jpg" alt=""><div class="p">&#9654;</div><div class="t">'+e[1]+'</div>';vids.appendChild(d);io.observe(d)});
   var lb=$('#lb'),lbf=$('#lbf');
   function open(id){lbf.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';lb.classList.add('on');document.body.style.overflow='hidden'}
   function close(){lb.classList.remove('on');lbf.src='';document.body.style.overflow=''}
@@ -824,6 +853,56 @@ footer a{color:var(--gold);text-decoration:none}
     var body=['Name: '+g('name'),'Event date: '+g('date'),'Organization / event: '+g('org'),'Audience size: '+g('size'),'Event type: '+g('type'),'Email: '+g('email'),'','About the audience:',g('msg')].join('\n');
     location.href='mailto:support@teamforbesriley.com?subject='+encodeURIComponent('Speaking inquiry: '+g('org'))+'&body='+encodeURIComponent(body)});
 })();
+
+/* ===== modern effects ===== */
+window.addEventListener('load',function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover) and (pointer:fine)').matches, $$=function(q,c){return [].slice.call((c||document).querySelectorAll(q))};
+  /* smooth inertia scroll */
+  var lenis=null;
+  if(!reduce && window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});
+    function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+    $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)&&!a.dataset.yt){e.preventDefault();lenis.scrollTo(id,{offset:-70})}})});}
+  /* gsap scroll cinema */
+  if(!reduce && window.gsap && window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);
+    if(lenis){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}
+    /* hero: Forbes and the words drift apart and fade as you scroll */
+    gsap.to('.hero .stage',{yPercent:-18,scale:1.08,opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    gsap.to('.hero .copy',{yPercent:30,opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'40% top',end:'bottom top',scrub:true}});
+    gsap.to('.herovid',{scale:1.15,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    /* split headings into characters */
+    $$('.chars').forEach(function(h){var t=h.textContent;h.innerHTML=t.split(' ').map(function(w){return '<span style="display:inline-block;white-space:nowrap">'+w.split('').map(function(c){return '<span class="ch">'+c+'</span>'}).join('')+'</span>'}).join(' ');
+      gsap.to(h.querySelectorAll('.ch'),{opacity:1,y:0,rotate:0,duration:.7,ease:'back.out(1.6)',stagger:.018,scrollTrigger:{trigger:h,start:'top 85%'}})});
+    /* images unveil */
+    $$('.gallery figure img,.vidbig img,.reel .hs img').forEach(function(im){gsap.from(im,{clipPath:'inset(0 100% 0 0)',duration:1.1,ease:'power3.out',scrollTrigger:{trigger:im,start:'top 88%'}})});
+    /* outcomes pop in a ring */
+    gsap.from('.arc .node .dot',{scale:0,duration:.6,ease:'back.out(2)',stagger:.12,scrollTrigger:{trigger:'.arc',start:'top 70%'}});
+    /* phone floats */
+    gsap.to('.phone',{y:-14,duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1});
+    /* courses: cards slide in from the right */
+    gsap.from('.course',{x:120,opacity:0,duration:.9,ease:'power3.out',stagger:.08,scrollTrigger:{trigger:'.courses',start:'top 70%'}});
+  }
+  /* 3D tilt + shine */
+  if(fine && !reduce){$$('.tilt').forEach(function(el){var sh=document.createElement('i');sh.className='shine';el.appendChild(sh);
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;el.style.transform='perspective(900px) rotateX('+((.5-y)*8)+'deg) rotateY('+((x-.5)*10)+'deg) translateY(-6px)';el.style.setProperty('--mx',(x*100)+'%');el.style.setProperty('--my',(y*100)+'%')});
+    el.addEventListener('mouseleave',function(){el.style.transform=''})});}
+  /* magnetic buttons */
+  if(fine && !reduce){$$('.btn').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})});}
+  /* gold cursor */
+  if(fine){var c1=document.querySelector('.cur'),c2=document.querySelector('.cur2'),mx=0,my=0,rx=0,ry=0;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px';document.body.classList.toggle('hovering',!!e.target.closest('a,button,.vid,.vidbig,.cover,.pillar,.tilt'))});
+    (function f(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(f)})();}
+  /* spotlight follows the mouse on dark sections */
+  if(fine){$$('section.dark').forEach(function(sec){var sp=document.createElement('div');sp.className='spot';sec.insertBefore(sp,sec.firstChild);sec.addEventListener('mousemove',function(e){var r=sec.getBoundingClientRect();sp.style.setProperty('--sx',(e.clientX-r.left)+'px');sp.style.setProperty('--sy',(e.clientY-r.top)+'px')})});}
+  /* floating book pill */
+  var pill=document.getElementById('pill'),book=document.getElementById('book'),hero=document.querySelector('.hero');
+  function pillCheck(){var y=scrollY,past=y>hero.offsetHeight*.8,nearForm=book.getBoundingClientRect().top<innerHeight*.7;pill.classList.toggle('on',past&&!nearForm)}
+  addEventListener('scroll',pillCheck,{passive:true});pillCheck();
+  /* gold confetti on send */
+  var cv=document.getElementById('confetti'),cx=cv.getContext('2d'),parts=[];
+  function burst(){cv.width=innerWidth;cv.height=innerHeight;parts=[];for(var i=0;i<160;i++)parts.push({x:innerWidth/2,y:innerHeight*.6,vx:(Math.random()-.5)*16,vy:-Math.random()*16-4,r:Math.random()*6+3,a:Math.random()*6,c:['#f6e3a1','#d4a73c','#f0d57a','#a04870','#fff'][i%5]});
+    (function step(){cx.clearRect(0,0,cv.width,cv.height);var alive=false;parts.forEach(function(p){p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.a+=.2;if(p.y<cv.height+20){alive=true;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);cx.restore()}});if(alive)requestAnimationFrame(step);else cx.clearRect(0,0,cv.width,cv.height)})()}
+  document.getElementById('bookform').addEventListener('submit',function(){if(!reduce)burst()});
+});
 </script>
 </body>
 </html>

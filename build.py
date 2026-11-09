@@ -39,6 +39,8 @@ if OUT.exists():
 OUT.mkdir()
 shutil.copytree(SRC / "img", OUT / "img")
 (OUT / "style.css").write_text(css)
+(OUT / "speak").mkdir(exist_ok=True)
+(OUT / "speak" / "index.html").write_text('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/speak.html"><title>Forbes Riley | Speaker</title><a href="/speak.html">Forbes Riley speaker page</a>')  # short address /speak
 for extra in sorted((SRC / "standalone").glob("*.html")):  # self-contained pages (own head/nav)
     shutil.copy(extra, OUT / extra.name)
 if (SRC / "CNAME").exists():

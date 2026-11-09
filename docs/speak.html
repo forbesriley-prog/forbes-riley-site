@@ -115,6 +115,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .metrics b{display:block;font-family:var(--body);font-weight:700;font-size:clamp(30px,3.4vw,46px);background:linear-gradient(180deg,#b05080,#7a2a58);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 .metrics span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-top:8px}
 .metrics li+li{border-left:1px solid rgba(154,115,32,.3)}
+.metrics li{position:relative;cursor:default}
+.metrics .tip{position:absolute;left:50%;top:100%;transform:translate(-50%,6px);background:#2a0f2a;color:#fff;font-size:12px;font-style:normal;padding:8px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:5}
+.metrics li:hover .tip{opacity:1;transform:translate(-50%,0)}
 @media(max-width:900px){.metrics ul{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.metrics ul{grid-template-columns:repeat(2,1fr)}}
 
@@ -233,6 +236,14 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .talk h3{font-size:28px;color:var(--gold);line-height:1.15;margin-bottom:8px;padding-bottom:14px;border-bottom:1px solid rgba(232,217,160,.2)}
 .talk p{color:#d9d1c0;margin:14px 0 16px}
 .talk .best{font-size:14px;color:var(--muted);font-style:italic}
+.talk{cursor:pointer}
+.talk .more{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.2,.8,.2,1)}
+.talk.open .more{max-height:320px}
+.talk .more ul{margin:16px 0 14px;padding-left:18px;color:#f1e9f5;font-size:15px}
+.talk .more li{margin:4px 0}
+.talk .more .btn{padding:10px 18px;font-size:12px}
+.talk .hint{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin-top:12px}
+.talk.open .hint{display:none}
 .talk .ico{width:70px;height:70px;border-radius:50%;border:1px solid rgba(232,217,160,.35);display:grid;place-items:center;color:var(--gold);font-family:var(--display);font-size:26px;background:rgba(0,0,0,.4);align-self:start}
 .lists{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:60px 0 0 auto;max-width:900px}
 .lists div{border-left:2px solid var(--gold-dark);padding-left:22px}
@@ -264,6 +275,33 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 @media(max-width:1000px){.arc{display:none}.outcomes-m{display:grid;grid-template-columns:1fr;gap:16px}.outcomes-m .node{position:static;width:auto;display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start;text-align:left}.outcomes-m .dot{width:72px;height:72px;font-size:24px}.promise .mcut{display:block;height:auto;width:min(86vw,360px);margin:30px auto 0;mask-image:linear-gradient(180deg,#000 85%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 85%,transparent)}}
 .promise .mcut{display:none}
 
+.arc .node{cursor:pointer;transition:opacity .4s}
+.arc.has-active .node:not(.on){opacity:.45}
+.arc .node.on .dot{background:linear-gradient(135deg,#f6e3a1,#d4a73c 55%,#f0d57a);color:#2a0f2a;transform:scale(1.14);box-shadow:0 0 0 10px rgba(240,213,122,.22),0 14px 30px rgba(0,0,0,.3)}
+.arc .node .dot:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(240,213,122,.6);opacity:0;transform:scale(.8)}
+.arc .node.on .dot:after{animation:ringout 1.6s ease-out infinite}
+@keyframes ringout{0%{opacity:.9;transform:scale(.8)}100%{opacity:0;transform:scale(1.5)}}
+.arc .node .dot{position:relative}
+.arc svg .arcpath{stroke-dasharray:6 8}
+.arc svg .beam{stroke:#d4a73c;stroke-width:2;stroke-dasharray:4 6;opacity:0;transition:opacity .4s}
+.arc.has-active svg .beam{opacity:.9;animation:beamdash .8s linear infinite}
+@keyframes beamdash{to{stroke-dashoffset:-20}}
+.arc .detail{position:absolute;left:50%;bottom:30px;transform:translate(-50%,20px);width:min(520px,90%);background:rgba(10,8,24,.88);color:#fff;border:1px solid rgba(240,213,122,.45);border-radius:16px;padding:22px 26px;z-index:5;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s;backdrop-filter:blur(10px);text-align:center}
+.arc.has-active .detail{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.arc .detail .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.arc .detail h3{color:#fff;font-size:22px;margin:6px 0 8px}
+.arc .detail p{color:#e9dff0;font-size:15px;margin:0 0 14px}
+.arc .detail .btn{padding:10px 18px;font-size:12px}
+.arc .cut{transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .5s}
+.arc.has-active .cut{filter:drop-shadow(0 20px 30px rgba(0,0,0,.25)) brightness(1.05)}
+.outcomes-m .node{cursor:pointer}.outcomes-m .node.on .dot{background:linear-gradient(135deg,#f6e3a1,#d4a73c);color:#2a0f2a}
+.outcomes-m .node p{max-height:3em;overflow:hidden;transition:max-height .5s}.outcomes-m .node.on p{max-height:12em}
+.arc .progress{position:absolute;left:50%;top:-40px;transform:translateX(-50%);display:flex;gap:8px}
+.arc .progress i{width:34px;height:3px;background:rgba(160,72,112,.25);border-radius:2px;overflow:hidden}
+.arc .progress i b{display:block;height:100%;width:0;background:var(--gold-deep)}
+.arc .progress i.on b{animation:fillbar 4.5s linear forwards}
+@keyframes fillbar{to{width:100%}}
+
 /* formula */
 .framework{background:linear-gradient(180deg,#07061a,#6b1f52);position:relative;overflow:hidden}
 .framework:before{content:"";position:absolute;inset:0;background:url(img/h-stage-purple.jpg) center/cover;opacity:.14;filter:grayscale(1)}
@@ -279,6 +317,19 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .pillar.open .more,.pillar:hover .more{max-height:140px;margin-top:14px}
 .framework .note{text-align:center;max-width:780px;margin:50px auto 0;font-family:var(--serif);font-size:22px;color:var(--gold)}
 @media(max-width:800px){.pillars{grid-template-columns:1fr}}
+
+.hooktool{max-width:900px;margin:60px auto 0;border:1px solid rgba(240,213,122,.35);border-radius:18px;padding:36px 40px;background:rgba(10,8,24,.6);backdrop-filter:blur(8px);text-align:center;position:relative;z-index:2}
+.hooktool h3{font-size:30px;color:var(--gold);margin:8px 0 6px}
+.hooktool .hk-head p{color:var(--muted);margin:0}
+.hk-form{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;margin:26px 0 18px;font-size:18px;color:#fff}
+.hk-form label{display:flex;align-items:center;gap:10px}
+.hk-form input{width:230px;background:transparent;border:0;border-bottom:2px solid rgba(240,213,122,.5);color:var(--gold);font:600 18px var(--body);padding:6px 4px;border-radius:0}
+.hk-form input:focus{outline:none;border-color:var(--gold);box-shadow:none}
+.hk-out{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.4vw,30px);color:#fff;line-height:1.35;min-height:2.7em;padding:18px 22px;border-radius:12px;background:linear-gradient(135deg,rgba(107,31,82,.6),rgba(26,12,46,.6));margin-bottom:18px;transition:transform .3s}
+.hk-out.pop{animation:popout .5s}
+@keyframes popout{50%{transform:scale(1.03)}}
+.hk-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+@media(max-width:700px){.hooktool{padding:26px 20px}.hk-form input{width:100%}.hk-form label{width:100%;flex-direction:column;align-items:stretch}}
 
 /* courses */
 .courses{background:linear-gradient(180deg,#6b1f52,#07061a);overflow:hidden}
@@ -480,12 +531,12 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="metrics">
   <div class="wrap">
     <ul>
-      <li class="rv"><b data-count="2.5" data-prefix="$" data-suffix="B">$2.5B</b><span>In sales</span></li>
-      <li class="rv d1"><b data-count="125" data-suffix="K">125K</b><span>Students</span></li>
-      <li class="rv d2"><b data-count="4" data-suffix="M">4M</b><span>Social followers</span></li>
-      <li class="rv d3"><b data-count="5" data-suffix="M">5M</b><span>Podcast downloads</span></li>
-      <li class="rv d4"><b data-count="180" data-suffix="+">180+</b><span>National infomercials</span></li>
-      <li class="rv d5"><b data-count="1" data-suffix="M+">1M+</b><span>SpinGyms sold</span></li>
+      <li class="rv"><b data-count="2.5" data-prefix="$" data-suffix="B">$2.5B</b><span>In sales</span><em class="tip">Across 180+ national campaigns in 80 countries</em></li>
+      <li class="rv d1"><b data-count="125" data-suffix="K">125K</b><span>Students</span><em class="tip">Through the Pitch Secrets Masterclass and trainings</em></li>
+      <li class="rv d2"><b data-count="4" data-suffix="M">4M</b><span>Social followers</span><em class="tip">Across Instagram, Facebook and YouTube</em></li>
+      <li class="rv d3"><b data-count="5" data-suffix="M">5M</b><span>Podcast downloads</span><em class="tip">Forbes Factor Podcast</em></li>
+      <li class="rv d4"><b data-count="180" data-suffix="+">180+</b><span>National infomercials</span><em class="tip">Jack LaLanne Power Juicer, HealthMaster and more</em></li>
+      <li class="rv d5"><b data-count="1" data-suffix="M+">1M+</b><span>SpinGyms sold</span><em class="tip">Launched on Discovery's PitchMen after being told it would never work</em></li>
     </ul>
   </div>
 </section>
@@ -591,11 +642,11 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2">Every talk is built around one goal: your audience leaves able to do something they could not do when they walked in.</p>
     </div>
     <div class="talk-stack">
-      <article class="talk tilt rv rv-r"><div><h3>The Power of YES: How One Decision Can Change Everything</h3><p>A YES opens doors. From the pageant she didn't win to the product they said would never sell, the one decision behind every turning point in Forbes' life, and how your audience learns to make it on purpose.</p><div class="best">Best for: leadership summits, associations, women's conferences, colleges</div></div><div class="ico">1</div></article>
-      <article class="talk tilt rv rv-r d1"><div><h3>Pitch Secrets: The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave the room.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs</div></div><div class="ico">2</div></article>
-      <article class="talk tilt rv rv-r d2"><div><h3>The Human Advantage: Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words. They can't walk into a room. Presence, voice, story and the human connection that still closes every deal that matters.</p><div class="best">Best for: corporate events, tech and finance teams, industry conferences</div></div><div class="ico">3</div></article>
-      <article class="talk tilt rv rv-r d3"><div><h3>Reinvent Yourself: The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold. Five careers, one person. What reinvention really costs, and the plan to do it on purpose instead of by accident.</p><div class="best">Best for: women's leadership, professionals in transition, personal-development events</div></div><div class="ico">4</div></article>
-      <article class="talk tilt rv rv-r d4"><div><h3>The Voice of Influence: How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds. Posture, voice, story, ask: the mechanics of being heard.</p><div class="best">Best for: speakers, executives, healthcare and education leaders</div></div><div class="ico">5</div></article>
+      <article class="talk tilt rv rv-r"><div><h3>The Power of YES: How One Decision Can Change Everything</h3><p>A YES opens doors. From the pageant she didn't win to the product they said would never sell, the one decision behind every turning point in Forbes' life, and how your audience learns to make it on purpose.</p><div class="best">Best for: leadership summits, associations, women's conferences, colleges<div class="more"><ul><li>The one decision behind every turning point, told through her own story</li><li>A room-wide YES exercise your people will repeat for weeks</li><li>The reframe from "waiting to be picked" to "pitching for it"</li></ul><a class="btn btn-gold req" href="#book" data-talk="The Power of YES: How One Decision Can Change Everything">Request this keynote</a></div><div class="hint">Tap for what your audience gets &darr;</div></div></div><div class="ico">1</div></article>
+      <article class="talk tilt rv rv-r d1"><div><h3>Pitch Secrets: The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales. Your audience pitches out loud before they leave the room.</p><div class="best">Best for: sales teams, founders, conferences, corporate kick-offs<div class="more"><ul><li>The 7-second hook, written and said out loud in the room</li><li>The three pitch patterns behind $2.5 billion in sales</li><li>Why you sound salesy and the exact fix</li><li>Live hot-seat coaching from the stage</li></ul><a class="btn btn-gold req" href="#book" data-talk="Pitch Secrets: The Art of Getting to YES">Request this keynote</a></div><div class="hint">Tap for what your audience gets &darr;</div></div></div><div class="ico">2</div></article>
+      <article class="talk tilt rv rv-r d2"><div><h3>The Human Advantage: Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words. They can't walk into a room. Presence, voice, story and the human connection that still closes every deal that matters.</p><div class="best">Best for: corporate events, tech and finance teams, industry conferences<div class="more"><ul><li>What a machine can never do in a room</li><li>Presence, voice and story as the new competitive edge</li><li>A pitch rebuilt around the human on the other side</li></ul><a class="btn btn-gold req" href="#book" data-talk="The Human Advantage: Why AI Can't Replace the Power of YOU">Request this keynote</a></div><div class="hint">Tap for what your audience gets &darr;</div></div></div><div class="ico">3</div></article>
+      <article class="talk tilt rv rv-r d3"><div><h3>Reinvent Yourself: The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold. Five careers, one person. What reinvention really costs, and the plan to do it on purpose instead of by accident.</p><div class="best">Best for: women's leadership, professionals in transition, personal-development events<div class="more"><ul><li>Five careers, one person: what reinvention really costs</li><li>The limiting belief audit, done live</li><li>A plan to pivot on purpose, not by accident</li></ul><a class="btn btn-gold req" href="#book" data-talk="Reinvent Yourself: The Space Between Who You Were and Who You Become">Request this keynote</a></div><div class="hint">Tap for what your audience gets &darr;</div></div></div><div class="ico">4</div></article>
+      <article class="talk tilt rv rv-r d4"><div><h3>The Voice of Influence: How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds. Posture, voice, story, ask: the mechanics of being heard.</p><div class="best">Best for: speakers, executives, healthcare and education leaders<div class="more"><ul><li>Posture, voice, story, ask: the mechanics of being heard</li><li>Ninety seconds that hold a stranger's attention</li><li>How executives stop informing and start enrolling</li></ul><a class="btn btn-gold req" href="#book" data-talk="The Voice of Influence: How to Make People Listen, Believe, and Take Action">Request this keynote</a></div><div class="hint">Tap for what your audience gets &darr;</div></div></div><div class="ico">5</div></article>
     </div>
     <div class="lists">
       <div class="rv"><h3>I speak to</h3><p>Entrepreneurs &middot; Sales teams &middot; Fortune 100 companies &middot; Women's groups &middot; Colleges &middot; Fitness and wellness conventions &middot; Healthcare teams &middot; Direct-response and home-shopping brands</p></div>
@@ -620,14 +671,16 @@ footer a{color:var(--gold);text-decoration:none}
       <h2 class="rv d1 chars">Here's what I promise every room I walk into</h2>
     </div>
     <p class="intro rv d2">I take a stage seriously. When someone gives me their audience, I don't show up to entertain. I show up to put a skill in their hands that is still there when the event is over and the phone rings on Monday.</p>
-    <div class="arc">
-      <svg viewBox="0 0 1100 780" preserveAspectRatio="none"><path d="M110 490 C 180 280, 400 50, 550 50 C 700 50, 920 280, 990 490"/></svg>
+    <div class="arc" id="arc">
+      <svg viewBox="0 0 1100 780" preserveAspectRatio="none"><path class="arcpath" d="M110 490 C 180 280, 400 50, 550 50 C 700 50, 920 280, 990 490"/><line class="beam" x1="550" y1="560" x2="550" y2="560"/></svg>
+      <div class="detail" id="detail"><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p><a class="btn btn-dark" href="#book">Book this for my room</a></div>
       <div class="glow gold"></div><div class="dust"></div>
-      <div class="node n1 rv rv-l"><div class="dot">1</div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div>
-      <div class="node n2 rv rv-l d1"><div class="dot">2</div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason. Everyone says theirs out loud.</p></div>
-      <div class="node n3 rv d2"><div class="dot">3</div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak. Posture first, feeling second.</p></div>
-      <div class="node n4 rv rv-r d1"><div class="dot">4</div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>The shift from pushing to inviting. They stop apologising for the ask.</p></div>
-      <div class="node n5 rv rv-r"><div class="dot">5</div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>A pitch is a performance. We rehearse it live, with coaching, so it's theirs.</p></div>
+      <div class="node n1 rv data-i="0" data-title="A 7-second hook" data-text="Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open." tabindex="0" role="button" aria-label="Outcome 1: A 7-second hook" rv-l"><div class="dot">1</div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div>
+      <div class="node n2 rv data-i="1" data-title="Their WHY in one sentence" data-text="Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands." tabindex="0" role="button" aria-label="Outcome 2: Their WHY in one sentence" rv-l d1"><div class="dot">2</div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason. Everyone says theirs out loud.</p></div>
+      <div class="node n3 rv data-i="2" data-title="Confidence as posture" data-text="Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen." tabindex="0" role="button" aria-label="Outcome 3: Confidence as posture" d2"><div class="dot">3</div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak. Posture first, feeling second.</p></div>
+      <div class="node n4 rv data-i="3" data-title="No more sounding salesy" data-text="The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling." tabindex="0" role="button" aria-label="Outcome 4: No more sounding salesy" rv-r d1"><div class="dot">4</div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>The shift from pushing to inviting. They stop apologising for the ask.</p></div>
+      <div class="node n5 rv data-i="4" data-title="Reps before they leave" data-text="A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open." tabindex="0" role="button" aria-label="Outcome 5: Reps before they leave" rv-r"><div class="dot">5</div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>A pitch is a performance. We rehearse it live, with coaching, so it's theirs.</p></div>
+      <div class="progress" id="arcprog"></div>
       <img class="cut rv rv-s d2" src="img/cut/pointing.png" alt="Forbes Riley pointing up">
     </div>
     <div class="outcomes-m">
@@ -654,6 +707,12 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="pillar rv d2"><div class="letter">E</div><h3>Enroll</h3><p>The ask, the objections and the close, said with your shoulders back. A YES opens doors.</p><div class="more">"You don't get what you deserve. You get what you pitch for."</div></div>
     </div>
     <p class="note rv">This is not a motivational formula. It is a selling formula, tested on 180 national campaigns and taught to 125,000 students.</p>
+    <div class="hooktool rv" id="hooktool">
+      <div class="hk-head"><p class="eyebrow">Try it</p><h3>Build your 7-second hook</h3><p>Three blanks. Forbes' structure. Say the result out loud.</p></div>
+      <div class="hk-form"><label>I help <input id="hk-who" placeholder="busy founders" maxlength="40"></label><label>who want <input id="hk-want" placeholder="to close more deals" maxlength="50"></label><label>but <input id="hk-but" placeholder="freeze when they have to pitch" maxlength="60"></label></div>
+      <div class="hk-out" id="hk-out">Your hook appears here.</div>
+      <div class="hk-btns"><button class="btn btn-gold" id="hk-copy" type="button">Copy my hook</button><a class="btn btn-ghost" href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Learn the full formula free</a></div>
+    </div>
   </div>
 </section>
 
@@ -852,6 +911,42 @@ footer a{color:var(--gold);text-decoration:none}
   $('#bookform').addEventListener('submit',function(e){e.preventDefault();var f=this,g=function(id){return (f.elements[id].value||'').trim()};
     var body=['Name: '+g('name'),'Event date: '+g('date'),'Organization / event: '+g('org'),'Audience size: '+g('size'),'Event type: '+g('type'),'Email: '+g('email'),'','About the audience:',g('msg')].join('\n');
     location.href='mailto:support@teamforbesriley.com?subject='+encodeURIComponent('Speaking inquiry: '+g('org'))+'&body='+encodeURIComponent(body)});
+})();
+
+/* ===== interactions ===== */
+(function(){
+  var $=function(q,c){return (c||document).querySelector(q)},$$=function(q,c){return [].slice.call((c||document).querySelectorAll(q))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* outcomes ring */
+  var arc=$('#arc'),nodes=$$('#arc .node'),detail=$('#detail'),beam=$('#arc .beam'),prog=$('#arcprog'),cur=-1,timer;
+  if(arc){nodes.forEach(function(n,i){var b=document.createElement('i');b.innerHTML='<b></b>';b.onclick=function(){set(i);restart()};prog.appendChild(b);
+      n.addEventListener('click',function(){set(i);restart()});n.addEventListener('mouseenter',function(){set(i);clearInterval(timer)});n.addEventListener('mouseleave',restart);
+      n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();set(i);restart()}})});
+    function set(i){cur=i;arc.classList.add('has-active');nodes.forEach(function(n,k){n.classList.toggle('on',k===i)});$$('#arcprog i').forEach(function(b,k){b.classList.toggle('on',k===i);if(k===i){var bb=b.firstChild;bb.style.animation='none';void bb.offsetWidth;bb.style.animation=''}});
+      var n=nodes[i];detail.querySelector('.k').textContent='Outcome '+(i+1);detail.querySelector('h3').textContent=n.dataset.title;detail.querySelector('p').textContent=n.dataset.text;
+      var r=arc.getBoundingClientRect(),d=n.querySelector('.dot').getBoundingClientRect(),x=(d.left+d.width/2-r.left)/r.width*1100,y=(d.top+d.height/2-r.top)/r.height*780;
+      beam.setAttribute('x1',x);beam.setAttribute('y1',y);beam.setAttribute('x2',i<2?430:i>2?670:550);beam.setAttribute('y2',i===2?330:430)}
+    function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){set((cur+1)%nodes.length)},4500)}
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(cur<0)set(0);restart()}else clearInterval(timer)})},{threshold:.4}).observe(arc);}
+  /* mobile outcomes accordion */
+  $$('.outcomes-m .node').forEach(function(n){n.addEventListener('click',function(){$$('.outcomes-m .node').forEach(function(m){m.classList.toggle('on',m===n&&!n.classList.contains('on'))})})});
+  /* keynote cards expand + request prefill */
+  $$('.talk').forEach(function(t){t.addEventListener('click',function(e){if(e.target.closest('a'))return;var open=t.classList.contains('open');$$('.talk').forEach(function(o){o.classList.remove('open')});if(!open)t.classList.add('open')})});
+  $$('.req').forEach(function(a){a.addEventListener('click',function(){var sel=$('#type'),msg=$('#msg');if(sel)sel.value='Keynote';if(msg&&!msg.value)msg.value='We\'d like to book "'+a.dataset.talk+'". ';})});
+  /* hook builder */
+  var who=$('#hk-who'),want=$('#hk-want'),but=$('#hk-but'),out=$('#hk-out');
+  if(out){function build(){var w=who.value.trim()||'busy founders',n=want.value.trim()||'to close more deals',b=but.value.trim()||'freeze when they have to pitch';out.textContent='"I help '+w+' who want '+n+' but '+b+'. Give me seven seconds and I\'ll show you the one sentence that changes that."';out.classList.remove('pop');void out.offsetWidth;out.classList.add('pop')}
+    [who,want,but].forEach(function(i){i.addEventListener('input',build)});build();
+    $('#hk-copy').addEventListener('click',function(){navigator.clipboard&&navigator.clipboard.writeText(out.textContent);this.textContent='Copied. Now say it out loud.';var b=this;setTimeout(function(){b.textContent='Copy my hook'},2200)})}
+  /* drag to scroll: trainings rail */
+  var rail=$('#rail');if(rail){var down=false,sx=0,sl=0;rail.addEventListener('pointerdown',function(e){down=true;sx=e.clientX;sl=rail.scrollLeft;rail.setPointerCapture(e.pointerId);rail.style.scrollSnapType='none'});rail.addEventListener('pointermove',function(e){if(down)rail.scrollLeft=sl-(e.clientX-sx)});['pointerup','pointercancel'].forEach(function(ev){rail.addEventListener(ev,function(){down=false;rail.style.scrollSnapType=''})})}
+  /* gallery: grab to drag, pauses the auto-scroll */
+  var gal=$('#gal');if(gal){var g=false,gx=0,base=0,off=0;gal.style.cursor='grab';
+    gal.addEventListener('pointerdown',function(e){g=true;gx=e.clientX;gal.style.animationPlayState='paused';var m=getComputedStyle(gal).transform;base=m&&m!=='none'?new DOMMatrix(m).m41:0;gal.style.animation='none';gal.style.transform='translateX('+base+'px)';gal.style.cursor='grabbing';gal.setPointerCapture(e.pointerId)});
+    gal.addEventListener('pointermove',function(e){if(!g)return;off=base+(e.clientX-gx);var half=gal.scrollWidth/2;if(off>0)off-=half;if(off<-half)off+=half;gal.style.transform='translateX('+off+'px)'});
+    ['pointerup','pointercancel'].forEach(function(ev){gal.addEventListener(ev,function(){g=false;gal.style.cursor='grab'})})}
+  /* testimonials: swipe + arrow keys */
+  var sl=$('#slider');if(sl){var tx=0;sl.addEventListener('pointerdown',function(e){tx=e.clientX});sl.addEventListener('pointerup',function(e){var d=e.clientX-tx;if(Math.abs(d)>40){var dots=$$('#dots button'),i=dots.findIndex(function(b){return b.classList.contains('on')});dots[(i+(d<0?1:-1)+dots.length)%dots.length].click()}})}
 })();
 
 /* ===== modern effects ===== */

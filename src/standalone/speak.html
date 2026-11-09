@@ -258,7 +258,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .arc .cut{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:560px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;z-index:2;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))}
 .arc .glow{width:min(520px,100%);left:50%;bottom:-60px;transform:translateX(-50%);opacity:.55}
 .arc .dust{left:20%;right:20%;top:10%;bottom:0;z-index:1}
-.node{position:absolute;width:230px;z-index:3}
+.node{position:absolute;width:250px;z-index:3}
 .node .dot{width:92px;height:92px;border-radius:50%;background:linear-gradient(180deg,#4a1438,#0a0912);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:30px;box-shadow:0 14px 30px rgba(0,0,0,.25);border:3px solid var(--gold-deep);transition:transform .4s}
 .node:hover .dot{transform:scale(1.08) rotate(-4deg)}
 .node h3{font-size:19px;color:#000;margin:12px 0 6px}
@@ -276,6 +276,12 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .promise .mcut{display:none}
 
 .arc .node{cursor:pointer;transition:opacity .4s}
+.arc .node p{transition:color .3s}
+.arc .node.on h3{color:#7b1f4f}
+.arc .node.on p{color:#1a1420}
+.arc .node .bk{display:none;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-dark);text-decoration:none}
+.arc .node.on .bk{display:inline-block}
+.arc .node .bk:after{content:" \2192"}
 .arc.has-active .node:not(.on){opacity:.45}
 .arc .node.on .dot{background:linear-gradient(135deg,#f6e3a1,#d4a73c 55%,#f0d57a);color:#2a0f2a;transform:scale(1.14);box-shadow:0 0 0 10px rgba(240,213,122,.22),0 14px 30px rgba(0,0,0,.3)}
 .arc .node .dot:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(240,213,122,.6);opacity:0;transform:scale(.8)}
@@ -286,7 +292,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .arc svg .beam{stroke:#d4a73c;stroke-width:2;stroke-dasharray:4 6;opacity:0;transition:opacity .4s}
 .arc.has-active svg .beam{opacity:.9;animation:beamdash .8s linear infinite}
 @keyframes beamdash{to{stroke-dashoffset:-20}}
-.arc .detail{position:absolute;left:50%;bottom:30px;transform:translate(-50%,20px);width:min(520px,90%);background:rgba(10,8,24,.88);color:#fff;border:1px solid rgba(240,213,122,.45);border-radius:16px;padding:22px 26px;z-index:5;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s;backdrop-filter:blur(10px);text-align:center}
+.arc .detail{display:none;position:absolute;left:50%;bottom:30px;transform:translate(-50%,20px);width:min(520px,90%);background:rgba(10,8,24,.88);color:#fff;border:1px solid rgba(240,213,122,.45);border-radius:16px;padding:22px 26px;z-index:5;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s;backdrop-filter:blur(10px);text-align:center}
 .arc.has-active .detail{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .arc .detail .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .arc .detail h3{color:#fff;font-size:22px;margin:6px 0 8px}
@@ -461,11 +467,11 @@ body.hovering .cur2{width:64px;height:64px;background:rgba(240,213,122,.12)}
 .tilt .shine{position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(300px 200px at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),transparent 60%);opacity:0;transition:opacity .3s}
 .tilt:hover .shine{opacity:1}
 .chars .ch{display:inline-block;opacity:0;transform:translateY(.6em) rotate(6deg);transform-origin:bottom left}
-.pill{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);z-index:94;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(10,8,24,.75);border:1px solid rgba(240,213,122,.4);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1);color:#fff;font-size:14px;white-space:nowrap}
-.pill.on{transform:translate(-50%,0)}
+.pill{position:fixed;left:22px;bottom:22px;transform:translate(0,120px);z-index:94;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(10,8,24,.75);border:1px solid rgba(240,213,122,.4);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1);color:#fff;font-size:14px;white-space:nowrap}
+.pill.on{transform:translate(0,0)}
 .pill img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top}
 .pill .btn{padding:10px 18px;font-size:12px}
-@media(max-width:900px){.pill span.t{display:none}.pill{right:22px;left:auto;transform:translate(0,120px)}.pill.on{transform:none}}
+@media(max-width:900px){.pill span.t{display:none}}
 .hero .stage,.hero .copy{will-change:transform,opacity}
 .gallery figure img{clip-path:inset(0 0 0 0)}
 canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:300}
@@ -675,11 +681,11 @@ footer a{color:var(--gold);text-decoration:none}
       <svg viewBox="0 0 1100 780" preserveAspectRatio="none"><path class="arcpath" d="M110 490 C 180 280, 400 50, 550 50 C 700 50, 920 280, 990 490"/><line class="beam" x1="550" y1="560" x2="550" y2="560"/></svg>
       <div class="detail" id="detail"><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p><a class="btn btn-dark" href="#book">Book this for my room</a></div>
       <div class="glow gold"></div><div class="dust"></div>
-      <div class="node n1 rv data-i="0" data-title="A 7-second hook" data-text="Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open." tabindex="0" role="button" aria-label="Outcome 1: A 7-second hook" rv-l"><div class="dot">1</div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div>
-      <div class="node n2 rv data-i="1" data-title="Their WHY in one sentence" data-text="Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands." tabindex="0" role="button" aria-label="Outcome 2: Their WHY in one sentence" rv-l d1"><div class="dot">2</div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason. Everyone says theirs out loud.</p></div>
-      <div class="node n3 rv data-i="2" data-title="Confidence as posture" data-text="Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen." tabindex="0" role="button" aria-label="Outcome 3: Confidence as posture" d2"><div class="dot">3</div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak. Posture first, feeling second.</p></div>
-      <div class="node n4 rv data-i="3" data-title="No more sounding salesy" data-text="The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling." tabindex="0" role="button" aria-label="Outcome 4: No more sounding salesy" rv-r d1"><div class="dot">4</div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>The shift from pushing to inviting. They stop apologising for the ask.</p></div>
-      <div class="node n5 rv data-i="4" data-title="Reps before they leave" data-text="A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open." tabindex="0" role="button" aria-label="Outcome 5: Reps before they leave" rv-r"><div class="dot">5</div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>A pitch is a performance. We rehearse it live, with coaching, so it's theirs.</p></div>
+      <div class="node n1 rv data-i="0" data-title="A 7-second hook" data-text="Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open." tabindex="0" role="button" aria-label="Outcome 1: A 7-second hook" rv-l"><div class="dot">1</div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <div class="node n2 rv data-i="1" data-title="Their WHY in one sentence" data-text="Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands." tabindex="0" role="button" aria-label="Outcome 2: Their WHY in one sentence" rv-l d1"><div class="dot">2</div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason. Everyone says theirs out loud.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <div class="node n3 rv data-i="2" data-title="Confidence as posture" data-text="Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen." tabindex="0" role="button" aria-label="Outcome 3: Confidence as posture" d2"><div class="dot">3</div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak. Posture first, feeling second.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <div class="node n4 rv data-i="3" data-title="No more sounding salesy" data-text="The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling." tabindex="0" role="button" aria-label="Outcome 4: No more sounding salesy" rv-r d1"><div class="dot">4</div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>The shift from pushing to inviting. They stop apologising for the ask.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <div class="node n5 rv data-i="4" data-title="Reps before they leave" data-text="A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open." tabindex="0" role="button" aria-label="Outcome 5: Reps before they leave" rv-r"><div class="dot">5</div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>A pitch is a performance. We rehearse it live, with coaching, so it's theirs.</p><a class="bk" href="#book">Book this for my room</a></div>
       <div class="progress" id="arcprog"></div>
       <img class="cut rv rv-s d2" src="img/cut/pointing.png" alt="Forbes Riley pointing up">
     </div>
@@ -923,7 +929,7 @@ footer a{color:var(--gold);text-decoration:none}
       n.addEventListener('click',function(){set(i);restart()});n.addEventListener('mouseenter',function(){set(i);clearInterval(timer)});n.addEventListener('mouseleave',restart);
       n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();set(i);restart()}})});
     function set(i){cur=i;arc.classList.add('has-active');nodes.forEach(function(n,k){n.classList.toggle('on',k===i)});$$('#arcprog i').forEach(function(b,k){b.classList.toggle('on',k===i);if(k===i){var bb=b.firstChild;bb.style.animation='none';void bb.offsetWidth;bb.style.animation=''}});
-      var n=nodes[i];detail.querySelector('.k').textContent='Outcome '+(i+1);detail.querySelector('h3').textContent=n.dataset.title;detail.querySelector('p').textContent=n.dataset.text;
+      nodes.forEach(function(m,k){var pp=m.querySelector('p');if(!m.dataset.short)m.dataset.short=pp.textContent;pp.textContent=k===i?m.dataset.text:m.dataset.short});var n=nodes[i];
       var r=arc.getBoundingClientRect(),d=n.querySelector('.dot').getBoundingClientRect(),x=(d.left+d.width/2-r.left)/r.width*1100,y=(d.top+d.height/2-r.top)/r.height*780;
       beam.setAttribute('x1',x);beam.setAttribute('y1',y);beam.setAttribute('x2',i<2?430:i>2?670:550);beam.setAttribute('y2',i===2?330:430)}
     function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){set((cur+1)%nodes.length)},4500)}

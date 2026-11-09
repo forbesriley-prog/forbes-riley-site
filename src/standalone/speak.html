@@ -44,6 +44,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;margin:
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}.hero .stage .cut,.hero h1 .w{opacity:1!important;transform:none!important}}
 
 /* cutout + glow helpers */
+[data-parallax]{transform:translateY(var(--py,0px))}
 .cut{position:relative;display:block;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55));will-change:transform}
 .glow{position:absolute;inset:auto;border-radius:50%;pointer-events:none;filter:blur(30px);opacity:.7;aspect-ratio:1;height:auto!important}
 .glow.gold{background:radial-gradient(circle,rgba(232,217,160,.55),rgba(201,154,58,.25) 45%,transparent 70%)}
@@ -537,7 +538,7 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="node n3 rv d2"><div class="dot">3</div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak. Posture first, feeling second.</p></div>
       <div class="node n4 rv rv-r d1"><div class="dot">4</div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>The shift from pushing to inviting. They stop apologising for the ask.</p></div>
       <div class="node n5 rv rv-r"><div class="dot">5</div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>A pitch is a performance. We rehearse it live, with coaching, so it's theirs.</p></div>
-      <img class="cut rv rv-s d2" src="img/cut/pointing.png" alt="Forbes Riley pointing up" data-parallax="0.05">
+      <img class="cut rv rv-s d2" src="img/cut/pointing.png" alt="Forbes Riley pointing up">
     </div>
     <div class="outcomes-m">
       <div class="node rv"><div class="dot">1</div><div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div></div>
@@ -736,8 +737,8 @@ footer a{color:var(--gold);text-decoration:none}
   /* parallax + nav */
   var par=$$('[data-parallax]'),nav=$('#nav'),prog=$('#progress');
   function onScroll(){var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(y/h*100)+'%';nav.classList.toggle('solid',y>40);
-    if(!reduce&&innerWidth>960)par.forEach(function(el){var r=el.getBoundingClientRect(),mid=r.top+r.height/2-innerHeight/2;el.style.transform='translateY('+(mid*-parseFloat(el.dataset.parallax))+'px)'})}
-  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',function(){if(innerWidth<=960)par.forEach(function(el){el.style.transform=''});onScroll()});onScroll();
+    if(!reduce&&innerWidth>960)par.forEach(function(el){var r=el.getBoundingClientRect(),mid=r.top+r.height/2-innerHeight/2;el.style.setProperty('--py',(mid*-parseFloat(el.dataset.parallax))+'px')})}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',function(){if(innerWidth<=960)par.forEach(function(el){el.style.setProperty('--py','0px')});onScroll()});onScroll();
 
   /* mouse glow on talk cards */
   $$('.talk').forEach(function(t){t.addEventListener('mousemove',function(e){var r=t.getBoundingClientRect();t.style.setProperty('--mx',(e.clientX-r.left)+'px');t.style.setProperty('--my',(e.clientY-r.top)+'px')})});

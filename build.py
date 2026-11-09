@@ -39,6 +39,8 @@ if OUT.exists():
 OUT.mkdir()
 shutil.copytree(SRC / "img", OUT / "img")
 (OUT / "style.css").write_text(css)
+for extra in sorted((SRC / "standalone").glob("*.html")):  # self-contained pages (own head/nav)
+    shutil.copy(extra, OUT / extra.name)
 if (SRC / "CNAME").exists():
     shutil.copy(SRC / "CNAME", OUT / "CNAME")  # custom domain for GitHub Pages
 

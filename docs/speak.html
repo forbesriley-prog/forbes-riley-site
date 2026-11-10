@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forbes Riley | Keynote Speaker &amp; The Queen of Pitch</title>
 <meta name="description" content="Book Dr. Forbes Riley, the $2.5 billion host, 3X TEDx speaker and creator of SpinGym. Keynotes that leave your audience with a skill, not a feeling.">
-<link rel="icon" type="image/png" href="img/favicon.png?v=287743">
+<link rel="icon" type="image/png" href="img/favicon.png?v=288612">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forbes Riley | Keynote Speaker &amp; The Queen of Pitch">
+<meta property="og:description" content="Book Dr. Forbes Riley: the $2.5 billion host, 3X TEDx speaker. Keynotes that leave your audience with a skill, not a feeling.">
+<meta property="og:image" content="https://site.forbesrileyhq.com/img/keynote-stage.jpg?v=288612">
+<meta property="og:url" content="https://site.forbesrileyhq.com/speak.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a0c2e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Allura&display=swap" rel="stylesheet">
@@ -28,6 +35,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .talk h3,.course h3,.node h3,form h3,.outcome h3{font-weight:700}
 .goldtxt,.section-head h2{background:linear-gradient(180deg,#f6e3a1 0%,#d4a73c 55%,#b8860b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .cream .section-head h2,.promise .section-head h2{background:none;-webkit-text-fill-color:initial;color:#1a1420}
+.section-head h2.chars{background:none;-webkit-text-fill-color:initial;color:var(--gold)}
+.dark .section-head h2.chars .ch,.section-head h2.chars .ch{background:linear-gradient(180deg,#f6e3a1 0%,#d4a73c 55%,#b8860b 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.cream .section-head h2.chars .ch,.promise .section-head h2.chars .ch{background:none;color:#1a1420;-webkit-text-fill-color:#1a1420}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px;position:relative}
 .eyebrow{font-family:var(--body);font-weight:700;letter-spacing:.28em;text-transform:uppercase;font-size:12px;color:var(--gold-deep)}
 .script{font-family:var(--script);font-weight:400;text-transform:none;letter-spacing:0}
@@ -52,7 +62,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .cut{position:relative;display:block;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55));will-change:transform}
 .glow{position:absolute;inset:auto;border-radius:50%;pointer-events:none;filter:blur(30px);opacity:.7;aspect-ratio:1;height:auto!important}
 .glow.gold{background:radial-gradient(circle,rgba(232,217,160,.55),rgba(201,154,58,.25) 45%,transparent 70%)}
-.dust{position:absolute;pointer-events:none;background:url(img/cut/gold-dust.png?v=287743) center/contain no-repeat;opacity:.9;mix-blend-mode:screen}
+.dust{position:absolute;pointer-events:none;background:url(img/cut/gold-dust.png?v=288612) center/contain no-repeat;opacity:.9;mix-blend-mode:screen}
 .ring{position:absolute;border:1.5px solid rgba(232,217,160,.45);border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite}
 .ring.b{animation-duration:19s;animation-direction:reverse;border-style:dashed}
 @keyframes drift{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(12px,-18px) rotate(40deg)}}
@@ -67,6 +77,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .nav ul a:after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--gold);transition:right .3s}
 .nav ul a:hover:after{right:0}
 .nav .btn{padding:11px 20px;font-size:12px;white-space:nowrap}
+@media(max-width:420px){.nav img{height:34px}.nav .btn{padding:9px 12px;font-size:10.5px;letter-spacing:.08em}}
 #progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-dark),var(--gold));z-index:60}
 @media(max-width:960px){.nav ul{display:none}}
 
@@ -116,7 +127,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .metrics span{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#b8862b;font-weight:700;margin-top:10px}
 .metrics li+li{border-left:1px solid rgba(154,115,32,.3)}
 .metrics li{position:relative;cursor:default}
-.metrics .tip{position:absolute;left:50%;top:100%;transform:translate(-50%,6px);background:#2a0f2a;color:#fff;font-size:12px;font-style:normal;padding:8px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:5}
+.metrics .tip{position:absolute;left:50%;top:100%;transform:translate(-50%,6px);background:#2a0f2a;color:#fff;font-size:12px;font-style:normal;padding:8px 12px;border-radius:8px;white-space:normal;width:max-content;max-width:min(260px,80vw);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:5}
 .metrics li:hover .tip{opacity:1;transform:translate(-50%,0)}
 @media(max-width:900px){.metrics ul{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.metrics ul{grid-template-columns:repeat(2,1fr)}}
@@ -136,7 +147,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .seen ul{list-style:none;margin:0;padding:0;display:flex;gap:28px;flex-wrap:wrap;justify-content:center}
 .seen li{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;color:#2a1a28;opacity:.6}
 .cta{background:linear-gradient(135deg,#3b1030,#7b2a60 55%,#a04870);padding:56px 0;position:relative;overflow:hidden}
-.cta:before{content:"";position:absolute;inset:0;background:url(img/cut/gold-dust.png?v=287743) right center/700px no-repeat;opacity:.5;mix-blend-mode:screen}
+.cta:before{content:"";position:absolute;inset:0;background:url(img/cut/gold-dust.png?v=288612) right center/700px no-repeat;opacity:.5;mix-blend-mode:screen}
 .ctabox{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;border:1px solid rgba(240,213,122,.35);border-radius:16px;padding:40px 46px;background:rgba(6,6,14,.35);backdrop-filter:blur(6px)}
 .ctabox h2{font-size:clamp(26px,3.2vw,40px);line-height:1.1;color:#fff;margin:8px 0 12px;text-transform:none}
 .ctabox p{margin:0;color:#e9dff0;font-size:17px}
@@ -314,7 +325,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 /* formula */
 .framework{background:linear-gradient(180deg,#07061a,#6b1f52);position:relative;overflow:hidden}
-.framework:before{content:"";position:absolute;inset:0;background:url(img/h-stage-purple.jpg?v=287743) center/cover;opacity:.14;filter:grayscale(1)}
+.framework:before{content:"";position:absolute;inset:0;background:url(img/h-stage-purple.jpg?v=288612) center/cover;opacity:.14;filter:grayscale(1)}
 .framework .wrap{position:relative}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:0 auto;max-width:1000px}
 .pillar{position:relative;text-align:center;padding:48px 26px 36px;border:1px solid rgba(232,217,160,.25);border-radius:var(--r);background:rgba(11,11,11,.72);overflow:hidden;cursor:pointer;transition:border-color .4s,transform .4s}
@@ -389,7 +400,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 /* wheel */
 .wheel{background:radial-gradient(900px 500px at 50% 0,#4a1438,transparent 70%),linear-gradient(180deg,#1a0c2e,#07061a);overflow:hidden}
-.wheel:before,.testi:before{content:"";position:absolute;inset:0;background:url(img/collage.jpg?v=287743) center/cover;opacity:.16;pointer-events:none;mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent)}
+.wheel:before,.testi:before{content:"";position:absolute;inset:0;background:url(img/collage.jpg?v=288612) center/cover;opacity:.16;pointer-events:none;mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent)}
 .wheel .wrap,.testi .wrap{position:relative;z-index:1}
 .wheel .section-head{margin-bottom:10px}
 .wheel h2{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,64px);line-height:1.05;color:#fff;text-transform:none;letter-spacing:0}
@@ -490,7 +501,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .kn-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 .kn-btns .btn{padding:12px 20px;font-size:12px}
 .kn-pic img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
-@media(max-width:1000px){.kn{grid-template-columns:1fr}.kn-list{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.kn-tab{flex:0 0 240px;border-left:0;border-bottom:3px solid rgba(240,213,122,.18);border-radius:10px 10px 0 0}.kn-tab.on{border-bottom-color:var(--gold)}.kn-stages{flex:0 0 100%;order:9}.kn-item{grid-template-columns:1fr}.kn-pic{order:-1}.kn-pic img{aspect-ratio:16/10}.kn-panel{padding:22px;min-height:0}}
+@media(max-width:1000px){.kn{grid-template-columns:1fr}.kn-list{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none;scroll-snap-type:x mandatory;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.kn-tab{scroll-snap-align:start}.kn-tab{flex:0 0 240px;border-left:0;border-bottom:3px solid rgba(240,213,122,.18);border-radius:10px 10px 0 0}.kn-tab.on{border-bottom-color:var(--gold)}.kn-stages{flex:0 0 100%;order:9}.kn-item{grid-template-columns:1fr}.kn-pic{order:-1}.kn-pic img{aspect-ratio:16/10}.kn-panel{padding:22px;min-height:0}}
 
 /* readers strip */
 .readers{background:#1a0c2e;padding:40px 0 46px;text-align:center;overflow:hidden}
@@ -512,7 +523,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .kn-poster img{position:absolute;right:-4%;bottom:0;width:96%;max-height:68%;object-fit:contain;object-position:bottom right;z-index:1;filter:drop-shadow(0 20px 30px rgba(0,0,0,.6))}
 .kn-poster .ps{position:absolute;left:20px;bottom:18px;z-index:2;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);max-width:60%;line-height:1.5;text-shadow:0 2px 10px rgba(0,0,0,.7)}
 .kn-poster.p1 img{width:92%;right:4%;max-height:66%}
-.kn-poster.p2 img{width:100%;right:0;max-height:62%;object-position:bottom center}
+.kn-poster.p2 img{width:84%;right:8%;max-height:66%;object-position:bottom center}
 .kn-poster.p3 img{width:80%;right:2%;max-height:64%}
 .kn-poster.p5 img{width:74%;right:2%;max-height:66%}
 .kn-poster .olds{position:absolute;left:7%;right:7%;top:27%;bottom:24%;z-index:1}
@@ -597,7 +608,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .tedx{margin-top:22px}
 .tedx .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 10px}
 .tedrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:600px){.tedrow{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.tedrow{grid-template-columns:1fr 1fr}.ev-grid{grid-template-columns:1fr 1fr;gap:12px}.ev h3{font-size:17px}.ev .hook{font-size:12px}.ev-body{padding:50px 12px 14px}}
 .ted{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(240,213,122,.35);cursor:pointer;background:#0b0912;aspect-ratio:16/9}
 .ted img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s;filter:brightness(.85)}
 .ted:hover img{transform:scale(1.05);filter:brightness(1)}
@@ -657,7 +668,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 /* author */
 .author{background:linear-gradient(180deg,#2a0f2a,#4a1438 50%,#2a0f2a);color:#f1e9f5;overflow:hidden}
 .author.section{padding-top:30px;padding-bottom:80px;position:relative}
-.author:before{content:"";position:absolute;inset:0;background:url(img/readers-collage.jpg?v=287743) center/cover;opacity:.14;pointer-events:none;mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
+.author:before{content:"";position:absolute;inset:0;background:url(img/readers-collage.jpg?v=288612) center/cover;opacity:.14;pointer-events:none;mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
 .author .wrap,.author .bridge{position:relative;z-index:1}
 .author .bridge{display:flex;align-items:center;gap:18px;max-width:1180px;margin:0 auto 46px;color:var(--gold);font-family:var(--script);font-size:clamp(26px,3vw,40px)}
 .author .bridge:before,.author .bridge:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,213,122,.6),transparent)}
@@ -701,8 +712,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .free h2{font-size:clamp(30px,4.2vw,54px);text-transform:uppercase;line-height:1.1;color:#1b1619}
 .free p{max-width:760px;margin:22px auto 34px;font-size:19px;color:#2a2420}
 .free small{display:block;margin-top:18px;font-size:14px;color:#3a3236}
-.free .cutr{position:absolute;right:-20px;bottom:0;height:110%;width:auto;max-width:none;opacity:.95;pointer-events:none}
-.free .cutl{position:absolute;left:-30px;bottom:0;height:105%;width:auto;max-width:none;opacity:.95;pointer-events:none}
+.free .cutr{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:none;opacity:.95;pointer-events:none}
+.free .cutl{position:absolute;left:0;bottom:0;height:100%;width:auto;max-width:none;opacity:.95;pointer-events:none}
 @media(max-width:1100px){.free .cutr,.free .cutl{display:none}}
 
 /* book */
@@ -755,6 +766,7 @@ footer img{height:54px;width:auto;margin:0 auto 18px}
 footer .line{font-family:var(--serif);font-size:20px;color:var(--gold);margin-bottom:14px}
 footer a{color:var(--gold);text-decoration:none}
 .chat{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:flex-end;gap:12px}
+@media(max-width:700px){.chat .bubble{display:none}.chat{right:14px;bottom:14px}}
 .chat .bubble{background:#fff;color:#1b1619;border-radius:14px;padding:12px 16px;font-size:14px;box-shadow:0 14px 40px rgba(0,0,0,.4);max-width:230px;position:relative;opacity:0;transform:translateY(10px);transition:all .5s;pointer-events:none}
 .chat.show .bubble{opacity:1;transform:none;pointer-events:auto}
 .chat .bubble b{display:block;font-size:13px}
@@ -768,11 +780,11 @@ footer a{color:var(--gold);text-decoration:none}
 </head>
 <body>
 <div id="progress"></div>
-<div class="grain" aria-hidden="true"></div><div class="pill" id="pill"><img src="img/helms-headshot.jpg?v=287743" alt=""><span class="t">Bring Forbes to your stage</span><a class="btn btn-gold" href="#book">Book Forbes</a></div>
+<div class="grain" aria-hidden="true"></div><div class="pill" id="pill"><img src="img/helms-headshot.jpg?v=288612" alt=""><span class="t">Bring Forbes to your stage</span><a class="btn btn-gold" href="#book">Book Forbes</a></div>
 <canvas id="confetti"></canvas>
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a href="#top"><img src="img/logo-signature-gold.png?v=287743" alt="Forbes Riley"></a>
+    <a href="#top"><img src="img/logo-signature-gold.png?v=288612" alt="Forbes Riley"></a>
     <ul>
       <li><a href="#story">About</a></li>
       <li><a href="#speaking">Speaking</a></li>
@@ -797,7 +809,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="stage" data-parallax="0.08">
       <div class="glow gold"></div>
-      <img class="cut" src="img/cut/az-wide-plum.png?v=287743" alt="Forbes Riley, arms wide">
+      <img class="cut" src="img/cut/az-wide-plum.png?v=288612" alt="Forbes Riley, arms wide">
     </div>
   </div>
   <div class="floor"></div>
@@ -821,13 +833,13 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="section reel dark" id="reel">
   <div class="wrap grid">
     <div class="hs rv rv-l" data-parallax="0.04">
-      <img src="img/helms-headshot.jpg?v=287743" alt="Forbes Riley headshot">
+      <img src="img/helms-headshot.jpg?v=288612" alt="Forbes Riley headshot">
     </div>
     <div>
       <p class="eyebrow rv">Meet Forbes Riley</p>
       <h2 class="rv d1">Two minutes on stage with the Queen of Pitch</h2>
       <p class="rv d2 lead">"I didn't learn to pitch because everything worked out. I learned because it didn't, and I still had to sell the thing in my hands."</p>
-      <div class="vidbig rv d3" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg'" alt="Forbes Riley keynote sizzle reel"><div class="p">&#9654;</div><div class="t">Forbes Riley's Keynote Stage Sizzle</div></div>
+      <div class="vidbig rv d3" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg" alt="Forbes Riley keynote sizzle reel"><div class="p">&#9654;</div><div class="t">Forbes Riley's Keynote Stage Sizzle</div></div>
 
       <div class="tedx rv d4">
         <p class="k">Her TEDx talks</p>
@@ -890,8 +902,8 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d1 sub">Pick where you want to go. Tap a slice.</p>
     </div>
     <div class="wheel-wrap rv rv-s d2">
-      <svg class="wheel-svg" viewBox="0 0 800 800" aria-label="Where to go next"><defs><linearGradient id="wov" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b1030"/><stop offset=".55" stop-color="#1a0c2e"/><stop offset="1" stop-color="#5a1a4a"/></linearGradient><clipPath id="wc0"><path d="M219.1 68.1 A378 378 0 0 1 580.9 68.1 L472.8 266.5 A152 152 0 0 0 327.2 266.5 Z"/></clipPath><clipPath id="wc1"><path d="M596.9 77.4 A378 378 0 0 1 777.9 390.8 L552.0 396.3 A152 152 0 0 0 479.2 270.3 Z"/></clipPath><clipPath id="wc2"><path d="M777.9 409.2 A378 378 0 0 1 596.9 722.6 L479.2 529.7 A152 152 0 0 0 552.0 403.7 Z"/></clipPath><clipPath id="wc3"><path d="M580.9 731.9 A378 378 0 0 1 219.1 731.9 L327.2 533.5 A152 152 0 0 0 472.8 533.5 Z"/></clipPath><clipPath id="wc4"><path d="M203.1 722.6 A378 378 0 0 1 22.1 409.2 L248.0 403.7 A152 152 0 0 0 320.8 529.7 Z"/></clipPath><clipPath id="wc5"><path d="M22.1 390.8 A378 378 0 0 1 203.1 77.4 L320.8 270.3 A152 152 0 0 0 248.0 396.3 Z"/></clipPath><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e3a1"/><stop offset=".5" stop-color="#a04870"/><stop offset="1" stop-color="#f0d57a"/></linearGradient><radialGradient id="cg" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3a1030"/><stop offset="1" stop-color="#07061a"/></radialGradient><filter id="desat"><feColorMatrix type="saturate" values="0.25"/></filter></defs><circle cx="400" cy="400" r="142" fill="url(#cg)" stroke="rgba(240,213,122,.35)" stroke-width="2"/><a class="wd" href="#speaking" data-i="0"><g clip-path="url(#wc0)"><image class="ph" href="img/wheel-speaking.jpg?v=287743" x="211.0" y="22.0" width="378.0" height="246.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M219.1 68.1 A378 378 0 0 1 580.9 68.1 L472.8 266.5 A152 152 0 0 0 327.2 266.5 Z"/><text class="lb" text-anchor="middle" style="transform-origin:400.0px 125.0px"><tspan x="400.0" y="95.0">Speaking</tspan><tspan x="400.0" y="127.0">Engagements</tspan></text><text class="more" text-anchor="middle" style="transform-origin:400.0px 125.0px"><tspan x="400.0" y="163.0">Keynotes and workshops.</tspan><tspan x="400.0" y="184.0">Book her for your stage.</tspan></text></a><a class="wd" href="#book" data-i="1"><g clip-path="url(#wc1)"><image class="ph" href="img/wheel-coach.jpg?v=287743" x="476.0" y="72.6" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M596.9 77.4 A378 378 0 0 1 777.9 390.8 L552.0 396.3 A152 152 0 0 0 479.2 270.3 Z"/><text class="lb" text-anchor="middle" style="transform-origin:638.2px 262.5px"><tspan x="638.2" y="232.5">Coach with</tspan></text><image class="sigimg" style="transform-origin:638.2px 262.5px" href="img/signature-maroon.png?v=287743" x="568.2" y="242.5" width="140" height="63"/><text class="more" text-anchor="middle" style="transform-origin:638.2px 262.5px"><tspan x="638.2" y="312.5">One-on-one coaching.</tspan><tspan x="638.2" y="333.5">Her in your corner.</tspan></text></a><a class="wd" href="#podcast" data-i="2"><g clip-path="url(#wc2)"><image class="ph" href="img/wheel-podcast.jpg?v=287743" x="476.0" y="400.0" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M777.9 409.2 A378 378 0 0 1 596.9 722.6 L479.2 529.7 A152 152 0 0 0 552.0 403.7 Z"/><text class="lb" text-anchor="middle" style="transform-origin:638.2px 537.5px"><tspan x="638.2" y="523.5">Podcast</tspan></text><text class="more" text-anchor="middle" style="transform-origin:638.2px 537.5px"><tspan x="638.2" y="559.5">Forbes Factor Podcast.</tspan><tspan x="638.2" y="580.5">5 million downloads.</tspan></text></a><a class="wd" href="https://pitchsecretstraining.com" target="_blank" rel="noopener" data-i="3"><g clip-path="url(#wc3)"><image class="ph" href="img/wheel-pitch.jpg?v=287743" x="211.0" y="531.6" width="378.0" height="246.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M580.9 731.9 A378 378 0 0 1 219.1 731.9 L327.2 533.5 A152 152 0 0 0 472.8 533.5 Z"/><text class="lb" text-anchor="middle" style="transform-origin:400.0px 675.0px"><tspan x="400.0" y="645.0">Pitch with</tspan></text><image class="sigimg" style="transform-origin:400.0px 675.0px" href="img/signature-maroon.png?v=287743" x="330.0" y="655.0" width="140" height="63"/><text class="more" text-anchor="middle" style="transform-origin:400.0px 675.0px"><tspan x="400.0" y="725.0">Free Sunday masterclass.</tspan><tspan x="400.0" y="746.0">Learn it live with her.</tspan></text></a><a class="wd" href="#courses" data-i="4"><g clip-path="url(#wc4)"><image class="ph" href="img/event-ffl-room.jpg?v=287743" x="22.0" y="400.0" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M203.1 722.6 A378 378 0 0 1 22.1 409.2 L248.0 403.7 A152 152 0 0 0 320.8 529.7 Z"/><text class="lb" text-anchor="middle" style="transform-origin:161.8px 537.5px"><tspan x="161.8" y="523.5">Trainings</tspan></text><text class="more" text-anchor="middle" style="transform-origin:161.8px 537.5px"><tspan x="161.8" y="559.5">Courses, pods and</tspan><tspan x="161.8" y="580.5">3-day live events.</tspan></text></a><a class="wd" href="#events" data-i="5"><g clip-path="url(#wc5)"><image class="ph" href="img/event-ffl-crowd.jpg?v=287743" x="22.0" y="72.6" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M22.1 390.8 A378 378 0 0 1 203.1 77.4 L320.8 270.3 A152 152 0 0 0 248.0 396.3 Z"/><text class="lb" text-anchor="middle" style="transform-origin:161.8px 262.5px"><tspan x="161.8" y="248.5">Events</tspan></text><text class="more" text-anchor="middle" style="transform-origin:161.8px 262.5px"><tspan x="161.8" y="284.5">Momentum X, summits,</tspan><tspan x="161.8" y="305.5">Forbes Factor Live.</tspan></text></a></svg>
-      <img class="me" src="img/cut/teal-crossed.png?v=287743" alt="Forbes Riley">
+      <svg class="wheel-svg" viewBox="0 0 800 800" aria-label="Where to go next"><defs><linearGradient id="wov" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b1030"/><stop offset=".55" stop-color="#1a0c2e"/><stop offset="1" stop-color="#5a1a4a"/></linearGradient><clipPath id="wc0"><path d="M219.1 68.1 A378 378 0 0 1 580.9 68.1 L472.8 266.5 A152 152 0 0 0 327.2 266.5 Z"/></clipPath><clipPath id="wc1"><path d="M596.9 77.4 A378 378 0 0 1 777.9 390.8 L552.0 396.3 A152 152 0 0 0 479.2 270.3 Z"/></clipPath><clipPath id="wc2"><path d="M777.9 409.2 A378 378 0 0 1 596.9 722.6 L479.2 529.7 A152 152 0 0 0 552.0 403.7 Z"/></clipPath><clipPath id="wc3"><path d="M580.9 731.9 A378 378 0 0 1 219.1 731.9 L327.2 533.5 A152 152 0 0 0 472.8 533.5 Z"/></clipPath><clipPath id="wc4"><path d="M203.1 722.6 A378 378 0 0 1 22.1 409.2 L248.0 403.7 A152 152 0 0 0 320.8 529.7 Z"/></clipPath><clipPath id="wc5"><path d="M22.1 390.8 A378 378 0 0 1 203.1 77.4 L320.8 270.3 A152 152 0 0 0 248.0 396.3 Z"/></clipPath><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e3a1"/><stop offset=".5" stop-color="#a04870"/><stop offset="1" stop-color="#f0d57a"/></linearGradient><radialGradient id="cg" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3a1030"/><stop offset="1" stop-color="#07061a"/></radialGradient><filter id="desat"><feColorMatrix type="saturate" values="0.25"/></filter></defs><circle cx="400" cy="400" r="142" fill="url(#cg)" stroke="rgba(240,213,122,.35)" stroke-width="2"/><a class="wd" href="#speaking" data-i="0"><g clip-path="url(#wc0)"><image class="ph" href="img/wheel-speaking.jpg?v=288612" x="211.0" y="22.0" width="378.0" height="246.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M219.1 68.1 A378 378 0 0 1 580.9 68.1 L472.8 266.5 A152 152 0 0 0 327.2 266.5 Z"/><text class="lb" text-anchor="middle" style="transform-origin:400.0px 125.0px"><tspan x="400.0" y="95.0">Speaking</tspan><tspan x="400.0" y="127.0">Engagements</tspan></text><text class="more" text-anchor="middle" style="transform-origin:400.0px 125.0px"><tspan x="400.0" y="163.0">Keynotes and workshops.</tspan><tspan x="400.0" y="184.0">Book her for your stage.</tspan></text></a><a class="wd" href="#book" data-i="1"><g clip-path="url(#wc1)"><image class="ph" href="img/wheel-coach.jpg?v=288612" x="476.0" y="72.6" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M596.9 77.4 A378 378 0 0 1 777.9 390.8 L552.0 396.3 A152 152 0 0 0 479.2 270.3 Z"/><text class="lb" text-anchor="middle" style="transform-origin:638.2px 262.5px"><tspan x="638.2" y="232.5">Coach with</tspan></text><image class="sigimg" style="transform-origin:638.2px 262.5px" href="img/signature-maroon.png?v=288612" x="568.2" y="242.5" width="140" height="63"/><text class="more" text-anchor="middle" style="transform-origin:638.2px 262.5px"><tspan x="638.2" y="312.5">One-on-one coaching.</tspan><tspan x="638.2" y="333.5">Her in your corner.</tspan></text></a><a class="wd" href="#podcast" data-i="2"><g clip-path="url(#wc2)"><image class="ph" href="img/wheel-podcast.jpg?v=288612" x="476.0" y="400.0" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M777.9 409.2 A378 378 0 0 1 596.9 722.6 L479.2 529.7 A152 152 0 0 0 552.0 403.7 Z"/><text class="lb" text-anchor="middle" style="transform-origin:638.2px 537.5px"><tspan x="638.2" y="523.5">Podcast</tspan></text><text class="more" text-anchor="middle" style="transform-origin:638.2px 537.5px"><tspan x="638.2" y="559.5">Forbes Factor Podcast.</tspan><tspan x="638.2" y="580.5">5 million downloads.</tspan></text></a><a class="wd" href="https://pitchsecretstraining.com" target="_blank" rel="noopener" data-i="3"><g clip-path="url(#wc3)"><image class="ph" href="img/wheel-pitch.jpg?v=288612" x="211.0" y="531.6" width="378.0" height="246.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M580.9 731.9 A378 378 0 0 1 219.1 731.9 L327.2 533.5 A152 152 0 0 0 472.8 533.5 Z"/><text class="lb" text-anchor="middle" style="transform-origin:400.0px 675.0px"><tspan x="400.0" y="645.0">Pitch with</tspan></text><image class="sigimg" style="transform-origin:400.0px 675.0px" href="img/signature-maroon.png?v=288612" x="330.0" y="655.0" width="140" height="63"/><text class="more" text-anchor="middle" style="transform-origin:400.0px 675.0px"><tspan x="400.0" y="725.0">Free Sunday masterclass.</tspan><tspan x="400.0" y="746.0">Learn it live with her.</tspan></text></a><a class="wd" href="#courses" data-i="4"><g clip-path="url(#wc4)"><image class="ph" href="img/event-ffl-room.jpg?v=288612" x="22.0" y="400.0" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M203.1 722.6 A378 378 0 0 1 22.1 409.2 L248.0 403.7 A152 152 0 0 0 320.8 529.7 Z"/><text class="lb" text-anchor="middle" style="transform-origin:161.8px 537.5px"><tspan x="161.8" y="523.5">Trainings</tspan></text><text class="more" text-anchor="middle" style="transform-origin:161.8px 537.5px"><tspan x="161.8" y="559.5">Courses, pods and</tspan><tspan x="161.8" y="580.5">3-day live events.</tspan></text></a><a class="wd" href="#events" data-i="5"><g clip-path="url(#wc5)"><image class="ph" href="img/event-ffl-crowd.jpg?v=288612" x="22.0" y="72.6" width="302.0" height="327.4" preserveAspectRatio="xMidYMin slice"/><rect class="ov" x="0" y="0" width="800" height="800"/></g><path class="edge" d="M22.1 390.8 A378 378 0 0 1 203.1 77.4 L320.8 270.3 A152 152 0 0 0 248.0 396.3 Z"/><text class="lb" text-anchor="middle" style="transform-origin:161.8px 262.5px"><tspan x="161.8" y="248.5">Events</tspan></text><text class="more" text-anchor="middle" style="transform-origin:161.8px 262.5px"><tspan x="161.8" y="284.5">Momentum X, summits,</tspan><tspan x="161.8" y="305.5">Forbes Factor Live.</tspan></text></a></svg>
+      <img class="me" src="img/cut/teal-crossed.png?v=288612" alt="Forbes Riley">
     </div>
   </div>
 </section>
@@ -899,7 +911,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="split">
   <div class="wrap grid">
     <div class="fig rv rv-l" data-parallax="0.06">
-      <img class="cut" src="img/cut/gold-crossed.png?v=287743" alt="Forbes Riley">
+      <img class="cut" src="img/cut/gold-crossed.png?v=288612" alt="Forbes Riley">
     </div>
     <div>
       <p class="eyebrow rv">Where it comes from</p>
@@ -915,18 +927,18 @@ footer a{color:var(--gold);text-decoration:none}
 
 <section class="gallery" aria-label="Forbes on stage">
   <div class="track" id="gal">
-    <figure><img src="img/hero-stage-blue.jpg?v=287743" alt=""><figcaption>Keynote</figcaption></figure>
-    <figure><img src="img/event-ffl-stage.jpg?v=287743" alt=""><figcaption>Forbes Factor Live</figcaption></figure>
-    <figure><img src="img/h-10x-stage.jpg?v=287743" alt=""><figcaption>10X Growth Con</figcaption></figure>
-    <figure><img src="img/event-audience.jpg?v=287743" alt=""><figcaption>Live audience</figcaption></figure>
-    <figure><img src="img/friends-les-brown.jpg?v=287743" alt=""><figcaption>With Les Brown</figcaption></figure>
-    <figure><img src="img/h-stage-purple.jpg?v=287743" alt=""><figcaption>On stage</figcaption></figure>
-    <figure><img src="img/event-garden-crowd.jpg?v=287743" alt=""><figcaption>Private event</figcaption></figure>
-    <figure><img src="img/friends-kevin-harrington-panel.jpg?v=287743" alt=""><figcaption>Panel with Kevin Harrington</figcaption></figure>
-    <figure><img src="img/spingym-hsn-set.jpg?v=287743" alt=""><figcaption>Live on HSN</figcaption></figure>
-    <figure><img src="img/event-speaking-hand.jpg?v=287743" alt=""><figcaption>Speaking</figcaption></figure>
-    <figure><img src="img/friends-george-foreman.jpg?v=287743" alt=""><figcaption>With George Foreman</figcaption></figure>
-    <figure><img src="img/h-redcarpet.jpg?v=287743" alt=""><figcaption>Red carpet</figcaption></figure>
+    <figure><img src="img/hero-stage-blue.jpg?v=288612" alt=""><figcaption>Keynote</figcaption></figure>
+    <figure><img src="img/event-ffl-stage.jpg?v=288612" alt=""><figcaption>Forbes Factor Live</figcaption></figure>
+    <figure><img src="img/h-10x-stage.jpg?v=288612" alt=""><figcaption>10X Growth Con</figcaption></figure>
+    <figure><img src="img/event-audience.jpg?v=288612" alt=""><figcaption>Live audience</figcaption></figure>
+    <figure><img src="img/friends-les-brown.jpg?v=288612" alt=""><figcaption>With Les Brown</figcaption></figure>
+    <figure><img src="img/h-stage-purple.jpg?v=288612" alt=""><figcaption>On stage</figcaption></figure>
+    <figure><img src="img/event-garden-crowd.jpg?v=288612" alt=""><figcaption>Private event</figcaption></figure>
+    <figure><img src="img/friends-kevin-harrington-panel.jpg?v=288612" alt=""><figcaption>Panel with Kevin Harrington</figcaption></figure>
+    <figure><img src="img/spingym-hsn-set.jpg?v=288612" alt=""><figcaption>Live on HSN</figcaption></figure>
+    <figure><img src="img/event-speaking-hand.jpg?v=288612" alt=""><figcaption>Speaking</figcaption></figure>
+    <figure><img src="img/friends-george-foreman.jpg?v=288612" alt=""><figcaption>With George Foreman</figcaption></figure>
+    <figure><img src="img/h-redcarpet.jpg?v=288612" alt=""><figcaption>Red carpet</figcaption></figure>
   </div>
 </section>
 
@@ -939,7 +951,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="kn">
       <div class="kn-list rv rv-l"><button class="kn-tab on" data-i="0"><span class="n">01</span><span class="t">The Power of YES</span><span class="sub">How One Decision Can Change Everything</span></button><button class="kn-tab" data-i="1"><span class="n">02</span><span class="t">Pitch Secrets</span><span class="sub">The Art of Getting to YES</span></button><button class="kn-tab" data-i="2"><span class="n">03</span><span class="t">The Human Advantage</span><span class="sub">Why AI Can't Replace the Power of YOU</span></button><button class="kn-tab" data-i="3"><span class="n">04</span><span class="t">Reinvent Yourself</span><span class="sub">The Space Between Who You Were and Who You Become</span></button><button class="kn-tab" data-i="4"><span class="n">05</span><span class="t">The Voice of Influence</span><span class="sub">How to Make People Listen, Believe, and Take Action</span></button></div>
-      <div class="kn-panel rv"><div class="kn-item on" data-i="0"><div class="kn-copy"><p class="k">Keynote 01</p><h3>How One Decision Can Change Everything</h3><p>A YES opens doors.</p><p class="k2">Your audience walks out with</p><ul><li>The one decision behind every turning point, told through her own story</li><li>A room-wide YES exercise your people will repeat for weeks</li><li>The reframe from "waiting to be picked" to "pitching for it"</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Power of YES: How One Decision Can Change Everything">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p1"><i class="dust"></i><i class="shine"></i><div class="pt">The Power of<em>YES</em></div><img src="img/cut/arms-up-close.png?v=287743" alt="Forbes Riley"><span class="ps">How one decision changes everything</span></div></div></div><div class="kn-item" data-i="1"><div class="kn-copy"><p class="k">Keynote 02</p><h3>The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales.</p><p class="k2">Your audience walks out with</p><ul><li>The 7-second hook, written and said out loud in the room</li><li>The three pitch patterns behind $2.5 billion in sales</li><li>Why you sound salesy and the exact fix</li><li>Live hot-seat coaching from the stage</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="Pitch Secrets: The Art of Getting to YES">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p2"><i class="dust"></i><i class="shine"></i><div class="pt">Pitch<em>Secrets</em></div><img src="img/cut/books-close.png?v=287743" alt="Forbes Riley holding Pitch Secrets A to Z"><span class="ps">The art of getting to yes</span></div></div></div><div class="kn-item" data-i="2"><div class="kn-copy"><p class="k">Keynote 03</p><h3>Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words.</p><p class="k2">Your audience walks out with</p><ul><li>What a machine can never do in a room</li><li>Presence, voice and story as the new competitive edge</li><li>A pitch rebuilt around the human on the other side</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Human Advantage: Why AI Can&#x27;t Replace the Power of YOU">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p3"><i class="dust"></i><i class="shine"></i><div class="pt">The Human<em>Advantage</em></div><img src="img/cut/pointed-up.png?v=287743" alt="Forbes Riley pointing up"><span class="ps">Why AI can't replace the power of you</span></div></div></div><div class="kn-item" data-i="3"><div class="kn-copy"><p class="k">Keynote 04</p><h3>The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold.</p><p class="k2">Your audience walks out with</p><ul><li>Five careers, one person: what reinvention really costs</li><li>The limiting belief audit, done live</li><li>A plan to pivot on purpose, not by accident</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="Reinvent Yourself: The Space Between Who You Were and Who You Become">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p4"><i class="dust"></i><i class="shine"></i><div class="pt">Reinvent<em>Yourself</em></div><div class="olds"><img src="img/h-portrait-bw1.jpg?v=287743" alt="Forbes Riley, Broadway years"><img src="img/h-doctors.jpg?v=287743" alt="Forbes Riley on The Doctors"><img src="img/h-lalanne.jpg?v=287743" alt="Forbes Riley with Jack LaLanne"></div><span class="ps">The space between who you were and who you become</span></div></div></div><div class="kn-item" data-i="4"><div class="kn-copy"><p class="k">Keynote 05</p><h3>How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds.</p><p class="k2">Your audience walks out with</p><ul><li>Posture, voice, story, ask: the mechanics of being heard</li><li>Ninety seconds that hold a stranger's attention</li><li>How executives stop informing and start enrolling</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Voice of Influence: How to Make People Listen, Believe, and Take Action">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p5"><i class="dust"></i><i class="shine"></i><div class="pt">The Voice of<em>Influence</em></div><img src="img/cut/mic.png?v=287743" alt="Forbes Riley with a microphone"><span class="ps">How people listen, believe and take action</span></div></div></div></div>
+      <div class="kn-panel rv"><div class="kn-item on" data-i="0"><div class="kn-copy"><p class="k">Keynote 01</p><h3>How One Decision Can Change Everything</h3><p>A YES opens doors.</p><p class="k2">Your audience walks out with</p><ul><li>The one decision behind every turning point, told through her own story</li><li>A room-wide YES exercise your people will repeat for weeks</li><li>The reframe from "waiting to be picked" to "pitching for it"</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Power of YES: How One Decision Can Change Everything">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p1"><i class="dust"></i><i class="shine"></i><div class="pt">The Power of<em>YES</em></div><img src="img/cut/arms-up-close.png?v=288612" alt="Forbes Riley"><span class="ps">How one decision changes everything</span></div></div></div><div class="kn-item" data-i="1"><div class="kn-copy"><p class="k">Keynote 02</p><h3>The Art of Getting to YES</h3><p>The 7-second hook, why you sound salesy and how to stop, and the three patterns behind $2.5 billion in sales.</p><p class="k2">Your audience walks out with</p><ul><li>The 7-second hook, written and said out loud in the room</li><li>The three pitch patterns behind $2.5 billion in sales</li><li>Why you sound salesy and the exact fix</li><li>Live hot-seat coaching from the stage</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="Pitch Secrets: The Art of Getting to YES">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p2"><i class="dust"></i><i class="shine"></i><div class="pt">Pitch<em>Secrets</em></div><img src="img/cut/plum-books.png?v=288612" alt="Forbes Riley holding Pitch Secrets A to Z"><span class="ps">The art of getting to yes</span></div></div></div><div class="kn-item" data-i="2"><div class="kn-copy"><p class="k">Keynote 03</p><h3>Why AI Can't Replace the Power of YOU</h3><p>Machines can write the words.</p><p class="k2">Your audience walks out with</p><ul><li>What a machine can never do in a room</li><li>Presence, voice and story as the new competitive edge</li><li>A pitch rebuilt around the human on the other side</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Human Advantage: Why AI Can&#x27;t Replace the Power of YOU">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p3"><i class="dust"></i><i class="shine"></i><div class="pt">The Human<em>Advantage</em></div><img src="img/cut/pointed-up.png?v=288612" alt="Forbes Riley pointing up"><span class="ps">Why AI can't replace the power of you</span></div></div></div><div class="kn-item" data-i="3"><div class="kn-copy"><p class="k">Keynote 04</p><h3>The Space Between Who You Were and Who You Become</h3><p>Broadway to television to a million SpinGyms sold.</p><p class="k2">Your audience walks out with</p><ul><li>Five careers, one person: what reinvention really costs</li><li>The limiting belief audit, done live</li><li>A plan to pivot on purpose, not by accident</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="Reinvent Yourself: The Space Between Who You Were and Who You Become">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p4"><i class="dust"></i><i class="shine"></i><div class="pt">Reinvent<em>Yourself</em></div><div class="olds"><img src="img/h-portrait-bw1.jpg?v=288612" alt="Forbes Riley, Broadway years"><img src="img/h-doctors.jpg?v=288612" alt="Forbes Riley on The Doctors"><img src="img/h-lalanne.jpg?v=288612" alt="Forbes Riley with Jack LaLanne"></div><span class="ps">The space between who you were and who you become</span></div></div></div><div class="kn-item" data-i="4"><div class="kn-copy"><p class="k">Keynote 05</p><h3>How to Make People Listen, Believe, and Take Action</h3><p>Twenty years of live television taught Forbes how to hold a stranger's attention for ninety seconds.</p><p class="k2">Your audience walks out with</p><ul><li>Posture, voice, story, ask: the mechanics of being heard</li><li>Ninety seconds that hold a stranger's attention</li><li>How executives stop informing and start enrolling</li></ul><div class="kn-btns"><a class="btn btn-gold req" href="#book" data-talk="The Voice of Influence: How to Make People Listen, Believe, and Take Action">Request this keynote</a></div></div><div class="kn-pic"><div class="kn-poster p5"><i class="dust"></i><i class="shine"></i><div class="pt">The Voice of<em>Influence</em></div><img src="img/cut/mic.png?v=288612" alt="Forbes Riley with a microphone"><span class="ps">How people listen, believe and take action</span></div></div></div></div>
       <div class="kn-stages"><p class="k">Stages she has stood on</p><div class="chips"><span>TEDx &times; 3</span><span>Achieve, Denver</span><span>The Wealth Summit, Toronto</span><span>Momentum X</span><span>Forbes Factor Live</span><span>HSN &amp; QVC, live on air</span><span>Discovery's PitchMen</span><span>Fortune 100 sales teams</span><span>Women's leadership summits</span></div></div>
     </div>
     <div class="lists">
@@ -952,7 +964,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="cta">
   <div class="wrap">
     <div class="ctabox script-box rv rv-s">
-      <div class="script-art"><img class="cash" src="img/cut/cash.png?v=287743" alt="Forbes Riley holding cash"></div>
+      <div class="script-art"><img class="cash" src="img/cut/cash.png?v=288612" alt="Forbes Riley holding cash"></div>
       <form class="script-form" id="scriptform" novalidate>
         <p class="kk">Free mini course &middot; created by Dr. Forbes Riley</p>
         <h2>The 5 Steps To Influence Behind <em>$2.5 Billion In Sales</em></h2>
@@ -976,7 +988,7 @@ footer a{color:var(--gold);text-decoration:none}
       <svg viewBox="0 0 1180 800" preserveAspectRatio="none"><path class="arcpath" d="M291 500 C 314 330, 418 160, 590 160 C 762 160, 866 330, 889 500"/></svg>
       <button class="oc oc1" data-i="0" style="left:291.0px;top:500.0px" aria-label="Outcome 1: A 7-second hook"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8"/></svg></button><button class="oc oc2" data-i="1" style="left:384.4px;top:266.2px" aria-label="Outcome 2: Their WHY in one sentence"><svg viewBox="0 0 64 64"><path d="M12 14h40a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H30l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M32 22v10M32 36v2"/></svg></button><button class="oc oc3" data-i="2" style="left:590.0px;top:160.0px" aria-label="Outcome 3: Confidence as posture"><svg viewBox="0 0 64 64"><circle cx="32" cy="13" r="7"/><path d="M14 44c0-14 36-14 36 0"/><path d="M32 24v14"/><path d="M20 60c2-10 22-10 24 0"/></svg></button><button class="oc oc4" data-i="3" style="left:795.6px;top:266.2px" aria-label="Outcome 4: No more sounding salesy"><svg viewBox="0 0 64 64"><path d="M8 40l10-10 8 8 10-10 8 8 12-12"/><path d="M44 24h12v12"/><path d="M6 56h52"/></svg></button><button class="oc oc5" data-i="4" style="left:889.0px;top:500.0px" aria-label="Outcome 5: Reps before they leave"><svg viewBox="0 0 64 64"><path d="M14 26a18 18 0 0 1 32-8l6 6"/><path d="M52 12v12H40"/><path d="M50 38a18 18 0 0 1-32 8l-6-6"/><path d="M12 52V40h12"/></svg></button>
       <div class="ot ot1" data-i="0"><div class="k">Outcome 1</div><p><b>A 7-second hook</b> Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot2" data-i="1"><div class="k">Outcome 2</div><p><b>Their WHY in one sentence</b> Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot3" data-i="2"><div class="k">Outcome 3</div><p><b>Confidence as posture</b> Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot4" data-i="3"><div class="k">Outcome 4</div><p><b>No more sounding salesy</b> The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot5" data-i="4"><div class="k">Outcome 5</div><p><b>Reps before they leave</b> A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open.</p><a class="bk" href="#book">Book this for my room</a></div>
-      <img class="cut rv rv-s d2" src="img/cut/plum-point.png?v=287743" alt="Forbes Riley pointing up">
+      <img class="cut rv rv-s d2" src="img/cut/plum-point.png?v=288612" alt="Forbes Riley pointing up">
     </div>
     <div class="outcomes-m">
       <div class="node rv"><div class="dot">1</div><div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div></div>
@@ -985,7 +997,7 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="node rv"><div class="dot">4</div><div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>From pushing to inviting.</p></div></div>
       <div class="node rv"><div class="dot">5</div><div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>Rehearsed live, with coaching, so it's theirs.</p></div></div>
     </div>
-    <img class="mcut" src="img/cut/plum-point.png?v=287743" alt="">
+    <img class="mcut" src="img/cut/plum-point.png?v=288612" alt="">
   </div>
 </section>
 
@@ -994,9 +1006,9 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="section-head">
       <p class="eyebrow rv">What a better pitch gives your people</p>
       <h2 class="rv d1 chars">What changes when they can P.I.T.C.H.</h2>
-      <p class="rv d2">Five things your audience walks out with. Hover a letter.</p>
+      <p class="rv d2">Five things your audience walks out with. Tap or hover a letter.</p>
     </div>
-    <img class="peek-r" src="img/cut/az-shh.png?v=287743" alt="">
+    <img class="peek-r" src="img/cut/az-shh.png?v=288612" alt="">
     <div class="acro rv" id="acro">
       <div class="letters">
         <button class="lt" data-i="0"><span class="big">P</span><span class="w">Profit</span></button>
@@ -1028,10 +1040,10 @@ footer a{color:var(--gold);text-decoration:none}
         <button class="on" data-f="0">Keynote</button><button data-f="1">Workshop</button><button data-f="2">Emcee &amp; host</button><button data-f="3">Virtual</button>
       </div>
       <div class="fmt-panels">
-        <div class="fmt-panel on"><div class="fmt-copy"><h3>The keynote</h3><p>45 to 90 minutes. Forbes' story, one of her five keynotes tailored to your audience, and a live pitch moment where your people say it out loud. Built for openings, closings and general sessions from 100 to 10,000.</p><ul><li>Pre-event call to tailor the talk to your room</li><li>Live hot-seat coaching from the stage</li><li>A takeaway every attendee can use the next morning</li></ul><a class="btn btn-gold" href="#book">Check keynote availability</a></div><div class="fmt-pic"><img src="img/keynote-stage.jpg?v=287743" alt="Forbes keynoting"></div></div>
-        <div class="fmt-panel"><div class="fmt-copy"><h3>Workshop or pitch intensive</h3><p>Half day to full day. Everyone builds and rehearses their pitch with Forbes coaching in real time. Best for sales teams, founders' cohorts and leadership groups who need the skill, not just the spark.</p><ul><li>Small-group reps with live feedback</li><li>Templates your team keeps</li><li>Optional follow-up Pitch Practice Pods</li></ul><a class="btn btn-gold" href="#book">Ask about a workshop</a></div><div class="fmt-pic"><img src="img/workshop.jpg?v=287743" alt="Forbes leading a workshop"></div></div>
-        <div class="fmt-panel"><div class="fmt-copy"><h3>Emcee and live host</h3><p>The host of two national talk shows and twenty years of live home shopping running your event from the stage. Energy, timing, transitions, and the room never dips.</p><ul><li>Multi-day conferences and galas</li><li>Award shows and product launches</li><li>Panel moderation</li></ul><a class="btn btn-gold" href="#book">Ask about hosting</a></div><div class="fmt-pic"><img src="img/emcee.jpg?v=287743" alt="Forbes hosting a panel"></div></div>
-        <div class="fmt-panel"><div class="fmt-copy"><h3>Virtual keynote</h3><p>Forbes broadcasts from her own studio, Forbes Riley Studios in St. Petersburg, Florida. Camera-ready, interactive, and built to hold attention on a screen the way she held it on live TV.</p><ul><li>Broadcast-quality studio, not a laptop webcam</li><li>Live chat hot seats</li><li>Recordings available for your team</li></ul><a class="btn btn-gold" href="#book">Ask about virtual</a></div><div class="fmt-pic"><img src="img/virtual-studio.jpg?v=287743" alt="Forbes teaching from the studio"></div></div>
+        <div class="fmt-panel on"><div class="fmt-copy"><h3>The keynote</h3><p>45 to 90 minutes. Forbes' story, one of her five keynotes tailored to your audience, and a live pitch moment where your people say it out loud. Built for openings, closings and general sessions from 100 to 10,000.</p><ul><li>Pre-event call to tailor the talk to your room</li><li>Live hot-seat coaching from the stage</li><li>A takeaway every attendee can use the next morning</li></ul><a class="btn btn-gold" href="#book">Check keynote availability</a></div><div class="fmt-pic"><img src="img/keynote-stage.jpg?v=288612" alt="Forbes keynoting"></div></div>
+        <div class="fmt-panel"><div class="fmt-copy"><h3>Workshop or pitch intensive</h3><p>Half day to full day. Everyone builds and rehearses their pitch with Forbes coaching in real time. Best for sales teams, founders' cohorts and leadership groups who need the skill, not just the spark.</p><ul><li>Small-group reps with live feedback</li><li>Templates your team keeps</li><li>Optional follow-up Pitch Practice Pods</li></ul><a class="btn btn-gold" href="#book">Ask about a workshop</a></div><div class="fmt-pic"><img src="img/workshop.jpg?v=288612" alt="Forbes leading a workshop"></div></div>
+        <div class="fmt-panel"><div class="fmt-copy"><h3>Emcee and live host</h3><p>The host of two national talk shows and twenty years of live home shopping running your event from the stage. Energy, timing, transitions, and the room never dips.</p><ul><li>Multi-day conferences and galas</li><li>Award shows and product launches</li><li>Panel moderation</li></ul><a class="btn btn-gold" href="#book">Ask about hosting</a></div><div class="fmt-pic"><img src="img/emcee.jpg?v=288612" alt="Forbes hosting a panel"></div></div>
+        <div class="fmt-panel"><div class="fmt-copy"><h3>Virtual keynote</h3><p>Forbes broadcasts from her own studio, Forbes Riley Studios in St. Petersburg, Florida. Camera-ready, interactive, and built to hold attention on a screen the way she held it on live TV.</p><ul><li>Broadcast-quality studio, not a laptop webcam</li><li>Live chat hot seats</li><li>Recordings available for your team</li></ul><a class="btn btn-gold" href="#book">Ask about virtual</a></div><div class="fmt-pic"><img src="img/virtual-studio.jpg?v=288612" alt="Forbes teaching from the studio"></div></div>
       </div>
     </div>
     <p class="note rv">Not sure which fits? Tell us the date and the room and Forbes' team will recommend one.</p>
@@ -1046,10 +1058,10 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2 sub">Rooms Forbes has walked into lately. Yours is next.</p>
     </div>
     <div class="ev-grid">
-      <a class="ev tilt rv" href="https://momentumxtraining.com/" target="_blank" rel="noopener"><img src="img/momentum-x.jpg?v=287743" alt="Momentum X"><div class="ev-body"><span class="k">Just wrapped</span><h3>Momentum X</h3><span class="hook">Two days. One room. Nobody left without saying their pitch out loud.</span><p>Forbes' mindset and momentum intensive. Strangers on day one, a room that stood for each other by the end, and every person walked out with the plan and the people to carry it out.</p><span class="more">Book this energy</span></div></a>
-      <a class="ev tilt rv d1" href="#book"><img src="img/achieve-denver.jpg?v=287743" alt="Achieve, Denver"><div class="ev-body"><span class="k">Keynote &middot; Denver</span><h3>Achieve</h3><span class="hook">She finished the keynote, then worked the room table by table.</span><p>Denver got the talk, then the hot seats: Forbes at the tables fixing pitches one at a time, a signed Pitch Secrets in every hand.</p><span class="more">Book a keynote</span></div></a>
-      <a class="ev tilt rv d2" href="#book"><img src="img/wealth-summit.jpg?v=287743" alt="The Wealth Summit, Toronto"><div class="ev-body"><span class="k">Keynote &middot; Toronto</span><h3>The Wealth Summit</h3><span class="hook">The largest transfer of wealth in history. Forbes told Toronto how to pitch for its share.</span><p>On the Wealth Summit stage: you don't get what you deserve, you get what you pitch for. The room wrote its ask before she left the stage.</p><span class="more">Bring Forbes</span></div></a>
-      <a class="ev tilt rv d3" href="#courses"><img src="img/ffl-group.jpg?v=287743" alt="Forbes Factor Live"><div class="ev-body"><span class="k">Live &middot; St. Petersburg</span><h3>Forbes Factor Live</h3><span class="hook">Walk in with an idea. Walk out with your pitch on camera.</span><p>Three days in Forbes' own St. Petersburg studio. Every pitch built, rehearsed and delivered on camera, with Forbes coaching each one live.</p><span class="more">See trainings</span></div></a>
+      <a class="ev tilt rv" href="https://momentumxtraining.com/" target="_blank" rel="noopener"><img src="img/momentum-x.jpg?v=288612" alt="Momentum X"><div class="ev-body"><span class="k">Just wrapped</span><h3>Momentum X</h3><span class="hook">Two days. One room. Nobody left without saying their pitch out loud.</span><p>Forbes' mindset and momentum intensive. Strangers on day one, a room that stood for each other by the end, and every person walked out with the plan and the people to carry it out.</p><span class="more">Book this energy</span></div></a>
+      <a class="ev tilt rv d1" href="#book"><img src="img/achieve-denver.jpg?v=288612" alt="Achieve, Denver"><div class="ev-body"><span class="k">Keynote &middot; Denver</span><h3>Achieve</h3><span class="hook">She finished the keynote, then worked the room table by table.</span><p>Denver got the talk, then the hot seats: Forbes at the tables fixing pitches one at a time, a signed Pitch Secrets in every hand.</p><span class="more">Book a keynote</span></div></a>
+      <a class="ev tilt rv d2" href="#book"><img src="img/wealth-summit.jpg?v=288612" alt="The Wealth Summit, Toronto"><div class="ev-body"><span class="k">Keynote &middot; Toronto</span><h3>The Wealth Summit</h3><span class="hook">The largest transfer of wealth in history. Forbes told Toronto how to pitch for its share.</span><p>On the Wealth Summit stage: you don't get what you deserve, you get what you pitch for. The room wrote its ask before she left the stage.</p><span class="more">Bring Forbes</span></div></a>
+      <a class="ev tilt rv d3" href="#courses"><img src="img/ffl-group.jpg?v=288612" alt="Forbes Factor Live"><div class="ev-body"><span class="k">Live &middot; St. Petersburg</span><h3>Forbes Factor Live</h3><span class="hook">Walk in with an idea. Walk out with your pitch on camera.</span><p>Three days in Forbes' own St. Petersburg studio. Every pitch built, rehearsed and delivered on camera, with Forbes coaching each one live.</p><span class="more">See trainings</span></div></a>
     </div>
   </div>
 </section>
@@ -1062,13 +1074,13 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2">Every path starts with the free masterclass. From there, pick the depth your people need.</p>
     </div>
     <div class="rail" id="rail">
-      <div class="course tilt rv"><img class="cpic" src="img/forbesd-it.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div></div>
-      <div class="course tilt rv d1"><img class="cpic" src="img/elevator.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A 20 to 30 second pitch that ends with "tell me more." Forbes' seven-step blueprint: begin with the end, the name game, I'm known as, because, an example, what I'm up to now, and the best way to reach you. Workbook, drills and reps until it's second nature.</p><a href="#book">Ask about Elevator Pitch 2.0</a></div></div>
-      <div class="course tilt rv d2"><img class="cpic" src="img/stage-vegas.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div></div>
-      <div class="course tilt rv d3"><img class="cpic" src="img/studio-group.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div></div>
-      <div class="course tilt rv d4"><img class="cpic" src="img/momentum-x.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="https://momentumxtraining.com/" target="_blank" rel="noopener">Read more</a></div></div>
-      <div class="course tilt rv d5"><img class="cpic" src="img/h-stage-purple.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div></div>
-      <div class="course tilt rv d5"><img class="cpic" src="img/blue-jacket.jpg?v=287743" alt=""><div class="cbody"><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div></div>
+      <div class="course tilt rv"><img class="cpic" src="img/forbesd-it.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div></div>
+      <div class="course tilt rv d1"><img class="cpic" src="img/elevator.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A 20 to 30 second pitch that ends with "tell me more." Forbes' seven-step blueprint: begin with the end, the name game, I'm known as, because, an example, what I'm up to now, and the best way to reach you. Workbook, drills and reps until it's second nature.</p><a href="#book">Ask about Elevator Pitch 2.0</a></div></div>
+      <div class="course tilt rv d2"><img class="cpic" src="img/stage-vegas.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div></div>
+      <div class="course tilt rv d3"><img class="cpic" src="img/studio-group.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div></div>
+      <div class="course tilt rv d4"><img class="cpic" src="img/momentum-x.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="https://momentumxtraining.com/" target="_blank" rel="noopener">Read more</a></div></div>
+      <div class="course tilt rv d5"><img class="cpic" src="img/h-stage-purple.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div></div>
+      <div class="course tilt rv d5"><img class="cpic" src="img/blue-jacket.jpg?v=288612" alt=""><div class="cbody"><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div></div>
     </div>
     <div class="rail-nav"><button id="rl" aria-label="Scroll left">&#8592;</button><button id="rr" aria-label="Scroll right">&#8594;</button></div>
   </div>
@@ -1089,11 +1101,11 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap grid">
     <div class="fig rv rv-l" data-parallax="0.06">
       <a class="bigname" href="#reel" data-yt="t52E3asvjsw" aria-label="Play the video">F<span class="o"><i></i></span>RBES<span class="pv">play video</span></a>
-      <img class="cut" src="img/cut/az-chin.png?v=287743" alt="Forbes Riley">
+      <img class="cut" src="img/cut/az-chin.png?v=288612" alt="Forbes Riley">
     </div>
     <div>
       <p class="eyebrow rv">Meet Forbes Riley</p>
-      <h2 class="rv d1 meet">Meet <img class="sig" src="img/white-signature.png?v=287743" alt="Forbes Riley"></h2>
+      <h2 class="rv d1 meet">Meet <img class="sig" src="img/white-signature.png?v=288612" alt="Forbes Riley"></h2>
       <p class="rv d2">Award-winning TV host. Bestselling author. Motivational speaker. More than $2.5 billion in sales. I'm a globally recognized entrepreneur, 3X TEDx speaker and media personality whose career spans television, live stages and digital platforms, and it all proves one thing: your life expands in direct proportion to how well you master the one skill most people overlook. The power of the pitch.</p>
       <p class="rv d3">I've shared stages with icons, built companies from ideas, and helped thousands of entrepreneurs, speakers, coaches and founders monetize their message with clarity and confidence. But my story didn't begin with billion-dollar sales. It began in a hospital waiting room.</p>
       <p class="quoteline rv d3">"I'm on a mission to empower you to elevate your pitch."</p>
@@ -1106,7 +1118,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="bridge rv">and she wrote the book on it</div>
   <div class="wrap grid">
     <div class="bk-fig rv rv-l">
-      <img class="authorcut" src="img/cut/author-stool.png?v=287743" alt="Forbes Riley holding Pitch Secrets A to Z">
+      <img class="authorcut" src="img/cut/author-stool.png?v=288612" alt="Forbes Riley holding Pitch Secrets A to Z">
     </div>
     <div>
       <p class="eyebrow rv">Bestselling author</p>
@@ -1123,8 +1135,8 @@ footer a{color:var(--gold);text-decoration:none}
 
 
 <section class="section free" id="free">
-  <img class="cutl" src="img/cut/coral-crossed.png?v=287743" alt="">
-  <img class="cutr" src="img/cut/az-half.png?v=287743" alt="">
+  <img class="cutl" src="img/cut/coral-crossed.png?v=288612" alt="">
+  <img class="cutr" src="img/cut/az-half.png?v=288612" alt="">
   <div class="wrap">
     <p class="eyebrow rv" style="color:#5a4210">Start here. It's free.</p>
     <h2 class="rv d1">Before you book, come to the masterclass</h2>
@@ -1153,6 +1165,10 @@ footer a{color:var(--gold);text-decoration:none}
         <div class="f"><label for="size">Estimated audience size</label><input id="size" name="size" placeholder="e.g. 300"></div>
       </div>
       <div class="row">
+        <div class="f"><label for="fmt">In person or virtual</label><select id="fmt" name="fmt"><option>In person</option><option>Virtual</option><option>Hybrid</option><option>Not sure yet</option></select></div>
+        <div class="f"><label for="budget">Speaker budget</label><select id="budget" name="budget"><option>Prefer to discuss</option><option>Under $10,000</option><option>$10,000 to $25,000</option><option>$25,000 to $50,000</option><option>$50,000+</option></select></div>
+      </div>
+      <div class="row">
         <div class="f"><label for="type">Event type</label>
           <select id="type" name="type"><option>Keynote</option><option>Workshop or pitch intensive</option><option>Corporate event</option><option>Conference or summit</option><option>Panel</option><option>Emcee or live hosting</option><option>Podcast or virtual event</option><option>Other</option></select></div>
         <div class="f"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
@@ -1165,7 +1181,7 @@ footer a{color:var(--gold);text-decoration:none}
 
 <footer>
   <div class="wrap">
-    <img src="img/logo-signature-gold.png?v=287743" alt="Forbes Riley">
+    <img src="img/logo-signature-gold.png?v=288612" alt="Forbes Riley">
     <div class="line">Teaching the skill that built everything.</div>
     <div>Instagram: <a href="https://instagram.com/forbes_riley" target="_blank" rel="noopener">@forbes_riley</a> &middot; <a href="index.html">forbesriley.com</a> &middot; <a href="mailto:assistant@theforbesfactor.com">assistant@theforbesfactor.com</a></div>
     <div style="margin-top:12px">&copy; 2026 Forbes Riley. All rights reserved.</div>
@@ -1250,7 +1266,7 @@ footer a{color:var(--gold);text-decoration:none}
 
   /* form -> email */
   $('#bookform').addEventListener('submit',function(e){e.preventDefault();var f=this,g=function(id){return (f.elements[id].value||'').trim()};
-    var body=['Name: '+g('name'),'Event date: '+g('date'),'Organization / event: '+g('org'),'Audience size: '+g('size'),'Event type: '+g('type'),'Email: '+g('email'),'','About the audience:',g('msg')].join('\n');
+    var body=['Name: '+g('name'),'Event date: '+g('date'),'Organization / event: '+g('org'),'Audience size: '+g('size'),'Format: '+g('fmt'),'Budget: '+g('budget'),'Event type: '+g('type'),'Email: '+g('email'),'','About the audience:',g('msg')].join('\n');
     location.href='mailto:assistant@theforbesfactor.com?subject='+encodeURIComponent('Speaking inquiry: '+g('org'))+'&body='+encodeURIComponent(body)});
   var sf=document.getElementById('scriptform');if(sf)sf.addEventListener('submit',function(e){e.preventDefault();var n=sf.name.value.trim(),m=sf.email.value.trim();if(!n||!m||!sf.ok.checked){sf.reportValidity();return}sf.querySelector('.sent').hidden=false;window.open('downloads/forbes-riley-5-steps-to-influence-mini-course.pdf','_blank');location.href='mailto:assistant@theforbesfactor.com?subject='+encodeURIComponent('Send me the 5 Steps to Influence mini course')+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+m+'\nI agree to receive emails from Forbes Riley.')});
 })();

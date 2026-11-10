@@ -480,10 +480,13 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .courses{background:linear-gradient(180deg,#6b1f52,#07061a);overflow:hidden}
 .rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 24px 18px;margin:0 -24px;scrollbar-width:none}
 .rail::-webkit-scrollbar{display:none}
-.course{flex:0 0 320px;scroll-snap-align:start;background:linear-gradient(180deg,#4a1438,#0a0912);border:1px solid rgba(232,217,160,.2);border-radius:14px;padding:30px 28px;display:flex;flex-direction:column;min-height:330px;transition:transform .4s,border-color .4s;position:relative;overflow:hidden}
+.course{flex:0 0 320px;scroll-snap-align:start;background:linear-gradient(180deg,#4a1438,#0a0912);border:1px solid rgba(232,217,160,.2);border-radius:14px;padding:0;display:flex;flex-direction:column;min-height:330px;transition:transform .4s,border-color .4s;position:relative;overflow:hidden}
 .course:hover{transform:translateY(-6px);border-color:var(--gold)}
+.course .cpic{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(.95);transition:transform .8s}
+.course:hover .cpic{transform:scale(1.05)}
+.course .cbody{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
 .course .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
-.course h3{font-size:26px;color:var(--gold);margin:12px 0 10px;line-height:1.15}
+.course h3{font-size:22px;color:var(--gold);margin:12px 0 10px;line-height:1.15}
 .course p{color:#d9d1c0;font-size:15px;margin:0 0 20px;flex:1}
 .course a{color:var(--gold);text-decoration:none;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
 .course a:after{content:" \2192";transition:margin .3s}
@@ -961,13 +964,13 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d2">Every path starts with the free masterclass. From there, pick the depth your people need.</p>
     </div>
     <div class="rail" id="rail">
-      <div class="course tilt rv"><span class="num">01</span><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div>
-      <div class="course tilt rv d1"><span class="num">02</span><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A modern, impactful way to communicate your value in under 30 seconds. It creates an emotional connection, shows impact and leaves your audience wanting more.</p><a href="https://pitchsecretstraining.com/ep2sm" target="_blank" rel="noopener">Read more</a></div>
-      <div class="course tilt rv d2"><span class="num">03</span><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div>
-      <div class="course tilt rv d3"><span class="num">04</span><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div>
-      <div class="course tilt rv d4"><span class="num">05</span><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="#book">Read more</a></div>
-      <div class="course tilt rv d5"><span class="num">06</span><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div>
-      <div class="course tilt rv d5"><span class="num">07</span><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div>
+      <div class="course tilt rv"><img class="cpic" src="img/virtual-studio.jpg" alt=""><div class="cbody"><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div></div>
+      <div class="course tilt rv d1"><img class="cpic" src="img/event-speaking-hand.jpg" alt=""><div class="cbody"><div class="tag">Short course</div><h3>Elevator Pitch 2.0</h3><p>A modern, impactful way to communicate your value in under 30 seconds. It creates an emotional connection, shows impact and leaves your audience wanting more.</p><a href="https://pitchsecretstraining.com/ep2sm" target="_blank" rel="noopener">Read more</a></div></div>
+      <div class="course tilt rv d2"><img class="cpic" src="img/event-ffl-stage.jpg" alt=""><div class="cbody"><div class="tag">Live &middot; 3 days</div><h3>Forbes Factor Live</h3><p>Three days in Forbes' St. Petersburg studio. Elevate your pitch, shatter limits and build your business foundation while networking like a pro.</p><a href="#book">Ask about dates</a></div></div>
+      <div class="course tilt rv d3"><img class="cpic" src="img/event-ffl-room.jpg" alt=""><div class="cbody"><div class="tag">Weekly group</div><h3>Pitch Practice Pods</h3><p>Small groups that meet to pitch, get coached live and pitch again. Reps are the only way a pitch becomes second nature.</p><a href="#book">Ask about the next pod</a></div></div>
+      <div class="course tilt rv d4"><img class="cpic" src="img/event-audience.jpg" alt=""><div class="cbody"><div class="tag">Training</div><h3>Momentum X</h3><p>The immersive mindset and momentum intensive. Drop limiting beliefs and leave with the plan and the people to carry it out.</p><a href="#book">Read more</a></div></div>
+      <div class="course tilt rv d5"><img class="cpic" src="img/keynote-stage.jpg" alt=""><div class="cbody"><div class="tag">Program</div><h3>Next Level Speaker Training</h3><p>For speakers who want to own a stage. Presence, structure, the enrollment close and how to get booked. Taught by a host of two national talk shows.</p><a href="#book">Read more</a></div></div>
+      <div class="course tilt rv d5"><img class="cpic" src="img/g-event-group.jpg" alt=""><div class="cbody"><div class="tag">Membership</div><h3>Inner Circle</h3><p>Ongoing access to Forbes, the community and the monthly live coaching for people who want the Queen of Pitch in their corner all year.</p><a href="#book">Ask to join</a></div></div>
     </div>
     <div class="rail-nav"><button id="rl" aria-label="Scroll left">&#8592;</button><button id="rr" aria-label="Scroll right">&#8594;</button></div>
   </div>
@@ -1004,7 +1007,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="section author" id="author">
   <div class="wrap grid">
     <div class="bk-fig rv rv-l">
-      <img class="authorcut" src="img/cut/ai-author.png" alt="Forbes Riley holding her book">
+      <img class="authorcut" src="img/cut/book-hold.png" alt="Forbes Riley holding Pitch Secrets A to Z">
       <img class="cover2" src="img/book-cover-2.jpg" alt="Pitch Secrets for Network Marketers by Dr. Forbes Riley">
     </div>
     <div>

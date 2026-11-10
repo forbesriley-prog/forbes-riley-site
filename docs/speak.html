@@ -254,8 +254,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 /* promise arc */
 .promise{background:linear-gradient(180deg,#fff,#f6f1fb);color:var(--cream-ink);overflow:hidden;padding-bottom:0}
 .promise .intro{max-width:820px;margin:-26px auto 40px;text-align:center;font-size:19px;color:#2a2420}
-.arc{position:relative;height:780px;max-width:1100px;margin:0 auto}
-.arc .cut{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:560px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;z-index:2;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))}
+.arc{position:relative;height:720px;max-width:1000px;margin:0 auto}
+.arc .cut{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:440px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;z-index:2;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))}
 .arc .glow{width:min(520px,100%);left:50%;bottom:-60px;transform:translateX(-50%);opacity:.55}
 .arc .dust{left:20%;right:20%;top:10%;bottom:0;z-index:1}
 .node{position:absolute;width:250px;z-index:3}
@@ -264,11 +264,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .node h3{font-size:19px;color:#000;margin:12px 0 6px}
 .node p{margin:0;font-size:14px;color:#3a3236}
 .node .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--maroon);font-weight:700}
-.n1{left:0;top:440px;text-align:right}.n1 .dot{margin-left:auto}
+.n1{left:0;top:420px;text-align:right}.n1 .dot{margin-left:auto}
 .n2{left:40px;top:110px;text-align:right}.n2 .dot{margin-left:auto}
 .n3{left:50%;top:0;transform:translateX(-50%);text-align:center;width:300px}.n3 .dot{margin:0 auto}
 .n4{right:40px;top:110px}
-.n5{right:0;top:440px}
+.n5{right:0;top:420px}
 .arc svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .arc svg path{fill:none;stroke:var(--gold-deep);stroke-width:1.5;stroke-dasharray:6 8;opacity:.6}
 .outcomes-m{display:none}
@@ -282,7 +282,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .arc .node .bk{display:none;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-dark);text-decoration:none}
 .arc .node.on .bk{display:inline-block}
 .arc .node .bk:after{content:" \2192"}
-.arc.has-active .node:not(.on){opacity:.45}
+.arc.has-active .node:not(.on){opacity:.72}
 .arc .node.on .dot{background:linear-gradient(135deg,#f6e3a1,#d4a73c 55%,#f0d57a);color:#2a0f2a;transform:scale(1.14);box-shadow:0 0 0 10px rgba(240,213,122,.22),0 14px 30px rgba(0,0,0,.3)}
 .arc .node .dot:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(240,213,122,.6);opacity:0;transform:scale(.8)}
 .arc .node.on .dot:after{animation:ringout 1.6s ease-out infinite}
@@ -495,8 +495,7 @@ footer a{color:var(--gold);text-decoration:none}
 </head>
 <body>
 <div id="progress"></div>
-<div class="grain" aria-hidden="true"></div><div class="cur" aria-hidden="true"></div><div class="cur2" aria-hidden="true"></div>
-<div class="pill" id="pill"><img src="img/helms-headshot.jpg" alt=""><span class="t">Bring Forbes to your stage</span><a class="btn btn-gold" href="#book">Book Forbes</a></div>
+<div class="grain" aria-hidden="true"></div><div class="pill" id="pill"><img src="img/helms-headshot.jpg" alt=""><span class="t">Bring Forbes to your stage</span><a class="btn btn-gold" href="#book">Book Forbes</a></div>
 <canvas id="confetti"></canvas>
 <nav class="nav" id="nav">
   <div class="wrap">
@@ -678,8 +677,8 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <p class="intro rv d2">I take a stage seriously. When someone gives me their audience, I don't show up to entertain. I show up to put a skill in their hands that is still there when the event is over and the phone rings on Monday.</p>
     <div class="arc" id="arc">
-      <svg viewBox="0 0 1100 780" preserveAspectRatio="none"><path class="arcpath" d="M110 490 C 180 280, 400 50, 550 50 C 700 50, 920 280, 990 490"/><line class="beam" x1="550" y1="560" x2="550" y2="560"/></svg>
-      <div class="detail" id="detail"><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p><a class="btn btn-dark" href="#book">Book this for my room</a></div>
+      <svg viewBox="0 0 1000 720" preserveAspectRatio="none"><path class="arcpath" d="M110 470 C 170 260, 380 60, 500 60 C 620 60, 830 260, 890 470"/></svg>
+      
       <div class="glow gold"></div><div class="dust"></div>
       <div class="node n1 rv data-i="0" data-title="A 7-second hook" data-text="Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open." tabindex="0" role="button" aria-label="Outcome 1: A 7-second hook" rv-l"><div class="dot">1</div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p><a class="bk" href="#book">Book this for my room</a></div>
       <div class="node n2 rv data-i="1" data-title="Their WHY in one sentence" data-text="Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands." tabindex="0" role="button" aria-label="Outcome 2: Their WHY in one sentence" rv-l d1"><div class="dot">2</div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason. Everyone says theirs out loud.</p><a class="bk" href="#book">Book this for my room</a></div>
@@ -924,14 +923,13 @@ footer a{color:var(--gold);text-decoration:none}
   var $=function(q,c){return (c||document).querySelector(q)},$$=function(q,c){return [].slice.call((c||document).querySelectorAll(q))};
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* outcomes ring */
-  var arc=$('#arc'),nodes=$$('#arc .node'),detail=$('#detail'),beam=$('#arc .beam'),prog=$('#arcprog'),cur=-1,timer;
+  var arc=$('#arc'),nodes=$$('#arc .node'),prog=$('#arcprog'),cur=-1,timer;
   if(arc){nodes.forEach(function(n,i){var b=document.createElement('i');b.innerHTML='<b></b>';b.onclick=function(){set(i);restart()};prog.appendChild(b);
       n.addEventListener('click',function(){set(i);restart()});n.addEventListener('mouseenter',function(){set(i);clearInterval(timer)});n.addEventListener('mouseleave',restart);
       n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();set(i);restart()}})});
     function set(i){cur=i;arc.classList.add('has-active');nodes.forEach(function(n,k){n.classList.toggle('on',k===i)});$$('#arcprog i').forEach(function(b,k){b.classList.toggle('on',k===i);if(k===i){var bb=b.firstChild;bb.style.animation='none';void bb.offsetWidth;bb.style.animation=''}});
       nodes.forEach(function(m,k){var pp=m.querySelector('p');if(!m.dataset.short)m.dataset.short=pp.textContent;pp.textContent=k===i?m.dataset.text:m.dataset.short});var n=nodes[i];
-      var r=arc.getBoundingClientRect(),d=n.querySelector('.dot').getBoundingClientRect(),x=(d.left+d.width/2-r.left)/r.width*1100,y=(d.top+d.height/2-r.top)/r.height*780;
-      beam.setAttribute('x1',x);beam.setAttribute('y1',y);beam.setAttribute('x2',i<2?430:i>2?670:550);beam.setAttribute('y2',i===2?330:430)}
+}
     function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){set((cur+1)%nodes.length)},4500)}
     new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(cur<0)set(0);restart()}else clearInterval(timer)})},{threshold:.4}).observe(arc);}
   /* mobile outcomes accordion */
@@ -976,7 +974,6 @@ window.addEventListener('load',function(){
     /* images unveil */
     $$('.gallery figure img,.vidbig img,.reel .hs img').forEach(function(im){gsap.from(im,{clipPath:'inset(0 100% 0 0)',duration:1.1,ease:'power3.out',scrollTrigger:{trigger:im,start:'top 88%'}})});
     /* outcomes pop in a ring */
-    gsap.from('.arc .node .dot',{scale:0,duration:.6,ease:'back.out(2)',stagger:.12,scrollTrigger:{trigger:'.arc',start:'top 70%'}});
     /* phone floats */
     gsap.to('.phone',{y:-14,duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1});
     /* courses: cards slide in from the right */
@@ -989,9 +986,6 @@ window.addEventListener('load',function(){
   /* magnetic buttons */
   if(fine && !reduce){$$('.btn').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})});}
   /* gold cursor */
-  if(fine){var c1=document.querySelector('.cur'),c2=document.querySelector('.cur2'),mx=0,my=0,rx=0,ry=0;
-    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px';document.body.classList.toggle('hovering',!!e.target.closest('a,button,.vid,.vidbig,.cover,.pillar,.tilt'))});
-    (function f(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(f)})();}
   /* spotlight follows the mouse on dark sections */
   if(fine){$$('section.dark').forEach(function(sec){var sp=document.createElement('div');sp.className='spot';sec.insertBefore(sp,sec.firstChild);sec.addEventListener('mousemove',function(e){var r=sec.getBoundingClientRect();sp.style.setProperty('--sx',(e.clientX-r.left)+'px');sp.style.setProperty('--sy',(e.clientY-r.top)+'px')})});}
   /* floating book pill */

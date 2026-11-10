@@ -96,7 +96,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .hero p.lede strong{color:#fff}
 .hero .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .hero .stage{position:absolute;left:50%;top:70px;transform:translateX(-50%);height:min(66vh,640px);width:min(100%,900px);display:flex;align-items:flex-start;justify-content:center;z-index:1;overflow:hidden;mask-image:linear-gradient(180deg,#000 70%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
-.hero .stage .cut{height:auto;width:min(1150px,96vw);max-width:none;object-fit:contain;object-position:top center;position:relative;z-index:2;opacity:0;transform:translateY(60px) scale(.96);animation:popin 1.2s .3s cubic-bezier(.2,.8,.2,1) forwards}
+.hero .stage .cut{height:auto;width:min(1150px,96vw);max-width:none;margin-top:70px;object-fit:contain;object-position:top center;position:relative;z-index:2;opacity:0;transform:translateY(60px) scale(.96);animation:popin 1.2s .3s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes popin{to{opacity:1;transform:none}}
 .hero .stage .glow{width:min(640px,100%);left:50%;top:0;transform:translateX(-50%);opacity:.45}
 .hero .stage .dust{inset:-10% 0 0 0;z-index:1;animation:twinkle 5s ease-in-out infinite}
@@ -877,6 +877,37 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap">
     <div class="ctabox script-box rv rv-s">
       <div class="script-art"><img class="cash" src="img/cash.jpg" alt="Forbes Riley holding cash"></div>
+      <form class="script-form" id="scriptform" novalidate>
+        <h2>The EXACT Script To How Forbes Riley <em>Grossed $2.5 Billion In Sales...</em></h2>
+        <p class="lead">Tell Us Where To Send The Script</p>
+        <div class="row"><input type="text" name="name" placeholder="Name" required><input type="email" name="email" placeholder="Email" required><button class="btn btn-gold" type="submit">I'm ready to get started</button></div>
+        <label class="consent"><input type="checkbox" name="ok" required><span>By checking this box, I agree to receive future promotional and marketing emails from Forbes Riley at the email address provided above. I understand that I can unsubscribe at any time by clicking the unsubscribe link in the footer of any email, or by contacting Forbes Riley directly.</span></label>
+        <p class="sent" hidden>Got it. Your script is on its way.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section promise cream" id="promise">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow rv">The promise</p>
+      <h2 class="rv d1 chars">Here's what I promise every room I walk into</h2>
+    </div>
+    <p class="intro rv d2">I take a stage seriously. When someone gives me their audience, I don't show up to entertain. I show up to put a skill in their hands that is still there when the event is over and the phone rings on Monday.</p>
+    <div class="arc" id="arc">
+      <svg viewBox="0 0 1180 800" preserveAspectRatio="none"><path class="arcpath" d="M291 500 C 314 330, 418 160, 590 160 C 762 160, 866 330, 889 500"/></svg>
+      <button class="oc oc1" data-i="0" style="left:291.0px;top:500.0px" aria-label="Outcome 1: A 7-second hook"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8"/></svg></button><button class="oc oc2" data-i="1" style="left:384.4px;top:266.2px" aria-label="Outcome 2: Their WHY in one sentence"><svg viewBox="0 0 64 64"><path d="M12 14h40a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H30l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M32 22v10M32 36v2"/></svg></button><button class="oc oc3" data-i="2" style="left:590.0px;top:160.0px" aria-label="Outcome 3: Confidence as posture"><svg viewBox="0 0 64 64"><circle cx="32" cy="13" r="7"/><path d="M14 44c0-14 36-14 36 0"/><path d="M32 24v14"/><path d="M20 60c2-10 22-10 24 0"/></svg></button><button class="oc oc4" data-i="3" style="left:795.6px;top:266.2px" aria-label="Outcome 4: No more sounding salesy"><svg viewBox="0 0 64 64"><path d="M8 40l10-10 8 8 10-10 8 8 12-12"/><path d="M44 24h12v12"/><path d="M6 56h52"/></svg></button><button class="oc oc5" data-i="4" style="left:889.0px;top:500.0px" aria-label="Outcome 5: Reps before they leave"><svg viewBox="0 0 64 64"><path d="M14 26a18 18 0 0 1 32-8l6 6"/><path d="M52 12v12H40"/><path d="M50 38a18 18 0 0 1-32 8l-6-6"/><path d="M12 52V40h12"/></svg></button>
+      <div class="ot ot1" data-i="0"><div class="k">Outcome 1</div><p><b>A 7-second hook</b> Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot2" data-i="1"><div class="k">Outcome 2</div><p><b>Their WHY in one sentence</b> Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot3" data-i="2"><div class="k">Outcome 3</div><p><b>Confidence as posture</b> Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot4" data-i="3"><div class="k">Outcome 4</div><p><b>No more sounding salesy</b> The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot5" data-i="4"><div class="k">Outcome 5</div><p><b>Reps before they leave</b> A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <img class="cut rv rv-s d2" src="img/cut/plum-point.png" alt="Forbes Riley pointing up">
+    </div>
+    <div class="outcomes-m">
+      <div class="node rv"><div class="dot">1</div><div><div class="k">Outcome 1</div><h3>A 7-second hook</h3><p>An opening line they can say tonight, built in the room.</p></div></div>
+      <div class="node rv"><div class="dot">2</div><div><div class="k">Outcome 2</div><h3>Their WHY in one sentence</h3><p>Nobody buys the product. They buy the reason.</p></div></div>
+      <div class="node rv"><div class="dot">3</div><div><div class="k">Outcome 3</div><h3>Confidence as posture</h3><p>Feet. Shoulders. Breath. Then speak.</p></div></div>
+      <div class="node rv"><div class="dot">4</div><div><div class="k">Outcome 4</div><h3>No more sounding salesy</h3><p>From pushing to inviting.</p></div></div>
+      <div class="node rv"><div class="dot">5</div><div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>Rehearsed live, with coaching, so it's theirs.</p></div></div>
+    </div>
     <img class="mcut" src="img/cut/plum-point.png" alt="">
   </div>
 </section>

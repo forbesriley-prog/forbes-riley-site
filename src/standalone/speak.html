@@ -428,11 +428,12 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 /* author */
 .author{background:linear-gradient(180deg,#fff,#f6f1fb);color:var(--cream-ink);overflow:hidden}
 .author .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
-.bk-fig{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center}
+.bk-fig{position:relative;min-height:640px;display:flex;align-items:flex-end;justify-content:center}
+.bk-fig .authorcut{position:relative;z-index:2;height:640px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 30px 40px rgba(0,0,0,.25))}
 .bk-fig .splash{position:absolute;left:50%;top:50%;width:130%;max-width:none;transform:translate(-50%,-50%);z-index:0;pointer-events:none}
-.bk-fig .cover{position:relative;z-index:2;width:min(300px,70%);border-radius:6px;box-shadow:0 40px 80px rgba(0,0,0,.35);transform:rotate(-6deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.bk-fig:hover .cover{transform:rotate(-2deg) translateY(-8px)}
-.bk-fig .badge{position:absolute;right:0;bottom:0;width:38%;border-radius:10px;border:4px solid #fff;box-shadow:0 20px 40px rgba(0,0,0,.25);z-index:3;transform:rotate(5deg)}
+.bk-fig .cover{position:absolute;right:0;bottom:40px;z-index:3;width:min(200px,40%);border-radius:6px;border:4px solid #fff;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(6deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.bk-fig:hover .cover{transform:rotate(2deg) translateY(-8px)}
+
 .author h2{font-size:clamp(32px,4vw,54px);color:#1a1420;line-height:1;margin:10px 0 14px;text-transform:none}
 .author h2 .script{color:var(--maroon);font-size:1.25em;font-weight:400;display:block}
 .author .lead{font-weight:600;font-size:20px;color:#4a1233;margin:0 0 14px}
@@ -440,7 +441,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .author ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:8px}
 .author li{padding-left:26px;position:relative;font-size:15.5px;color:#1a1420}
 .author li:before{content:"\2726";position:absolute;left:0;color:var(--gold-deep)}
-@media(max-width:900px){.author .grid{grid-template-columns:1fr}.bk-fig{min-height:420px}}
+@media(max-width:900px){.author .grid{grid-template-columns:1fr}.bk-fig{min-height:460px}.bk-fig .authorcut{height:460px}}
 
 /* testimonials */
 .testi{background:linear-gradient(180deg,#6b1f52,#1a0c2e);text-align:center;overflow:hidden}
@@ -830,8 +831,8 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap grid">
     <div class="bk-fig rv rv-l">
       <img class="splash" src="img/cut/splash-2.png" alt="">
+      <img class="authorcut" src="img/cut/ai-author.png" alt="Forbes Riley holding her book">
       <img class="cover" src="img/book-cover.jpg" alt="Pitch Secrets A to Z by Forbes Riley">
-      <img class="badge" src="img/book-bestseller.jpg" alt="Forbes with her bestseller">
     </div>
     <div>
       <p class="eyebrow rv">Bestselling author</p>

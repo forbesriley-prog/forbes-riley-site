@@ -525,7 +525,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .kn-poster .ps{max-width:58%}
 
 /* shine + fun */
-@keyframes sweep{0%{transform:translateX(-130%) skewX(-18deg)}100%{transform:translateX(230%) skewX(-18deg)}}
+@keyframes sweep{0%{transform:translateX(-260%) skewX(-18deg)}100%{transform:translateX(380%) skewX(-18deg)}}
 @keyframes rise{0%{transform:translateY(40px);opacity:0}100%{transform:none;opacity:1}}
 @keyframes popin2{0%{transform:scale(.94);opacity:0}100%{transform:none;opacity:1}}
 @keyframes glowpulse{0%,100%{filter:drop-shadow(0 0 10px rgba(240,213,122,.45))}50%{filter:drop-shadow(0 0 26px rgba(240,213,122,.95))}}
@@ -533,7 +533,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 @keyframes goldsheen{0%{background-position:0% 50%}100%{background-position:200% 50%}}
 .kn-item.on .kn-poster{animation:popin2 .6s cubic-bezier(.2,.8,.2,1)}
 .kn-item.on .kn-poster img{animation:rise .8s .15s cubic-bezier(.2,.8,.2,1) both}
-.kn-poster .shine{position:absolute;top:-20%;bottom:-20%;left:0;width:45%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:translateX(-130%) skewX(-18deg);pointer-events:none;z-index:3}
+.kn-poster .shine{position:absolute;top:-20%;bottom:-20%;left:0;width:45%;opacity:0;animation:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:translateX(-260%) skewX(-18deg);pointer-events:none;z-index:3}
+.kn-item.on .kn-poster .shine,.kn-poster:hover .shine{opacity:1}
 .kn-item.on .kn-poster .shine{animation:sweep 1.5s .35s ease-out both}
 .kn-poster:hover .shine{animation:sweep 1.1s ease-out both}
 .btn-gold{position:relative;overflow:hidden}

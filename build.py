@@ -53,6 +53,8 @@ if (SRC / "CNAME").exists():
 import gen_archive
 sources = [(page.name, page.read_text()) for page in sorted((SRC / "pages").glob("*.html"))]
 sources += sorted(gen_archive.generate().items())
+if (SRC / "downloads").exists():
+    shutil.copytree(SRC / "downloads", OUT / "downloads")
 if (SRC / "postimg").exists():
     shutil.copytree(SRC / "postimg", OUT / "postimg")
 if (SRC / "video").exists():

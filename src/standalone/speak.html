@@ -156,7 +156,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .script-form .consent input{margin-top:3px;accent-color:#d4a73c}
 .script-form .sent{margin:14px 0 0;color:var(--gold);font-weight:600}
 .script-art{position:relative;height:auto}
-.script-art .cash{display:block;width:100%;border-radius:12px;border:2px solid #d4a73c;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.script-art .cash{display:block;width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
 .script-art .pg{position:absolute;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
 .script-art .pg2,.script-art .pg3{background:#fff;width:46%;height:82%;padding:28px 16px}
 .script-art .pg3{left:38%;top:0;transform:rotate(7deg)}.script-art .pg2{left:30%;top:9%;transform:rotate(2deg)}
@@ -603,14 +603,15 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 /* author */
 .author{background:linear-gradient(180deg,#2a0f2a,#4a1438 50%,#2a0f2a);color:#f1e9f5;overflow:hidden}
-.author.section{padding-top:30px}
+.author.section{padding-top:30px;position:relative}
+.author:before{content:"";position:absolute;inset:0;background:url(img/readers-collage.jpg) center/cover;opacity:.14;pointer-events:none;mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
+.author .wrap,.author .bridge{position:relative;z-index:1}
 .author .bridge{display:flex;align-items:center;gap:18px;max-width:1180px;margin:0 auto 46px;color:var(--gold);font-family:var(--script);font-size:clamp(26px,3vw,40px)}
 .author .bridge:before,.author .bridge:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,213,122,.6),transparent)}
 .author .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
 .bk-fig{position:relative;min-height:0;display:flex;align-items:center;justify-content:center}
 .bk-fig:before{display:none}
-.bk-fig .authorphoto{position:relative;z-index:2;width:100%;border-radius:16px;border:1px solid rgba(240,213,122,.35);box-shadow:0 40px 80px rgba(0,0,0,.5);transform:rotate(-2deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.bk-fig:hover .authorphoto{transform:rotate(0) scale(1.02)}
+.bk-fig .authorcut2{position:relative;z-index:2;width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
 .bk-fig .authorcut{position:relative;z-index:2;height:560px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 30px 40px rgba(0,0,0,.25))}
 .bk-fig .splash{position:absolute;left:50%;top:50%;width:130%;max-width:none;transform:translate(-50%,-50%);z-index:0;pointer-events:none}
 .bk-fig .cover{position:absolute;left:-4%;top:6%;z-index:3;width:min(180px,32%);transform:rotate(-7deg);border-radius:6px;border:4px solid #fff;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(6deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
@@ -688,7 +689,7 @@ body.hovering .cur2{width:64px;height:64px;background:rgba(240,213,122,.12)}
 .pill{position:fixed;left:22px;bottom:22px;transform:translate(0,120px);z-index:94;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(10,8,24,.75);border:1px solid rgba(240,213,122,.4);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1);color:#fff;font-size:14px;white-space:nowrap}
 .pill.on{transform:translate(0,0)}
 .pill img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top}
-.pill .btn{padding:10px 18px;font-size:12px}
+.pill .btn{padding:10px 18px;font-size:12px;border-radius:999px}
 @media(max-width:900px){.pill span.t{display:none}}
 .hero .stage,.hero .copy{will-change:transform,opacity}
 .gallery figure img{clip-path:inset(0 0 0 0)}
@@ -895,7 +896,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="cta">
   <div class="wrap">
     <div class="ctabox script-box rv rv-s">
-      <div class="script-art"><img class="cash" src="img/cash.jpg" alt="Forbes Riley holding cash"></div>
+      <div class="script-art"><img class="cash" src="img/cut/cash.png" alt="Forbes Riley holding cash"></div>
       <form class="script-form" id="scriptform" novalidate>
         <h2>The EXACT Script To How Forbes Riley <em>Grossed $2.5 Billion In Sales...</em></h2>
         <p class="lead">Tell Us Where To Send The Script</p>
@@ -1048,7 +1049,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="bridge rv">and she wrote the book on it</div>
   <div class="wrap grid">
     <div class="bk-fig rv rv-l">
-      <img class="authorphoto" src="img/book-studio.jpg" alt="Forbes Riley holding Pitch Secrets A to Z in her studio">
+      <img class="authorcut2" src="img/cut/two-books.png" alt="Forbes Riley holding two copies of Pitch Secrets A to Z">
     </div>
     <div>
       <p class="eyebrow rv">Bestselling author</p>

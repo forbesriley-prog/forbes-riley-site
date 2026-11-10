@@ -143,7 +143,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .ctabtns{display:flex;flex-direction:column;gap:12px;align-items:stretch}
 .ctabtns .btn{text-align:center}
 /* script capture */
-.script-box{grid-template-columns:.8fr 1.2fr;gap:44px;border:3px solid #d4a73c;box-shadow:0 0 0 1px rgba(240,213,122,.4) inset,0 30px 80px rgba(0,0,0,.45),0 0 40px rgba(240,213,122,.25);background:linear-gradient(135deg,#120a1f,#2a0f2a 60%,#3b1030);backdrop-filter:none;padding:40px 46px}
+.script-box{grid-template-columns:.6fr 1.4fr;gap:36px;border:3px solid #d4a73c;box-shadow:0 0 0 1px rgba(240,213,122,.4) inset,0 30px 80px rgba(0,0,0,.45),0 0 40px rgba(240,213,122,.25);background:linear-gradient(135deg,#120a1f,#2a0f2a 60%,#3b1030);backdrop-filter:none;padding:40px 46px}
 .script-form{background:none!important;border:0!important;padding:0!important;box-shadow:none!important;margin:0!important;max-width:none}
 .script-form .consent span{text-transform:none;letter-spacing:0;font-size:12px;line-height:1.45;color:#c9bdd6;font-weight:400}
 .script-form h2{font-family:var(--body);font-weight:700;font-size:clamp(22px,2.4vw,32px);line-height:1.2;color:#fff;margin:0 0 10px;letter-spacing:0}
@@ -152,11 +152,12 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .script-form .row{display:grid;grid-template-columns:1fr 1fr auto;gap:10px}
 .script-form input[type=text],.script-form input[type=email]{font:400 14px var(--body);padding:14px 14px;border-radius:var(--r);border:1px solid rgba(240,213,122,.35);background:#fff;color:#1a1420;min-width:0}
 .script-form .btn{padding:14px 20px;font-size:12px;white-space:nowrap}
-.script-form .consent{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:11.5px;line-height:1.45;color:#c9bdd6}
+.script-form .consent{display:flex;gap:10px;align-items:flex-start;justify-content:flex-start;margin-top:14px;max-width:620px;font-size:11.5px;line-height:1.45;color:#c9bdd6}
 .script-form .consent input{margin-top:3px;accent-color:#d4a73c}
 .script-form .sent{margin:14px 0 0;color:var(--gold);font-weight:600}
 .script-art{position:relative;height:auto}
-.script-art .cash{display:block;width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+.script-art .cash{display:block;width:100%;max-width:300px;max-height:380px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+.script-form .kk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 10px}
 .script-art .pg{position:absolute;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
 .script-art .pg2,.script-art .pg3{background:#fff;width:46%;height:82%;padding:28px 16px}
 .script-art .pg3{left:38%;top:0;transform:rotate(7deg)}.script-art .pg2{left:30%;top:9%;transform:rotate(2deg)}
@@ -939,8 +940,9 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="ctabox script-box rv rv-s">
       <div class="script-art"><img class="cash" src="img/cut/cash.png" alt="Forbes Riley holding cash"></div>
       <form class="script-form" id="scriptform" novalidate>
-        <h2>The EXACT Script To How Forbes Riley <em>Grossed $2.5 Billion In Sales...</em></h2>
-        <p class="lead">Tell Us Where To Send The Script</p>
+        <p class="kk">Free download &middot; The One Minute to Millions Script</p>
+        <h2>The EXACT Script Forbes Riley Used To <em>Gross $2.5 Billion In Sales</em></h2>
+        <p class="lead">Tell us where to send your One Minute to Millions Script. One page, the whole pitch.</p>
         <div class="row"><input type="text" name="name" placeholder="Name" required><input type="email" name="email" placeholder="Email" required><button class="btn btn-gold" type="submit">I'm ready to get started</button></div>
         <label class="consent"><input type="checkbox" name="ok" required><span>By checking this box, I agree to receive future promotional and marketing emails from Forbes Riley at the email address provided above. I understand that I can unsubscribe at any time by clicking the unsubscribe link in the footer of any email, or by contacting Forbes Riley directly.</span></label>
         <p class="sent" hidden>Got it. Your script is on its way.</p>

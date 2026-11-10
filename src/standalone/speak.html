@@ -419,14 +419,15 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .events h2 .script{font-family:var(--script);font-weight:400;font-size:1.2em;color:var(--gold)}
 .events .sub{color:#c9bdd6;font-size:17px;margin:10px 0 0}
 .ev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.ev{display:block;position:relative;border-radius:14px;overflow:hidden;background:#0b0912;border:1px solid rgba(240,213,122,.22);text-decoration:none;color:#fff;transition:transform .4s,border-color .4s,box-shadow .4s}
+.ev{display:block;position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#0b0912;border:1px solid rgba(240,213,122,.3);text-decoration:none;color:#fff;transition:transform .4s,border-color .4s,box-shadow .4s}
 .ev:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 30px 60px rgba(0,0,0,.5)}
-.ev img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 15%;filter:saturate(.9);transition:transform .8s}
+.ev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.9);transition:transform .8s}
 .ev:hover img{transform:scale(1.06)}
-.ev-body{padding:20px 20px 22px}
+.ev-body{position:absolute;left:0;right:0;bottom:0;padding:70px 20px 22px;background:linear-gradient(180deg,transparent,rgba(7,6,26,.6) 35%,rgba(7,6,26,.96))}
 .ev .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .ev h3{font-family:var(--display);font-weight:700;font-size:21px;margin:8px 0 8px;color:#fff;text-transform:none}
-.ev p{margin:0 0 14px;font-size:14.5px;line-height:1.5;color:#d9d1c0}
+.ev p{margin:0 0 14px;font-size:14px;line-height:1.5;color:#d9d1c0;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s,opacity .4s}
+.ev:hover p{max-height:140px;opacity:1}
 .ev .more{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold)}
 .ev .more:after{content:" \2192"}
 @media(max-width:1000px){.ev-grid{grid-template-columns:repeat(2,1fr)}}
@@ -996,9 +997,9 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="section events dark" id="events">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow rv">Past events</p>
-      <h2 class="rv d1">Recent <span class="script">stages</span></h2>
-      <p class="rv d2 sub">Where Forbes has been lately. Your event is next.</p>
+      <p class="eyebrow rv">See past events</p>
+      <h2 class="rv d1">Permission <span class="script">Granted</span></h2>
+      <p class="rv d2 sub">Rooms Forbes has walked into lately. Yours is next.</p>
     </div>
     <div class="ev-grid">
       <a class="ev tilt rv" href="https://momentumxtraining.com/" target="_blank" rel="noopener"><img src="img/momentum-x.jpg" alt="Momentum X"><div class="ev-body"><span class="k">Just wrapped</span><h3>Momentum X</h3><p>Forbes' immersive mindset and momentum intensive. A full room, two days, and everyone left with the plan and the people to carry it out.</p><span class="more">Bring this energy to my event</span></div></a>
@@ -1013,8 +1014,8 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow rv">Trainings</p>
-      <h2 class="rv d1 chars">Train with Forbes</h2>
-      <p class="rv d2">From a free Sunday masterclass to three days in her studio. Pick how deep your people go.</p>
+      <h2 class="rv d1 chars">Keep going after the keynote</h2>
+      <p class="rv d2">Every path starts with the free masterclass. From there, pick the depth your people need.</p>
     </div>
     <div class="rail" id="rail">
       <div class="course tilt rv"><img class="cpic" src="img/forbesd-it.jpg" alt=""><div class="cbody"><div class="tag">Free &middot; Sundays live</div><h3>Pitch Secrets Masterclass</h3><p>Forbes' interactive live webinar. Unlock the power of verbal communication, avoid the common entrepreneurial pitfalls, craft compelling introductions and close with confidence.</p><a href="https://pitchsecretstraining.com" target="_blank" rel="noopener">Register free</a></div></div>

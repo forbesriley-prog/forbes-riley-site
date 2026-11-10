@@ -431,23 +431,30 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 @media(max-width:1000px){.ev-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.ev-grid{grid-template-columns:1fr}}
 
-.endorse{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:980px;margin:50px auto 0}
-.ecard{margin:0;background:linear-gradient(180deg,#2a0f2a,#120a1f);border:1px solid rgba(240,213,122,.3);border-radius:14px;overflow:hidden;text-align:left;transition:transform .5s,border-color .5s}
+.endorse{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1180px;margin:50px auto 0}
+.ecard{margin:0;background:linear-gradient(180deg,rgba(26,10,34,.92),rgba(10,6,20,.96));border:1px solid rgba(240,213,122,.28);border-radius:14px;overflow:visible;text-align:center;position:relative;transition:transform .5s,border-color .5s}
 .ecard:hover{transform:translateY(-8px);border-color:var(--gold)}
 .ecard img,.ecard .mono{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}
-.endorse{align-items:end;padding-top:40px}
+.endorse{align-items:end;padding-top:70px}
 .ecard{overflow:visible;position:relative}
-.ecard .ppl{object-fit:contain;object-position:bottom center;aspect-ratio:4/3;margin-top:-40px;padding:0 10px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.55));background:radial-gradient(ellipse at 50% 100%,rgba(240,213,122,.22),transparent 65%)}
-.ecard .mono{border-radius:14px 14px 0 0}
+.ecard .ppl{object-fit:contain;object-position:bottom center;aspect-ratio:1/1;height:auto;margin-top:-70px;padding:0 8px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6));background:none}
+.ecard .mono{width:120px;height:120px;aspect-ratio:1;border-radius:50%;margin:-50px auto 10px;font-size:40px;border:4px solid rgba(240,213,122,.5)}
+.ecard .vthumb{position:relative;margin:-50px 14px 0;border-radius:10px;overflow:hidden;border:1px solid rgba(240,213,122,.4);cursor:pointer;aspect-ratio:16/10}
+.ecard .vthumb img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+.ecard .vthumb .p{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);color:#2a0f2a;display:grid;place-items:center;font-size:18px;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.ecard .q{display:block;font-family:var(--serif);font-size:46px;line-height:.5;color:var(--gold);margin:14px 0 10px}
+.ecard h4{font-family:var(--body);font-weight:700;font-size:16px;color:#fff;margin:0 0 8px;text-transform:none;letter-spacing:0}
+.vcard{cursor:pointer}
 .ecard .mono{display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:72px;color:#2a0f2a;background:linear-gradient(135deg,#f6e3a1,#d4a73c)}
-.ecard figcaption{padding:20px 22px 22px}
-.testi .ecard blockquote{font-size:16px;line-height:1.5;color:#f1e9f5;margin:0 0 12px}
+.ecard figcaption{padding:0 18px 22px}
+.testi .ecard blockquote{font-size:13.5px;line-height:1.5;color:#d9d1c0;margin:0 0 12px;font-style:italic}
 .testi .ecard cite{margin-top:0;font-size:14px;letter-spacing:0;text-transform:none;color:var(--gold)}
 .testi .ecard cite span{font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 .ecard blockquote{margin:0 0 14px;font-family:var(--serif);font-size:17px;line-height:1.45;color:#f1e9f5}
 .ecard cite{font-style:normal;display:block;font-family:var(--body);font-weight:700;font-size:14px;color:var(--gold)}
 .ecard cite span{display:block;font-weight:400;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b9a7c7;margin-top:3px}
-@media(max-width:700px){.endorse{grid-template-columns:1fr;max-width:420px}}
+@media(max-width:1000px){.endorse{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.endorse{grid-template-columns:1fr;max-width:420px}}
 
 /* keynote picker */
 .kn{display:grid;grid-template-columns:minmax(280px,.8fr) 1.5fr;gap:34px;align-items:start}
@@ -1034,9 +1041,10 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="dots" id="dots"></div>
     <div class="endorse">
-      <figure class="ecard rv"><img class="ppl" src="img/cut/les-forbes.png" alt="Les Brown with Forbes Riley"><figcaption><blockquote>&ldquo;She radiates and communicates in a way I've never seen before. A true blessing to behold.&rdquo;</blockquote><cite>Les Brown<span>Legendary motivational speaker</span></cite></figcaption></figure>
-      <figure class="ecard rv d1"><img class="ppl" src="img/cut/florence-forbes.png" alt="Florence Henderson with Forbes Riley"><figcaption><blockquote>&ldquo;Funny, smart, gutsy and talented. If you want the job done right, go see Forbes.&rdquo;</blockquote><cite>Florence Henderson<span>Television icon</span></cite></figcaption></figure>
-      <figure class="ecard rv d2"><div class="mono">JT</div><figcaption><blockquote>&ldquo;Forbes brings energy and professionalism to her work. In all my years in television, she is the best I have been around.&rdquo;</blockquote><cite>Joe Theismann<span>NFL Hall of Fame</span></cite></figcaption></figure>
+      <figure class="ecard rv"><img class="ppl" src="img/cut/les-forbes.png" alt="Les Brown with Forbes Riley"><figcaption><span class="q">&#10077;</span><h4>A True Blessing to Behold</h4><blockquote>She radiates and communicates in a way I've never seen before.</blockquote><cite>Les Brown<span>Legendary motivational speaker</span></cite></figcaption></figure>
+      <figure class="ecard rv d1"><img class="ppl" src="img/cut/florence-forbes.png" alt="Florence Henderson with Forbes Riley"><figcaption><span class="q">&#10077;</span><h4>Funny, Smart, Gutsy and Talented</h4><blockquote>If you want the job done right, go see Forbes.</blockquote><cite>Florence Henderson<span>Television icon</span></cite></figcaption></figure>
+      <figure class="ecard rv d2"><div class="mono">JT</div><figcaption><span class="q">&#10077;</span><h4>The Best I Have Been Around</h4><blockquote>Forbes brings energy and professionalism to her work. In all my years in television, she is the best I have been around.</blockquote><cite>Joe Theismann<span>NFL Hall of Fame</span></cite></figcaption></figure>
+      <figure class="ecard vcard rv d3" data-yt="oXM50d4iDuQ"><div class="vthumb"><img src="https://i.ytimg.com/vi/oXM50d4iDuQ/hqdefault.jpg" alt="Rose Chung video testimonial"><div class="p">&#9654;</div></div><figcaption><span class="q">&#10077;</span><h4>Transformation Training</h4><blockquote>Watch Rose Chung on what changed after working with Forbes.</blockquote><cite>Rose Chung<span>Video testimonial</span></cite></figcaption></figure>
     </div>
 
   </div>

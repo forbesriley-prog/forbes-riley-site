@@ -41,8 +41,12 @@ shutil.copytree(SRC / "img", OUT / "img")
 (OUT / "style.css").write_text(css)
 (OUT / "speak").mkdir(exist_ok=True)
 (OUT / "speak" / "index.html").write_text('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/speak.html"><title>Forbes Riley | Speaker</title><a href="/speak.html">Forbes Riley speaker page</a>')  # short address /speak
+import time as _t
+_v = str(int(_t.time()))[-6:]
 for extra in sorted((SRC / "standalone").glob("*.html")):  # self-contained pages (own head/nav)
-    shutil.copy(extra, OUT / extra.name)
+    _h = extra.read_text()
+    _h = re.sub(r"(img/[^"'\)\s?]+\.(?:png|jpg|jpeg|webp))", lambda m: m.group(1) + "?v=" + _v, _h)  # cache-bust every image
+    (OUT / extra.name).write_text(_h)
 if (SRC / "CNAME").exists():
     shutil.copy(SRC / "CNAME", OUT / "CNAME")  # custom domain for GitHub Pages
 

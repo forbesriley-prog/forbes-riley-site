@@ -45,7 +45,7 @@ import time as _t
 _v = str(int(_t.time()))[-6:]
 for extra in sorted((SRC / "standalone").glob("*.html")):  # self-contained pages (own head/nav)
     _h = extra.read_text()
-    _h = re.sub(r"(img/[^"'\)\s?]+\.(?:png|jpg|jpeg|webp))", lambda m: m.group(1) + "?v=" + _v, _h)  # cache-bust every image
+    _h = re.sub(r"(img/[^\s?'" + chr(34) + ")]+\.(?:png|jpg|jpeg|webp))", lambda m: m.group(1) + "?v=" + _v, _h)  # cache-bust every image
     (OUT / extra.name).write_text(_h)
 if (SRC / "CNAME").exists():
     shutil.copy(SRC / "CNAME", OUT / "CNAME")  # custom domain for GitHub Pages

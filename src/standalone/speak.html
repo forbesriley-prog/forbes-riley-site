@@ -563,7 +563,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
 .about.section{padding:60px 0 0}
 .about .fig{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center}
-.about .fig .cut{height:620px;width:auto;max-width:none;z-index:2;mask-image:linear-gradient(180deg,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 86%,transparent 100%)}
+.about .fig .cut{height:620px;width:auto;max-width:none;z-index:2;mask-image:linear-gradient(180deg,#000 62%,transparent 96%);-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 96%)}
 .about .fig .blob{position:absolute;left:50%;top:50%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 40%,rgba(201,154,58,.45),rgba(232,217,160,.25) 50%,transparent 72%);border-radius:48% 52% 60% 40%/55% 45% 55% 45%;filter:blur(2px);animation:blob 12s ease-in-out infinite}
 @keyframes blob{0%,100%{border-radius:48% 52% 60% 40%/55% 45% 55% 45%;transform:translate(-50%,-50%) rotate(0)}50%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%;transform:translate(-50%,-50%) rotate(8deg)}}
 .about .fig .splash{position:absolute;left:50%;top:52%;width:min(820px,130%);height:auto;max-width:none;transform:translate(-50%,-50%);z-index:1;pointer-events:none;animation:floaty 9s ease-in-out infinite}
@@ -574,7 +574,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about h2.meet{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(28px,3vw,40px);color:#fff}
 .about h2.meet .sig{height:2.6em;width:auto}
 .about p{color:#d9d1c0;font-size:17px;margin:0 0 14px}
-.about .grid>div:last-child{padding-bottom:70px}
+.about .grid>div:last-child{padding-bottom:40px}
 .about .quoteline{font-family:var(--serif);font-size:22px;color:var(--gold);margin:24px 0}
 @media(max-width:900px){.about .grid{grid-template-columns:1fr}.about .fig{min-height:0;order:-1}.about .fig .cut{height:auto;width:min(88vw,460px)}.about .fig .blob{width:min(80vw,420px);height:min(80vw,420px)}.about .fig .bigname{font-size:58px;bottom:10px}}
 
@@ -592,6 +592,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 /* author */
 .author{background:linear-gradient(180deg,#2a0f2a,#4a1438 50%,#2a0f2a);color:#f1e9f5;overflow:hidden}
+.author.section{padding-top:30px}
+.author .bridge{display:flex;align-items:center;gap:18px;max-width:1180px;margin:0 auto 46px;color:var(--gold);font-family:var(--script);font-size:clamp(26px,3vw,40px)}
+.author .bridge:before,.author .bridge:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,213,122,.6),transparent)}
 .author .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
 .bk-fig{position:relative;min-height:0;display:flex;align-items:center;justify-content:center}
 .bk-fig:before{display:none}
@@ -992,6 +995,7 @@ footer a{color:var(--gold);text-decoration:none}
 </section>
 
 <section class="section author" id="author">
+  <div class="bridge rv">and she wrote the book on it</div>
   <div class="wrap grid">
     <div class="bk-fig rv rv-l">
       <img class="authorphoto" src="img/book-studio.jpg" alt="Forbes Riley holding Pitch Secrets A to Z in her studio">

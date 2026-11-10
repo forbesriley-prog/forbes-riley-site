@@ -542,6 +542,17 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .reel .hs img:not(.splash){position:relative;z-index:1}
 .reel h2{font-size:clamp(28px,3.6vw,46px);text-transform:uppercase;line-height:1.1;color:var(--gold);margin:12px 0 16px}
 .reel p{color:var(--muted);font-size:18px;margin:0 0 26px}
+.tedx{margin-top:22px}
+.tedx .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 10px}
+.tedrow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ted{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(240,213,122,.35);cursor:pointer;background:#0b0912;aspect-ratio:16/9}
+.ted img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s;filter:brightness(.85)}
+.ted:hover img{transform:scale(1.05);filter:brightness(1)}
+.ted .p{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);color:#2a0f2a;display:grid;place-items:center;font-size:16px;padding-left:3px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.ted .t{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(180deg,transparent,rgba(7,6,26,.95));color:#fff}
+.ted .t b{display:block;font-size:14px;line-height:1.2}
+.ted .t span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e0252f;font-weight:700;margin-top:3px}
+@media(max-width:560px){.tedrow{grid-template-columns:1fr}}
 .reel p.lead{color:var(--gold);font-weight:500;font-size:20px;line-height:1.45}
 .vidbig{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;cursor:pointer;border:1px solid rgba(232,217,160,.3);box-shadow:0 30px 70px rgba(0,0,0,.6)}
 .vidbig img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
@@ -762,6 +773,14 @@ footer a{color:var(--gold);text-decoration:none}
       <h2 class="rv d1">Two minutes on stage with the Queen of Pitch</h2>
       <p class="rv d2 lead">"I didn't learn to pitch because everything worked out. I learned because it didn't, and I still had to sell the thing in my hands."</p>
       <div class="vidbig rv d3" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg'" alt="Forbes Riley keynote sizzle reel"><div class="p">&#9654;</div><div class="t">Forbes Riley's Keynote Stage Sizzle</div></div>
+
+      <div class="tedx rv d4">
+        <p class="k">Her two TEDx talks</p>
+        <div class="tedrow">
+          <div class="ted tilt" data-yt="47WXAhCJIiU"><img src="https://i.ytimg.com/vi/47WXAhCJIiU/hqdefault.jpg" alt="P.I.T.C.H.ing is your superpower, TEDxSt Pete Women"><div class="p">&#9654;</div><div class="t"><b>P.I.T.C.H.ing is your superpower</b><span>TEDxSt Pete Women</span></div></div>
+          <div class="ted tilt" data-yt="TQZ7ppYRj28"><img src="https://i.ytimg.com/vi/TQZ7ppYRj28/hqdefault.jpg" alt="Blue is not better, TEDxJersey City"><div class="p">&#9654;</div><div class="t"><b>Blue is not better</b><span>TEDxJersey City</span></div></div>
+        </div>
+      </div>
       <div class="btns rv d4" style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-gold" href="#book">Book Forbes</a><a class="btn btn-ghost" href="https://www.youtube.com/watch?v=t52E3asvjsw" target="_blank" rel="noopener">Open on YouTube</a></div>
     </div>
   </div>

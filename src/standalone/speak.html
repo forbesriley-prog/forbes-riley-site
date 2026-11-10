@@ -541,7 +541,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
 .about.section{padding:60px 0 0}
 .about .fig{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center}
-.about .fig .cut{height:620px;width:auto;max-width:none;z-index:2}
+.about .fig .cut{height:620px;width:auto;max-width:none;z-index:2;mask-image:linear-gradient(180deg,#000 72%,transparent 97%);-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 97%)}
 .about .fig .blob{position:absolute;left:50%;top:50%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 40%,rgba(201,154,58,.45),rgba(232,217,160,.25) 50%,transparent 72%);border-radius:48% 52% 60% 40%/55% 45% 55% 45%;filter:blur(2px);animation:blob 12s ease-in-out infinite}
 @keyframes blob{0%,100%{border-radius:48% 52% 60% 40%/55% 45% 55% 45%;transform:translate(-50%,-50%) rotate(0)}50%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%;transform:translate(-50%,-50%) rotate(8deg)}}
 .about .fig .splash{position:absolute;left:50%;top:52%;width:min(820px,130%);height:auto;max-width:none;transform:translate(-50%,-50%);z-index:1;pointer-events:none;animation:floaty 9s ease-in-out infinite}
@@ -558,7 +558,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 .about .fig .ghost{position:absolute;bottom:0;height:78%;width:auto;max-width:none;opacity:.28;filter:grayscale(.7) contrast(.9);z-index:0;pointer-events:none;mask-image:linear-gradient(180deg,#000 60%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent)}
 .about .fig .ghost.l{left:-6%}.about .fig .ghost.r{right:-4%;height:84%}
-.about .fig .bigname{z-index:3;bottom:14px;-webkit-text-fill-color:initial;color:transparent}
+.about .fig .bigname{z-index:3;bottom:34px;-webkit-text-fill-color:initial;color:transparent}
 .about .fig .bigname{text-decoration:none;cursor:pointer}
 .about .fig .bigname .o{display:inline-grid;place-items:center;width:.8em;height:.8em;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);vertical-align:-.06em;margin:0 .02em;box-shadow:0 0 34px rgba(240,213,122,.55);transition:transform .4s,box-shadow .4s}
 .about .fig .bigname .o i{width:0;height:0;border-left:.3em solid #2a0f2a;border-top:.18em solid transparent;border-bottom:.18em solid transparent;margin-left:.07em}

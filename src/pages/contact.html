@@ -28,13 +28,13 @@
       </label>
       <label>Tell us more<textarea id="c-msg" name="message" placeholder="For speaking: date, city, audience size and format." required></textarea></label>
       <button class="btn btn-gold" type="submit">Send message</button>
-      <p class="fine" style="font-size:.8rem;color:var(--mute)">Sending opens a ready-to-send email to support@teamforbesriley.com in your mail app. Or write to that address directly.</p>
+      <p class="fine" style="font-size:.8rem;color:var(--mute)">Sending opens a ready-to-send email to assistant@theforbesfactor.com in your mail app. Or write to that address directly.</p>
     </form>
 
     <aside class="contact-aside">
       <div>
         <h3>Email</h3>
-        <p>support@teamforbesriley.com</p>
+        <p>assistant@theforbesfactor.com</p>
       </div>
       <div>
         <h3>Speaking &amp; bookings</h3>
@@ -68,9 +68,9 @@ Phone: ' + (v('c-phone') || 'n/a') + '
 Interested in: ' + v('c-topic') + '
 
 ' + v('c-msg');
-    window.location.href = 'mailto:support@teamforbesriley.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = 'mailto:assistant@theforbesfactor.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     var note = document.createElement('p'); note.className = 'thanks';
-    note.textContent = 'Your email draft is open in your mail app. Press send there and we will reply within two business days. If nothing opened, email support@teamforbesriley.com.';
+    note.textContent = 'Your email draft is open in your mail app. Press send there and we will reply within two business days. If nothing opened, email assistant@theforbesfactor.com.';
     cf.appendChild(note);
   });
 </script>

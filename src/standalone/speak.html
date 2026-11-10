@@ -96,7 +96,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .hero p.lede strong{color:#fff}
 .hero .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .hero .stage{position:absolute;left:50%;top:40px;transform:translateX(-50%);height:min(66vh,640px);width:min(100%,900px);display:flex;align-items:flex-start;justify-content:center;z-index:1;overflow:hidden;mask-image:linear-gradient(180deg,#000 70%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
-.hero .stage .cut{height:150%;width:auto;max-width:none;object-fit:contain;object-position:top center;position:relative;z-index:2;opacity:0;transform:translateY(60px) scale(.96);animation:popin 1.2s .3s cubic-bezier(.2,.8,.2,1) forwards}
+.hero .stage .cut{height:128%;width:auto;max-width:none;object-fit:contain;object-position:top center;position:relative;z-index:2;opacity:0;transform:translateY(60px) scale(.96);animation:popin 1.2s .3s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes popin{to{opacity:1;transform:none}}
 .hero .stage .glow{width:min(640px,100%);left:50%;top:0;transform:translateX(-50%);opacity:.45}
 .hero .stage .dust{inset:-10% 0 0 0;z-index:1;animation:twinkle 5s ease-in-out infinite}
@@ -198,7 +198,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .split .fig{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:center}
 .split .fig .cut{height:560px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;z-index:2}
 .split .fig .glow{width:min(460px,100%);left:50%;top:50%;transform:translate(-50%,-50%);opacity:.6}
-.split .fig .dust{inset:-5% 0;z-index:1;opacity:.8}
+.split .fig .splash{position:absolute;left:50%;top:50%;width:min(760px,140%);height:auto;max-width:none;transform:translate(-50%,-50%) scaleX(-1);z-index:1;pointer-events:none}
 .split .fig .ring.a{width:150px;height:150px;right:0;top:12%}
 .split .fig .ring.b{width:80px;height:80px;left:10px;bottom:24%}
 .split p{font-size:18px;color:#2a2420;margin:0 0 18px}
@@ -254,21 +254,22 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 /* promise arc */
 .promise{background:#fff;color:var(--cream-ink);overflow:hidden;padding-bottom:0}
 .promise .intro{max-width:820px;margin:-26px auto 30px;text-align:center;font-size:19px;color:#2a2420}
-.arc{position:relative;height:760px;max-width:1100px;margin:0 auto}
+.arc{position:relative;height:800px;max-width:1100px;margin:30px auto 0}
 .arc svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .arc svg .arcpath{fill:none;stroke:#2a0f2a;stroke-width:3}
+.arc .arcsplash{position:absolute;left:50%;bottom:-120px;width:720px;max-width:none;transform:translateX(-50%);z-index:1;opacity:.75;pointer-events:none}
 .arc .cut{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:420px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;z-index:2;filter:drop-shadow(0 20px 30px rgba(0,0,0,.2))}
 .oc{position:absolute;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:12px solid #f3eadc;background:#3b1030;color:#e9dcc4;display:grid;place-items:center;cursor:pointer;z-index:3;padding:0;transition:background .35s,transform .35s,border-color .35s,box-shadow .35s}
 .oc svg{width:66px;height:66px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
 .oc:hover,.oc.on{background:linear-gradient(135deg,#f6e3a1,#d4a73c);color:#2a0f2a;border-color:#fff3d6;transform:scale(1.06);box-shadow:0 18px 40px rgba(212,167,60,.35)}
 .oc.on svg{transform:scale(1.08)}
-.ot{position:absolute;width:270px;z-index:3;cursor:pointer;transition:opacity .35s}
+.ot{position:absolute;width:240px;z-index:3;cursor:pointer;transition:opacity .35s}
 .ot .k{font-family:var(--display);font-weight:700;font-size:26px;color:#b9a7c7;line-height:1.1;margin-bottom:6px;transition:color .35s}
 .ot p{margin:0;font-size:15.5px;line-height:1.5;color:#b8b0bd;transition:color .35s}
 .ot p b{color:#a89fb0;transition:color .35s}
 .ot .bk{display:none;margin-top:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-dark);text-decoration:none}
 .ot.on .k{color:#7b1f4f}.ot.on p{color:#1a1420}.ot.on p b{color:#000}.ot.on .bk{display:inline-block}.ot .bk:after{content:" \2192"}
-.ot1{left:0;top:470px;text-align:left}.ot2{left:0;top:150px;text-align:left}.ot3{left:50%;top:-20px;width:440px;margin-left:-220px;text-align:center}.ot4{right:0;top:150px;text-align:right}.ot5{right:0;top:470px;text-align:right}
+.ot1{left:0;top:560px;text-align:left}.ot2{left:0;top:120px;text-align:left}.ot3{left:50%;top:-44px;width:460px;margin-left:-230px;text-align:center}.ot4{right:0;top:120px;text-align:right}.ot5{right:0;top:560px;text-align:right}
 .ot3 .k{font-size:28px}
 .outcomes-m{display:none}
 @media(max-width:1000px){.arc{display:none}.outcomes-m{display:grid;grid-template-columns:1fr;gap:16px}.outcomes-m .node{position:static;width:auto;display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start;text-align:left}.outcomes-m .dot{width:72px;height:72px;font-size:24px;border-radius:50%;background:#3b1030;color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:700;border:3px solid #f3eadc}.outcomes-m .node h3{font-size:19px;margin:12px 0 6px}.outcomes-m .node p{margin:0;font-size:14px;color:#3a3236}.outcomes-m .node .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--maroon);font-weight:700}.promise .mcut{display:block;height:auto;width:min(86vw,360px);margin:30px auto 0;mask-image:linear-gradient(180deg,#000 85%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 85%,transparent)}}
@@ -304,6 +305,28 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 @keyframes popout{50%{transform:scale(1.03)}}
 .hk-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 @media(max-width:700px){.hooktool{padding:26px 20px}.hk-form input{width:100%}.hk-form label{width:100%;flex-direction:column;align-items:stretch}}
+
+/* pitch acrostic */
+.pitch{background:linear-gradient(180deg,#07061a,#2a0f2a 60%,#4a1438);overflow:hidden}
+.pitch .peek-r{position:absolute;right:-30px;bottom:0;height:auto;max-height:92%;max-width:30%;z-index:0;opacity:.95;pointer-events:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));mask-image:linear-gradient(180deg,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent)}
+.pitch .wrap{z-index:1}
+@media(max-width:1200px){.pitch .peek-r{display:none}}
+.acro{max-width:1100px;margin:0 auto}
+.letters{display:flex;align-items:stretch;justify-content:center;gap:0;margin-bottom:34px}
+.letters i{width:2px;background:linear-gradient(180deg,transparent,var(--gold-deep),transparent);box-shadow:0 0 12px rgba(240,213,122,.6);margin:10px 0}
+.lt{position:relative;flex:1;max-width:220px;min-height:190px;background:none;border:0;cursor:pointer;color:#fff;display:grid;place-items:center;padding:10px 6px}
+.lt .big{font-family:var(--display);font-weight:300;font-size:clamp(70px,10vw,150px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(240,213,122,.35);transition:all .45s;grid-area:1/1}
+.lt .w{grid-area:1/1;font:700 clamp(15px,1.5vw,22px) var(--body);color:#e9dff0;text-shadow:0 2px 14px rgba(0,0,0,.8);transition:color .3s;white-space:nowrap}
+.lt:hover .big{-webkit-text-stroke:1px rgba(240,213,122,.8)}
+.lt.on .big{color:transparent;-webkit-text-stroke:0;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 24px rgba(240,213,122,.45))}
+.lt.on .w{color:#fff}
+.lt:after{content:"";position:absolute;left:50%;bottom:-18px;width:60px;height:3px;margin-left:-30px;background:var(--gold-deep);border-radius:2px;opacity:0;transition:opacity .3s}
+.lt.on:after{opacity:1}
+.acro-panel{position:relative;background:rgba(74,20,56,.55);border:1px solid rgba(240,213,122,.25);border-radius:28px;padding:44px 50px;min-height:150px;backdrop-filter:blur(8px)}
+.acro-panel p{margin:0;font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#f1e9f5;text-align:center;display:none}
+.acro-panel p b{color:#fff}
+.acro-panel p.on{display:block;animation:fadein .5s}
+@media(max-width:700px){.letters{flex-wrap:wrap;gap:6px 0}.letters i{display:none}.lt{flex:1 1 33%;min-height:120px}.acro-panel{padding:26px 22px;border-radius:18px}}
 
 /* formats */
 .formats{background:linear-gradient(180deg,#07061a,#6b1f52)}
@@ -365,7 +388,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .reel .hs{position:relative;max-width:380px;margin:0 auto}
 .reel .hs img{border-radius:14px;border:1px solid rgba(232,217,160,.45);box-shadow:0 40px 80px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .reel .hs:hover img{transform:rotate(0) scale(1.02)}
-.reel .hs .dust{inset:-10%;opacity:.8}
+.reel .hs .splash{position:absolute;left:50%;top:50%;width:150%;max-width:none;transform:translate(-50%,-50%);z-index:0;opacity:.7;pointer-events:none}
+.reel .hs img:not(.splash){position:relative;z-index:1}
 .reel h2{font-size:clamp(28px,3.6vw,46px);text-transform:uppercase;line-height:1.1;color:var(--gold);margin:12px 0 16px}
 .reel p{color:var(--muted);font-size:18px;margin:0 0 26px}
 .reel p.lead{color:var(--gold);font-weight:500;font-size:20px;line-height:1.45}
@@ -384,7 +408,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .fig .cut{height:600px;width:auto;max-width:none;z-index:2}
 .about .fig .blob{position:absolute;left:50%;top:50%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 40%,rgba(201,154,58,.45),rgba(232,217,160,.25) 50%,transparent 72%);border-radius:48% 52% 60% 40%/55% 45% 55% 45%;filter:blur(2px);animation:blob 12s ease-in-out infinite}
 @keyframes blob{0%,100%{border-radius:48% 52% 60% 40%/55% 45% 55% 45%;transform:translate(-50%,-50%) rotate(0)}50%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%;transform:translate(-50%,-50%) rotate(8deg)}}
-.about .fig .dust{inset:0;z-index:1;opacity:.85}
+.about .fig .splash{position:absolute;left:50%;top:52%;width:min(820px,130%);height:auto;max-width:none;transform:translate(-50%,-50%);z-index:1;pointer-events:none;animation:floaty 9s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translate(-50%,-50%) rotate(0)}50%{transform:translate(-50%,-52%) rotate(1.5deg)}}
 .about .fig .bigname{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);font-family:var(--display);font-size:clamp(70px,9vw,120px);letter-spacing:.08em;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;z-index:0;white-space:nowrap}
 .about h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,48px);color:#000;line-height:1.1;margin:14px 0 24px}
 .about h2 .script{color:var(--maroon);font-size:1.6em;font-weight:400}
@@ -399,6 +424,23 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .fig .bigname .pv{position:absolute;left:50%;bottom:-.75em;transform:translateX(-50%);font-size:.3em;color:#a04870;-webkit-text-fill-color:#a04870;letter-spacing:0;font-weight:400;display:flex;align-items:center;gap:.4em;text-decoration:none;white-space:nowrap}
 .about .fig .bigname .pv .playo{font-size:1.1em;animation:none}
 .about .fig .cut{z-index:2}
+
+/* author */
+.author{background:linear-gradient(180deg,#fff,#f6f1fb);color:var(--cream-ink);overflow:hidden}
+.author .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.bk-fig{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center}
+.bk-fig .splash{position:absolute;left:50%;top:50%;width:130%;max-width:none;transform:translate(-50%,-50%);z-index:0;pointer-events:none}
+.bk-fig .cover{position:relative;z-index:2;width:min(300px,70%);border-radius:6px;box-shadow:0 40px 80px rgba(0,0,0,.35);transform:rotate(-6deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.bk-fig:hover .cover{transform:rotate(-2deg) translateY(-8px)}
+.bk-fig .badge{position:absolute;right:0;bottom:0;width:38%;border-radius:10px;border:4px solid #fff;box-shadow:0 20px 40px rgba(0,0,0,.25);z-index:3;transform:rotate(5deg)}
+.author h2{font-size:clamp(32px,4vw,54px);color:#1a1420;line-height:1;margin:10px 0 14px;text-transform:none}
+.author h2 .script{color:var(--maroon);font-size:1.25em;font-weight:400;display:block}
+.author .lead{font-weight:600;font-size:20px;color:#4a1233;margin:0 0 14px}
+.author p{color:#2a2420;font-size:17px;margin:0 0 16px}
+.author ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:8px}
+.author li{padding-left:26px;position:relative;font-size:15.5px;color:#1a1420}
+.author li:before{content:"\2726";position:absolute;left:0;color:var(--gold-deep)}
+@media(max-width:900px){.author .grid{grid-template-columns:1fr}.bk-fig{min-height:420px}}
 
 /* testimonials */
 .testi{background:linear-gradient(180deg,#6b1f52,#1a0c2e);text-align:center;overflow:hidden}
@@ -492,9 +534,11 @@ footer a{color:var(--gold);text-decoration:none}
       <li><a href="#story">About</a></li>
       <li><a href="#speaking">Speaking</a></li>
       <li><a href="#promise">Outcomes</a></li>
+      <li><a href="#pitch">P.I.T.C.H.</a></li>
       <li><a href="#formula">Formats</a></li>
       <li><a href="#reel">Reel</a></li>
       <li><a href="#courses">Trainings</a></li>
+      <li><a href="#author" >Book</a></li>
       <li><a href="#podcast">Podcast</a></li>
       <li><a href="#free">Free masterclass</a></li>
     </ul>
@@ -509,12 +553,12 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="eyebrow w" style="color:#f0d57a;margin-bottom:14px">You don't get what you deserve</p>
       <h1 id="h1"><span class="w">You</span> <span class="w">get</span> <span class="w">what</span> <span class="w">you</span> <span class="script w">Pitch for.</span></h1>
       <p class="iam">I am <b id="iam">the Queen of Pitch</b></p>
-      <p class="lede"><strong>Dr. Forbes Riley. Award-winning TV host, 2X TEDx speaker, the $2.5 billion host.</strong> I'm not here to motivate your audience for an hour. I'm here to hand them the one skill behind everything I've built.</p>
+      <p class="lede"><strong>Dr. Forbes Riley. Award-winning TV host, bestselling author, 2X TEDx speaker, the $2.5 billion host.</strong> I'm not here to motivate your audience for an hour. I'm here to hand them the one skill behind everything I've built.</p>
       <div class="btns"><a class="btn btn-gold" href="#book">Book Forbes to Speak</a><a class="btn btn-ghost" href="#reel" data-yt="t52E3asvjsw">&#9654;&nbsp; Watch the reel with sound</a></div>
     </div>
     <div class="stage" data-parallax="0.08">
       <div class="glow gold"></div>
-      <img class="cut" src="img/cut/arms-up.png" alt="Forbes Riley on stage, arms raised">
+      <img class="cut" src="img/cut/az-arms.png" alt="Forbes Riley, arms open">
     </div>
   </div>
   <div class="floor"></div>
@@ -539,7 +583,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="section reel dark" id="reel">
   <div class="wrap grid">
     <div class="hs rv rv-l" data-parallax="0.04">
-      <div class="dust"></div>
+      <img class="splash" src="img/cut/splash-2.png" alt="">
       <img src="img/helms-headshot.jpg" alt="Forbes Riley headshot">
     </div>
     <div>
@@ -596,7 +640,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="split">
   <div class="wrap grid">
     <div class="fig rv rv-l" data-parallax="0.06">
-      <div class="glow gold"></div><div class="dust"></div><i class="ring a"></i><i class="ring b"></i>
+      <img class="splash" src="img/cut/splash-2.png" alt="">
       <img class="cut" src="img/cut/black-crossed.png" alt="Forbes Riley">
     </div>
     <div>
@@ -665,9 +709,10 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <p class="intro rv d2">I take a stage seriously. When someone gives me their audience, I don't show up to entertain. I show up to put a skill in their hands that is still there when the event is over and the phone rings on Monday.</p>
     <div class="arc" id="arc">
-      <svg viewBox="0 0 1100 760" preserveAspectRatio="none"><path class="arcpath" d="M190 470 C 215 300, 390 120, 550 120 C 710 120, 885 300, 910 470"/></svg>
-      <button class="oc oc1" data-i="0" style="left:190.0px;top:470.0px" aria-label="Outcome 1: A 7-second hook"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8"/></svg></button><button class="oc oc2" data-i="1" style="left:319.4px;top:231.2px" aria-label="Outcome 2: Their WHY in one sentence"><svg viewBox="0 0 64 64"><path d="M12 14h40a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H30l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M32 22v10M32 36v2"/></svg></button><button class="oc oc3" data-i="2" style="left:550.0px;top:120.0px" aria-label="Outcome 3: Confidence as posture"><svg viewBox="0 0 64 64"><circle cx="32" cy="12" r="6"/><path d="M32 18v22M20 26l12 6 12-6M24 60l8-20 8 20"/></svg></button><button class="oc oc4" data-i="3" style="left:780.6px;top:231.2px" aria-label="Outcome 4: No more sounding salesy"><svg viewBox="0 0 64 64"><path d="M8 40l10-10 8 8 10-10 8 8 12-12"/><path d="M44 24h12v12"/><path d="M6 56h52"/></svg></button><button class="oc oc5" data-i="4" style="left:910.0px;top:470.0px" aria-label="Outcome 5: Reps before they leave"><svg viewBox="0 0 64 64"><path d="M14 26a18 18 0 0 1 32-8l6 6"/><path d="M52 12v12H40"/><path d="M50 38a18 18 0 0 1-32 8l-6-6"/><path d="M12 52V40h12"/></svg></button>
+      <svg viewBox="0 0 1100 760" preserveAspectRatio="none"><path class="arcpath" d="M280 470 C 300 300, 420 120, 550 120 C 680 120, 800 300, 820 470"/></svg>
+      <button class="oc oc1" data-i="0" style="left:280.0px;top:470.0px" aria-label="Outcome 1: A 7-second hook"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8"/></svg></button><button class="oc oc2" data-i="1" style="left:373.8px;top:231.2px" aria-label="Outcome 2: Their WHY in one sentence"><svg viewBox="0 0 64 64"><path d="M12 14h40a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H30l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M32 22v10M32 36v2"/></svg></button><button class="oc oc3" data-i="2" style="left:550.0px;top:120.0px" aria-label="Outcome 3: Confidence as posture"><svg viewBox="0 0 64 64"><circle cx="32" cy="12" r="6"/><path d="M32 18v22M20 26l12 6 12-6M24 60l8-20 8 20"/></svg></button><button class="oc oc4" data-i="3" style="left:726.2px;top:231.2px" aria-label="Outcome 4: No more sounding salesy"><svg viewBox="0 0 64 64"><path d="M8 40l10-10 8 8 10-10 8 8 12-12"/><path d="M44 24h12v12"/><path d="M6 56h52"/></svg></button><button class="oc oc5" data-i="4" style="left:820.0px;top:470.0px" aria-label="Outcome 5: Reps before they leave"><svg viewBox="0 0 64 64"><path d="M14 26a18 18 0 0 1 32-8l6 6"/><path d="M52 12v12H40"/><path d="M50 38a18 18 0 0 1-32 8l-6-6"/><path d="M12 52V40h12"/></svg></button>
       <div class="ot ot1" data-i="0"><div class="k">Outcome 1</div><p><b>A 7-second hook</b> Every person leaves with an opening line they can say tonight, built in the room with Forbes coaching them live. Not in a workbook they never open.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot2" data-i="1"><div class="k">Outcome 2</div><p><b>Their WHY in one sentence</b> Nobody buys the product. They buy the reason. Forbes gets each person to say theirs out loud and does not move on until it lands.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot3" data-i="2"><div class="k">Outcome 3</div><p><b>Confidence as posture</b> Feet. Shoulders. Breath. Then speak. Posture first, feeling second. Confidence you can do on purpose, even on a screen.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot4" data-i="3"><div class="k">Outcome 4</div><p><b>No more sounding salesy</b> The exact shift from pushing to inviting. Your people stop apologising for the ask and start enrolling.</p><a class="bk" href="#book">Book this for my room</a></div><div class="ot ot5" data-i="4"><div class="k">Outcome 5</div><p><b>Reps before they leave</b> A pitch is a performance. The room rehearses it out loud, live, with coaching, so it belongs to them before the doors open.</p><a class="bk" href="#book">Book this for my room</a></div>
+      <img class="splash arcsplash" src="img/cut/splash-1.png" alt="">
       <img class="cut rv rv-s d2" src="img/cut/pointing.png" alt="Forbes Riley pointing up">
     </div>
     <div class="outcomes-m">
@@ -678,6 +723,33 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="node rv"><div class="dot">5</div><div><div class="k">Outcome 5</div><h3>Reps before they leave</h3><p>Rehearsed live, with coaching, so it's theirs.</p></div></div>
     </div>
     <img class="mcut" src="img/cut/pointing.png" alt="">
+  </div>
+</section>
+
+<section class="section pitch dark" id="pitch">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow rv">What every room learns</p>
+      <h2 class="rv d1 chars">The P.I.T.C.H. behind everything Forbes teaches</h2>
+      <p class="rv d2">Five letters your audience will still remember on Monday. Tap one.</p>
+    </div>
+    <img class="peek-r" src="img/cut/az-shh.png" alt="">
+    <div class="acro rv" id="acro">
+      <div class="letters">
+        <button class="lt on" data-i="0"><span class="big">P</span><span class="w">Presence</span></button><i></i>
+        <button class="lt" data-i="1"><span class="big">I</span><span class="w">Intention</span></button><i></i>
+        <button class="lt" data-i="2"><span class="big">T</span><span class="w">Truth</span></button><i></i>
+        <button class="lt" data-i="3"><span class="big">C</span><span class="w">Connection</span></button><i></i>
+        <button class="lt" data-i="4"><span class="big">H</span><span class="w">Hear the YES</span></button>
+      </div>
+      <div class="acro-panel" id="acropanel">
+        <p data-i="0" class="on"><b>Presence.</b> Feet. Shoulders. Breath. Then speak. Before the first word lands, the room has already decided whether to listen. Posture first, feeling second, and the walk into every room, even on a screen.</p>
+        <p data-i="1"><b>Intention.</b> Nobody buys the product. They buy the reason. Your WHY, in one sentence, said out loud before anything else. Forbes starts every pitch with hers, and so will they.</p>
+        <p data-i="2"><b>Truth.</b> Story before features. The real one, with the hard parts left in. Twenty years of live television taught Forbes that the true story is the one that sells, and she shows the room how to tell theirs in ninety seconds.</p>
+        <p data-i="3"><b>Connection.</b> The shift from pushing to inviting. You stop sounding salesy the moment you stop talking at people and start enrolling them. Engage, excite, enroll.</p>
+        <p data-i="4"><b>Hear the YES.</b> The ask, the objections and the close, with your shoulders back. In life you don't get what you deserve. You get what you pitch for. Every talk ends with the room saying it out loud.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -740,8 +812,8 @@ footer a{color:var(--gold);text-decoration:none}
       <img class="ghost l" src="img/cut/mic.png" alt="">
       <img class="ghost r" src="img/cut/white-crossed.png" alt="">
       <div class="bigname">FORBES<a class="pv" href="#reel" data-yt="t52E3asvjsw"><i class="playo"><i></i></i><span class="script">play video</span></a></div>
-      <div class="blob"></div><div class="dust"></div>
-      <img class="cut" src="img/cut/white-hips.png" alt="Forbes Riley">
+      <img class="splash" src="img/cut/splash-1.png" alt="">
+      <img class="cut" src="img/cut/az-chin.png" alt="Forbes Riley">
     </div>
     <div>
       <p class="eyebrow rv">Meet Forbes Riley</p>
@@ -750,6 +822,24 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="rv d3">I've shared stages with icons, built companies from ideas, and helped thousands of entrepreneurs, speakers, coaches and founders monetize their message with clarity and confidence. But my story didn't begin with billion-dollar sales. It began in a hospital waiting room.</p>
       <p class="quoteline rv d3">"I'm on a mission to empower you to elevate your pitch."</p>
       <a class="btn btn-dark rv d4" href="about.html">Read the full story</a>
+    </div>
+  </div>
+</section>
+
+<section class="section author" id="author">
+  <div class="wrap grid">
+    <div class="bk-fig rv rv-l">
+      <img class="splash" src="img/cut/splash-2.png" alt="">
+      <img class="cover" src="img/book-cover.jpg" alt="Pitch Secrets A to Z by Forbes Riley">
+      <img class="badge" src="img/book-bestseller.jpg" alt="Forbes with her bestseller">
+    </div>
+    <div>
+      <p class="eyebrow rv">Bestselling author</p>
+      <h2 class="rv d1"><span class="script">Pitch Secrets</span> A to Z</h2>
+      <p class="lead rv d2">How to increase YOUR influence, impact and income.</p>
+      <p class="rv d2">Forbes' bestseller puts the system she teaches from the stage into a book your audience can take home. Everything she learned in twenty years of live television and $2.5 billion in sales, from the first seven seconds to the close.</p>
+      <ul class="rv d3"><li>Bulk copies for every attendee, signed on request</li><li>Pairs with any keynote as the take-home system</li><li>Book-signing and meet-and-greet add-on for your event</li></ul>
+      <div class="btns rv d4" style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-gold" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Get the book</a><a class="btn btn-ghost" href="#book">Add books to my booking</a></div>
     </div>
   </div>
 </section>
@@ -768,8 +858,8 @@ footer a{color:var(--gold);text-decoration:none}
 </section>
 
 <section class="section free" id="free">
-  <img class="cutl" src="img/cut/white-halter.png" alt="">
-  <img class="cutr" src="img/cut/coral-crossed.png" alt="">
+  <img class="cutl" src="img/cut/az-laugh.png" alt="">
+  <img class="cutr" src="img/cut/az-half.png" alt="">
   <div class="wrap">
     <p class="eyebrow rv" style="color:#5a4210">Start here. It's free.</p>
     <h2 class="rv d1">Before you book, come to the masterclass</h2>
@@ -910,6 +1000,8 @@ footer a{color:var(--gold);text-decoration:none}
     function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){set((cur+1)%5)},4500)}
     ocs.concat(ots).forEach(function(el){var i=+el.dataset.i;el.addEventListener('mouseenter',function(){set(i);clearInterval(timer)});el.addEventListener('mouseleave',restart);el.addEventListener('click',function(e){if(e.target.closest('a'))return;set(i);restart()})});
     new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(cur<0)set(0);restart()}else clearInterval(timer)})},{threshold:.35}).observe(arc);}
+  /* pitch acrostic */
+  $$('#acro .lt').forEach(function(b){b.addEventListener('click',function(){$$('#acro .lt').forEach(function(x){x.classList.toggle('on',x===b)});$$('#acropanel p').forEach(function(p){p.classList.toggle('on',p.dataset.i===b.dataset.i)})});b.addEventListener('mouseenter',function(){b.click()})});
   /* format tabs */
   $$('.fmt-tabs button').forEach(function(b){b.addEventListener('click',function(){$$('.fmt-tabs button').forEach(function(x){x.classList.toggle('on',x===b)});$$('.fmt-panel').forEach(function(p,i){p.classList.toggle('on',i===+b.dataset.f)})})});
   /* mobile outcomes accordion */

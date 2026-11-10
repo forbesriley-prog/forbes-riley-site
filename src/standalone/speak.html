@@ -527,10 +527,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 
 /* soft halo behind cutouts (replaces the splash art) */
 .about .fig:before,.split .fig:before,.bk-fig:before{content:"";position:absolute;left:50%;top:55%;width:min(520px,90%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(160,72,112,.18),rgba(200,170,224,.16) 45%,transparent 70%);z-index:0;pointer-events:none}
+.about .fig:before,.bk-fig:before{background:radial-gradient(circle,rgba(240,213,122,.22),rgba(160,72,112,.18) 45%,transparent 70%)}
 .reel .hs:before{content:"";position:absolute;left:50%;top:50%;width:140%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(240,213,122,.22),transparent 65%);z-index:0;pointer-events:none}
 
 /* about */
-.about{background:linear-gradient(180deg,#f6f1fb,#fff);color:var(--cream-ink);overflow:hidden}
+.about{background:linear-gradient(180deg,#07061a,#1a0c2e 60%,#2a0f2a);color:#f1e9f5;overflow:hidden}
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
 .about.section{padding:60px 0 0}
 .about .fig{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center}
@@ -542,11 +543,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .fig .bigname{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-family:var(--display);font-size:clamp(64px,8.5vw,118px);letter-spacing:.08em;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;z-index:0;white-space:nowrap}
 .about h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,48px);color:#000;line-height:1.1;margin:14px 0 24px}
 .about h2 .script{color:var(--maroon);font-size:1.6em;font-weight:400}
-.about h2.meet{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(28px,3vw,40px)}
+.about h2.meet{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(28px,3vw,40px);color:#fff}
 .about h2.meet .sig{height:2.6em;width:auto}
-.about p{color:#2a2420;font-size:17px;margin:0 0 14px}
+.about p{color:#d9d1c0;font-size:17px;margin:0 0 14px}
 .about .grid>div:last-child{padding-bottom:70px}
-.about .quoteline{font-family:var(--serif);font-size:22px;color:var(--maroon);margin:24px 0}
+.about .quoteline{font-family:var(--serif);font-size:22px;color:var(--gold);margin:24px 0}
 @media(max-width:900px){.about .grid{grid-template-columns:1fr}.about .fig{min-height:0;order:-1}.about .fig .cut{height:auto;width:min(88vw,460px)}.about .fig .blob{width:min(80vw,420px);height:min(80vw,420px)}.about .fig .bigname{font-size:58px;bottom:10px}}
 
 .about .fig .ghost{position:absolute;bottom:0;height:78%;width:auto;max-width:none;opacity:.28;filter:grayscale(.7) contrast(.9);z-index:0;pointer-events:none;mask-image:linear-gradient(180deg,#000 60%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent)}
@@ -558,7 +559,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .fig .cut{z-index:2}
 
 /* author */
-.author{background:linear-gradient(180deg,#fff,#f6f1fb);color:var(--cream-ink);overflow:hidden}
+.author{background:linear-gradient(180deg,#2a0f2a,#4a1438 50%,#2a0f2a);color:#f1e9f5;overflow:hidden}
 .author .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
 .bk-fig{position:relative;min-height:560px;display:flex;align-items:flex-end;justify-content:center}
 .bk-fig .authorcut{position:relative;z-index:2;height:560px;width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 30px 40px rgba(0,0,0,.25))}
@@ -568,13 +569,13 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .bk-fig .cover2{position:absolute;right:-4%;top:14%;z-index:3;width:min(180px,32%);border-radius:6px;border:4px solid #fff;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(7deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .bk-fig:hover .cover2{transform:rotate(3deg) translateY(-8px)}
 
-.author h2{font-size:clamp(32px,4vw,54px);color:#1a1420;line-height:1;margin:10px 0 14px;text-transform:none}
-.author h2 .script{color:var(--maroon);font-size:1.25em;font-weight:400;display:block}
-.author .lead{font-weight:600;font-size:20px;color:#4a1233;margin:0 0 14px}
-.author .also2{font-size:16px;color:#4a1233}.author .also2 em{font-style:normal;font-weight:700;color:var(--maroon)}
-.author p{color:#2a2420;font-size:17px;margin:0 0 16px}
+.author h2{font-size:clamp(32px,4vw,54px);color:#fff;line-height:1;margin:10px 0 14px;text-transform:none}
+.author h2 .script{color:var(--gold);font-size:1.25em;font-weight:400;display:block}
+.author .lead{font-weight:600;font-size:20px;color:var(--gold);margin:0 0 14px}
+.author .also2{font-size:16px;color:#e9dff0}.author .also2 em{font-style:normal;font-weight:700;color:var(--gold)}
+.author p{color:#d9d1c0;font-size:17px;margin:0 0 16px}
 .author ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:8px}
-.author li{padding-left:26px;position:relative;font-size:15.5px;color:#1a1420}
+.author li{padding-left:26px;position:relative;font-size:15.5px;color:#f1e9f5}
 .author li:before{content:"\2726";position:absolute;left:0;color:var(--gold-deep)}
 @media(max-width:900px){.author .grid{grid-template-columns:1fr}.bk-fig{min-height:460px}.bk-fig .authorcut{height:460px}}
 
@@ -692,7 +693,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="stage" data-parallax="0.08">
       <div class="glow gold"></div>
-      <img class="cut" src="img/cut/ai-green.png" alt="Forbes Riley, arms open">
+      <img class="cut" src="img/cut/gold-crossed.png" alt="Forbes Riley">
     </div>
   </div>
   <div class="floor"></div>
@@ -983,11 +984,11 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div>
       <p class="eyebrow rv">Meet Forbes Riley</p>
-      <h2 class="rv d1 meet">Meet <img class="sig" src="img/signature-maroon.png" alt="Forbes Riley"></h2>
+      <h2 class="rv d1 meet">Meet <img class="sig" src="img/white-signature.png" alt="Forbes Riley"></h2>
       <p class="rv d2">Award-winning TV host. Bestselling author. Motivational speaker. More than $2.5 billion in sales. I'm a globally recognized entrepreneur, 2X TEDx speaker and media personality whose career spans television, live stages and digital platforms, and it all proves one thing: your life expands in direct proportion to how well you master the one skill most people overlook. The power of the pitch.</p>
       <p class="rv d3">I've shared stages with icons, built companies from ideas, and helped thousands of entrepreneurs, speakers, coaches and founders monetize their message with clarity and confidence. But my story didn't begin with billion-dollar sales. It began in a hospital waiting room.</p>
       <p class="quoteline rv d3">"I'm on a mission to empower you to elevate your pitch."</p>
-      <a class="btn btn-dark rv d4" href="about.html">Read the full story</a>
+      <a class="btn btn-gold rv d4" href="about.html">Read the full story</a>
     </div>
   </div>
 </section>

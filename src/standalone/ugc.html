@@ -15,9 +15,9 @@
 <meta name="theme-color" content="#1a0c2e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07061a;--bg2:#1a0c2e;--plum:#5a1a44;--maroon:#a04870;--ink:#f7f3ea;--muted:#c9bfd2;--gold:#f0d57a;--gold-deep:#d4a73c;--cream-ink:#1a1420;--cream-muted:#5a4f63;--body:"Poppins","Helvetica Neue",Arial,sans-serif;--script:"Allura",cursive;--r:12px;--wrap:1180px}
+:root{--bg:#07061a;--bg2:#1a0c2e;--plum:#5a1a44;--maroon:#a04870;--ink:#f7f3ea;--muted:#c9bfd2;--gold:#f0d57a;--gold-deep:#d4a73c;--cream-ink:#1a1420;--cream-muted:#5a4f63;--body:"Poppins","Helvetica Neue",Arial,sans-serif;--serif:"Playfair Display",Georgia,serif;--r:12px;--wrap:1180px}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -49,7 +49,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .nav .wrap{display:flex;align-items:center;gap:26px}
 .nav img{height:44px}
 .nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:22px}
-.nav ul a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.nav ul a{text-decoration:none;font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .nav ul a:hover{color:var(--gold)}
 .nav .btn{padding:11px 20px;font-size:12px}
 @media(max-width:900px){.nav ul{display:none}.nav .btn{margin-left:auto}}
@@ -142,7 +142,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 @media(max-width:800px){.sold .strip{grid-template-columns:repeat(3,1fr)}}
 
 /* packages */
-.pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.pk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch}
 .pk{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(240,213,122,.22);border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;position:relative}
 .pk.hot{border-color:rgba(240,213,122,.7);box-shadow:0 0 0 1px rgba(240,213,122,.4),0 30px 60px rgba(0,0,0,.4)}
 .pk .pop{position:absolute;top:-13px;left:24px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#1b1619;background:linear-gradient(135deg,#f6e3a1,#d4a73c);padding:5px 12px;border-radius:999px}
@@ -153,9 +153,11 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .pk li:before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c)}
 .pk .btn{margin-top:auto;text-align:center}
 .pk .btn-line{font-size:12px;padding:12px 18px}
+.also{margin:30px auto 0;max-width:900px;text-align:center;color:var(--muted);font-size:15px;font-weight:300}
+.also b{color:#fff;font-weight:600}
 .addons{margin:28px auto 0;max-width:900px;text-align:center;color:var(--muted);font-size:15px}
 .addons b{color:#fff}
-@media(max-width:1000px){.pk-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1100px){.pk-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.pk-grid{grid-template-columns:1fr}}
 
 /* how */
@@ -212,6 +214,77 @@ footer a{color:var(--gold)}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero .stamp,.btn-gold:after{animation:none}}
+
+/* premium pass */
+h1,h2,.hero h1,.section-head h2,.brief h2{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;font-weight:500}
+.hero h1{text-transform:none;line-height:1.04;font-size:clamp(40px,5.4vw,74px)}
+.hero h1 em{display:inline}
+.hero{background:radial-gradient(90% 70% at 85% 30%,#4a1538,transparent 60%),linear-gradient(180deg,#0d0818,#1a0c2e)}
+.hero:after{content:"";position:absolute;left:24px;right:24px;top:92px;bottom:24px;border:1px solid rgba(240,213,122,.18);pointer-events:none;border-radius:4px}
+.hero .lead{font-weight:300;font-size:clamp(17px,1.4vw,20px);line-height:1.7}
+.hero .fig .ring{display:none}
+.eyebrow{font-weight:600;letter-spacing:.34em;font-size:11px}
+.section-head h2{font-size:clamp(34px,4.4vw,56px);line-height:1.08}
+.section-head p{font-weight:300}
+.section-head:after{content:"";display:block;width:56px;height:1px;background:linear-gradient(90deg,transparent,#d4a73c,transparent);margin:26px auto 0}
+.section{padding:110px 0}
+.btn{letter-spacing:.2em;font-size:12px;font-weight:600;padding:16px 30px}
+.btn-gold{box-shadow:0 10px 30px rgba(201,154,58,.18)}
+.btn-gold:after{animation-duration:9s}
+.btn-line{border-color:rgba(240,213,122,.45)}
+.proof{background:#0d0818;color:var(--ink);border-top:1px solid rgba(240,213,122,.18);border-bottom:1px solid rgba(240,213,122,.18);padding:30px 0}
+.proof b{font-family:var(--serif);font-weight:500;color:var(--gold);font-size:clamp(26px,2.6vw,38px)}
+.proof span{color:var(--muted);letter-spacing:.22em;font-size:11px}
+.proof .wrap>div+div{border-left:1px solid rgba(240,213,122,.14)}
+@media(max-width:800px){.proof .wrap>div+div{border-left:0}}
+.why{background:var(--bg)}
+.card{background:none;border:0;border-top:1px solid rgba(240,213,122,.35);border-radius:0;padding:28px 6px 0}
+.card:hover{transform:none;box-shadow:none}
+.card .n{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--gold-deep)}
+.card h3{font-family:var(--serif);font-weight:600;font-size:25px;margin:10px 0 12px}
+.card p{font-weight:300}
+.fmt{border:1px solid rgba(240,213,122,.18);border-radius:8px}
+.fmt .tag{background:none;color:var(--gold);border:1px solid rgba(240,213,122,.5);padding:4px 10px;font-weight:600;letter-spacing:.24em;font-size:10px}
+.fmt h3{font-family:var(--serif);font-weight:600;font-size:26px}
+.fmt p{font-weight:300;color:#e3d9e6}
+.fmt .len{background:none;border:0;color:#e9dfc5;font-weight:500;letter-spacing:.2em;font-size:10.5px;text-transform:uppercase;padding:0;top:18px;right:18px}
+.marq{padding:0 0 10px}
+.marq img{border-radius:6px;border-color:rgba(240,213,122,.18);height:230px}
+.marq .track{animation-duration:90s;gap:10px}
+.vid,.phone{border-radius:8px}
+.phone{border-radius:20px}
+.vid .p{width:56px;height:56px;font-size:18px;background:rgba(7,6,26,.55);border:1px solid rgba(240,213,122,.7);color:var(--gold);backdrop-filter:blur(4px)}
+.phone .snd{background:rgba(7,6,26,.55);backdrop-filter:blur(4px);letter-spacing:.22em;font-weight:600}
+.sold{background:#f7f3ea}
+.sold .section-head h2{color:#1a1420}
+.sold .strip figure{border-radius:6px;box-shadow:none;border:1px solid rgba(26,20,32,.08)}
+.sold .strip figcaption{letter-spacing:.1em;font-weight:600;font-size:10.5px}
+.sold .nets{letter-spacing:.26em;font-weight:500;font-size:12px;color:#7a6f84}
+.sold .nets b{font-weight:600;color:#1a1420}
+.pk{background:none;border:1px solid rgba(240,213,122,.22);border-radius:8px;padding:30px 22px}
+.pk.hot{border-color:rgba(240,213,122,.6);box-shadow:none;background:linear-gradient(180deg,rgba(240,213,122,.05),transparent)}
+.pk .pop{background:#0d0818;color:var(--gold);border:1px solid rgba(240,213,122,.6);letter-spacing:.24em;font-weight:600;font-size:10px}
+.pk h3{font-family:var(--serif);font-weight:600;font-size:23px}
+.pk .for{font-weight:600;letter-spacing:.22em;font-size:10.5px;margin:8px 0 20px}
+.pk ul{font-weight:300}
+.pk li{padding-left:18px}
+.pk li:before{width:5px;height:5px;top:17px;background:var(--gold-deep)}
+.addons{font-weight:300}
+.how{background:#f7f3ea}
+.how .section-head h2{color:#1a1420}
+.step{background:#fff;border:1px solid rgba(26,20,32,.08);border-radius:8px}
+.step:before{background:#1a1420;color:var(--gold);box-shadow:none;font-family:var(--serif);font-weight:500}
+.step h3{font-family:var(--serif);font-weight:600;font-size:21px}
+.step p{font-weight:300}
+.faq summary{font-family:var(--serif);font-weight:600;font-size:21px}
+.faq p{font-weight:300}
+.brief .side p{font-weight:300}
+form{background:none;border:1px solid rgba(240,213,122,.22);border-radius:8px;padding:34px}
+input,select,textarea{border-radius:6px;background:rgba(255,255,255,.03)}
+label{font-weight:600;letter-spacing:.22em;font-size:10.5px}
+footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
+@media(prefers-reduced-motion:reduce){.marq .track{animation:none}}
 </style>
 </head>
 <body id="top">
@@ -226,20 +299,19 @@ footer a{color:var(--gold)}
       <li><a href="#packages">Packages</a></li>
       <li><a href="speak.html">Speaking</a></li>
     </ul>
-    <a class="btn btn-gold" href="#brief">Get a quote</a>
+    <a class="btn btn-gold" href="#brief">Request a quote</a>
   </div>
 </nav>
 
 <header class="hero">
-  <i class="dust"></i>
   <div class="wrap">
     <div class="copy">
       <p class="eyebrow">UGC &amp; creator videos &middot; Forbes Riley</p>
-      <h1>The host who sold <em class="goldtxt">$2.5 billion</em> on live TV. Now on your brand's feed.</h1>
-      <p class="lead">Demos, testimonials, hook packs and live selling, shot in her own studio and delivered in days. <b>Thirty years of making people buy on camera</b>, now in 30-second vertical.</p>
+      <h1>Thirty years of selling on camera. <em class="goldtxt">Now for your brand.</em></h1>
+      <p class="lead">The host behind $2.5 billion in televised sales takes on a handful of brands each month. Pitches, demonstrations, endorsements and live selling, written and shot in her own studio.</p>
       <div class="cta">
-        <a class="btn btn-gold" href="#brief">Get a quote</a>
-        <a class="btn btn-line" href="#formats">See what she makes</a>
+        <a class="btn btn-gold" href="#brief">Request a quote</a>
+        <a class="btn btn-line" href="#oncamera">Watch a sample</a>
       </div>
     </div>
     <div class="fig">
@@ -263,13 +335,13 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">Why brands book her</p>
-      <h2 class="goldtxt">She was selling on camera before UGC had a name</h2>
+      <h2 class="goldtxt">Selling on camera before it had a name</h2>
       <p>Most creators learned to sell from their phone. Forbes learned it live, on air, with a sales counter running on the wall.</p>
     </div>
     <div class="grid">
-      <div class="card rv"><div class="n">1</div><h3>A hook in seven seconds</h3><p>Live TV gives you seconds before the viewer flips. She wrote and delivered thousands of those openings. Your video starts with one.</p></div>
-      <div class="card rv"><div class="n">2</div><h3>The buyer that scrolls past everyone else</h3><p>Women 45 and up hold the spending power and ignore most creator ads. They trust her face from twenty years of HSN and QVC. She talks to them like a friend, not an influencer.</p></div>
-      <div class="card rv"><div class="n">3</div><h3>Founder, host and inventor</h3><p>She built SpinGym into a global fitness product and sold it herself. She knows what a product needs to say, because she has been the one needing it said.</p></div>
+      <div class="card rv"><div class="n">I</div><h3>A hook in seven seconds</h3><p>Live TV gives you seconds before the viewer flips. She wrote and delivered thousands of those openings. Your video starts with one.</p></div>
+      <div class="card rv"><div class="n">II</div><h3>The buyer that scrolls past everyone else</h3><p>Women 45 and up hold the spending power and ignore most creator ads. They trust her face from twenty years of HSN and QVC. She talks to them like a friend, not an influencer.</p></div>
+      <div class="card rv"><div class="n">III</div><h3>Founder, host and inventor</h3><p>She built SpinGym into a global fitness product and sold it herself. She knows what a product needs to say, because she has been the one needing it said.</p></div>
     </div>
   </div>
 </section>
@@ -278,17 +350,19 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">What she makes</p>
-      <h2 class="goldtxt">Pick a format. She writes the words.</h2>
-      <p>Every video is delivered vertical for TikTok, Reels and Shorts, with a square cut for feed and raw footage on request.</p>
+      <h2 class="goldtxt">Choose the format. <em>She writes the words.</em></h2>
+      <p>Every video is written by Forbes and delivered vertical for TikTok, Reels and Shorts, with a square cut for feed. The script is a priced piece of every engagement, and it can be commissioned on its own.</p>
     </div>
     <div class="fmt-grid">
-      <a class="fmt rv" href="#brief"><img src="img/ugc/bottle.jpg" alt=""><span class="len">30 to 60 s</span><div class="t"><span class="tag">Demo</span><h3>Product demo</h3><p>The product in her hands, the problem it fixes, the moment it works. Her signature format.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-16.jpg" alt=""><span class="len">20 to 45 s</span><div class="t"><span class="tag">Testimonial</span><h3>Straight to camera</h3><p>A real review in her own words. Scripted together with you, said like she means it.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-06.jpg" alt=""><span class="len">3 x 15 s</span><div class="t"><span class="tag">Hook pack</span><h3>Three openings, one video</h3><p>Same body, three different first lines. Test them against each other and keep the winner.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/books-12.jpg" alt=""><span class="len">45 to 90 s</span><div class="t"><span class="tag">Founder style</span><h3>The story behind it</h3><p>Why the product exists, told by someone who has launched her own. Good for ads and landing pages.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/books-04.jpg" alt=""><span class="len">15 to 30 s</span><div class="t"><span class="tag">Unboxing</span><h3>First look</h3><p>Open it, react, show the one thing people need to see. Fast and honest.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-17.jpg" alt=""><span class="len">Live</span><div class="t"><span class="tag">Live selling</span><h3>TikTok Shop and live streams</h3><p>Hosting a live sale is the job she did for two decades. Hourly, with your products and your offers.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/bottle.jpg" alt=""><span class="len">60 s</span><div class="t"><span class="tag">Signature</span><h3>The pitch</h3><p>Your product, pitched the way she sold $2.5 billion of other people's. The format brands come for.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-17.jpg" alt=""><span class="len">30 to 60 s</span><div class="t"><span class="tag">Demo</span><h3>Product demonstration</h3><p>The problem, the product in her hands, the moment it works. Built for ads and listings.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-16.jpg" alt=""><span class="len">20 to 45 s</span><div class="t"><span class="tag">Endorsement</span><h3>Straight to camera</h3><p>Her name on your product, in her words. A celebrity endorsement, not a review.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/books-12.jpg" alt=""><span class="len">60 to 120 s</span><div class="t"><span class="tag">Hosted</span><h3>Founder interview</h3><p>She hosts, you talk. The questions that make a founder sound like one. For the website and the press kit.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-06.jpg" alt=""><span class="len">3 x 15 s</span><div class="t"><span class="tag">Hook set</span><h3>Three openings, one body</h3><p>Three first lines on the same video. Run them against each other and scale the winner.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-05.jpg" alt=""><span class="len">Live</span><div class="t"><span class="tag">Live selling</span><h3>She hosts your live</h3><p>TikTok Shop, Amazon Live or your own stream. Hosting a live sale was her job for two decades.</p></div></a>
     </div>
+    <p class="also rv"><b>Also by arrangement:</b> spokesperson campaigns, ad reads, trade-show and event hosting, podcast and media appearances, and pitch scripts or coaching for your own team.</p>
+  </div>
   </div>
 </section>
 
@@ -301,11 +375,11 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">On camera</p>
-      <h2 class="goldtxt">Press play. This is what you are booking.</h2>
+      <h2 class="goldtxt">This is what you are booking.</h2>
       <p>A brand demo from her studio, her sizzle reel and her talks. New samples land here as they go live.</p>
     </div>
     <div class="grid">
-      <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">&#9654; Tap for sound</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
+      <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
       <div class="vid rv" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg" alt="Forbes Riley sizzle reel"><div class="p">&#9654;</div><div class="cap">Sizzle reel<span>Thirty years on camera in two minutes</span></div></div>
       <div class="vid rv" data-yt="47WXAhCJIiU"><img src="https://i.ytimg.com/vi/47WXAhCJIiU/hqdefault.jpg" alt="TEDx St Pete Women"><div class="p">&#9654;</div><div class="cap">P.I.T.C.H.ing is your superpower<span>TEDx St Pete Women</span></div></div>
       <div class="vid rv" data-yt="TQZ7ppYRj28"><img src="https://i.ytimg.com/vi/TQZ7ppYRj28/hqdefault.jpg" alt="TEDx Jersey City"><div class="p">&#9654;</div><div class="cap">Blue is not better<span>TEDx Jersey City</span></div></div>
@@ -318,7 +392,7 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">Sold on camera</p>
-      <h2>Products she has already put in front of millions</h2>
+      <h2>Already in front of millions</h2>
       <p>Fitness, kitchen, beauty, wellness, home. If it ships in a box, she has probably sold one like it.</p>
     </div>
     <div class="strip">
@@ -337,16 +411,17 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">Packages</p>
-      <h2 class="goldtxt">Simple to order</h2>
-      <p>Every package includes the script, her studio, captions and one round of changes. Rates on the quote, usually back the same day.</p>
+      <h2 class="goldtxt">Engagements</h2>
+      <p>Forbes takes on a limited number of brands each month. Her script, her studio, captions and one round of changes come with every shoot. Rates reflect a thirty-year sales record and are set out on the quote.</p>
     </div>
     <div class="pk-grid">
-      <div class="pk rv"><h3>One video</h3><div class="for">Try her out</div><ul><li>1 video, your choice of format</li><li>Vertical 9:16 plus square cut</li><li>Script written with you</li><li>Delivered in 5 business days</li></ul><a class="btn btn-line" href="#brief">Get a quote</a></div>
-      <div class="pk hot rv"><span class="pop">Most booked</span><h3>Hook pack</h3><div class="for">Find the winner</div><ul><li>1 video with 3 different openings</li><li>Vertical plus square cuts of each</li><li>Script written with you</li><li>Delivered in 5 business days</li></ul><a class="btn btn-gold" href="#brief">Get a quote</a></div>
-      <div class="pk rv"><h3>Launch set</h3><div class="for">A month of content</div><ul><li>4 videos across formats</li><li>Hook variations on two of them</li><li>5 product photos with Forbes</li><li>Delivered over 2 weeks</li></ul><a class="btn btn-line" href="#brief">Get a quote</a></div>
-      <div class="pk rv"><h3>Live selling</h3><div class="for">By the hour</div><ul><li>She hosts your TikTok Shop or stream</li><li>Your products, your offers</li><li>Run of show written for you</li><li>Clips cut from the live after</li></ul><a class="btn btn-line" href="#brief">Get a quote</a></div>
+      <div class="pk rv"><h3>The script</h3><div class="for">Her words, your shoot</div><ul><li>60-second pitch script by Forbes</li><li>Three opening hooks</li><li>Delivery notes for your presenter</li><li>One round of changes</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
+      <div class="pk rv"><h3>One video</h3><div class="for">Script and shoot</div><ul><li>1 video, any format above</li><li>Scripted by Forbes, priced in</li><li>Vertical 9:16 plus square cut</li><li>Delivered in 5 business days</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
+      <div class="pk hot rv"><span class="pop">Most requested</span><h3>Hook set</h3><div class="for">Find the winner</div><ul><li>1 video with 3 openings</li><li>Scripted by Forbes, priced in</li><li>Vertical plus square cuts of each</li><li>Delivered in 5 business days</li></ul><a class="btn btn-gold" href="#brief">Request a quote</a></div>
+      <div class="pk rv"><h3>Launch set</h3><div class="for">A month of content</div><ul><li>4 videos across formats</li><li>Scripted by Forbes, priced in</li><li>Hook sets on two of them</li><li>5 product photos with Forbes</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
+      <div class="pk rv"><h3>Live selling</h3><div class="for">By the hour</div><ul><li>She hosts your live sale</li><li>Run of show written for you</li><li>Your products, your offers</li><li>Clips cut from the live after</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
     </div>
-    <p class="addons rv"><b>Add-ons:</b> raw footage, extra hooks, paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, rush delivery in 48 hours.</p>
+    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, rush delivery in 48 hours.</p>
   </div>
 </section>
 
@@ -354,11 +429,11 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="section-head rv">
       <p class="eyebrow">How it works</p>
-      <h2>Brief on Monday, video by Friday</h2>
+      <h2>Brief on Monday. Video by Friday.</h2>
     </div>
     <div class="steps">
       <div class="step rv"><h3>Send the brief</h3><p>Product, who it's for, what you want said, where it will run. The form below takes three minutes.</p><small>Day 1</small></div>
-      <div class="step rv"><h3>She writes the hook</h3><p>You get a short script back with the opening line and the one claim the video hangs on. Approve or tweak.</p><small>Day 1 to 2</small></div>
+      <div class="step rv"><h3>She writes the script</h3><p>The opening line, the one claim the video hangs on and the close. You approve every word.</p><small>Day 1 to 2</small></div>
       <div class="step rv"><h3>Ship the product, she shoots</h3><p>Her own studio, lit and mic'd. No crew to schedule, no location to find.</p><small>Day 3 to 4</small></div>
       <div class="step rv"><h3>Delivered, cut, captioned</h3><p>Vertical and square files, captions on, one round of changes included. Rights spelled out in writing.</p><small>Day 5</small></div>
     </div>
@@ -370,7 +445,7 @@ footer a{color:var(--gold)}
     <div class="section-head rv"><p class="eyebrow">Questions</p><h2 class="goldtxt">Before you book</h2></div>
     <details class="rv"><summary>Does she post the video on her own accounts?</summary><p>Only if you add it. The standard package is content for your channels and ads. Posting to her feed, or whitelisting her accounts for your ads, is an add-on with its own rights.</p></details>
     <details class="rv"><summary>What products does she say yes to?</summary><p>Things she would use or give to a friend: fitness, kitchen, beauty, wellness, home, gifts, books and courses. She will tell you quickly if it is not a fit.</p></details>
-    <details class="rv"><summary>Who writes the script?</summary><p>She does, from your brief and your must-say claims. You approve every word before she shoots.</p></details>
+    <details class="rv"><summary>Who writes the script, and is it included?</summary><p>Forbes writes every word, from your brief and your must-say claims, and the script is priced as its own line in the quote. You can also commission the script alone and shoot it with your own presenter or team.</p></details>
     <details class="rv"><summary>How are usage rights handled?</summary><p>Organic use on your own channels is included. Paid ads, whitelisting and anything beyond 12 months are priced separately and written into the quote.</p></details>
     <details class="rv"><summary>Can she do it in a day?</summary><p>Rush delivery in 48 hours is an add-on, product in hand. Ask when you send the brief.</p></details>
   </div>
@@ -380,15 +455,15 @@ footer a{color:var(--gold)}
   <div class="wrap">
     <div class="side rv">
       <p class="eyebrow">Get a quote</p>
-      <h2 class="goldtxt">Tell her about the product</h2>
-      <p>Three minutes. A quote comes back the same business day with the rate, timing and rights laid out.</p>
+      <h2 class="goldtxt">Tell her about <em>the product</em></h2>
+      <p>Three minutes. A quote comes back the same business day with the rate, timing and rights set out in writing.</p>
       <div class="fast"><img src="img/ugc/shoot-12.jpg" alt="Forbes Riley"><div><b>Forbes reads every brief herself</b><span>Replies go out from assistant@theforbesfactor.com</span></div></div>
     </div>
     <form id="bf" class="rv">
       <div class="row"><div><label for="bn">Your name</label><input id="bn" required placeholder="Name"></div><div><label for="be">Email</label><input id="be" type="email" required placeholder="you@brand.com"></div></div>
       <div class="row"><div><label for="br">Brand</label><input id="br" required placeholder="Brand name"></div><div><label for="bp">Product</label><input id="bp" required placeholder="What is it?"></div></div>
       <div class="row">
-        <div><label for="bfmt">Format</label><select id="bfmt"><option>Product demo</option><option>Testimonial</option><option>Hook pack</option><option>Founder style</option><option>Unboxing</option><option>Live selling</option><option>Launch set</option><option>Not sure yet</option></select></div>
+        <div><label for="bfmt">Format</label><select id="bfmt"><option>The pitch</option><option>Product demonstration</option><option>Endorsement</option><option>Founder interview</option><option>Hook set</option><option>Live selling</option><option>Launch set</option><option>Script only</option><option>Not sure yet</option></select></div>
         <div><label for="bw">Where it will run</label><select id="bw"><option>Organic social</option><option>Paid ads</option><option>Website / Amazon listing</option><option>All of the above</option></select></div>
       </div>
       <div class="row">
@@ -396,7 +471,7 @@ footer a{color:var(--gold)}
         <div><label for="bb">Budget</label><select id="bb"><option>Prefer to discuss</option><option>Under $1,000</option><option>$1,000 to $2,500</option><option>$2,500 to $5,000</option><option>$5,000+</option></select></div>
       </div>
       <div style="margin-bottom:14px"><label for="bm">Anything she must say or show</label><textarea id="bm" placeholder="Key claims, the problem it solves, links to the product page"></textarea></div>
-      <button class="btn btn-gold" type="submit">Send the brief</button>
+      <button class="btn btn-gold" type="submit">Request a quote</button>
       <p class="sent" hidden>Got it. Your email app has the brief ready to send, and a quote comes back the same business day.</p>
     </form>
   </div>

@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forbes Riley | UGC &amp; Creator Videos for Brands</title>
 <meta name="description" content="Hire Forbes Riley for UGC and creator content. The host who sold $2.5 billion on live TV makes demos, testimonials, hooks and founder-style videos for your brand, delivered in days.">
-<link rel="icon" type="image/png" href="img/favicon.png?v=407329">
+<link rel="icon" type="image/png" href="img/favicon.png?v=407691">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Forbes Riley | UGC &amp; Creator Videos for Brands">
 <meta property="og:description" content="The host who sold $2.5 billion on live TV now makes videos for your brand. Demos, testimonials, hook packs and live selling, delivered in days.">
-<meta property="og:image" content="https://site.forbesrileyhq.com/img/spingym-class.jpg?v=407329">
+<meta property="og:image" content="https://site.forbesrileyhq.com/img/spingym-class.jpg?v=407691">
 <meta property="og:url" content="https://site.forbesrileyhq.com/ugc.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1a0c2e">
@@ -57,7 +57,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:120px 0 150px;background:radial-gradient(120% 80% at 80% 20%,#6b1f52,transparent 60%),radial-gradient(90% 60% at 0% 100%,#3b1030,transparent 60%),linear-gradient(180deg,#120a1f,#1a0c2e);overflow:hidden}
-.hero .dust{position:absolute;inset:-10%;background:url(img/cut/gold-dust.png?v=407329) center/110% no-repeat;opacity:.35;mix-blend-mode:screen;pointer-events:none}
+.hero .dust{position:absolute;inset:-10%;background:url(img/cut/gold-dust.png?v=407691) center/110% no-repeat;opacity:.35;mix-blend-mode:screen;pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:end}
 .hero h1{font-size:clamp(38px,5.6vw,76px);text-transform:uppercase;line-height:.98}
 .hero h1 em{font-style:normal;display:block}
@@ -65,6 +65,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .hero .lead b{color:#fff}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero .fig{position:relative;align-self:end;justify-self:center;width:100%;max-width:560px}
+.hero .fig .seal{position:absolute;left:-8%;bottom:26%;width:24%;z-index:3;filter:drop-shadow(0 14px 24px rgba(0,0,0,.55));animation:rise 1s .35s cubic-bezier(.2,.8,.2,1) both}
 .hero .fig img{width:100%;position:relative;z-index:1;filter:drop-shadow(0 18px 22px rgba(0,0,0,.55)) drop-shadow(0 40px 60px rgba(0,0,0,.45));animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
 .hero .fig .floor{position:absolute;left:4%;right:4%;bottom:-6%;height:14%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(240,213,122,.28) 0%,rgba(240,213,122,.1) 40%,rgba(240,213,122,0) 70%);filter:blur(12px);z-index:0;animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
 .hero .fig .bigname{position:absolute;left:-10%;right:-10%;text-align:center;bottom:-13%;font-family:var(--serif);font-size:clamp(64px,7.6vw,108px);letter-spacing:.08em;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;z-index:2;white-space:nowrap;text-decoration:none;line-height:1;animation:rise 1s .05s cubic-bezier(.2,.8,.2,1) both}
@@ -126,10 +127,22 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .vid.short img{opacity:.95}
 .reel .also{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
 .reel .also a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.reach .soc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reach .soc{display:block;text-decoration:none;color:#fff;border:1px solid rgba(240,213,122,.22);border-radius:var(--r);padding:30px 28px;background:linear-gradient(180deg,rgba(240,213,122,.06),rgba(240,213,122,.02));transition:transform .4s,border-color .4s}
+.reach .soc:hover{transform:translateY(-4px);border-color:rgba(240,213,122,.5)}
+.reach .soc .pl{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.reach .soc b{display:block;font-family:var(--serif);font-weight:800;font-size:clamp(40px,4.6vw,64px);line-height:1;margin:14px 0 4px;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reach .soc .k{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.reach .soc .h{display:block;margin-top:14px;color:var(--muted);font-size:14px}
+@media(max-width:700px){.reach .soc-grid{grid-template-columns:1fr}}
 .stills .sgrid{columns:3;column-gap:12px}
 .stills .sgrid figure{break-inside:avoid;margin:0 0 12px}
 .stills figure{margin:0;overflow:hidden;border-radius:var(--r);border:1px solid rgba(240,213,122,.18);background:#000}
 .stills .sgrid img{height:auto}
+.stills .sgrid figure.arch{border-radius:999px 999px var(--r) var(--r)}
+.stills .sgrid figure.round{border-radius:28px}
+.stills .sgrid figure.pola{background:#fff;border:0;padding:12px 12px 44px;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.stills .sgrid figure.pola img{border-radius:2px}
 .stills .shelf{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;background:#fff;border-radius:var(--r);padding:22px 18px;position:relative;margin-bottom:14px}
 .stills .shelf figure{margin:0;aspect-ratio:16/9;background:#fff;border:0}
 .stills .shelf img{object-fit:contain}
@@ -186,6 +199,13 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .pk .btn-line{font-size:12px;padding:12px 18px}
 .also{margin:30px auto 0;max-width:900px;text-align:center;color:var(--muted);font-size:15px;font-weight:300}
 .also b{color:#fff;font-weight:600}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.svc>div{border:1px solid rgba(240,213,122,.18);border-radius:var(--r);padding:28px 30px}
+.svc h3{margin:0 0 14px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.svc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:24px}
+.svc li{break-inside:avoid;padding:6px 0 6px 18px;position:relative;color:var(--muted);font-size:15px}
+.svc li:before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+@media(max-width:800px){.svc{grid-template-columns:1fr}.svc ul{columns:1}}
 .addons{margin:28px auto 0;max-width:900px;text-align:center;color:var(--muted);font-size:15px}
 .addons b{color:#fff}
 @media(max-width:1100px){.pk-grid{grid-template-columns:1fr 1fr}.pk:nth-child(-n+3),.pk:nth-child(n+4){grid-column:auto}.pk:nth-child(5){grid-column:span 2}}
@@ -322,7 +342,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
 
 <nav class="nav">
   <div class="wrap">
-    <a href="#top"><img src="img/logo-signature-gold.png?v=407329" alt="Forbes Riley"></a>
+    <a href="#top"><img src="img/logo-signature-gold.png?v=407691" alt="Forbes Riley"></a>
     <ul>
       <li><a href="#why">Why Forbes</a></li>
       <li><a href="#formats">Formats</a></li>
@@ -348,7 +368,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
     </div>
     <div class="fig">
       <i class="ring"></i>
-      <span class="floor" aria-hidden="true"></span><a class="bigname" href="#oncamera" data-yt="t52E3asvjsw" aria-label="Play her reel">F<span class="o"><i></i></span>RBES<span class="pv">play her reel</span></a><img src="img/cut/chair-selfie.png?v=407329" alt="Forbes Riley laughing at her phone in a purple chair"><span class="refl" aria-hidden="true"><img src="img/cut/chair-selfie.png?v=407329" alt=""></span>
+      <img class="seal rv" src="img/cut/seal.png?v=407691" alt="Forbes Riley, Pitch Queen"><span class="floor" aria-hidden="true"></span><a class="bigname" href="#oncamera" data-yt="t52E3asvjsw" aria-label="Play her reel">F<span class="o"><i></i></span>RBES<span class="pv">play her reel</span></a><img src="img/cut/chair-selfie.png?v=407691" alt="Forbes Riley laughing at her phone in a purple chair"><span class="refl" aria-hidden="true"><img src="img/cut/chair-selfie.png?v=407691" alt=""></span>
     </div>
   </div>
 </header>
@@ -386,12 +406,15 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <p>Every video is written by Forbes and delivered vertical for TikTok, Reels and Shorts, with a square cut for feed. The script is a priced piece of every engagement, and it can be commissioned on its own.</p>
     </div>
     <div class="fmt-grid">
-      <a class="fmt rv" href="#brief"><img src="img/ugc/bottle.jpg?v=407329" alt=""><span class="len">60 s</span><div class="t"><span class="tag">Signature</span><h3>The pitch</h3><p>Your product, pitched the way she sold $2.5 billion of other people's. The format brands come for.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/g-kitchen.jpg?v=407329" alt=""><span class="len">30 to 60 s</span><div class="t"><span class="tag">Demo</span><h3>Product demonstration</h3><p>The problem, the product in her hands, the moment it works. Built for ads and listings.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/tv-pink-set.jpg?v=407329" alt=""><span class="len">20 to 45 s</span><div class="t"><span class="tag">Endorsement</span><h3>Straight to camera</h3><p>Her name on your product, in her words. A celebrity endorsement, not a review.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/tv-talkshow.jpg?v=407329" alt=""><span class="len">60 to 120 s</span><div class="t"><span class="tag">Hosted</span><h3>Founder interview</h3><p>She hosts, you talk. The questions that make a founder sound like one. For the website and the press kit.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-06.jpg?v=407329" alt=""><span class="len">3 x 15 s</span><div class="t"><span class="tag">Hook set</span><h3>Three openings, one body</h3><p>Three first lines on the same video. Run them against each other and scale the winner.</p></div></a>
-      <a class="fmt rv" href="#brief"><img src="img/virtual-studio.jpg?v=407329" alt=""><span class="len">Live</span><div class="t"><span class="tag">Live selling</span><h3>She hosts your live</h3><p>TikTok Shop, Amazon Live or your own stream. Hosting a live sale was her job for two decades.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/bottle.jpg?v=407691" alt=""><span class="len">60 s</span><div class="t"><span class="tag">Signature</span><h3>The pitch</h3><p>Your product, pitched the way she sold $2.5 billion of other people's. The format brands come for.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/g-kitchen.jpg?v=407691" alt=""><span class="len">30 to 60 s</span><div class="t"><span class="tag">Demo</span><h3>Product demonstration</h3><p>The problem, the product in her hands, the moment it works. Built for ads and listings.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/tv-pink-set.jpg?v=407691" alt=""><span class="len">20 to 45 s</span><div class="t"><span class="tag">Endorsement</span><h3>Straight to camera</h3><p>Her name on your product, in her words. A celebrity endorsement, not a review.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/tv-talkshow.jpg?v=407691" alt=""><span class="len">60 to 120 s</span><div class="t"><span class="tag">Hosted</span><h3>Founder interview</h3><p>She hosts, you talk. The questions that make a founder sound like one. For the website and the press kit.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/ugc/shoot-06.jpg?v=407691" alt=""><span class="len">3 x 15 s</span><div class="t"><span class="tag">Hook set</span><h3>Three openings, one body</h3><p>Three first lines on the same video. Run them against each other and scale the winner.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/virtual-studio.jpg?v=407691" alt=""><span class="len">Live</span><div class="t"><span class="tag">Live selling</span><h3>She hosts your live</h3><p>TikTok Shop, Amazon Live or your own stream. Hosting a live sale was her job for two decades.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/spingym-paris.jpg?v=407691" alt=""><span class="len">60 to 90 s</span><div class="t"><span class="tag">Travel</span><h3>Travel vlog</h3><p>Your hotel, tour, luggage or app in her hands on the road. She has shot on five continents and packs the product.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/h-veggies.jpg?v=407691" alt=""><span class="len">45 to 90 s</span><div class="t"><span class="tag">Food</span><h3>Food and kitchen</h3><p>Cooked, tasted and sold on camera. The Jack LaLanne Power Juicer was hers for a decade, and the kitchen set is where she is fastest.</p></div></a>
+      <a class="fmt rv" href="#brief"><img src="img/tvset.jpg?v=407691" alt=""><span class="len">30 to 60 s</span><div class="t"><span class="tag">Tech</span><h3>Tech, unboxed</h3><p>Apps, gadgets and devices explained for the buyer who is not twenty-five. She makes it feel easy, which is what sells it.</p></div></a>
     </div>
     <p class="also rv"><b>Also by arrangement:</b> spokesperson campaigns, ad reads, trade-show and event hosting, podcast and media appearances, and pitch scripts or coaching for your own team.</p>
   </div>
@@ -400,8 +423,8 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
 
 
 <div class="marq" aria-hidden="true"><div class="track">
-  <img src="img/ugc/shoot-07.jpg?v=407329" alt=""><img src="img/ugc/books-06.jpg?v=407329" alt=""><img src="img/ugc/shoot-01.jpg?v=407329" alt=""><img src="img/ugc/books-07.jpg?v=407329" alt=""><img src="img/ugc/shoot-13.jpg?v=407329" alt=""><img src="img/ugc/books-09.jpg?v=407329" alt=""><img src="img/ugc/shoot-11.jpg?v=407329" alt=""><img src="img/ugc/books-05.jpg?v=407329" alt=""><img src="img/ugc/shoot-14.jpg?v=407329" alt=""><img src="img/ugc/shoot-02.jpg?v=407329" alt="">
-  <img src="img/ugc/shoot-07.jpg?v=407329" alt=""><img src="img/ugc/books-06.jpg?v=407329" alt=""><img src="img/ugc/shoot-01.jpg?v=407329" alt=""><img src="img/ugc/books-07.jpg?v=407329" alt=""><img src="img/ugc/shoot-13.jpg?v=407329" alt=""><img src="img/ugc/books-09.jpg?v=407329" alt=""><img src="img/ugc/shoot-11.jpg?v=407329" alt=""><img src="img/ugc/books-05.jpg?v=407329" alt=""><img src="img/ugc/shoot-14.jpg?v=407329" alt=""><img src="img/ugc/shoot-02.jpg?v=407329" alt="">
+  <img src="img/ugc/shoot-07.jpg?v=407691" alt=""><img src="img/ugc/books-06.jpg?v=407691" alt=""><img src="img/ugc/shoot-01.jpg?v=407691" alt=""><img src="img/ugc/books-07.jpg?v=407691" alt=""><img src="img/ugc/shoot-13.jpg?v=407691" alt=""><img src="img/ugc/books-09.jpg?v=407691" alt=""><img src="img/ugc/shoot-11.jpg?v=407691" alt=""><img src="img/ugc/books-05.jpg?v=407691" alt=""><img src="img/ugc/shoot-14.jpg?v=407691" alt=""><img src="img/ugc/shoot-02.jpg?v=407691" alt="">
+  <img src="img/ugc/shoot-07.jpg?v=407691" alt=""><img src="img/ugc/books-06.jpg?v=407691" alt=""><img src="img/ugc/shoot-01.jpg?v=407691" alt=""><img src="img/ugc/books-07.jpg?v=407691" alt=""><img src="img/ugc/shoot-13.jpg?v=407691" alt=""><img src="img/ugc/books-09.jpg?v=407691" alt=""><img src="img/ugc/shoot-11.jpg?v=407691" alt=""><img src="img/ugc/books-05.jpg?v=407691" alt=""><img src="img/ugc/shoot-14.jpg?v=407691" alt=""><img src="img/ugc/shoot-02.jpg?v=407691" alt="">
 </div></div>
 <section class="section reel" id="oncamera">
   <div class="wrap">
@@ -411,7 +434,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <p>Vertical, phone-first, shot in her studio. A brand demo plus her own clips, the way they run on TikTok, Reels and Shorts.</p>
     </div>
     <div class="grid">
-      <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg?v=407329" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
+      <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg?v=407691" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
       <div class="vid short rv" data-yt="VTRUBydQsFc" data-v="1"><img src="https://i.ytimg.com/vi/VTRUBydQsFc/oar2.jpg" alt="Sell me this SpinGym"><div class="p">&#9654;</div><div class="cap">Sell me this SpinGym<span>Her own product, 60 s</span></div></div>
       <div class="vid short rv" data-yt="52UBRIMYPlc" data-v="1"><img src="https://i.ytimg.com/vi/52UBRIMYPlc/oar2.jpg" alt="Features vs benefits"><div class="p">&#9654;</div><div class="cap">Features vs benefits<span>The line that sells</span></div></div>
       <div class="vid short rv" data-yt="OiPdCC-P8LM" data-v="1"><img src="https://i.ytimg.com/vi/OiPdCC-P8LM/oar2.jpg" alt="Look better on camera"><div class="p">&#9654;</div><div class="cap">Look better on camera<span>Instant fixes</span></div></div>
@@ -422,30 +445,45 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
   </div>
 </section>
 
+<section class="section reach" id="reach">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="eyebrow">Her audience</p>
+      <h2 class="goldtxt">Already watching.</h2>
+      <p>Posting to her own feed is an add-on. This is who sees it.</p>
+    </div>
+    <div class="soc-grid">
+      <a class="soc rv" href="https://instagram.com/forbes_riley" target="_blank" rel="noopener"><span class="pl">Instagram</span><b>359K</b><span class="k">followers</span><span class="h">@forbes_riley &middot; 3,288 posts</span></a>
+      <a class="soc rv" href="https://www.tiktok.com/@forbesriley" target="_blank" rel="noopener"><span class="pl">TikTok</span><b>138K</b><span class="k">likes</span><span class="h">@forbesriley &middot; 36.6K followers</span></a>
+      <a class="soc rv" href="https://www.youtube.com/@forbesriley" target="_blank" rel="noopener"><span class="pl">YouTube</span><b>96</b><span class="k">Shorts and counting</span><span class="h">@forbesriley &middot; three TEDx talks</span></a>
+    </div>
+  </div>
+</section>
+
 <section class="section stills" id="stills">
   <div class="wrap">
     <div class="section-head rv">
-      <p class="eyebrow">Product photography</p>
+      <p class="eyebrow">Lifestyle + product photography</p>
       <h2 class="goldtxt">Your product, shot to sell.</h2>
       <p>Her photographer, Joshua, shoots the product itself: every colourway clean on white for the listing, then in her hands, at home and on location for the feed. Delivered with the video or on its own.</p>
     </div>
     <div class="shelf rv">
-      <figure><img src="img/ugc/prod-sg-pink.jpg?v=407329" alt="Pink SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-purple.jpg?v=407329" alt="Purple SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-blue.jpg?v=407329" alt="Blue SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-gold.jpg?v=407329" alt="Gold SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-teal.jpg?v=407329" alt="Teal SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-orange.jpg?v=407329" alt="Orange SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-green.jpg?v=407329" alt="Green SpinGym"></figure>
-      <figure><img src="img/ugc/prod-sg-black.jpg?v=407329" alt="Black SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-pink.jpg?v=407691" alt="Pink SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-purple.jpg?v=407691" alt="Purple SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-blue.jpg?v=407691" alt="Blue SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-gold.jpg?v=407691" alt="Gold SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-teal.jpg?v=407691" alt="Teal SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-orange.jpg?v=407691" alt="Orange SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-green.jpg?v=407691" alt="Green SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-black.jpg?v=407691" alt="Black SpinGym"></figure>
     </div>
     <div class="sgrid">
-      <figure class="rv tall"><img src="img/ugc/prod-rooftop.jpg?v=407329" alt="Forbes using SpinGym on a rooftop"></figure>
-      <figure class="rv"><img src="img/ugc/prod-kitchen.jpg?v=407329" alt="Forbes in the kitchen with the E.A.T. journal"></figure>
-      <figure class="rv"><img src="img/ugc/prod-beach.jpg?v=407329" alt="SpinGym class on the beach"></figure>
-      <figure class="rv tall"><img src="img/ugc/shoot-17.jpg?v=407329" alt="Forbes holding a product in her studio"></figure>
-      <figure class="rv"><img src="img/ugc/prod-book.jpg?v=407329" alt="Pitch Secrets A to Z book"></figure>
-      <figure class="rv"><img src="img/ugc/bottle.jpg?v=407329" alt="Product close-up with Forbes"></figure>
+      <figure class="rv arch"><img src="img/ugc/prod-rooftop.jpg?v=407691" alt="Forbes using SpinGym on a rooftop"></figure>
+      <figure class="rv pola"><img src="img/ugc/prod-kitchen.jpg?v=407691" alt="Forbes in the kitchen with the E.A.T. journal"></figure>
+      <figure class="rv pola"><img src="img/ugc/prod-beach.jpg?v=407691" alt="SpinGym class on the beach"></figure>
+      <figure class="rv arch"><img src="img/ugc/shoot-17.jpg?v=407691" alt="Forbes holding a product in her studio"></figure>
+      <figure class="rv "><img src="img/ugc/prod-book.jpg?v=407691" alt="Pitch Secrets A to Z book"></figure>
+      <figure class="rv round"><img src="img/ugc/bottle.jpg?v=407691" alt="Product close-up with Forbes"></figure>
     </div>
     <p class="also rv">Photography is quoted with the video or on its own.</p>
   </div>
@@ -459,12 +497,12 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <p>Fitness, kitchen, beauty, wellness, home. If it ships in a box, she has probably sold one like it.</p>
     </div>
     <div class="strip">
-      <figure class="rv"><img src="img/spingym-class.jpg?v=407329" alt=""><figcaption>SpinGym on HSN</figcaption></figure>
-      <figure class="rv"><img src="img/h-juicer2.jpg?v=407329" alt=""><figcaption>Power Juicer with Jack LaLanne</figcaption></figure>
-      <figure class="rv"><img src="img/g-kitchen.jpg?v=407329" alt=""><figcaption>Kitchen &amp; food</figcaption></figure>
-      <figure class="rv"><img src="img/g-hsn-models.jpg?v=407329" alt=""><figcaption>Fitness on air</figcaption></figure>
-      <figure class="rv"><img src="img/h-expo.jpg?v=407329" alt=""><figcaption>Trade show floor</figcaption></figure>
-      <figure class="rv"><img src="img/ugc/books-10.jpg?v=407329" alt=""><figcaption>Her own bestseller</figcaption></figure>
+      <figure class="rv"><img src="img/spingym-class.jpg?v=407691" alt=""><figcaption>SpinGym on HSN</figcaption></figure>
+      <figure class="rv"><img src="img/h-juicer2.jpg?v=407691" alt=""><figcaption>Power Juicer with Jack LaLanne</figcaption></figure>
+      <figure class="rv"><img src="img/g-kitchen.jpg?v=407691" alt=""><figcaption>Kitchen &amp; food</figcaption></figure>
+      <figure class="rv"><img src="img/g-hsn-models.jpg?v=407691" alt=""><figcaption>Fitness on air</figcaption></figure>
+      <figure class="rv"><img src="img/h-expo.jpg?v=407691" alt=""><figcaption>Trade show floor</figcaption></figure>
+      <figure class="rv"><img src="img/ugc/books-10.jpg?v=407691" alt=""><figcaption>Her own bestseller</figcaption></figure>
     </div>
     <p class="nets rv"><b>HSN</b> &middot; <b>QVC</b> &middot; <b>Fox</b> &middot; <b>CNBC</b> &middot; <b>Lifetime</b> &middot; <b>Discovery</b> &middot; <b>HGTV</b> &middot; <b>Forbes Living TV</b></p>
   </div>
@@ -484,7 +522,10 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <div class="pk rv"><h3>Launch set</h3><div class="for">A month of content</div><ul><li>4 videos across formats</li><li>Scripted by Forbes, priced in</li><li>Hook sets on two of them</li><li>5 product photos with Forbes</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
       <div class="pk rv"><h3>Live selling</h3><div class="for">By the hour</div><ul><li>She hosts your live sale</li><li>Run of show written for you</li><li>Your products, your offers</li><li>Clips cut from the live after</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
     </div>
-    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, product photography by Joshua, rush delivery in 48 hours.</p>
+    <div class="svc rv">
+      <div><h3>Every shoot includes</h3><ul><li>Concept and script, written by Forbes</li><li>Shot in her own studio, lit and mic'd</li><li>Captions on, colour done</li><li>Vertical 9:16 plus a square cut</li><li>One round of changes</li><li>Rights set out in writing</li></ul></div>
+      <div><h3>Add-ons</h3><ul><li>Paid usage rights, by the month or in perpetuity</li><li>Whitelisting on her accounts</li><li>Posting to her own feed</li><li>Extra hooks and calls to action</li><li>Raw footage and more aspect ratios</li><li>Product photography by Joshua</li><li>Exclusivity in your category</li><li>Rush delivery in 48 hours</li></ul></div>
+    </div>
   </div>
 </section>
 
@@ -520,7 +561,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <p class="eyebrow">Get a quote</p>
       <h2 class="goldtxt">Tell her about <em>the product</em></h2>
       <p>Three minutes. A quote comes back the same business day with the rate, timing and rights set out in writing.</p>
-      <div class="fast"><img src="img/ugc/shoot-12.jpg?v=407329" alt="Forbes Riley"><div><b>Forbes reads every brief herself</b><span>Replies go out from assistant@theforbesfactor.com</span></div></div>
+      <div class="fast"><img src="img/ugc/shoot-12.jpg?v=407691" alt="Forbes Riley"><div><b>Forbes reads every brief herself</b><span>Replies go out from assistant@theforbesfactor.com</span></div></div>
     </div>
     <form id="bf" class="rv">
       <div class="row"><div><label for="bn">Your name</label><input id="bn" required placeholder="Name"></div><div><label for="be">Email</label><input id="be" type="email" required placeholder="you@brand.com"></div></div>
@@ -542,7 +583,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
 
 <footer>
   <div class="wrap">
-    <img src="img/logo-signature-gold.png?v=407329" alt="Forbes Riley">
+    <img src="img/logo-signature-gold.png?v=407691" alt="Forbes Riley">
     <div class="line">Teaching the skill that built everything.</div>
     <div>Instagram: <a href="https://instagram.com/forbes_riley" target="_blank" rel="noopener">@forbes_riley</a> &middot; <a href="speak.html">Book Forbes to speak</a> &middot; <a href="mailto:assistant@theforbesfactor.com">assistant@theforbesfactor.com</a></div>
     <div style="margin-top:12px">&copy; 2026 Forbes Riley. All rights reserved.</div>

@@ -116,8 +116,13 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 @media(max-width:600px){.marq img{height:150px}}
 @media(prefers-reduced-motion:reduce){.marq .track{animation:none}}
 /* on camera */
-.reel .grid{display:grid;grid-template-columns:.78fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px}
-.phone{grid-row:span 2;position:relative;border-radius:22px;overflow:hidden;background:#000;border:3px solid #1b1419;box-shadow:0 0 0 1px rgba(240,213,122,.5),0 30px 60px rgba(0,0,0,.6);aspect-ratio:9/16;cursor:pointer}
+.reel .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.vid.short{aspect-ratio:9/16;border-radius:20px}
+.vid.short img{opacity:.95}
+.reel .also{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
+.reel .also a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.lb.vert .box{width:min(420px,100%);aspect-ratio:9/16;max-height:calc(100vh - 40px)}
+.phone{position:relative;border-radius:22px;overflow:hidden;background:#000;border:3px solid #1b1419;box-shadow:0 0 0 1px rgba(240,213,122,.5),0 30px 60px rgba(0,0,0,.6);aspect-ratio:9/16;cursor:pointer}
 .phone video{width:100%;height:100%;object-fit:cover;display:block}
 .phone .snd{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(7,6,26,.75);border:1px solid rgba(240,213,122,.5);color:var(--gold);font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
 .phone.sound .snd{display:none}
@@ -131,7 +136,8 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .vid:hover .p{transform:translate(-50%,-50%) scale(1.1)}
 .vid .cap{position:absolute;left:14px;right:14px;bottom:12px;font-size:13px;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.9)}
 .vid .cap span{display:block;font-weight:400;color:var(--muted);font-size:12px}
-@media(max-width:800px){.reel .grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;align-items:start}.phone{grid-column:span 2;grid-row:auto;width:min(100%,330px);margin:0 auto}}
+@media(max-width:1000px){.reel .grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.reel .grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 
 /* sold on camera */
 .sold{background:#fff;color:var(--cream-ink)}
@@ -379,15 +385,17 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
     <div class="section-head rv">
       <p class="eyebrow">On camera</p>
       <h2 class="goldtxt">This is what you are booking.</h2>
-      <p>A brand demo from her studio, her sizzle reel and her talks. New samples land here as they go live.</p>
+      <p>Vertical, phone-first, shot in her studio. A brand demo plus her own clips, the way they run on TikTok, Reels and Shorts.</p>
     </div>
     <div class="grid">
       <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
-      <div class="vid rv" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg" alt="Forbes Riley sizzle reel"><div class="p">&#9654;</div><div class="cap">Sizzle reel<span>Thirty years on camera in two minutes</span></div></div>
-      <div class="vid rv" data-yt="47WXAhCJIiU"><img src="https://i.ytimg.com/vi/47WXAhCJIiU/hqdefault.jpg" alt="TEDx St Pete Women"><div class="p">&#9654;</div><div class="cap">P.I.T.C.H.ing is your superpower<span>TEDx St Pete Women</span></div></div>
-      <div class="vid rv" data-yt="TQZ7ppYRj28"><img src="https://i.ytimg.com/vi/TQZ7ppYRj28/hqdefault.jpg" alt="TEDx Jersey City"><div class="p">&#9654;</div><div class="cap">Blue is not better<span>TEDx Jersey City</span></div></div>
-      <div class="vid rv" data-yt="kKqUF2d_zeU"><img src="https://i.ytimg.com/vi/kKqUF2d_zeU/hqdefault.jpg" alt="Podcast"><div class="p">&#9654;</div><div class="cap">On the mic<span>Podcast guest</span></div></div>
+      <div class="vid short rv" data-yt="VTRUBydQsFc" data-v="1"><img src="https://i.ytimg.com/vi/VTRUBydQsFc/oar2.jpg" alt="Sell me this SpinGym"><div class="p">&#9654;</div><div class="cap">Sell me this SpinGym<span>Her own product, 60 s</span></div></div>
+      <div class="vid short rv" data-yt="52UBRIMYPlc" data-v="1"><img src="https://i.ytimg.com/vi/52UBRIMYPlc/oar2.jpg" alt="Features vs benefits"><div class="p">&#9654;</div><div class="cap">Features vs benefits<span>The line that sells</span></div></div>
+      <div class="vid short rv" data-yt="OiPdCC-P8LM" data-v="1"><img src="https://i.ytimg.com/vi/OiPdCC-P8LM/oar2.jpg" alt="Look better on camera"><div class="p">&#9654;</div><div class="cap">Look better on camera<span>Instant fixes</span></div></div>
+      <div class="vid short rv" data-yt="wN88QTTr9vg" data-v="1"><img src="https://i.ytimg.com/vi/wN88QTTr9vg/oar2.jpg" alt="How infomercials changed my life"><div class="p">&#9654;</div><div class="cap">How infomercials changed my life<span>Her story</span></div></div>
+      <div class="vid short rv" data-yt="nP9Q45ia2fU" data-v="1"><img src="https://i.ytimg.com/vi/nP9Q45ia2fU/oar2.jpg" alt="Sales phrases rated 1 to 10"><div class="p">&#9654;</div><div class="cap">Sales phrases rated 1 to 10<span>Queen of Pitch</span></div></div>
     </div>
+    <p class="also rv">Long form too: <a href="#" data-yt="t52E3asvjsw">her sizzle reel</a>, <a href="#" data-yt="47WXAhCJIiU">TEDx St Pete</a> and <a href="#" data-yt="TQZ7ppYRj28">TEDx Jersey City</a>.</p>
   </div>
 </section>
 
@@ -493,7 +501,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
 
 <script>
 var lb=document.getElementById('lb'),lbf=document.getElementById('lbf');
-document.querySelectorAll('[data-yt]').forEach(function(el){el.addEventListener('click',function(){lbf.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1&rel=0';lb.classList.add('on');document.body.style.overflow='hidden'})});
+document.querySelectorAll('[data-yt]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();lb.classList.toggle('vert',!!el.dataset.v);lbf.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1&rel=0';lb.classList.add('on');document.body.style.overflow='hidden'})});
 function closeLb(){lb.classList.remove('on');lbf.src='';document.body.style.overflow=''}
 lb.querySelector('.x').addEventListener('click',closeLb);lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
 var ph=document.querySelector('.phone'),sv=document.getElementById('sv');

@@ -67,11 +67,11 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .hero .fig{position:relative;align-self:end;justify-self:center;width:100%;max-width:560px}
 .hero .fig img{width:100%;position:relative;z-index:1;filter:drop-shadow(0 18px 22px rgba(0,0,0,.55)) drop-shadow(0 40px 60px rgba(0,0,0,.45));animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
 .hero .fig .floor{position:absolute;left:4%;right:4%;bottom:-6%;height:14%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(240,213,122,.28) 0%,rgba(240,213,122,.1) 40%,rgba(240,213,122,0) 70%);filter:blur(12px);z-index:0;animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
-.hero .fig .bigname{position:absolute;left:-10%;right:-10%;text-align:center;bottom:1.5%;font-family:var(--serif);font-size:clamp(64px,7.6vw,108px);letter-spacing:.08em;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;z-index:0;white-space:nowrap;text-decoration:none;line-height:1;animation:rise 1s .05s cubic-bezier(.2,.8,.2,1) both}
-.hero .fig .bigname .o{display:inline-grid;place-items:center;width:.86em;height:.86em;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);vertical-align:-.07em;margin:0 .04em 0 .13em;box-shadow:0 0 34px rgba(240,213,122,.55);transition:transform .4s,box-shadow .4s}
-.hero .fig .bigname .o i{width:0;height:0;border-left:.3em solid #2a0f2a;border-top:.18em solid transparent;border-bottom:.18em solid transparent;margin-left:.07em}
+.hero .fig .bigname{position:absolute;left:-10%;right:-10%;text-align:center;bottom:-13%;font-family:var(--serif);font-size:clamp(64px,7.6vw,108px);letter-spacing:.08em;background:linear-gradient(180deg,#f6e3a1,#d4a73c 55%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;z-index:2;white-space:nowrap;text-decoration:none;line-height:1;animation:rise 1s .05s cubic-bezier(.2,.8,.2,1) both}
+.hero .fig .bigname .o{display:inline-grid;place-items:center;width:.72em;height:.72em;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);vertical-align:0;margin:0 .04em 0 .1em;box-shadow:0 0 34px rgba(240,213,122,.55);transition:transform .4s,box-shadow .4s}
+.hero .fig .bigname .o i{width:0;height:0;border-left:.26em solid #2a0f2a;border-top:.16em solid transparent;border-bottom:.16em solid transparent;margin-left:.06em}
 .hero .fig .bigname:hover .o{transform:scale(1.1);box-shadow:0 0 50px rgba(240,213,122,.85)}
-.hero .fig .bigname .pv{position:absolute;left:50%;bottom:-.95em;transform:translateX(-50%);font-size:.11em;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--gold);-webkit-text-fill-color:var(--gold);white-space:nowrap}
+.hero .fig .bigname .pv{position:absolute;left:50%;bottom:-.8em;transform:translateX(-50%);font-size:.11em;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--gold);-webkit-text-fill-color:var(--gold);white-space:nowrap}
 .hero .fig .refl{position:absolute;left:0;right:0;top:100%;height:36%;overflow:hidden;pointer-events:none;z-index:0;opacity:.42;-webkit-mask-image:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,0) 85%);mask-image:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,0) 85%);animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
 .hero .fig .refl img{position:absolute;left:0;top:0;width:100%;transform:translateY(-100%) scaleY(-1);transform-origin:bottom;filter:blur(1.5px) saturate(.8);animation:none}
 .hero .fig .ring{position:absolute;left:10%;right:0;bottom:-10%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(240,213,122,.35),rgba(240,213,122,0) 70%);z-index:-1}
@@ -126,6 +126,13 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .vid.short img{opacity:.95}
 .reel .also{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
 .reel .also a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.stills .sgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.stills figure{margin:0;overflow:hidden;border-radius:var(--r);border:1px solid rgba(240,213,122,.18);background:#000}
+.stills figure.tall{grid-row:span 2}
+.stills img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
+.stills figure:hover img{transform:scale(1.04)}
+.stills .also{margin-top:20px;text-align:center;color:var(--muted);font-size:14px}
+@media(max-width:800px){.stills .sgrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
 .lb.vert .box{width:min(420px,100%);aspect-ratio:9/16;max-height:calc(100vh - 40px)}
 .phone{position:relative;border-radius:22px;overflow:hidden;background:#000;border:3px solid #1b1419;box-shadow:0 0 0 1px rgba(240,213,122,.5),0 30px 60px rgba(0,0,0,.6);aspect-ratio:9/16;cursor:pointer}
 .phone video{width:100%;height:100%;object-fit:cover;display:block}
@@ -156,7 +163,9 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 @media(max-width:800px){.sold .strip{grid-template-columns:repeat(3,1fr)}}
 
 /* packages */
-.pk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch}
+.pk-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;align-items:stretch}
+.pk:nth-child(-n+3){grid-column:span 2}
+.pk:nth-child(n+4){grid-column:span 3}
 .pk{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(240,213,122,.22);border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;position:relative}
 .pk.hot{border-color:rgba(240,213,122,.7);box-shadow:0 0 0 1px rgba(240,213,122,.4),0 30px 60px rgba(0,0,0,.4)}
 .pk .pop{position:absolute;top:-13px;left:24px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#1b1619;background:linear-gradient(135deg,#f6e3a1,#d4a73c);padding:5px 12px;border-radius:999px}
@@ -171,8 +180,8 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .also b{color:#fff;font-weight:600}
 .addons{margin:28px auto 0;max-width:900px;text-align:center;color:var(--muted);font-size:15px}
 .addons b{color:#fff}
-@media(max-width:1100px){.pk-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.pk-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.pk-grid{grid-template-columns:1fr 1fr}.pk:nth-child(-n+3),.pk:nth-child(n+4){grid-column:auto}.pk:nth-child(5){grid-column:span 2}}
+@media(max-width:560px){.pk-grid{grid-template-columns:1fr}.pk:nth-child(5){grid-column:auto}}
 
 /* how */
 .how{background:#fff;color:var(--cream-ink)}
@@ -276,7 +285,7 @@ h1 em,h2 em{font-style:italic;font-weight:500}
 .sold .strip figcaption{letter-spacing:.1em;font-weight:600;font-size:10.5px}
 .sold .nets{letter-spacing:.26em;font-weight:500;font-size:12px;color:#7a6f84}
 .sold .nets b{font-weight:600;color:#1a1420}
-.pk{background:none;border:1px solid rgba(240,213,122,.22);border-radius:8px;padding:30px 22px}
+.pk{background:none;border:1px solid rgba(240,213,122,.22);border-radius:8px;padding:34px 30px}
 .pk.hot{border-color:rgba(240,213,122,.6);box-shadow:none;background:linear-gradient(180deg,rgba(240,213,122,.05),transparent)}
 .pk .pop{background:#0d0818;color:var(--gold);border:1px solid rgba(240,213,122,.6);letter-spacing:.24em;font-weight:600;font-size:10px}
 .pk h3{font-family:var(--serif);font-weight:700;font-size:23px}
@@ -310,6 +319,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <li><a href="#why">Why Forbes</a></li>
       <li><a href="#formats">Formats</a></li>
       <li><a href="#oncamera">On camera</a></li>
+      <li><a href="#stills">Stills</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="speak.html">Speaking</a></li>
     </ul>
@@ -404,6 +414,25 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
   </div>
 </section>
 
+<section class="section stills" id="stills">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="eyebrow">Product visuals</p>
+      <h2 class="goldtxt">Stills from the same shoot.</h2>
+      <p>Her photographer, Joshua, shoots alongside every video session. Product in her hands, on her set, lit for the feed. Hero shots, lifestyle crops and square cuts, delivered with the video.</p>
+    </div>
+    <div class="sgrid">
+      <figure class="rv tall"><img src="img/ugc/shoot-17.jpg" alt="Forbes holding a product in her studio"></figure>
+      <figure class="rv"><img src="img/ugc/bottle.jpg" alt="Product close-up with Forbes"></figure>
+      <figure class="rv"><img src="img/ugc/books-02.jpg" alt="Forbes with her book"></figure>
+      <figure class="rv tall"><img src="img/ugc/shoot-11.jpg" alt="Forbes on set"></figure>
+      <figure class="rv"><img src="img/ugc/shoot-10.jpg" alt="Forbes at her desk"></figure>
+      <figure class="rv"><img src="img/ugc/books-07.jpg" alt="Forbes in the bookstore"></figure>
+    </div>
+    <p class="also rv">Stills are priced as an add-on to any video engagement or on their own. Usage rights per image set.</p>
+  </div>
+</section>
+
 <section class="section sold">
   <div class="wrap">
     <div class="section-head rv">
@@ -437,7 +466,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <div class="pk rv"><h3>Launch set</h3><div class="for">A month of content</div><ul><li>4 videos across formats</li><li>Scripted by Forbes, priced in</li><li>Hook sets on two of them</li><li>5 product photos with Forbes</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
       <div class="pk rv"><h3>Live selling</h3><div class="for">By the hour</div><ul><li>She hosts your live sale</li><li>Run of show written for you</li><li>Your products, your offers</li><li>Clips cut from the live after</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
     </div>
-    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, rush delivery in 48 hours.</p>
+    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, product stills by Joshua, rush delivery in 48 hours.</p>
   </div>
 </section>
 

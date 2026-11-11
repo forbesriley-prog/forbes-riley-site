@@ -645,7 +645,6 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
 .about.section{padding:60px 0 0}
 .about .fig{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center}
-.about .fig .seal{position:absolute;right:0;top:8%;width:30%;z-index:3;filter:drop-shadow(0 14px 24px rgba(0,0,0,.55))}
 .about .fig .cut{height:620px;width:auto;max-width:none;z-index:2;mask-image:linear-gradient(180deg,#000 62%,transparent 96%);-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 96%)}
 .about .fig .blob{position:absolute;left:50%;top:50%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 40%,rgba(201,154,58,.45),rgba(232,217,160,.25) 50%,transparent 72%);border-radius:48% 52% 60% 40%/55% 45% 55% 45%;filter:blur(2px);animation:blob 12s ease-in-out infinite}
 @keyframes blob{0%,100%{border-radius:48% 52% 60% 40%/55% 45% 55% 45%;transform:translate(-50%,-50%) rotate(0)}50%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%;transform:translate(-50%,-50%) rotate(8deg)}}
@@ -665,8 +664,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;margin
 .about .fig .ghost.l{left:-6%}.about .fig .ghost.r{right:-4%;height:84%}
 .about .fig .bigname{z-index:3;bottom:56px;-webkit-text-fill-color:initial;color:transparent}
 .about .fig .bigname{text-decoration:none;cursor:pointer}
-.about .fig .bigname .o{display:inline-grid;place-items:center;width:.86em;height:.86em;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);vertical-align:-.07em;margin:0 .04em 0 .13em;box-shadow:0 0 34px rgba(240,213,122,.55);transition:transform .4s,box-shadow .4s}
-.about .fig .bigname .o i{width:0;height:0;border-left:.3em solid #2a0f2a;border-top:.18em solid transparent;border-bottom:.18em solid transparent;margin-left:.07em}
+.about .fig .bigname .o{display:inline-block;position:relative;overflow:hidden;width:.7em;height:.7em;border-radius:50%;background:linear-gradient(135deg,#f6e3a1,#d4a73c);vertical-align:baseline;margin:0 .04em 0 .1em;box-shadow:0 0 34px rgba(240,213,122,.55);transition:transform .4s,box-shadow .4s}
+.about .fig .bigname .o i{position:absolute;left:50%;top:50%;width:0;height:0;border-left:.26em solid #2a0f2a;border-top:.16em solid transparent;border-bottom:.16em solid transparent;transform:translate(-40%,-50%)}
 .about .fig .bigname:hover .o{transform:scale(1.1);box-shadow:0 0 50px rgba(240,213,122,.85)}
 .about .fig .bigname .pv{position:absolute;left:50%;bottom:-.85em;transform:translateX(-50%);font-family:var(--script);font-size:.3em;color:#e9c9ff;-webkit-text-fill-color:#e9c9ff;letter-spacing:0;font-weight:400;white-space:nowrap}
 .about .fig .bigname .pv{position:absolute;left:50%;bottom:-.75em;transform:translateX(-50%);font-size:.3em;color:#a04870;-webkit-text-fill-color:#a04870;letter-spacing:0;font-weight:400;display:flex;align-items:center;gap:.4em;text-decoration:none;white-space:nowrap}
@@ -1112,7 +1111,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="wrap grid">
     <div class="fig rv rv-l" data-parallax="0.06">
       <a class="bigname" href="#reel" data-yt="t52E3asvjsw" aria-label="Play the video">F<span class="o"><i></i></span>RBES<span class="pv">play video</span></a>
-      <img class="cut" src="img/cut/az-chin.png" alt="Forbes Riley"><img class="seal" src="img/cut/seal.png" alt="Forbes Riley, Pitch Queen">
+      <img class="cut" src="img/cut/az-chin.png" alt="Forbes Riley">
     </div>
     <div>
       <p class="eyebrow rv">Meet Forbes Riley</p>

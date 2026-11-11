@@ -129,6 +129,13 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.1}
 .stills .sgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
 .stills figure{margin:0;overflow:hidden;border-radius:var(--r);border:1px solid rgba(240,213,122,.18);background:#000}
 .stills figure.tall{grid-row:span 2}
+.stills .shelf{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;background:#fff;border-radius:var(--r);padding:18px 18px 40px;position:relative;margin-bottom:14px}
+.stills .shelf figure{margin:0;aspect-ratio:16/9;background:#fff;border:0}
+.stills .shelf img{object-fit:contain}
+.stills .shelf>figcaption{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5a4f63}
+@media(max-width:800px){.stills .shelf{grid-template-columns:repeat(4,1fr)}}
+.stills figcaption{position:absolute;left:12px;bottom:10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.stills figure{position:relative}
 .stills img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
 .stills figure:hover img{transform:scale(1.04)}
 .stills .also{margin-top:20px;text-align:center;color:var(--muted);font-size:14px}
@@ -319,7 +326,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <li><a href="#why">Why Forbes</a></li>
       <li><a href="#formats">Formats</a></li>
       <li><a href="#oncamera">On camera</a></li>
-      <li><a href="#stills">Stills</a></li>
+      <li><a href="#stills">Photos</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="speak.html">Speaking</a></li>
     </ul>
@@ -417,19 +424,30 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
 <section class="section stills" id="stills">
   <div class="wrap">
     <div class="section-head rv">
-      <p class="eyebrow">Product visuals</p>
-      <h2 class="goldtxt">Stills from the same shoot.</h2>
-      <p>Her photographer, Joshua, shoots alongside every video session. Product in her hands, on her set, lit for the feed. Hero shots, lifestyle crops and square cuts, delivered with the video.</p>
+      <p class="eyebrow">Product photography</p>
+      <h2 class="goldtxt">Your product, shot to sell.</h2>
+      <p>Her photographer, Joshua, shoots the product itself: every colourway clean on white for the listing, then in her hands, at home and on location for the feed. Delivered with the video or on its own.</p>
+    </div>
+    <div class="shelf rv">
+      <figure><img src="img/ugc/prod-sg-pink.jpg" alt="Pink SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-purple.jpg" alt="Purple SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-blue.jpg" alt="Blue SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-gold.jpg" alt="Gold SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-teal.jpg" alt="Teal SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-orange.jpg" alt="Orange SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-green.jpg" alt="Green SpinGym"></figure>
+      <figure><img src="img/ugc/prod-sg-black.jpg" alt="Black SpinGym"></figure>
+      <figcaption>SpinGym, every colourway, on white for the listing</figcaption>
     </div>
     <div class="sgrid">
-      <figure class="rv tall"><img src="img/ugc/shoot-17.jpg" alt="Forbes holding a product in her studio"></figure>
-      <figure class="rv"><img src="img/ugc/bottle.jpg" alt="Product close-up with Forbes"></figure>
-      <figure class="rv"><img src="img/ugc/books-02.jpg" alt="Forbes with her book"></figure>
-      <figure class="rv tall"><img src="img/ugc/shoot-11.jpg" alt="Forbes on set"></figure>
-      <figure class="rv"><img src="img/ugc/shoot-10.jpg" alt="Forbes at her desk"></figure>
-      <figure class="rv"><img src="img/ugc/books-07.jpg" alt="Forbes in the bookstore"></figure>
+      <figure class="rv tall"><img src="img/ugc/prod-rooftop.jpg" alt="Forbes using SpinGym on a rooftop"><figcaption>Lifestyle, on location</figcaption></figure>
+      <figure class="rv"><img src="img/ugc/prod-kitchen.jpg" alt="Forbes in the kitchen with the E.A.T. journal"><figcaption>In use, at home</figcaption></figure>
+      <figure class="rv"><img src="img/ugc/prod-beach.jpg" alt="SpinGym class on the beach"><figcaption>Group, outdoors</figcaption></figure>
+      <figure class="rv tall"><img src="img/ugc/shoot-17.jpg" alt="Forbes holding a product in her studio"><figcaption>In her hands, on set</figcaption></figure>
+      <figure class="rv"><img src="img/ugc/prod-book.jpg" alt="Pitch Secrets A to Z book"><figcaption>Packaging and books</figcaption></figure>
+      <figure class="rv"><img src="img/ugc/bottle.jpg" alt="Product close-up with Forbes"><figcaption>Product close-up</figcaption></figure>
     </div>
-    <p class="also rv">Stills are priced as an add-on to any video engagement or on their own. Usage rights per image set.</p>
+    <p class="also rv">Product photography is priced as an add-on to any video engagement or on its own. Usage rights per image set.</p>
   </div>
 </section>
 
@@ -466,7 +484,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <div class="pk rv"><h3>Launch set</h3><div class="for">A month of content</div><ul><li>4 videos across formats</li><li>Scripted by Forbes, priced in</li><li>Hook sets on two of them</li><li>5 product photos with Forbes</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
       <div class="pk rv"><h3>Live selling</h3><div class="for">By the hour</div><ul><li>She hosts your live sale</li><li>Run of show written for you</li><li>Your products, your offers</li><li>Clips cut from the live after</li></ul><a class="btn btn-line" href="#brief">Request a quote</a></div>
     </div>
-    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, product stills by Joshua, rush delivery in 48 hours.</p>
+    <p class="addons rv"><b>Priced separately:</b> paid usage rights by the month or in perpetuity, whitelisting on her accounts, posting to her own feed, raw footage, extra hooks, product photography by Joshua, rush delivery in 48 hours.</p>
   </div>
 </section>
 

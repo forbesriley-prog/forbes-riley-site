@@ -434,6 +434,7 @@ footer .line{font-family:var(--serif);font-style:italic;font-size:22px}
       <p>Vertical, phone-first, shot in her studio. A brand demo plus her own clips, the way they run on TikTok, Reels and Shorts.</p>
     </div>
     <div class="grid">
+      <div class="phone rv"><video src="video/grwm-hotel.mp4" poster="img/ugc/grwm-poster.jpg" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Get ready with me, 2:33<span>Hotel edition, nine products, her voice</span></div></div>
       <div class="phone rv"><video id="sv" src="video/ugc-sample-1.mp4" poster="img/ugc/sample-1-poster.jpg?v=408352" playsinline muted loop preload="metadata"></video><button class="snd" type="button" aria-label="Play with sound">Sound on</button><div class="cap">Product demo, 54 s<span>Shot and captioned in her studio</span></div></div>
       <div class="vid short rv" data-yt="VTRUBydQsFc" data-v="1"><img src="https://i.ytimg.com/vi/VTRUBydQsFc/oar2.jpg" alt="Sell me this SpinGym"><div class="p">&#9654;</div><div class="cap">Sell me this SpinGym<span>Her own product, 60 s</span></div></div>
       <div class="vid short rv" data-yt="52UBRIMYPlc" data-v="1"><img src="https://i.ytimg.com/vi/52UBRIMYPlc/oar2.jpg" alt="Features vs benefits"><div class="p">&#9654;</div><div class="cap">Features vs benefits<span>The line that sells</span></div></div>
@@ -597,9 +598,10 @@ var lb=document.getElementById('lb'),lbf=document.getElementById('lbf');
 document.querySelectorAll('[data-yt]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();lb.classList.toggle('vert',!!el.dataset.v);lbf.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1&rel=0';lb.classList.add('on');document.body.style.overflow='hidden'})});
 function closeLb(){lb.classList.remove('on');lbf.src='';document.body.style.overflow=''}
 lb.querySelector('.x').addEventListener('click',closeLb);lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
-var ph=document.querySelector('.phone'),sv=document.getElementById('sv');
-if(ph){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sv.play().catch(function(){})}else{sv.pause()}})},{threshold:.4}).observe(ph);
-ph.addEventListener('click',function(){if(sv.muted){sv.muted=false;sv.currentTime=0;ph.classList.add('sound');sv.play()}else if(sv.paused){sv.play()}else{sv.pause()}})}
+document.querySelectorAll('.phone').forEach(function(ph){var sv=ph.querySelector('video');
+new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(sv.muted)sv.play().catch(function(){})}else{sv.pause()}})},{threshold:.4}).observe(ph);
+ph.addEventListener('click',function(){document.querySelectorAll('.phone video').forEach(function(o){if(o!==sv&&!o.muted){o.muted=true;o.pause();o.parentNode.classList.remove('sound')}});
+if(sv.muted){sv.muted=false;sv.currentTime=0;ph.classList.add('sound');sv.play()}else if(sv.paused){sv.play()}else{sv.pause()}})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%6)*60+'ms';io.observe(el)});
 function revealNear(){document.querySelectorAll('.rv:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<innerHeight+100)el.classList.add('in')})}

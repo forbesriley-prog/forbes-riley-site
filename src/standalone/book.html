@@ -63,10 +63,10 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.12;text-wr
 .rtrack{display:flex;gap:12px;width:max-content;animation:rroll 80s linear infinite}.rtrack.b{animation-direction:reverse;animation-duration:95s;margin-top:12px}.rwrap:hover .rtrack{animation-play-state:paused}
 .rtrack img{width:160px;height:160px;object-fit:cover;border-radius:10px;border:1px solid #eee;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .35s}.rtrack img:nth-child(odd){transform:rotate(-2deg)}.rtrack img:nth-child(even){transform:rotate(2deg)}.rtrack img:hover{transform:scale(1.08) rotate(0)}
 @keyframes rroll{to{transform:translateX(-50%)}}
-.story{background:#fff}.story .grid{display:grid;grid-template-columns:1.4fr .6fr;gap:36px;align-items:start}
+.story{background:#fff}.story .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:start}
 .story .script{font-family:var(--script);font-weight:400;font-size:clamp(44px,5vw,66px);line-height:1;color:var(--ink);margin-bottom:6px}.story h2{font-size:clamp(24px,2.8vw,34px);margin-bottom:14px}.story p{font-size:17px;color:#333}.story .punch{font-size:22px;font-weight:800;color:var(--ink);margin:18px 0}
 .story .photo{float:left;width:min(46%,380px);margin:6px 26px 10px 0;border-radius:10px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.2)}.story .photo img{width:100%;height:auto}
-.story .side{display:grid;gap:14px;position:sticky;top:20px}.story .side img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .35s}.story .side img:hover{transform:scale(1.04) rotate(-1deg)}
+.story .side{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-self:start}.story .side img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .35s}.story .side img:hover{transform:scale(1.04) rotate(-1deg)}
 .next{background:#fff;text-align:center}.next .k{font-weight:800;font-size:20px;color:#333;margin:0}.next h2{font-size:clamp(28px,3.6vw,46px);color:var(--gold-dark);margin:6px 0 24px}
 .next .vid{max-width:860px;margin:0 auto 10px;aspect-ratio:16/9}
 .next .who{font-weight:700;color:#333;margin:12px 0 0}
@@ -87,9 +87,11 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn::after,.cc .photo img,.stack img,.rtrack{animation:none}}
-@media (max-width:860px){body{font-size:16px;padding-bottom:78px}.section{padding-block:44px}.two,.cc,.story .grid,.bgrid,.stack,.bio .grid,.roles{grid-template-columns:1fr}.hero{padding-block:22px 36px}.hero h1{font-size:clamp(30px,8vw,40px)}.hero .sub{font-size:16px}.hero .lead{font-size:17px}.two{margin-top:22px;gap:26px}.cc .photo{position:static}.cc .photo img{max-height:420px}.story .photo{float:none;width:100%;max-width:420px;margin:0 auto 18px}.story .side{grid-template-columns:repeat(3,1fr);position:static}.cta .btn{min-width:0;width:100%;font-size:16px;padding:16px 18px}.bio img{-webkit-box-reflect:none;max-height:320px}.sticky{display:block}}
+@media (max-width:860px){body{font-size:16px;padding-bottom:78px}.section{padding-block:44px}.two,.cc,.story .grid,.bgrid,.stack,.bio .grid,.roles{grid-template-columns:1fr}.hero{padding-block:22px 36px}.hero h1{font-size:clamp(30px,8vw,40px)}.hero .sub{font-size:16px}.hero .lead{font-size:17px}.two{margin-top:22px;gap:26px}.cc .photo{position:static}.cc .photo img{max-height:420px}.story .photo{float:none;width:100%;max-width:420px;margin:0 auto 18px}.story .side{grid-template-columns:repeat(3,1fr)}.cta .btn{min-width:0;width:100%;font-size:16px;padding:16px 18px}.bio img{-webkit-box-reflect:none;max-height:320px}.sticky{display:block}}
 
 /* video tiles */
+.phonevid{position:relative;max-width:320px;margin:22px auto 0;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.6);border:1px solid rgba(240,213,122,.4)}.phonevid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcap{text-align:center;color:#ddd;font-size:14px;margin:12px 0 0}.vcap em{color:var(--gold);font-style:normal;font-weight:700}
 .vid{cursor:pointer}.vid img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 .vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(10,10,10,.75);border:2px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px;padding-left:6px;transition:transform .25s,background .25s}
 .vid:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(212,167,60,.95);color:#111}
@@ -98,9 +100,9 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .hero .vid .tagline span{display:inline;font-size:1em;font-weight:800}
 .vid.on .play,.vid.on .tagline{display:none}
 .tv{background:#fff}.tv .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-size:14px;margin:0 0 6px}.tv h2{text-align:center;font-size:clamp(24px,3vw,36px)}
-.tvgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}.tvgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
+.tvgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.tvgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
 .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}.tgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
-@media (max-width:860px){.tvgrid{grid-template-columns:1fr}.tgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.tvgrid{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -112,7 +114,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <div class="two">
       <div>
         <p class="lead">Every successful pitch, on stage, on camera or across a table, follows a very specific pattern.<br><br>&hellip;It&rsquo;s the pattern Forbes used to sell out on live TV thousands of times.<b>This book is that pattern.</b></p>
-        <div class="vid yt" data-yt="1EgGbxn5Wwg"><img src="https://i.ytimg.com/vi/1EgGbxn5Wwg/hqdefault.jpg" alt="Forbes Riley pitches the bestseller on Studio 5 Live Las Vegas"><div class="play">&#9654;</div><div class="tagline">Watch: 30 seconds to pitch the <span>USA TODAY bestseller</span>, live on Studio 5</div></div>
+        <div class="phonevid"><iframe src="https://drive.google.com/file/d/19FadAZUZF3tNhG4ltRXF7-BneB1esPh1/preview" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Pitch Secrets A to Z is out!"></iframe></div>
+        <p class="vcap">Forbes, the day <em>Pitch Secrets A to Z</em> came out</p></div>
       </div>
       <div class="order rv" id="order">
         <h3>Get Yours For $29 Today!</h3>
@@ -159,6 +162,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <p class="k rv">As seen on TV</p>
     <h2 class="rv">Forbes pitching the book, live on air</h2>
     <div class="tvgrid rv">
+      <div class="vid yt" data-yt="1EgGbxn5Wwg"><img src="https://i.ytimg.com/vi/1EgGbxn5Wwg/hqdefault.jpg" alt="Studio 5 Live Las Vegas" loading="lazy"><div class="play">&#9654;</div><div class="tagline">Studio 5 Live Las Vegas<span>30 seconds to pitch the USA TODAY bestseller</span></div></div>
       <div class="vid yt" data-yt="PWr7sXAM66A"><img src="https://i.ytimg.com/vi/PWr7sXAM66A/hqdefault.jpg" alt="Great Day Washington" loading="lazy"><div class="play">&#9654;</div><div class="tagline">Great Day Washington<span>Pitching the USA TODAY bestseller</span></div></div>
       <div class="vid yt" data-yt="t9WmijohgwI"><img src="https://i.ytimg.com/vi/t9WmijohgwI/hqdefault.jpg" alt="KTLA 5" loading="lazy"><div class="play">&#9654;</div><div class="tagline">KTLA 5<span>How to pitch like a pro</span></div></div>
       <div class="vid yt" data-yt="-37aEOpfdZ8"><img src="https://i.ytimg.com/vi/-37aEOpfdZ8/hqdefault.jpg" alt="Good Day Alabama" loading="lazy"><div class="play">&#9654;</div><div class="tagline">Good Day Alabama<span>Pitch Secrets</span></div></div>

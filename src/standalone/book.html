@@ -115,6 +115,12 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .sales .arrow{font-size:44px;line-height:.6;color:#111;margin:14px 0 6px}
 .sales .collage{width:100%;height:auto;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.22);transform:rotate(-1deg);transition:transform .4s}.sales .collage:hover{transform:rotate(0) scale(1.01)}
 .seemore{display:block;margin:14px auto 0;background:none;border:2px solid var(--gold-deep);color:var(--gold-dark);font:800 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:12px 20px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}.seemore:hover{background:var(--gold-deep);color:#1b1619}.covercost .seemore{color:var(--gold)}.covercost .seemore:hover{color:#1b1619}.vgrid.more{margin-top:10px}.tgrid.more{margin-top:16px}
+.vsub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold-dark);margin:0 0 12px}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,300px));justify-content:center;gap:22px}
+.pgrid .vid.tall{aspect-ratio:9/16;border-radius:22px;overflow:hidden;position:relative;background:#000;border:1px solid rgba(240,213,122,.45);box-shadow:0 24px 50px rgba(0,0,0,.3)}
+.pgrid .vid.tall img{object-fit:cover}.pgrid .vid.tall video{object-fit:cover}
+.pgrid .who small{display:block;font-weight:500;font-style:italic;color:#555;font-size:14px;margin-top:2px}
+@media (max-width:860px){.pgrid{grid-template-columns:1fr 1fr;gap:12px}.pgrid .vid.tall{border-radius:16px}}
 /* video tiles */
 .phonevid{position:relative;width:100%;max-width:320px;margin:22px auto 0;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.6);border:1px solid rgba(240,213,122,.4)}.phonevid iframe,.phonevid video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
 .phonevid .snd{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(10,10,10,.8);border:1px solid rgba(240,213,122,.5);color:var(--gold);font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;z-index:2}
@@ -132,7 +138,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .vid.on .play,.vid.on .tagline{display:none}
 .tv{background:#fff}.tv .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-size:14px;margin:0 0 6px}.tv h2{text-align:center;font-size:clamp(24px,3vw,36px)}
 .tvgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.tvgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
-.tgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:10px}.tgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}.tgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
 @media (max-width:860px){.tvgrid{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:1fr 1fr}}
 
 /* ===== floating 3D book: cover lifts, a gold YES! pops out ===== */
@@ -409,8 +415,10 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   <div class="wrap">
     <p class="k rv">Pitch Secrets A to Z has already helped thousands of business owners, speakers &amp; entrepreneurs get the YES.</p>
     <h2 class="rv">The question is, are <span class="u">YOU</span> next?</h2>
+    <p class="vsub rv">Straight from the Momentum X room</p>
+    <div class="pgrid rv"><div class="ph"><div class="vid local tall" data-src="video/jeremy-book.mp4"><img src="img/book/jeremy-poster.jpg" alt="Jeremy Ray Davis on Pitch Secrets A to Z"><div class="play">&#9654;</div></div><p class="who">Jeremy Ray Davis<small>&ldquo;If you run a sales team, you need this book.&rdquo;</small></p></div><div class="ph"><div class="vid local tall" data-src="video/andrea-book.mp4"><img src="img/book/andrea-poster.jpg" alt="Andrea Isaacs on Pitch Secrets A to Z"><div class="play">&#9654;</div></div><p class="who">Andrea Isaacs<small>&ldquo;Life is a pitch. Get this book.&rdquo;</small></p></div><div class="ph"><div class="vid local tall" data-src="video/stacy-book.mp4"><img src="img/book/stacy-poster.jpg" alt="Stacy McCosky on Pitch Secrets A to Z"><div class="play">&#9654;</div></div><p class="who">Stacy McCosky<small>&ldquo;The holy grail of pitching.&rdquo;</small></p></div></div>
+    <p class="vsub rv" style="margin-top:34px">Readers on YouTube</p>
     <div class="tgrid rv">
-      <div><div class="vid local" data-src="video/jeremy-book.mp4"><img src="img/book/jeremy-poster.jpg" alt="Jeremy Ray Davis on Pitch Secrets A to Z"><div class="play">&#9654;</div></div><p class="who">Jeremy Ray Davis</p></div>
       <div><div class="vid yt" data-yt="ENUEVwEii0g"><img src="https://i.ytimg.com/vi/ENUEVwEii0g/hqdefault.jpg" alt="Glen Watkins" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Glen Watkins</p></div>
       <div><div class="vid yt" data-yt="V8NUPCcWPB0"><img src="https://i.ytimg.com/vi/V8NUPCcWPB0/hqdefault.jpg" alt="Andrew Darlow" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Andrew Darlow</p></div>
       <div><div class="vid yt" data-yt="bcjJwScIqt8"><img src="https://i.ytimg.com/vi/bcjJwScIqt8/hqdefault.jpg" alt="Chris Steindorf" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Chris Steindorf</p></div>
@@ -582,7 +590,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   var mixed=[]; toasts.forEach(function(t,i){ mixed.push(t); var n=readers[(i*4)%readers.length]; mixed.push({img:'img/readers/r'+String(n).padStart(2,'0')+'.jpg',h:'Another reader, another copy',t:'Pitch Secrets A to Z, <span>$29</span> with free US shipping.'}) }); toasts=mixed;
   var toast=document.getElementById('toast'), ti=0, closed=false;
   if(toast){ toast.querySelector('.x').addEventListener('click',function(){closed=true;toast.classList.remove('show')});
-    var showToast=function(){ if(closed) return; var d=toasts[ti++%toasts.length]; document.getElementById('toastImg').src=d.img; document.getElementById('toastTxt').innerHTML='<b>'+d.h+'</b>'+d.t; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show')},5200) };
+    var showToast=function(){ if(closed) return; var d=toasts[ti++%toasts.length]; var ti_=document.getElementById('toastImg'), tt_=document.getElementById('toastTxt'); if(!ti_||!tt_) return; ti_.src=d.img; tt_.innerHTML='<b>'+d.h+'</b>'+d.t; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show')},5200) };
     setTimeout(showToast,5000); setInterval(showToast,11000) }
   }catch(e){console.warn('book page feature failed',e)}
   try{

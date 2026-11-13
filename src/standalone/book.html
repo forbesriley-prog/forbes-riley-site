@@ -167,7 +167,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .igrid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:26px;align-items:center;margin-top:34px}
 .icol{display:grid;gap:18px}.icard{background:#fff;color:#111;border-radius:14px;padding:22px 20px;font-weight:800;font-size:19px;text-align:left;box-shadow:0 20px 40px rgba(0,0,0,.45);position:relative;padding-left:52px;transition:transform .25s}.icard:hover{transform:translateY(-4px)}
 .icard::before{content:"";position:absolute;left:18px;top:24px;width:22px;height:22px;border-radius:50%;background:var(--gold-deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231b1619' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");background-size:14px;background-position:center;background-repeat:no-repeat}
-.ibook{perspective:1400px}.ibook img{max-height:520px;width:auto;margin:0 auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.7));animation:bookturn 9s ease-in-out infinite}
+.ibook{perspective:1400px;position:relative}.goldpad{position:absolute;left:12%;right:12%;top:6%;bottom:8%;border-radius:28px;background:radial-gradient(circle at 30% 20%,#f6e3a1,#d4a73c 55%,#9a7320);box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-4deg)}.ibook img{position:relative}.ibook img{max-height:520px;width:auto;margin:0 auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.7));animation:bookturn 9s ease-in-out infinite}
 @keyframes bookturn{0%,100%{transform:rotateY(-18deg) translateY(0)}50%{transform:rotateY(18deg) translateY(-14px)}}
 .proof .group{width:100%;border-radius:14px;margin:26px auto 14px;box-shadow:0 30px 60px rgba(0,0,0,.25)}.proof .shush{width:100%;max-width:980px;margin:0 auto 10px}
 .bonuses .stackimg{width:100%;max-width:900px;margin:22px auto 6px;filter:drop-shadow(0 24px 40px rgba(0,0,0,.2));animation:floaty 8s ease-in-out infinite}
@@ -306,7 +306,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <h2 class="rv">What&rsquo;s inside the Pitch Secrets A to Z book?</h2>
     <div class="igrid">
       <div class="icol rv"><div class="icard">Turn everyday conversations into opportunities</div><div class="icard">Handle objections and resistance</div><div class="icard">Communicate your value clearly and quickly</div></div>
-      <div class="ibook rv"><img src="img/book/book-3d.png" alt="Pitch Secrets A to Z"></div>
+      <div class="ibook rv"><div class="goldpad"></div><img src="img/book/book-3d.png" alt="Pitch Secrets A to Z"></div>
       <div class="icol rv"><div class="icard">Create emotional connection and trust</div><div class="icard">Speak with confidence in any situation</div><div class="icard">Use video, social media and technology to expand your influence</div></div>
     </div>
     <div class="cta rv"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">YES! I want to order a copy now<small>and secure 4 game-changing bonuses</small></a></div>

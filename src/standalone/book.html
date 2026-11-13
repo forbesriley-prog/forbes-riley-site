@@ -36,6 +36,11 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.12;text-wr
 .hero .wrap{position:relative}
 .ribbon{display:table;margin:0 auto 10px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:13px;padding:8px 22px;border-radius:999px;box-shadow:0 10px 24px rgba(212,167,60,.35)}
 .order .bs{text-align:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold-dark);margin:0 0 6px}
+.bk .medal{position:absolute;left:-60px;bottom:-30px;width:130px;height:130px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.5));z-index:4;animation:medalbob 5s ease-in-out infinite}
+@keyframes medalbob{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
+.order .medal2{position:absolute;top:-36px;left:-26px;width:112px;height:112px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));z-index:3}
+@media (max-width:860px){.order .medal2{width:90px;height:90px;top:-28px;left:-10px}.bk .medal{width:100px;height:100px;left:-40px}}
+.band .bandseal{width:120px;height:120px}
 .bk .bsr{position:absolute;left:-6px;top:16px;background:var(--gold-deep);color:#1b1619;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:5px 10px 5px 12px;border-radius:0 999px 999px 0;box-shadow:0 6px 14px rgba(0,0,0,.3)}
 .hero .pre{text-align:center;font-weight:600;font-size:17px;color:#ddd;margin:0 0 6px}
 .hero h1{text-align:center;font-size:clamp(34px,5.4vw,58px);color:#fff}
@@ -160,7 +165,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
           <div class="book3d" id="book3d">
             <div class="bk" id="bk">
               <div class="pages"></div><div class="edge"></div>
-              <div class="cv"><img src="img/book-cover.jpg" alt="Pitch Secrets A to Z cover"><span class="bsr">Bestseller</span></div>
+              <div class="cv"><img src="img/book-cover.jpg" alt="Pitch Secrets A to Z cover"></div>
+              <img class="medal" src="img/book/usa-today-bestseller.png" alt="USA TODAY Bestseller">
               <i class="ray" style="--a:-60deg"></i><i class="ray" style="--a:-35deg"></i><i class="ray" style="--a:-10deg"></i><i class="ray" style="--a:15deg"></i><i class="ray" style="--a:40deg"></i><i class="ray" style="--a:65deg"></i>
               <div class="yes">YES!<small>every time</small></div>
             </div>
@@ -171,7 +177,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
         <p class="vcap">Forbes, the day <em>Pitch Secrets A to Z</em> came out</p></div>
       </div>
       <div class="order rv" id="order">
-        <img class="seal" src="img/cut/seal.png" alt="Forbes Riley, Pitch Queen seal">
+        <img class="seal" src="img/cut/seal.png" alt="Forbes Riley, Pitch Queen seal"><img class="medal2" src="img/book/usa-today-bestseller.png" alt="USA TODAY Bestseller">
         <p class="bs">USA TODAY bestseller</p>
         <h3>Get Yours For $29 Today!</h3>
         <p class="ship">Free shipping and handling in the US.<br>Lists for $99 with its four bonuses.</p>
@@ -209,7 +215,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 </section>
 
 <section class="band">
-  <img class="bandseal" src="img/cut/seal.png" alt="">
+  <img class="bandseal" src="img/book/usa-today-bestseller.png" alt="USA TODAY Bestseller">
   <h2>Leverage the most profitable skill on the planet!</h2>
   <blockquote>&ldquo;A powerful playbook for the two things that determine your success: how you think and how you speak.&rdquo;</blockquote>
   <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>

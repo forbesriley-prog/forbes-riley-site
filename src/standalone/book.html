@@ -54,7 +54,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.12;text-wr
 .field{border:1px solid #ddd;border-radius:6px;padding:12px 14px;margin-bottom:10px;color:#9a9a9a;font-size:15px;background:#fff}
 .order .btn{width:100%;font-size:18px;padding:16px 18px}
 .order .fine{font-size:12px;color:#666;text-align:center;margin:12px 0 0;line-height:1.45}.order .lock{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dark);margin-top:8px}
-.crickets{background:#fff;padding-block:50px 20px}.crickets h2{font-size:clamp(26px,3vw,36px);text-align:center}.crickets h2 em{font-style:normal;color:var(--gold-dark)}.crickets p{text-align:center;font-size:19px}.crickets .punch{font-weight:800;font-size:22px;margin-top:10px}.crickets .pink{color:var(--gold-dark);font-weight:800;font-style:italic}
+.crickets{background:#fff;padding-block:50px 20px}.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.framed{border-radius:14px;box-shadow:0 24px 50px rgba(0,0,0,.2);width:100%;height:auto;animation:floaty 8s ease-in-out infinite}.framed.side{float:right;width:42%;margin:0 0 14px 24px}@media (max-width:860px){.twocol{grid-template-columns:1fr}.framed.side{float:none;width:100%;margin:0 0 16px}}.crickets h2{font-size:clamp(26px,3vw,36px);text-align:center}.crickets h2 em{font-style:normal;color:var(--gold-dark)}.crickets p{text-align:center;font-size:19px}.crickets .punch{font-weight:800;font-size:22px;margin-top:10px}.crickets .pink{color:var(--gold-dark);font-weight:800;font-style:italic}
 .band{background:var(--gold-band);color:#111;text-align:center;padding:26px 16px}.band .bandseal{width:92px;height:92px;margin:0 auto 10px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.25))}
 .band h2{font-size:clamp(22px,2.8vw,34px);text-transform:uppercase;letter-spacing:.02em}.band blockquote{margin:12px auto 0;max-width:900px;font-size:clamp(18px,2vw,24px);font-weight:600;font-style:italic}.band cite{display:block;font-style:normal;font-weight:800;margin-top:6px;font-size:16px}.band .stars{font-size:22px;letter-spacing:3px}
 .covercost{background:var(--black);color:#fff;position:relative;overflow:hidden}.covercost::before{content:"";position:absolute;inset:0;background:url(img/readers-collage.jpg) center/cover;opacity:.08}.covercost .wrap{position:relative}
@@ -193,7 +193,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 </section>
 
 <section class="crickets">
-  <div class="wrap narrow rv">
+  <div class="wrap twocol">
+  <div class="rv">
     <h2>Ever share your idea<br><em>and get crickets?</em></h2>
     <p style="margin-top:16px">You explain what you do, on stage, in a meeting, on a call, in your posts. People nod, smile, say &ldquo;interesting,&rdquo; and don&rsquo;t buy&hellip;</p>
     <p class="punch">The problem isn&rsquo;t your idea.</p>
@@ -202,6 +203,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <p>&hellip;It&rsquo;s the same system behind <span class="pink">$2.5 billion in sales</span>, and 80,000 masterclass students use it to get the YES.</p>
     <p>This isn&rsquo;t just about talking&hellip; It&rsquo;s about saying exactly what makes people say <span class="pink">&ldquo;yes.&rdquo;</span></p>
     <div class="cta"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">YES! Send my book now!</a><span class="note">$29 today with free US shipping and 4 bonuses</span></div>
+  </div>
+  <img class="framed rv" src="img/book/chair-laugh.jpg" alt="Forbes Riley laughing in the studio with Pitch Secrets A to Z">
   </div>
 </section>
 
@@ -363,6 +366,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <p class="center big">Now it&rsquo;s your turn. Will <span class="u">YOU</span> be next?</p>
     <p>Like I mentioned before, this book lists for $99 with its bonuses. Today it&rsquo;s $29, and I cover the shipping anywhere in the US.</p>
     <p class="big">Oh, and in case you&rsquo;re wondering&hellip;</p>
+    <img class="framed side rv" src="img/book/chair-hat.jpg" alt="Forbes Riley pointing at Pitch Secrets A to Z">
     <h2 style="margin-top:8px">There is <em>NO CATCH!</em></h2>
     <p>I know some websites offer you something cheap, only to sneak you into a subscription that charges your card every month.</p>
     <p><b>This isn&rsquo;t one of those.</b> There&rsquo;s no hidden program, no upsell trap, and no strings attached. You&rsquo;re getting a real, physical 240-page book and four bonuses for $29.</p>

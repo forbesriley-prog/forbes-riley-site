@@ -73,10 +73,10 @@ h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.12;text-wr
 .rtrack img{width:160px;height:160px;object-fit:cover;border-radius:10px;border:1px solid #eee;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .35s}.rtrack img:nth-child(odd){transform:rotate(-2deg)}.rtrack img:nth-child(even){transform:rotate(2deg)}.rtrack img:hover{transform:scale(1.08) rotate(0)}
 @keyframes rroll{to{transform:translateX(-50%)}}
 .story{background:#fff}.story .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:start}
-.story .hi{font-size:22px;font-weight:700;margin:0 0 2px}.sigimg{height:74px;width:auto;margin:0 0 16px}
+.hihead{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px}.hihead .sigimg{margin:0}.story .hi{font-size:26px;font-weight:700;margin:0 0 10px}.sigimg{height:74px;width:auto;margin:0 0 16px}
 .story .script{font-family:var(--script);font-weight:400;font-size:clamp(44px,5vw,66px);line-height:1;color:var(--ink);margin-bottom:6px}.story h2{font-size:clamp(24px,2.8vw,34px);margin-bottom:14px}.story p{font-size:17px;color:#333}.story .punch{font-size:22px;font-weight:800;color:var(--ink);margin:18px 0}
 .story .photo{float:left;width:min(46%,380px);margin:6px 26px 10px 0;border-radius:10px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.2)}.story .photo img{width:100%;height:auto}
-.story .side{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-self:start}.story .side img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .35s}.story .side img:hover{transform:scale(1.04) rotate(-1deg)}
+.story .side{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-self:start}.story .side img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .35s}.story .side img:hover{transform:scale(1.04) rotate(-1deg)}
 .next{background:#fff;text-align:center}.next .k{font-weight:800;font-size:20px;color:#333;margin:0}.next h2{font-size:clamp(28px,3.6vw,46px);color:var(--gold-dark);margin:6px 0 24px}
 .next .vid{max-width:860px;margin:0 auto 10px;aspect-ratio:16/9}
 .next .who{font-weight:700;color:#333;margin:12px 0 0}
@@ -178,9 +178,16 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .exbox h2{font-size:clamp(28px,5vw,44px);color:var(--gold-dark);letter-spacing:-.01em}.exbox p{font-size:18px;margin:12px 0 10px}.exbox img{max-height:200px;width:auto;margin:0 auto 14px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.3))}.exbox .btn{width:100%}
 .exx{position:absolute;top:26px;right:14px;border:0;background:none;font-size:28px;cursor:pointer;color:#999}.exno{display:block;margin:12px auto 0;border:0;background:none;color:#888;text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
 @media (max-width:860px){.igrid{grid-template-columns:1fr}.ibook img{max-height:380px}.icard{font-size:17px}}
+.urgbar{background:#0a0a0a;color:#eee;text-align:center;font-size:13px;padding:9px 14px;border-bottom:1px solid rgba(240,213,122,.35);letter-spacing:.02em}.urgbar b{color:var(--gold)}.urgbar a{color:var(--gold);font-weight:800;text-decoration:underline;text-underline-offset:3px;margin-left:6px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#e4232b;margin:0 7px 1px 0;box-shadow:0 0 0 0 rgba(228,35,43,.6);animation:ping 1.6s ease-out infinite;vertical-align:middle}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(228,35,43,.6)}100%{box-shadow:0 0 0 10px rgba(228,35,43,0)}}
+.order .avail{text-align:center;font-size:12px;font-weight:700;color:#8a1c1c;margin:0 0 8px;letter-spacing:.04em}
+@media (max-width:860px){.urgbar{font-size:12px}.urgbar a{display:block;margin:4px 0 0}}
 </style>
 </head>
 <body>
+<div class="urgbar"><span class="dot"></span><b>Limited print run.</b> Availability: <b>LOW</b>. Free US shipping ends when this run is gone. <a href="#order">Claim your copy &raquo;</a></div>
+
 <section class="hero">
   <div class="wrap">
     <p class="ribbon">&#9733; USA TODAY Bestseller &#9733;</p>
@@ -208,6 +215,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
       <div class="order rv" id="order">
         <img class="seal" src="img/cut/seal.png" alt="Forbes Riley, Pitch Queen seal"><img class="medal2" src="img/book/usa-today-bestseller.png" alt="USA TODAY Bestseller">
         <p class="bs">USA TODAY bestseller</p>
+        <p class="avail"><span class="dot"></span>Availability: LOW &middot; Free shipping is a limited-time offer</p>
         <h3>Get Yours For $29 Today!</h3>
         <p class="ship">Free shipping and handling in the US.<br>Lists for $99 with its four bonuses.</p>
         <ul>
@@ -219,7 +227,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
         <div class="field">Full name</div>
         <div class="field">Email address</div>
         <div class="field">Shipping address</div>
-        <a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Send my book &raquo;<small>YES! I want the book and the 4 bonuses now!</small></a>
+        <a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Claim my copy before it&rsquo;s gone &raquo;<small>YES! I want the book and the 4 bonuses now!</small></a>
         <span class="lock">&#128274; 100% secure, encrypted checkout</span>
         <img class="trusted" src="img/book/trusted-strip.png" alt="Trusted by 107,217+ entrepreneurs">
         <p class="fine">*Pitch Secrets A to Z lists for $99 with its bonuses. Today you pay just $29, and shipping in the US is on us. Physical copy, limited print run.</p>
@@ -352,9 +360,9 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 
 <section class="section story">
   <div class="wrap">
+    <div class="hihead rv"><p class="hi">Hi, I&rsquo;m</p><img class="sigimg" src="img/logo-signature-black.png" alt="Forbes Riley"></div>
     <div class="grid">
       <div class="rv">
-        <p class="hi">Hi, I&rsquo;m</p><img class="sigimg" src="img/logo-signature-black.png" alt="Forbes Riley">
         <div class="photo"><img src="img/book/stool-book.jpg" alt="Forbes Riley holding Pitch Secrets A to Z"></div>
         <h2>After selling $2.5 billion on live television, I&rsquo;ve learned one thing:</h2>
         <p>The ability to say what you do, why it matters and what to do next, in a way that makes people want to say yes, is the single greatest skill you can master to transform your business and your life.</p>
@@ -517,7 +525,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   </div>
 </div>
 
-<div class="sticky"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Send my book, $29 + free shipping</a></div>
+<div class="sticky"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Claim my copy, $29 + free shipping</a></div>
 
 <script>
 (function(){

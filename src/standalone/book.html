@@ -107,7 +107,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 
 /* ===== floating 3D book: cover lifts, a gold YES! pops out ===== */
 .showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;margin-top:22px}
-.book3d{perspective:1400px;display:flex;justify-content:center;align-items:flex-end;min-height:380px;position:relative}
+.book3d{perspective:1400px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;min-height:400px;position:relative;padding-top:10px}
 .bk{position:relative;width:210px;aspect-ratio:2/3;transform-style:preserve-3d;animation:bob 6s ease-in-out infinite;cursor:pointer}
 .bk .pages{position:absolute;inset:3px 0 3px 6px;background:linear-gradient(90deg,#efece4,#fff 30%,#f1eee6);transform:translateZ(-16px);border-radius:2px 6px 6px 2px;box-shadow:0 30px 50px rgba(0,0,0,.65)}
 .bk .edge{position:absolute;top:3px;bottom:3px;right:-8px;width:12px;background:repeating-linear-gradient(180deg,#f7f5ef 0 2px,#d9d5ca 2px 3px);transform:rotateY(90deg) translateZ(-4px);transform-origin:left}
@@ -122,7 +122,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .bk.open .ray{animation:ray .9s ease-out .25s}
 @keyframes ray{0%{opacity:0;transform:rotate(var(--a)) translateY(0) scaleY(.3)}30%{opacity:1}100%{opacity:0;transform:rotate(var(--a)) translateY(-70px) scaleY(1.2)}}
 @keyframes bob{0%,100%{transform:translateY(0) rotateY(-22deg) rotateX(5deg)}50%{transform:translateY(-14px) rotateY(-28deg) rotateX(7deg)}}
-.book3d .hint{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.book3d .hint{text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .showcase .phonevid{margin:0 auto;max-width:240px}
 @media (max-width:860px){.showcase{grid-template-columns:1fr}.book3d{min-height:360px}.bk{width:180px}}
 /* ===== pop-ups: real proof, bottom left ===== */
@@ -414,15 +414,26 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 
 <script>
 (function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}else{
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4000); /* safety: everything shows within 4 s no matter what */
+
+  try{
   var readers=[1,2,3,4,5,6,7,9,12,14,16,18,19,22,28,30,33,36,39,41,43,44,47,48,49,51,52,54];
   var tags=readers.map(function(n){return '<img src="img/readers/r'+String(n).padStart(2,'0')+'.jpg" alt="A reader holding Pitch Secrets A to Z">'});
   var half=Math.ceil(tags.length/2), a=tags.slice(0,half).join(''), b=tags.slice(half).join('');
   document.getElementById('rt1').innerHTML=a+a; document.getElementById('rt2').innerHTML=b+b;
+  }catch(e){console.warn('book page feature failed',e)}
+  try{
   /* the book flips open to YES! on its own, and on tap */
   var bk=document.getElementById('bk'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(bk){ var flip=function(){ bk.classList.add('open'); setTimeout(function(){bk.classList.remove('open')},2600) };
     bk.addEventListener('click',function(){ bk.classList.toggle('open') });
     if(!reduce){ setTimeout(flip,1800); setInterval(flip,9000) } }
+  }catch(e){console.warn('book page feature failed',e)}
+  try{
   /* pop-ups: only real things from this page */
   var toasts=[
     {img:'img/book-cover.jpg',h:'USA TODAY bestseller',t:'Pitch Secrets A to Z, <span>240 pages</span>, physical copy, free US shipping.'},
@@ -437,6 +448,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   if(toast){ toast.querySelector('.x').addEventListener('click',function(){closed=true;toast.classList.remove('show')});
     var showToast=function(){ if(closed) return; var d=toasts[ti++%toasts.length]; document.getElementById('toastImg').src=d.img; document.getElementById('toastTxt').innerHTML='<b>'+d.h+'</b>'+d.t; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show')},5200) };
     setTimeout(showToast,6000); setInterval(showToast,14000) }
+  }catch(e){console.warn('book page feature failed',e)}
+  try{
   /* click-to-play YouTube, keeps the page light */
   document.querySelectorAll('.yt').forEach(function(el){
     el.addEventListener('click',function(){
@@ -445,10 +458,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
       el.innerHTML=''; el.appendChild(f); el.classList.add('on');
     });
   });
-  var els=[].slice.call(document.querySelectorAll('.rv'));
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-  els.forEach(function(e){io.observe(e)});
+
+  }catch(e){console.warn('book page feature failed',e)}
 })();
 </script>
 </body>

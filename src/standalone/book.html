@@ -100,6 +100,14 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn::after,.cc .photo img,.stack img,.rtrack{animation:none}}
 @media (max-width:860px){body{font-size:16px;padding-bottom:78px}.section{padding-block:44px}.two,.cc,.story .grid,.bgrid,.stack,.bio .grid,.roles{grid-template-columns:1fr}.hero{padding-block:22px 36px}.hero h1{font-size:clamp(30px,8vw,40px)}.hero .sub{font-size:16px}.hero .lead{font-size:17px}.two{margin-top:22px;gap:26px}.cc .photo{position:static}.cc .photo img{max-height:420px}.story .photo{float:none;width:100%;max-width:420px;margin:0 auto 18px}.story .hi{text-align:center}.story .sigimg{margin:0 auto 16px}.story h2{text-align:center}.story .side{grid-template-columns:repeat(3,1fr)}.cta .btn{min-width:0;width:100%;font-size:16px;padding:16px 18px}.bio img{-webkit-box-reflect:none;max-height:320px}.sticky{display:block}}
 
+.leaders{background:var(--black);color:#fff}.leaders .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:14px;margin:0 0 6px}.leaders h2{text-align:center;font-size:clamp(24px,3vw,36px)}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.lead{background:linear-gradient(180deg,#1a1a1a,#0d0d0d);border:1px solid rgba(240,213,122,.35);border-radius:14px;padding:22px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.4);transition:transform .25s,box-shadow .25s}
+.lead:hover{transform:translateY(-5px);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 30px rgba(240,213,122,.15)}
+.lead img{width:150px;height:150px;object-fit:cover;object-position:top;border-radius:50%;margin:0 auto 14px;border:3px solid var(--gold-deep);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.lead h3{font-size:22px;color:#fff}.lead .role{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:4px 0 12px}
+.lead blockquote{margin:0;font-size:15px;line-height:1.55;color:#e6e6e6;font-style:italic}.lead blockquote b{color:#fff;font-style:normal}
+@media (max-width:860px){.lgrid{grid-template-columns:1fr}}
 /* video tiles */
 .phonevid{position:relative;max-width:320px;margin:22px auto 0;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.6);border:1px solid rgba(240,213,122,.4)}.phonevid iframe,.phonevid video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
 .phonevid .snd{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(10,10,10,.8);border:1px solid rgba(240,213,122,.5);color:var(--gold);font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;z-index:2}
@@ -220,6 +228,18 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   <blockquote>&ldquo;A powerful playbook for the two things that determine your success: how you think and how you speak.&rdquo;</blockquote>
   <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
   <cite>What industry leaders say about the book</cite>
+</section>
+
+<section class="section leaders">
+  <div class="wrap">
+    <p class="k rv">What industry leaders are saying</p>
+    <h2 class="rv">About Forbes Riley&rsquo;s new book</h2>
+    <div class="lgrid">
+      <div class="lead rv"><img src="img/book/lead-hoffman.jpg" alt="Jeff Hoffman"><h3>Jeff Hoffman</h3><p class="role">Global Entrepreneur</p><blockquote>&ldquo;<b>Pitch Secrets A to Z</b> is like having Forbes in your corner, teaching you how to communicate with clarity, confidence, and power. <b>This book is a game-changer</b> for anyone serious about being heard.&rdquo;</blockquote></div>
+      <div class="lead rv"><img src="img/book/lead-harrington.jpg" alt="Kevin Harrington with Forbes Riley"><h3>Kevin Harrington</h3><p class="role">Shark Tank Investor</p><blockquote>&ldquo;I am happy to attest that what Forbes offers in <b>Pitch Secrets A to Z is priceless</b>. She shares the exact tools she has collected and perfected over decades, giving you everything you need to build your perfect pitch.&rdquo;</blockquote></div>
+      <div class="lead rv"><img src="img/book/lead-diamond.jpg" alt="Marie Diamond"><h3>Marie Diamond</h3><p class="role">Energy Expert</p><blockquote>&ldquo;<b>Forbes Riley&rsquo;s Pitch Secrets A to Z</b> is more than a guide to communication. It&rsquo;s a masterclass in energy alignment.&rdquo;</blockquote></div>
+    </div>
+  </div>
 </section>
 
 <section class="section tv">

@@ -160,6 +160,24 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 .toast .x{position:absolute;top:4px;right:8px;border:0;background:none;font-size:16px;cursor:pointer;color:#999}
 @media (max-width:860px){.toast{bottom:84px;left:10px;right:10px;max-width:none}}
 @media (prefers-reduced-motion:reduce){.bk{animation:none}}
+
+.featured{background:#0d0d0d;padding:22px 0 26px;text-align:center}.featured .k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#bbb;margin:0 0 12px}.featured img{width:100%;max-width:1100px;margin:0 auto;filter:brightness(0) invert(1);opacity:.85}
+.order .trusted{width:100%;margin:12px auto 0}
+.inside{background:linear-gradient(180deg,#120a0a,#0a0a0a);color:#fff;text-align:center}.inside h2{font-size:clamp(26px,3.4vw,42px);color:#fff}
+.igrid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:26px;align-items:center;margin-top:34px}
+.icol{display:grid;gap:18px}.icard{background:#fff;color:#111;border-radius:14px;padding:22px 20px;font-weight:800;font-size:19px;text-align:left;box-shadow:0 20px 40px rgba(0,0,0,.45);position:relative;padding-left:52px;transition:transform .25s}.icard:hover{transform:translateY(-4px)}
+.icard::before{content:"";position:absolute;left:18px;top:24px;width:22px;height:22px;border-radius:50%;background:var(--gold-deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231b1619' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");background-size:14px;background-position:center;background-repeat:no-repeat}
+.ibook{perspective:1400px}.ibook img{max-height:520px;width:auto;margin:0 auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.7));animation:bookturn 9s ease-in-out infinite}
+@keyframes bookturn{0%,100%{transform:rotateY(-18deg) translateY(0)}50%{transform:rotateY(18deg) translateY(-14px)}}
+.proof .group{width:100%;border-radius:14px;margin:26px auto 14px;box-shadow:0 30px 60px rgba(0,0,0,.25)}.proof .shush{width:100%;max-width:980px;margin:0 auto 10px}
+.bonuses .stackimg{width:100%;max-width:900px;margin:22px auto 6px;filter:drop-shadow(0 24px 40px rgba(0,0,0,.2));animation:floaty 8s ease-in-out infinite}
+.exit{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:60;padding:16px}.exit.on{display:flex}
+.exbox{position:relative;background:#fff;color:#111;border-radius:14px;max-width:560px;width:100%;padding:0 28px 26px;text-align:center;box-shadow:0 40px 90px rgba(0,0,0,.6);animation:popin .35s cubic-bezier(.2,1.3,.3,1)}
+@keyframes popin{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+.exstripe{height:18px;margin:0 -28px 22px;border-radius:14px 14px 0 0;background:repeating-linear-gradient(135deg,#d4a73c 0 16px,#b8860b 16px 32px)}
+.exbox h2{font-size:clamp(28px,5vw,44px);color:var(--gold-dark);letter-spacing:-.01em}.exbox p{font-size:18px;margin:12px 0 10px}.exbox img{max-height:200px;width:auto;margin:0 auto 14px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.3))}.exbox .btn{width:100%}
+.exx{position:absolute;top:26px;right:14px;border:0;background:none;font-size:28px;cursor:pointer;color:#999}.exno{display:block;margin:12px auto 0;border:0;background:none;color:#888;text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
+@media (max-width:860px){.igrid{grid-template-columns:1fr}.ibook img{max-height:380px}.icard{font-size:17px}}
 </style>
 </head>
 <body>
@@ -203,10 +221,15 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
         <div class="field">Shipping address</div>
         <a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Send my book &raquo;<small>YES! I want the book and the 4 bonuses now!</small></a>
         <span class="lock">&#128274; 100% secure, encrypted checkout</span>
+        <img class="trusted" src="img/book/trusted-strip.png" alt="Trusted by 107,217+ entrepreneurs">
         <p class="fine">*Pitch Secrets A to Z lists for $99 with its bonuses. Today you pay just $29, and shipping in the US is on us. Physical copy, limited print run.</p>
       </div>
     </div>
   </div>
+</section>
+
+<section class="featured">
+  <div class="wrap"><p class="k">Forbes Riley has been featured on</p><img src="img/book/featured-logos.png" alt="NBC, CBS, ABC, FOX, HSN, ESPN, TLC and more"></div>
 </section>
 
 <section class="crickets">
@@ -250,7 +273,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <p class="k rv">#MadeASale</p>
     <h2 class="rv">Thousands of Forbes Riley&rsquo;s students already use the power of pitch to increase their income</h2>
     <div class="arrow rv">&#8964;</div>
-    <img class="collage rv" src="img/book/made-a-sale.jpg" alt="Screenshots of Forbes Riley's students posting their sales after using her pitch formula">
+    <img class="collage rv" src="img/book/made-a-sale.png" alt="Screenshots of Forbes Riley's students posting their sales after using her pitch formula">
   </div>
 </section>
 
@@ -264,6 +287,18 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
       <div class="vid yt" data-yt="t9WmijohgwI"><img src="https://i.ytimg.com/vi/t9WmijohgwI/hqdefault.jpg" alt="KTLA 5" loading="lazy"><div class="play">&#9654;</div><div class="tagline">KTLA 5<span>How to pitch like a pro</span></div></div>
       <div class="vid yt" data-yt="-37aEOpfdZ8"><img src="https://i.ytimg.com/vi/-37aEOpfdZ8/hqdefault.jpg" alt="Good Day Alabama" loading="lazy"><div class="play">&#9654;</div><div class="tagline">Good Day Alabama<span>Pitch Secrets</span></div></div>
     </div>
+  </div>
+</section>
+
+<section class="section inside">
+  <div class="wrap">
+    <h2 class="rv">What&rsquo;s inside the Pitch Secrets A to Z book?</h2>
+    <div class="igrid">
+      <div class="icol rv"><div class="icard">Turn everyday conversations into opportunities</div><div class="icard">Handle objections and resistance</div><div class="icard">Communicate your value clearly and quickly</div></div>
+      <div class="ibook rv"><img src="img/book/book-3d.png" alt="Pitch Secrets A to Z"></div>
+      <div class="icol rv"><div class="icard">Create emotional connection and trust</div><div class="icard">Speak with confidence in any situation</div><div class="icard">Use video, social media and technology to expand your influence</div></div>
+    </div>
+    <div class="cta rv"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">YES! I want to order a copy now<small>and secure 4 game-changing bonuses</small></a></div>
   </div>
 </section>
 
@@ -308,6 +343,8 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   <div class="wrap">
     <p class="k rv">Proof! A USA TODAY bestseller</p>
     <h2 class="rv">Pitch Secrets A to Z is already in the hands of thousands of readers, speakers and entrepreneurs</h2>
+    <img class="group rv" src="img/book/group-forbesd.png" alt="A room full of readers in I Forbes'd It shirts holding Pitch Secrets A to Z">
+    <img class="shush rv" src="img/book/shush-collage.png" alt="Readers holding Pitch Secrets A to Z with a finger to their lips">
   </div>
   <div class="rwrap"><div class="rtrack" id="rt1"></div></div>
   <div class="rwrap"><div class="rtrack b" id="rt2"></div></div>
@@ -375,6 +412,7 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
     <p class="k rv">With your order today</p>
     <h2 class="rv">You unlock 4 free bonuses</h2>
     <p class="lede rv">The book alone is worth ten times the price. You get a lot more than the book.</p>
+    <img class="stackimg rv" src="img/book/bonus-stack.png" alt="Pitch Secrets A to Z with the Action Vault, the YES Files, the template and the workshop">
     <div class="bgrid">
       <div class="bonus rv"><span class="tag">Bonus 1</span><h3>One Minute to Millions template</h3><p class="sub">Get a &ldquo;Yes, tell me more&rdquo; when asked &ldquo;What do you do?&rdquo;</p><p>A fill-in-the-blanks template that shows you exactly how to introduce yourself with clarity and confidence.</p></div>
       <div class="bonus rv"><span class="tag">Bonus 2</span><h3>The YES Files</h3><p class="sub">10 real, live pitch transformations</p><p>Watch Forbes take ten ordinary pitches and transform them live. Small changes in wording, structure and delivery that make a message far more persuasive.</p></div>
@@ -467,6 +505,18 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
 
 <div class="toast" id="toast" role="status" aria-live="polite"><img id="toastImg" src="img/book-cover.jpg" alt=""><div class="t" id="toastTxt"></div><button class="x" type="button" aria-label="Close">&times;</button></div>
 
+<div class="exit" id="exit" role="dialog" aria-modal="true" aria-label="Before you go">
+  <div class="exbox">
+    <button class="exx" type="button" aria-label="Close">&times;</button>
+    <div class="exstripe"></div>
+    <h2>WAIT! Before you go&hellip;</h2>
+    <p>Grab <b>Pitch Secrets A to Z</b> for $29 today and <b>we&rsquo;ll cover the cost of shipping and handling.</b> Plus the four bonuses, while this print run lasts.</p>
+    <img src="img/book/book-3d.png" alt="">
+    <a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">YES! Send my book &raquo;</a>
+    <button class="exno" type="button">No thanks, I don&rsquo;t want the YES</button>
+  </div>
+</div>
+
 <div class="sticky"><a class="btn" href="https://pitchsecretsbook.com" target="_blank" rel="noopener">Send my book, $29 + free shipping</a></div>
 
 <script>
@@ -518,6 +568,11 @@ footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-siz
   });
 
   }catch(e){console.warn('book page feature failed',e)}  try{ var hv=document.getElementById('heroVid'); if(hv){ var v=hv.querySelector('video'); new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ if(v.muted) v.play().catch(function(){}) } else { v.pause() } })},{threshold:.4}).observe(hv); hv.addEventListener('click',function(){ if(v.muted){ v.muted=false; v.currentTime=0; hv.classList.add('sound'); v.play() } else if(v.paused){ v.play() } else { v.pause() } }) } }catch(e){}
+  try{ var ex=document.getElementById('exit'), shown=false; if(ex){ var openEx=function(){ if(shown) return; shown=true; ex.classList.add('on') }; var closeEx=function(){ ex.classList.remove('on') };
+    ex.querySelector('.exx').addEventListener('click',closeEx); ex.querySelector('.exno').addEventListener('click',closeEx); ex.addEventListener('click',function(e){ if(e.target===ex) closeEx() });
+    document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) openEx() });
+    var lastY=window.scrollY; window.addEventListener('scroll',function(){ var y=window.scrollY; if(y>1200 && lastY-y>400) openEx(); lastY=y },{passive:true});
+    setTimeout(function(){ if(!shown && window.scrollY>600) openEx() },90000) } }catch(e){}
 
 })();
 </script>

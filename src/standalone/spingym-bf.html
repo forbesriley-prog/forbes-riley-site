@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SpinGym Black Friday | Five minutes, three times a day</title>
+<meta name="description" content="SpinGym Black Friday. The half-pound disc that sold 61,000 in 24 hours on live TV and has passed a million sold. Five minutes, three times a day. Pick your color.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap">
+<style>
+:root{--pink:#ff2d8f;--pink2:#ff6fb5;--pink3:#ffd1e8;--hot:#ff0f7b;--ink:#111;--wh:#fff;--yel:#ffe600;--font:"Poppins","Helvetica Neue",Arial,sans-serif;--r:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--wh);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
+h1{font-size:clamp(44px,8vw,104px);font-weight:900}
+h2{font-size:clamp(34px,5.6vw,66px)}
+h3{font-size:clamp(20px,2.2vw,26px)}
+p{margin:0}
+.k{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--hot);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;font-weight:800;font-size:18px;padding:18px 32px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;position:relative;transition:transform .15s;box-shadow:0 14px 0 -6px rgba(0,0,0,.18)}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.btn.pink{background:var(--hot);color:#fff;box-shadow:0 18px 40px rgba(255,15,123,.4)}
+.btn.white{background:#fff;color:var(--hot)}
+.btn.big{font-size:22px;padding:22px 40px}
+/* top bar */
+.bar{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff;border-bottom:3px solid var(--hot)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:58px}
+.bar .lg{font-weight:900;letter-spacing:-.02em;font-size:18px}
+.bar .lg i{color:var(--hot);font-style:normal}
+.bar .cd{display:flex;align-items:center;gap:8px;font-size:13px;color:#ddd;font-weight:600}
+.bar .cd b{background:var(--hot);color:#fff;border-radius:8px;padding:3px 8px;font-variant-numeric:tabular-nums;min-width:36px;text-align:center}
+.bar .btn{padding:9px 16px;font-size:14px;box-shadow:none}
+/* ribbon */
+.ribbon{position:absolute;top:26px;left:-60px;transform:rotate(-30deg);background:var(--yel);color:var(--ink);font-weight:900;letter-spacing:.18em;text-transform:uppercase;font-size:13px;padding:10px 70px;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:5;white-space:nowrap}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(60% 70% at 70% 20%,#ffb5d8,transparent 60%),radial-gradient(50% 50% at 10% 90%,#ffd1e8,transparent 60%),#fff;padding:clamp(40px,6vw,80px) 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center}
+.hero .badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;animation:wig 2.4s ease-in-out infinite}
+.hero .badge i{width:10px;height:10px;border-radius:50%;background:var(--yel);box-shadow:0 0 0 4px rgba(255,230,0,.3)}
+@keyframes wig{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+.hero h1 .p{color:var(--hot)}
+.hero h1 .o{-webkit-text-stroke:3px var(--ink);color:transparent}
+.hero .sub{font-size:clamp(18px,2.2vw,24px);color:#333;font-weight:600;margin:18px 0 22px;max-width:560px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.deal{display:inline-flex;align-items:baseline;gap:10px;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:10px 16px;margin-top:18px;box-shadow:6px 6px 0 var(--hot)}
+.deal s{color:#888;font-weight:600}
+.deal b{font-size:30px;font-weight:900;color:var(--hot);letter-spacing:-.03em}
+.deal small{font-size:12px;color:#555;font-weight:600}
+.stage{position:relative;min-height:520px;display:grid;place-items:center}
+.stage .disc{position:absolute;width:min(560px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff 0,#ffd1e8 55%,transparent 72%);animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.96)}50%{transform:scale(1.04)}}
+.stage .prod{position:relative;width:min(640px,100%);border-radius:var(--r);filter:drop-shadow(0 40px 50px rgba(255,15,123,.25));transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .3s;mix-blend-mode:multiply}
+.stage .prod.swap{animation:pop .5s}
+@keyframes pop{0%{transform:scale(.9) rotate(-4deg);opacity:.4}100%{transform:none;opacity:1}}
+.stage .forbes{position:absolute;right:-10px;bottom:-30px;height:min(60%,360px);width:auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25));z-index:2}
+.picker{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:8px 0 26px;position:relative;z-index:3}
+.picker button{width:40px;height:40px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #ddd,0 8px 20px rgba(0,0,0,.15);cursor:pointer;transition:transform .2s;font:inherit}
+.picker button:hover{transform:scale(1.15)}
+.picker button.on{box-shadow:0 0 0 3px var(--ink),0 8px 20px rgba(0,0,0,.2);transform:scale(1.15)}
+.picker .name{width:100%;text-align:center;font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--hot)}
+/* proof */
+.proof{background:var(--ink);color:#fff;padding:26px 0}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.proof b{display:block;white-space:nowrap;font-size:clamp(26px,3vw,40px);font-weight:900;color:var(--pink2);letter-spacing:-.03em;line-height:1}
+.proof b+span{display:block;font-size:13px;color:#bbb;margin-top:6px;font-weight:600;white-space:normal}
+section{padding-block:clamp(60px,8vw,110px)}
+.center{text-align:center}
+.sub{font-size:clamp(17px,2vw,21px);color:#444;max-width:700px;margin:14px auto 0;font-weight:500}
+/* how */
+.how{background:var(--pink3)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.step{background:#fff;border-radius:var(--r);padding:28px 24px;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--hot);transition:transform .2s}
+.step:hover{transform:translate(-3px,-3px)}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--hot);color:#fff;font-weight:900;display:grid;place-items:center;font-size:20px;margin-bottom:14px}
+.step p{color:#444;margin-top:8px;font-size:15.5px}
+.spin{width:90px;height:90px;border-radius:50%;background:conic-gradient(var(--hot),var(--pink2),var(--hot));margin:0 0 14px;position:relative;animation:spin 1.6s linear infinite}
+.spin:after{content:"";position:absolute;inset:34px;border-radius:50%;background:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* timer */
+.timer{background:var(--hot);color:#fff}
+.timer h2{color:#fff}
+.timer .sub{color:#ffd1e8}
+.tcard{max-width:720px;margin:36px auto 0;background:#fff;color:var(--ink);border-radius:30px;padding:32px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.tcard .big{font-size:clamp(64px,12vw,120px);font-weight:900;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;color:var(--hot)}
+.tcard .ring{width:200px;height:200px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;background:conic-gradient(var(--hot) var(--p,0%),#ffe1ef 0);position:relative}
+.tcard .ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:#fff}
+.tcard .ring .in{position:relative;z-index:1;width:120px;height:120px;border-radius:50%;background:conic-gradient(#111,#444,#111);animation:spin 1.2s linear infinite;animation-play-state:paused}
+.tcard.run .ring .in{animation-play-state:running}
+.tcard .ring .in:after{content:"";position:absolute;inset:42px;border-radius:50%;background:#fff}
+.tcard .dots{display:flex;justify-content:center;gap:10px;margin:14px 0}
+.tcard .dots i{width:16px;height:16px;border-radius:50%;background:#ffd1e8;border:2px solid var(--hot)}
+.tcard .dots i.done{background:var(--hot)}
+.tcard .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.tcard small{display:block;color:#666;margin-top:10px;font-size:13px}
+/* who */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.chips span{background:#fff;border:3px solid var(--ink);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;transition:.2s}
+.chips span:hover{background:var(--hot);color:#fff;border-color:var(--hot);transform:rotate(-2deg)}
+/* story */
+.story{background:var(--ink);color:#fff}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.story h2{color:#fff}.story .k{color:var(--pink2)}
+.story p{color:#ddd;font-size:17px;margin-top:14px}
+.story img{border-radius:var(--r);border:4px solid var(--hot);box-shadow:0 30px 60px rgba(255,15,123,.3)}
+.story blockquote{margin:22px 0 0;padding-left:18px;border-left:4px solid var(--hot);font-style:italic;color:#fff;font-size:18px}
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.quote{background:#fff;border:3px solid var(--ink);border-radius:var(--r);padding:24px;box-shadow:8px 8px 0 var(--yel)}
+.quote p{font-weight:700;font-size:17px}.quote small{display:block;color:#666;margin-top:10px;font-weight:600}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.gal img{aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);border:3px solid var(--ink)}
+/* offer */
+.offer{background:radial-gradient(60% 60% at 50% 0,#ffb5d8,transparent 60%),var(--pink3);position:relative;overflow:hidden}
+.ocard{max-width:900px;margin:34px auto 0;background:#fff;border:4px solid var(--ink);border-radius:30px;padding:clamp(24px,4vw,44px);box-shadow:14px 14px 0 var(--hot);display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;position:relative;overflow:hidden}
+.ocard .pr b{display:block;font-size:clamp(56px,8vw,96px);font-weight:900;color:var(--hot);letter-spacing:-.05em;line-height:1}
+.ocard .pr s{color:#888;font-weight:700;font-size:20px}
+.ocard .pr small{display:block;color:#555;font-weight:600;margin-top:6px}
+.ocard ul{list-style:none;padding:0;margin:16px 0 20px;display:grid;gap:8px}
+.ocard li{padding-left:30px;position:relative;font-weight:600}
+.ocard li:before{content:"\2713";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--hot);color:#fff;font-size:13px;font-weight:900;display:grid;place-items:center}
+.ocard .ends{font-weight:800;color:var(--hot);margin-top:10px}
+.ocard img{mix-blend-mode:multiply}
+/* faq */
+.faq{max-width:820px;margin:30px auto 0}
+.faq details{border:3px solid var(--ink);border-radius:18px;margin-bottom:10px;padding:0 18px;background:#fff}
+.faq summary{cursor:pointer;font-weight:800;padding:16px 0;list-style:none}
+.faq summary:after{content:"+";float:right;color:var(--hot);font-weight:900;font-size:22px;line-height:1}
+.faq details[open] summary:after{content:"\2212"}
+.faq p{color:#444;padding-bottom:16px}
+/* final */
+.final{background:var(--ink);color:#fff;text-align:center}
+.final h2{color:#fff}.final .sub{color:#ddd}
+footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#000}
+/* sticky buy */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--hot);color:#fff;padding:10px max(16px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;transform:translateY(110%);transition:.3s;box-shadow:0 -10px 40px rgba(0,0,0,.25)}
+.sticky.on{transform:none}
+.sticky span{font-weight:800;font-size:14px}
+.sticky .btn{padding:10px 18px;font-size:14px;box-shadow:none}
+/* confetti */
+.conf{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}
+.conf i{position:absolute;width:10px;height:14px;top:-20px;opacity:0;animation:fall 1.6s ease-out forwards}
+@keyframes fall{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--dx),110vh) rotate(720deg)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px) scale(.98);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero .wrap,.story .wrap,.ocard{grid-template-columns:1fr}.stage{min-height:360px}.stage .forbes{height:46%;right:-14px}.steps,.quotes,.gal{grid-template-columns:1fr}.proof .wrap{grid-template-columns:1fr 1fr}.bar .cd{display:none}.picker{gap:6px}.picker button{width:34px;height:34px}.ribbon{top:18px;left:-70px;font-size:11px;padding:8px 70px}.hero h1{font-size:clamp(40px,12vw,64px)}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.spin,.hero .badge,.stage .disc{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="lg">Spin<i>Gym</i> <span style="font-weight:600;font-size:13px;color:#bbb">Black Friday</span></div>
+  <div class="cd">Ends in <b id="cd-d">--</b><b id="cd-h">--</b><b id="cd-m">--</b><b id="cd-s">--</b></div>
+  <a class="btn pink" href="https://forbesriley.com" data-fill="buy" data-buy>Get mine</a>
+</div></div>
+
+<section class="hero">
+  <div class="ribbon">Black Friday</div>
+  <div class="wrap">
+    <div>
+      <span class="badge"><i></i> Black Friday &middot; Pink is back</span>
+      <h1>Five minutes.<br><span class="p">Three times</span><br>a day. <span class="o">That's it.</span></h1>
+      <p class="sub">SpinGym weighs less than half a pound, fits in your bag, and works your whole upper body and core from the first pull. Over a million sold. Pick your color.</p>
+      <div class="cta"><a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a><a class="btn white" href="#how">How it works</a></div>
+      <div class="deal"><s data-fill="was">$__</s><b data-fill="price">$__</b><small>Black Friday &middot; ends <span data-fill="ends-label">soon</span></small></div>
+    </div>
+    <div>
+      <div class="stage">
+        <div class="disc"></div>
+        <img class="prod" id="prod" src="img/sg/sg-pink.jpg" alt="SpinGym in pink">
+        <img class="forbes" src="img/sg/forbes-rooftop.png" alt="Forbes Riley with SpinGym">
+      </div>
+      <div class="picker" id="picker">
+        <button data-c="pink" style="background:#ff2d8f" class="on" aria-label="Pink"></button>
+        <button data-c="purple" style="background:#7b2cbf" aria-label="Purple"></button>
+        <button data-c="blue" style="background:#1f6fe0" aria-label="Blue"></button>
+        <button data-c="teal" style="background:#13b5b1" aria-label="Teal"></button>
+        <button data-c="green" style="background:#2bb24c" aria-label="Green"></button>
+        <button data-c="orange" style="background:#ff7a1a" aria-label="Orange"></button>
+        <button data-c="gold" style="background:#d4a73c" aria-label="Gold"></button>
+        <button data-c="black" style="background:#111" aria-label="Black"></button>
+        <span class="name" id="cname">Pink</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof"><div class="wrap">
+  <div><b data-count="61000">0</b><span>sold in one 24-hour live TV show</span></div>
+  <div><b><span data-count="1000000">0</span>+</b><span>sold and counting</span></div>
+  <div><b>2010</b><span>Forbes, National Fitness Hall of Fame</span></div>
+  <div><b>&lt; &frac12; lb</b><span>fits in your bag, up to 20 lb of resistance</span></div>
+</div></div>
+
+<section class="how" id="how"><div class="wrap">
+  <div class="center rv"><span class="k">How it works</span><h2>Pull. Spin. Repeat.</h2><p class="sub">Gyrotronic resistance: the spinning weighted disc creates a slightly irregular load, so every upper-body and core muscle fires at once. Up to 20 pounds of resistance on each pull.</p></div>
+  <div class="steps">
+    <div class="step rv"><div class="n">1</div><div class="spin"></div><h3>Pull</h3><p>Hold the handles, pull apart, and let the disc spin up. You'll feel it in your arms, shoulders, back and abs in seconds.</p></div>
+    <div class="step rv"><div class="n">2</div><div class="spin" style="animation-duration:1s"></div><h3>Hold the rhythm</h3><p>Keep the disc spinning. The irregular load does the work and your heart rate doubles in under a minute.</p></div>
+    <div class="step rv"><div class="n">3</div><div class="spin" style="animation-duration:.7s"></div><h3>Five minutes, three times a day</h3><p>The SpinGym Promise. Commit to that and you will quickly feel and see changes. Sculpt, not bulk.</p></div>
+  </div>
+</div></section>
+
+<section class="timer"><div class="wrap">
+  <div class="center rv"><span class="k" style="color:#fff">Try it now</span><h2>Start your five minutes.</h2><p class="sub">Three sessions a day. Tap start, grab anything with two handles, and keep the rhythm until the ring closes.</p></div>
+  <div class="tcard rv" id="tcard">
+    <div class="ring" id="ring"><div class="in"></div></div>
+    <div class="big" id="clock">5:00</div>
+    <div class="dots" id="dots"><i></i><i></i><i></i></div>
+    <div class="btns"><button class="btn pink" id="tstart">Start five minutes</button><button class="btn" id="treset">Reset</button></div>
+    <small id="tmsg">Session 1 of 3 today</small>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="center rv"><span class="k">Who it's for</span><h2>Everyone with five minutes.</h2></div>
+  <div class="chips rv"><span>Busy moms</span><span>Traveling professionals</span><span>Competitive athletes</span><span>Pilots</span><span>Police and military</span><span>Rehab patients</span><span>People in wheelchairs</span><span>Cubicle dwellers</span><span>Couch potatoes</span><span>Fit after 60</span></div>
+  <div class="gal rv">
+    <img src="img/ugc/prod-beach.jpg" alt="SpinGym class on the beach">
+    <img src="img/spingym-hsn-set.jpg" alt="SpinGym live on HSN">
+    <img src="img/g-gym.jpg" alt="SpinGym at the expo">
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <img class="rv" src="img/spingym-hsn-set.jpg" alt="Forbes Riley selling SpinGym live on HSN">
+  <div class="rv">
+    <span class="k">The story</span>
+    <h2>"No one wanted it."</h2>
+    <p>When Forbes launched SpinGym on Discovery's PitchMen she was told it would never work and she was wasting her time. She marketed it out of the back of her car.</p>
+    <p>It went on to sell 600,000 units in three years, 61,000 of them in a single 24-hour live home-shopping show, and has now passed a million.</p>
+    <blockquote>"I own the company 100 percent, and it's all my heart and soul. I've created a product that gets people in wheelchairs easy cardio, helps women who hate their arms, and gives hope to people who can't get to the gym."</blockquote>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="center rv"><span class="k">What people say</span><h2>Celebs and doctors love it.</h2></div>
+  <div class="quotes">
+    <div class="quote rv"><p>"This is a monumental moment. Kurt Angle LOVES SpinGym!"</p><small>WWE champion Kurt Angle, on set</small></div>
+    <div class="quote rv"><p>"Praised by Fox News as the hottest fitness sensation, and it continues to grow in popularity."</p><small>SpinGym in the news</small></div>
+    <div class="quote rv"><p>"Fit after 60. I've been using SpinGym for six years and my arms have never looked better."</p><small>Barb Cetrone, HSN fitness model</small></div>
+  </div>
+</div></section>
+
+<section class="offer" id="offer"><div class="wrap">
+  <div class="center rv"><span class="k">Black Friday</span><h2>The deal.</h2></div>
+  <div class="ocard rv">
+    <div>
+      <div class="pr"><s data-fill="was">$__</s><b data-fill="price">$__</b><small data-fill="offer">Black Friday offer details go here</small></div>
+      <ul><li>SpinGym in the color you pick</li><li>Forbes' routines: five minutes, three times a day</li><li>Less than half a pound, up to 20 lb of resistance</li><li>Patented. Over a million sold.</li></ul>
+      <a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a>
+      <p class="ends">Ends <span data-fill="ends-label">soon</span></p>
+    </div>
+    <img id="prod2" src="img/sg/sg-pink.jpg" alt="SpinGym">
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="center rv"><span class="k">Questions</span><h2>Quick answers.</h2></div>
+  <div class="faq rv">
+    <details><summary>What is it, in one sentence?</summary><p>A half-pound weighted disc on two handles. Pull the handles apart, the disc spins, and the irregular load works your arms, shoulders, back and core at once.</p></details>
+    <details><summary>How long does a workout take?</summary><p>Five minutes, three times a day. That's the SpinGym Promise. Your heart rate doubles in under a minute.</p></details>
+    <details><summary>Will it bulk me up?</summary><p>No. Up to 20 pounds of resistance per pull, and the routines are designed to sculpt and tone, not bulk.</p></details>
+    <details><summary>Is it good for rehab?</summary><p>SpinGym holds a US patent for rehab exercises, from shoulder and posture to knee and back problems. Forbes used it to condition her quads and hamstrings after ACL surgery. Ask your physio about your case.</p></details>
+    <details><summary>Does it travel?</summary><p>It weighs less than half a pound and fits in a bag. Pilots, road warriors and military use it in hotel rooms and at desks.</p></details>
+    <details><summary>Which color should I get?</summary><p>Pink, obviously. But there are eight: pink, purple, blue, teal, green, orange, gold and black.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <div class="rv"><span class="k" style="color:var(--pink2)">Black Friday</span><h2>Five minutes from now you could own one.</h2><p class="sub">Pick your color, grab the deal, and start the promise tonight.</p>
+  <div style="margin-top:24px"><a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a></div></div>
+</div></section>
+
+<footer><div class="wrap">The SpinGym trademark is owned by and used under license from Mad Dogg Athletics, Inc. SpinGym is a patented product: U.S. Patent Nos. 9,254,406, 9,072,934 and 8,668,631. &copy; SpinGym LLC. All rights reserved.<br>Black Friday offer ends <span data-fill="ends-label">soon</span>.</div></footer>
+
+<div class="sticky" id="sticky"><span>SpinGym Black Friday &middot; <span data-fill="price">$__</span></span><a class="btn" href="https://forbesriley.com" data-fill="buy" data-buy>Get mine</a></div>
+<div class="conf" id="conf"></div>
+
+<!-- FILL THESE: set the ISO date here and every data-fill span above (price, was, offer, buy links). -->
+<span id="ends" data-fill="ends" hidden></span>
+
+<script>
+(function(){
+  /* fill helpers: anything with data-fill="buy" gets this href if set */
+  var BUY=document.getElementById('ends').getAttribute('data-buy-url');
+  if(BUY){document.querySelectorAll('[data-fill="buy"]').forEach(function(a){a.href=BUY})}
+  /* reveal */
+  try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)})}catch(e){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
+  setTimeout(function(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})},5000);
+  /* color picker */
+  try{var names={pink:'Pink',purple:'Purple',blue:'Blue',teal:'Teal',green:'Green',orange:'Orange',gold:'Gold',black:'Black'};var pk=document.getElementById('picker'),prod=document.getElementById('prod'),prod2=document.getElementById('prod2'),cn=document.getElementById('cname');pk.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){pk.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var c=b.getAttribute('data-c');prod.classList.remove('swap');void prod.offsetWidth;prod.src='img/sg/sg-'+c+'.jpg';prod.alt='SpinGym in '+names[c];prod.classList.add('swap');if(prod2)prod2.src='img/sg/sg-'+c+'.jpg';cn.textContent=names[c]})})}catch(e){}
+  /* counters */
+  try{var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,t=+el.getAttribute('data-count'),st=performance.now();(function f(n){var k=Math.min(1,(n-st)/1500);k=1-Math.pow(1-k,3);el.textContent=Math.round(t*k).toLocaleString('en-US');if(k<1)requestAnimationFrame(f)})(st)})},{threshold:.5});document.querySelectorAll('[data-count]').forEach(function(e){co.observe(e)})}catch(e){}
+  /* countdown: reads the ISO date in data-fill="ends" (e.g. 2026-11-30T23:59:00-05:00) */
+  try{var endsEl=document.getElementById('ends'),raw=(endsEl.getAttribute('data-date')||endsEl.textContent||'').trim(),end=raw?new Date(raw).getTime():NaN;var ids=['cd-d','cd-h','cd-m','cd-s'].map(function(i){return document.getElementById(i)});function tick(){if(isNaN(end)){ids.forEach(function(e){e.textContent='--'});return}var d=Math.max(0,end-Date.now()),s=Math.floor(d/1000);ids[0].textContent=Math.floor(s/86400)+'d';ids[1].textContent=Math.floor(s%86400/3600)+'h';ids[2].textContent=Math.floor(s%3600/60)+'m';ids[3].textContent=(s%60)+'s'}tick();setInterval(tick,1000);if(!isNaN(end)){var lbl=new Date(end).toLocaleString('en-US',{weekday:'long',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});document.querySelectorAll('[data-fill="ends-label"]').forEach(function(e){e.textContent=lbl})}}catch(e){}
+  /* 5-minute timer */
+  try{var T=300,left=T,run=false,iv=null,card=document.getElementById('tcard'),clock=document.getElementById('clock'),ring=document.getElementById('ring'),dots=document.getElementById('dots').querySelectorAll('i'),msg=document.getElementById('tmsg'),bs=document.getElementById('tstart'),br=document.getElementById('treset');var done=0;try{var k='sg-'+new Date().toDateString();done=+(localStorage.getItem(k)||0)}catch(e){}function paint(){var m=Math.floor(left/60),s=left%60;clock.textContent=m+':'+(s<10?'0':'')+s;ring.style.setProperty('--p',Math.round((1-left/T)*100)+'%');dots.forEach(function(d,i){d.classList.toggle('done',i<done)});msg.textContent=done>=3?'Three done today. That is the promise.':'Session '+(done+1)+' of 3 today'}function finish(){clearInterval(iv);run=false;card.classList.remove('run');bs.textContent='Start five minutes';done=Math.min(3,done+1);try{localStorage.setItem(k,done)}catch(e){}left=T;paint();burst(window.innerWidth/2,window.innerHeight/2)}bs.addEventListener('click',function(){if(run){clearInterval(iv);run=false;card.classList.remove('run');bs.textContent='Resume';return}run=true;card.classList.add('run');bs.textContent='Pause';iv=setInterval(function(){left--;if(left<=0){finish();return}paint()},1000)});br.addEventListener('click',function(){clearInterval(iv);run=false;card.classList.remove('run');left=T;bs.textContent='Start five minutes';paint()});paint()}catch(e){}
+  /* confetti */
+  var conf=document.getElementById('conf');function burst(x,y){var cols=['#ff2d8f','#ffe600','#111','#fff','#ff6fb5','#7b2cbf'];for(var i=0;i<90;i++){var p=document.createElement('i');p.style.left=x+'px';p.style.top=y+'px';p.style.background=cols[i%cols.length];p.style.setProperty('--dx',(Math.random()*600-300)+'px');p.style.animationDelay=(Math.random()*.25)+'s';p.style.animationDuration=(1.2+Math.random()*.9)+'s';p.style.transform='rotate('+Math.random()*360+'deg)';conf.appendChild(p);(function(q){setTimeout(function(){q.remove()},2400)})(p)}}
+  document.querySelectorAll('[data-buy]').forEach(function(b){b.addEventListener('click',function(e){var r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2)})});
+  /* sticky buy bar */
+  try{var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>600)},{passive:true})}catch(e){}
+})();
+</script>
+</body>
+</html>

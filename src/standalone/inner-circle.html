@@ -29,6 +29,7 @@ p{margin:0}
 /* the invitation */
 #invite{position:fixed;inset:0;z-index:100;background:radial-gradient(60% 50% at 50% 62%,rgba(240,213,122,.22),transparent 70%),#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:20px;transition:opacity .9s,visibility .9s}
 #invite.off{opacity:0;visibility:hidden;pointer-events:none}
+#invite[hidden]{display:none}
 #invite .who{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;opacity:.9}
 .env{position:relative;width:min(92vw,560px);aspect-ratio:1.6;cursor:pointer;animation:envin 1.2s cubic-bezier(.2,.7,.2,1) both}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}

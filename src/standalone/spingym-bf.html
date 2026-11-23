@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap">
 <style>
+.picker button.out{opacity:.45;position:relative}.picker button.out:after{content:"";position:absolute;left:-2px;right:-2px;top:50%;height:3px;background:#fff;transform:rotate(-45deg);box-shadow:0 0 0 1px #111}.picker .stock{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#111;background:#fff;border-radius:999px;padding:4px 10px;margin-left:8px}.picker .stock.no{background:#111;color:#fff}
 :root{--pink:#ff2d8f;--pink2:#ff6fb5;--pink3:#ffd1e8;--hot:#ff0f7b;--ink:#111;--wh:#fff;--yel:#ffe600;--font:"Poppins","Helvetica Neue",Arial,sans-serif;--r:22px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 html,body{overflow-x:hidden}
@@ -157,7 +158,7 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
 <div class="bar"><div class="wrap">
   <div class="lg">Spin<i>Gym</i> <span style="font-weight:600;font-size:13px;color:#bbb">Black Friday</span></div>
   <div class="cd">Ends in <b id="cd-d">--</b><b id="cd-h">--</b><b id="cd-m">--</b><b id="cd-s">--</b></div>
-  <a class="btn pink" href="https://forbesriley.com" data-fill="buy" data-buy>Get mine</a>
+  <a class="btn pink" href="https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant=22107911815257" data-fill="buy" data-buy target="_blank" rel="noopener">Get mine</a>
 </div></div>
 
 <section class="hero">
@@ -167,8 +168,8 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
       <span class="badge"><i></i> Black Friday &middot; Pink is back</span>
       <h1>Five minutes.<br><span class="p">Three times</span><br>a day. <span class="o">That's it.</span></h1>
       <p class="sub">SpinGym weighs less than half a pound, fits in your bag, and works your whole upper body and core from the first pull. Over a million sold. Pick your color.</p>
-      <div class="cta"><a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a><a class="btn white" href="#how">How it works</a></div>
-      <div class="deal"><s data-fill="was">$__</s><b data-fill="price">$__</b><small>Black Friday &middot; ends <span data-fill="ends-label">soon</span></small></div>
+      <div class="cta"><a class="btn pink big" href="https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant=22107911815257" data-fill="buy" data-buy target="_blank" rel="noopener">Get my SpinGym</a><a class="btn white" href="#how">How it works</a></div>
+      <div class="deal"><s data-fill="was">$45</s><b data-fill="price">$__</b><small>Black Friday &middot; ends <span data-fill="ends-label">soon</span></small></div>
     </div>
     <div>
       <div class="stage">
@@ -177,15 +178,15 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
         <img class="forbes" src="img/sg/forbes-rooftop.png" alt="Forbes Riley with SpinGym">
       </div>
       <div class="picker" id="picker">
-        <button data-c="pink" style="background:#ff2d8f" class="on" aria-label="Pink"></button>
-        <button data-c="purple" style="background:#7b2cbf" aria-label="Purple"></button>
-        <button data-c="blue" style="background:#1f6fe0" aria-label="Blue"></button>
-        <button data-c="teal" style="background:#13b5b1" aria-label="Teal"></button>
-        <button data-c="green" style="background:#2bb24c" aria-label="Green"></button>
-        <button data-c="orange" style="background:#ff7a1a" aria-label="Orange"></button>
-        <button data-c="gold" style="background:#d4a73c" aria-label="Gold"></button>
-        <button data-c="black" style="background:#111" aria-label="Black"></button>
-        <span class="name" id="cname">Pink</span>
+        <button data-c="pink" data-v="22107911815257" style="background:#ff2d8f" class="on" aria-label="Pink"></button>
+        <button data-c="purple" data-v="22107911848025" style="background:#7b2cbf" aria-label="Purple"></button>
+        <button data-c="blue" data-v="47751939686489" style="background:#1f6fe0" aria-label="Blue"></button>
+        <button data-c="teal" style="background:#13b5b1" aria-label="Teal (sold out)" class="out" title="Sold out"></button>
+        <button data-c="green" style="background:#2bb24c" aria-label="Green (sold out)" class="out" title="Sold out"></button>
+        <button data-c="orange" style="background:#ff7a1a" aria-label="Orange (sold out)" class="out" title="Sold out"></button>
+        <button data-c="gold" style="background:#d4a73c" aria-label="Gold (sold out)" class="out" title="Sold out"></button>
+        <button data-c="black" style="background:#111" aria-label="Black (sold out)" class="out" title="Sold out"></button>
+        <span class="name" id="cname">Pink</span><span class="stock" id="cstock">In stock</span>
       </div>
     </div>
   </div>
@@ -252,9 +253,9 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
   <div class="center rv"><span class="k">Black Friday</span><h2>The deal.</h2></div>
   <div class="ocard rv">
     <div>
-      <div class="pr"><s data-fill="was">$__</s><b data-fill="price">$__</b><small data-fill="offer">Black Friday offer details go here</small></div>
+      <div class="pr"><s data-fill="was">$45</s><b data-fill="price">$__</b><small data-fill="offer">Black Friday offer details go here</small></div>
       <ul><li>SpinGym in the color you pick</li><li>Forbes' routines: five minutes, three times a day</li><li>Less than half a pound, up to 20 lb of resistance</li><li>Patented. Over a million sold.</li></ul>
-      <a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a>
+      <a class="btn pink big" href="https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant=22107911815257" data-fill="buy" data-buy target="_blank" rel="noopener">Get my SpinGym</a>
       <p class="ends">Ends <span data-fill="ends-label">soon</span></p>
     </div>
     <img id="prod2" src="img/sg/sg-pink.jpg" alt="SpinGym">
@@ -275,12 +276,12 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
 
 <section class="final"><div class="wrap">
   <div class="rv"><span class="k" style="color:var(--pink2)">Black Friday</span><h2>Five minutes from now you could own one.</h2><p class="sub">Pick your color, grab the deal, and start the promise tonight.</p>
-  <div style="margin-top:24px"><a class="btn pink big" href="https://forbesriley.com" data-fill="buy" data-buy>Get my SpinGym</a></div></div>
+  <div style="margin-top:24px"><a class="btn pink big" href="https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant=22107911815257" data-fill="buy" data-buy target="_blank" rel="noopener">Get my SpinGym</a></div></div>
 </div></section>
 
 <footer><div class="wrap">The SpinGym trademark is owned by and used under license from Mad Dogg Athletics, Inc. SpinGym is a patented product: U.S. Patent Nos. 9,254,406, 9,072,934 and 8,668,631. &copy; SpinGym LLC. All rights reserved.<br>Black Friday offer ends <span data-fill="ends-label">soon</span>.</div></footer>
 
-<div class="sticky" id="sticky"><span>SpinGym Black Friday &middot; <span data-fill="price">$__</span></span><a class="btn" href="https://forbesriley.com" data-fill="buy" data-buy>Get mine</a></div>
+<div class="sticky" id="sticky"><span>SpinGym Black Friday &middot; <span data-fill="price">$__</span></span><a class="btn" href="https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant=22107911815257" data-fill="buy" data-buy target="_blank" rel="noopener">Get mine</a></div>
 <div class="conf" id="conf"></div>
 
 <!-- FILL THESE: set the ISO date here and every data-fill span above (price, was, offer, buy links). -->
@@ -295,7 +296,7 @@ footer{padding:30px 0;color:#777;font-size:12px;text-align:center;background:#00
   try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)})}catch(e){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
   setTimeout(function(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})},5000);
   /* color picker */
-  try{var names={pink:'Pink',purple:'Purple',blue:'Blue',teal:'Teal',green:'Green',orange:'Orange',gold:'Gold',black:'Black'};var pk=document.getElementById('picker'),prod=document.getElementById('prod'),prod2=document.getElementById('prod2'),cn=document.getElementById('cname');pk.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){pk.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var c=b.getAttribute('data-c');prod.classList.remove('swap');void prod.offsetWidth;prod.src='img/sg/sg-'+c+'.jpg';prod.alt='SpinGym in '+names[c];prod.classList.add('swap');if(prod2)prod2.src='img/sg/sg-'+c+'.jpg';cn.textContent=names[c]})})}catch(e){}
+  try{var names={pink:'Pink',purple:'Purple',blue:'Blue',teal:'Teal',green:'Green',orange:'Orange',gold:'Gold',black:'Black'};var pk=document.getElementById('picker'),prod=document.getElementById('prod'),prod2=document.getElementById('prod2'),cn=document.getElementById('cname');pk.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){pk.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var c=b.getAttribute('data-c');var v=b.getAttribute('data-v'),st=document.getElementById('cstock');if(st){st.textContent=v?'In stock':'Sold out';st.className='stock'+(v?'':' no')}if(v){document.querySelectorAll('[data-buy]').forEach(function(a){a.href='https://shopforbesriley.com/products/copy-of-forbes-riley-spingym-workout-anytime-anywhere?variant='+v})}prod.classList.remove('swap');void prod.offsetWidth;prod.src='img/sg/sg-'+c+'.jpg';prod.alt='SpinGym in '+names[c];prod.classList.add('swap');if(prod2)prod2.src='img/sg/sg-'+c+'.jpg';cn.textContent=names[c]})})}catch(e){}
   /* counters */
   try{var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,t=+el.getAttribute('data-count'),st=performance.now();(function f(n){var k=Math.min(1,(n-st)/1500);k=1-Math.pow(1-k,3);el.textContent=Math.round(t*k).toLocaleString('en-US');if(k<1)requestAnimationFrame(f)})(st)})},{threshold:.5});document.querySelectorAll('[data-count]').forEach(function(e){co.observe(e)})}catch(e){}
   /* countdown: reads the ISO date in data-fill="ends" (e.g. 2026-11-30T23:59:00-05:00) */

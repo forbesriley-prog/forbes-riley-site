@@ -55,10 +55,10 @@ section{padding-block:clamp(48px,7vw,90px);border-top:1px solid var(--line)}
 .do li,.dont li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid var(--line)}
 .do li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
 .dont li:before{content:"✕";position:absolute;left:0;color:#8a8a8a;font-weight:800}
-.type{display:grid;gap:18px;grid-template-columns:1.2fr .8fr;margin-top:28px}
-.spec{font-size:clamp(34px,5vw,64px);font-weight:800;line-height:1;margin:0 0 6px}
-.spec.script{font-family:var(--script);font-weight:400;color:var(--gold);font-size:clamp(44px,6vw,80px)}
-.spec.serif{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(30px,4vw,48px)}
+.type{display:grid;gap:18px;grid-template-columns:1.2fr .8fr;margin-top:28px}.type>*{min-width:0}.type .card{overflow:hidden}
+.spec{font-size:clamp(30px,4.2vw,56px);font-weight:800;line-height:1;margin:0 0 6px;overflow-wrap:anywhere}
+.spec.script{font-family:var(--script);font-weight:400;color:var(--gold);font-size:clamp(40px,4.5vw,60px)}
+.spec.serif{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(26px,3vw,36px)}
 .scale{margin-top:14px;border-top:1px solid var(--line)}
 .scale div{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--line);padding:10px 0}
 .scale span:first-child{min-width:150px;font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
@@ -180,7 +180,7 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
   <div class="photos">
     <figure><img src="img/cut/red-chair.png" alt="Forbes in red" loading="lazy"><figcaption>Red: the favourite</figcaption></figure>
     <figure><img src="img/cut/az-arms-gold.png" alt="Forbes in gold, arms out" loading="lazy"><figcaption>Gold, arms out</figcaption></figure>
-    <figure><img src="img/cut/arms-up.png" alt="Forbes, arms up" loading="lazy"><figcaption>Big energy</figcaption></figure>
+    <figure><img src="img/cut/black-crossed.png" alt="Forbes in black, arms crossed" loading="lazy"><figcaption>Black, arms crossed</figcaption></figure>
     <figure><img src="img/cut/mic.png" alt="Forbes with a microphone" loading="lazy"><figcaption>On the mic</figcaption></figure>
     <figure><img src="img/cut/gold-crossed.png" alt="Forbes in gold, arms crossed" loading="lazy"><figcaption>Gold, arms crossed</figcaption></figure>
     <figure><img src="img/cut/book-hold.png" alt="Forbes holding Pitch Secrets A to Z" loading="lazy"><figcaption>With the book</figcaption></figure>

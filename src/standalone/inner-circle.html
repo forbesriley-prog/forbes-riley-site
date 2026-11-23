@@ -44,13 +44,13 @@ p{margin:0}
 .env .front:before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(240,213,122,.35),transparent);clip-path:polygon(0 0,50% 100%,100% 0,100% 2px,50% calc(100% + 2px),0 2px)}
 .env .flap{position:absolute;left:0;right:0;top:0;height:54%;z-index:4;background:linear-gradient(180deg,#2d2d31,#141416);border-radius:18px 18px 0 0;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .9s cubic-bezier(.6,0,.2,1),z-index 0s .45s;backface-visibility:hidden}
 .env .flap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(240,213,122,.35))}
-.env .seal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82px;height:82px;border-radius:50%;z-index:5;background:radial-gradient(circle at 35% 30%,#f6e3a1,#b8902e 72%);box-shadow:0 12px 30px rgba(0,0,0,.6),inset 0 0 0 5px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;font-weight:800;color:#1b1619;letter-spacing:.08em;font-size:16px;transition:transform .5s,opacity .5s}
+.env .seal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:124px;height:auto;z-index:5;filter:drop-shadow(0 12px 24px rgba(0,0,0,.7));transition:transform .5s,opacity .5s}
 .env.open .flap{transform:rotateX(180deg);z-index:1}
 .env.open .seal{transform:translate(-50%,-50%) scale(.3);opacity:0}
 .env.open .card{transform:translateY(-80%)}
 #invite .acts{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
 #invite .skip{background:none;border:0;color:#888;font:inherit;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:560px){.env{aspect-ratio:1.35}.env .card{padding:16px 14px;gap:6px}.env .card .cres{display:none}.env.open .card{transform:translateY(-72%)}}
+@media(max-width:560px){.env{aspect-ratio:1.35}.env .seal{width:96px}.env .card{padding:16px 14px;gap:6px}.env .card .cres{display:none}.env.open .card{transform:translateY(-72%)}}
 #confetti{position:fixed;inset:0;z-index:200;pointer-events:none}
 /* top glass bar */
 .bar{position:sticky;top:0;z-index:30;background:rgba(0,0,0,.55);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -247,7 +247,7 @@ footer a{color:#999;margin:0 6px}
     <div class="card"><img class="logo" src="img/ic/logo.svg" alt="Forbes Riley's"><div class="inv">You're invited.</div><p>To a seat in Forbes' private circle: live with her every week, 12 BREAKTHRUs a year, your pitch reviewed by her team.</p><p><b>Black Friday only: a year for $1,500.</b></p><img class="cres" src="img/ic/crescent.png" alt="Inner Circle"></div>
     <div class="front"></div>
     <div class="flap"></div>
-    <div class="seal">FR</div>
+    <img class="seal" src="img/cut/seal.png" alt="Forbes Riley, Pitch Queen">
   </div>
   <div class="acts"><button class="btn lg" id="invopen">Open your invitation</button><button class="skip" id="invskip">Skip</button></div>
   <p class="who">Dr. Forbes Riley &middot; Inner Circle &middot; Black Friday 2026</p>

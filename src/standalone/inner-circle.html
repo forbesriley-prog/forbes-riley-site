@@ -7,7 +7,7 @@
 <meta name="description" content="Membership by invitation only. Weekly Inner Circle LIVE calls, pitch video reviews, the Elevate Course Hub, the community, 12 BREAKTHRU sessions a year and Pitch Practice Pods with Dr. Forbes Riley.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Allura&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,700;1,700;1,900&display=swap">
 <style>
 :root{--black:#0a0a0a;--ink:#111;--panel:#141414;--line:#2a2a2a;--text:#f2f2f2;--muted:#b3b3b3;--gold:#f0d57a;--gold-band:#f3d873;--gold-deep:#d4a73c;--gold-dark:#9a7320;--pink:#eb068c;--body:"Poppins","Helvetica Neue",Arial,sans-serif;--script:"Allura",cursive;--r:6px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -260,41 +260,104 @@ footer a{color:var(--muted);margin:0 6px}
 .letter .more{position:absolute;left:0;right:0;bottom:0;padding:80px 0 22px;background:linear-gradient(transparent,#fff 55%);text-align:center;border-radius:0 0 var(--r) var(--r)}
 .letter:not(.collapsed) .more{display:none}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.showcase{min-height:380px}.showcase .pol{width:110px}.showcase .pol img{height:80px}.week{grid-template-columns:repeat(2,1fr)}.weekpanel,.stack,.hook{grid-template-columns:1fr}.stack .sum{position:static}.wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}.gets{grid-template-columns:1fr}}
+
+/* ===== Option B: light theme ===== */
+:root{--black:#fffdf9;--panel:#ffffff;--line:#e6dccb;--text:#1b1619;--muted:#6b6065;--script:"Playfair Display",Georgia,serif}
+body{background:#fffdf9;color:var(--text)}
+h1,h2,h3{color:#1b1619}.card h3,.weekpanel h3{color:#1b1619}
+section{border-top:1px solid #efe6d6}
+.urgbar{background:#111;color:#ddd;border:0}
+.card{box-shadow:0 14px 40px rgba(0,0,0,.06)}.card p{color:#444}
+.types div,.steps span,.pods3 div{background:#f7f0e4;border-color:#e6dccb;color:#333}.types b,.pods3 b{color:#1b1619}.steps span{color:#333}
+.card .val{color:var(--gold-dark);border-color:var(--gold-deep)}
+.ribbon{color:#1b1619}
+.bonus .card,.card[style*="border-color"]{border-color:#e6dccb!important}
+.card .art{filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))}
+.artwrap:before{background:radial-gradient(ellipse at 50% 100%,rgba(212,167,60,.45),transparent 70%)}
+.week button{background:#fff;border-color:#e6dccb;color:#333}.week button small{color:#777}
+.weekpanel{background:#fff;border-color:#e6dccb}.weekpanel p{color:#444}.weekpanel .t{color:var(--gold-dark)}.weekpanel img{background:#111}
+.stack .items button{background:#fff;border-color:#e6dccb;color:#1b1619}.stack .items button b{color:#1b1619}.stack .items button.on{background:#fff8e3;border-color:var(--gold-deep)}.stack .items button i{color:var(--gold-dark)}
+.stack .sum{box-shadow:0 20px 50px rgba(0,0,0,.08);border:1px solid #e6dccb}
+.hook .form{background:#fff;border-color:#e6dccb}.hook input{background:#fffdf9;border-color:#e6dccb;color:#1b1619}.hook .out{box-shadow:0 20px 50px rgba(0,0,0,.08);border:1px solid #e6dccb}
+.price .side .open b{color:#1b1619}.price .side .open span{color:var(--gold-dark)}.price .box{border:1px solid #e6dccb}
+.tgrid img{border-color:#e6dccb}
+.faq details{background:#fff;border-color:#e6dccb}.faq summary{color:#1b1619}.faq p{color:#444}
+footer{color:#777;border-top:1px solid #efe6d6}footer a{color:#777}
+.sticky{background:rgba(255,253,249,.94);border-top:1px solid #e6dccb}.sticky span{color:#333}
+.letter{border:1px solid #e6dccb}
+.trust{color:#555}.trust span:before{color:var(--gold-dark)}
+.btn.ghost{color:var(--gold-dark);border-color:var(--gold-deep)}
+.k{color:var(--gold-dark)}
+.lede{color:#5a4f63}
+.quote{color:var(--gold-dark)}
+.vid{box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.modal{background:rgba(27,22,25,.6)}
+/* ===== centered hero ===== */
+.hero{min-height:0;display:block;padding-block:clamp(36px,5vw,64px) clamp(40px,5vw,70px);background:radial-gradient(1100px 600px at 50% 0,rgba(240,213,122,.55),rgba(240,213,122,.12) 50%,transparent 72%),linear-gradient(180deg,#fffdf9,#f7f0e4)}
+.hero .wrap{display:block;max-width:1180px}
+.dust{display:none}
+.h6open{text-align:center;max-width:860px;margin:0 auto}
+.h6open .pre{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:900;font-size:clamp(54px,8vw,104px);line-height:1;color:var(--gold-dark);margin:0 0 6px;letter-spacing:-.01em}
+.h6open .brand{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 0 14px}
+.h6open .brand img{height:58px;width:auto}.h6open .brand .crescent{height:92px;filter:drop-shadow(0 8px 20px rgba(212,167,60,.35))}
+.h6open .welcome{font-size:clamp(18px,2.1vw,24px);color:#1b1619;font-weight:500;line-height:1.4;margin:0}
+.h6open .welcome b{color:var(--gold-dark);font-weight:800}
+.h6open .sigline{display:flex;justify-content:center;align-items:center;gap:10px;margin:10px 0 0;color:#666;font-size:14px}
+.h6open .sigline img{height:40px;filter:invert(1)}
+.stage{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:0;margin:26px auto 10px;max-width:1180px;position:relative}
+.stage .glow{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:620px;height:520px;border-radius:50%;background:radial-gradient(ellipse at 50% 80%,rgba(212,167,60,.55),rgba(212,167,60,.12) 55%,transparent 72%)}
+.stage .forbes{position:relative;height:clamp(360px,44vw,620px);width:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));z-index:2;margin:0 -30px}
+.stage .lapL,.stage .lapR{position:relative;width:100%;max-width:520px;border-radius:10px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));animation:floaty 7s ease-in-out infinite;z-index:1}
+.stage .lapL{justify-self:end;transform:rotate(-4deg);margin-right:-30px}
+.stage .lapR{justify-self:start;transform:rotate(4deg);margin-left:-30px;animation-delay:2s}
+.stage .cap{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--gold-band),var(--gold-deep));color:#1b1619;font-weight:800;padding:9px 18px;border-radius:999px;font-size:14px;z-index:3;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.h6want{text-align:center;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1b1619;margin:34px 0 14px}
+.gets6{list-style:none;padding:0;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1100px}
+.gets6 li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #e6dccb;border-radius:var(--r);padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.06);opacity:0;transform:translateY(12px);animation:slidein .5s forwards}
+.gets6 li:nth-child(1){animation-delay:.1s}.gets6 li:nth-child(2){animation-delay:.25s}.gets6 li:nth-child(3){animation-delay:.4s}.gets6 li:nth-child(4){animation-delay:.55s}.gets6 li:nth-child(5){animation-delay:.7s}.gets6 li:nth-child(6){animation-delay:.85s}
+.gets6 .ck{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,var(--gold-band),var(--gold-deep));color:#1b1619;font-weight:800;display:grid;place-items:center;flex:none;font-size:15px;box-shadow:0 6px 16px rgba(212,167,60,.35)}
+.gets6 b{display:block;color:#1b1619;font-size:16px;line-height:1.25}.gets6 small{display:block;color:#666;font-size:13px;margin-top:2px}.gets6 .v{display:block;color:var(--gold-dark);font-weight:800;font-size:14px;margin-top:6px}
+.bam6{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;background:#111;color:#fff;border-radius:var(--r);padding:16px 22px;max-width:1100px;margin:16px auto 0;box-shadow:0 20px 50px rgba(0,0,0,.18);opacity:0;animation:pop .5s 1.1s forwards}
+.bam6 .word{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:900;font-size:46px;color:var(--gold);line-height:1}
+.bam6 .t b{display:block;font-size:19px}.bam6 .t small{color:#bbb;font-size:13px}
+.bam6 .price{margin-left:auto;text-align:right}.bam6 .price s{display:block;color:#888;font-size:13px}.bam6 .price b{font-size:34px;color:var(--gold)}
+.h6btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.h6btns .btn.big{font-size:20px;padding:20px 40px}
+.h6trust{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:14px;font-size:13px;color:#555}
+.h6trust span:before{content:"\2713";color:var(--gold-dark);font-weight:800;margin-right:6px}
+@media(max-width:900px){.stage{grid-template-columns:1fr}.stage .forbes{height:420px;margin:0 auto;order:-1}.stage .lapL,.stage .lapR{justify-self:center;margin:8px 0;max-width:420px;transform:none}.gets6{grid-template-columns:1fr}.bam6 .price{margin-left:0;text-align:center;width:100%}}
 </style>
 </head>
 <body>
 
 <div class="urgbar"><span class="dot"></span><b>Membership is by invitation only.</b> The Inner Circle opens just <b>four times a year</b> and seats are limited.</div>
 
-<section class="hero"><div class="dust"></div><div class="dust b"></div><div class="wrap">
-  <div class="open">
+<section class="hero"><div class="wrap">
+  <div class="h6open">
     <p class="pre">You're invited</p>
     <div class="brand"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png" alt="Inner Circle Membership"></div>
     <p class="welcome">Forbes saved you a seat. <b>Come be in the room with her every single week</b>, with the people who think bigger, speak bolder and finally get their YES.</p>
     <div class="sigline"><span>With love,</span><img src="img/logo-signature-white.png" alt="Forbes Riley"></div>
   </div>
-  <div>
-    <h1><span class="scr">Forbes Riley's</span>Inner Circle</h1>
-    <p class="want">Want in? The day you join, you get:</p>
-    <ul class="youget">
-      <li><span class="ck">&#10003;</span><span><b>LIVE with Forbes every week</b><small>52 Inner Circle LIVE calls a year</small></span><span class="v">$5,200</span></li>
-      <li><span class="ck">&#10003;</span><span><b>12 BREAKTHRU sessions led by Forbes herself</b><small>Her most personal, powerful process. Members only.</small></span><span class="v">$12,000</span></li>
-      <li><span class="ck">&#10003;</span><span><b>Your pitch video reviewed by her team</b><small>Submit it, get insider feedback, go again</small></span><span class="v">$6,000</span></li>
-      <li><span class="ck">&#10003;</span><span><b>The Elevate Course Hub</b><small>Her whole vault of business, branding and money trainings</small></span><span class="v">$4,500</span></li>
-      <li><span class="ck">&#10003;</span><span><b>Pitch Practice Pods every Wednesday</b><small>90 minutes of reps, 5 PM EST</small></span><span class="v">$580</span></li>
-      <li><span class="ck">&#10003;</span><span><b>The private group + social media review</b><small>A global circle that lifts each other</small></span><span class="v">$1,000</span></li>
-    </ul>
-    <div class="bam"><span class="word">BAM.</span><span><b>You're in the room with Forbes herself.</b><small>$23,780 of access &middot; only opens four times a year &middot; no contracts, cancel anytime</small></span><span class="price"><s>Normally $5,000</s><b>$1,500 / yr</b></span></div>
-    <div class="btns"><button class="btn big" data-q>Check if you qualify</button><a class="btn ghost big" href="#stack">See everything you get</a></div>
-  </div>
-  <div class="fan">
+  <div class="stage">
     <div class="glow"></div>
-    <img class="lap l1" src="img/ic/live.png" alt="Inner Circle LIVE">
-    <img class="lap l2" src="img/ic/review.png" alt="Pitch Video Review">
-    <img class="lap l3" src="img/ic/hub.png" alt="Elevate Course Hub">
-    <img class="cut" src="img/px/cut-f25.png" alt="Dr. Forbes Riley">
-    <span class="tag">&#9733; This is what's waiting for you</span>
+    <img class="lapL" src="img/ic/live.png" alt="Inner Circle LIVE">
+    <img class="forbes" src="img/px/cut-f15.png" alt="Dr. Forbes Riley">
+    <img class="lapR" src="img/ic/review.png" alt="Pitch Video Review">
+    <span class="cap">&#9733; You're with Forbes herself</span>
   </div>
+  <p class="h6want">Want in? The day you join, you get:</p>
+  <ul class="gets6">
+    <li><span class="ck">&#10003;</span><span><b>LIVE with Forbes every week</b><small>52 Inner Circle LIVE calls a year</small><span class="v">$5,200 value</span></span></li>
+    <li><span class="ck">&#10003;</span><span><b>12 BREAKTHRU sessions led by Forbes herself</b><small>Her most personal, powerful process. Members only.</small><span class="v">$12,000 value</span></span></li>
+    <li><span class="ck">&#10003;</span><span><b>Your pitch video reviewed by her team</b><small>Submit it, get insider feedback, go again</small><span class="v">$6,000 value</span></span></li>
+    <li><span class="ck">&#10003;</span><span><b>The Elevate Course Hub</b><small>Her whole vault of business, branding and money trainings</small><span class="v">$4,500 value</span></span></li>
+    <li><span class="ck">&#10003;</span><span><b>Pitch Practice Pods every Wednesday</b><small>90 minutes of reps, 5 PM EST</small><span class="v">$580 value</span></span></li>
+    <li><span class="ck">&#10003;</span><span><b>The private group + social media review</b><small>A global circle that lifts each other</small><span class="v">$1,000 value</span></span></li>
+  </ul>
+  <div class="bam6"><span class="word">BAM.</span><span class="t"><b>You're in the room with Forbes herself.</b><small>$23,780 of access &middot; only opens four times a year &middot; no contracts, cancel anytime</small></span><span class="price"><s>Normally $5,000</s><b>$1,500 / yr</b></span></div>
+  <div class="h6btns"><button class="btn big" data-q>YES, I want in. Check if I qualify</button><a class="btn ghost big" href="#stack">Show me everything</a></div>
+  <div class="h6trust"><span>No contracts, cancel anytime</span><span>Pitch Practice Pods every Wednesday</span><span>Intentionally small</span></div>
 </div></section>
 
 <section id="week"><div class="wrap">
@@ -529,7 +592,7 @@ footer a{color:var(--muted);margin:0 6px}
 (function(){
   try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)})}catch(e){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
   setTimeout(function(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})},4000);
-  setTimeout(function(){document.querySelectorAll('.youget li,.bam').forEach(function(e){e.style.opacity=1;e.style.transform='none'})},2500);
+  setTimeout(function(){document.querySelectorAll('.gets6 li,.bam6').forEach(function(e){e.style.opacity=1;e.style.transform='none'})},2500);
   try{document.querySelectorAll('.vid[data-yt]').forEach(function(v){v.addEventListener('click',function(){var id=v.getAttribute('data-yt');v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'})})}catch(e){}
   try{var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>700)},{passive:true})}catch(e){}
   try{

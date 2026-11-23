@@ -293,6 +293,16 @@ footer{color:#777;border-top:1px solid #efe6d6}footer a{color:#777}
 .vid{box-shadow:0 20px 50px rgba(0,0,0,.18)}
 .modal{background:rgba(27,22,25,.6)}
 /* ===== centered hero ===== */
+.h6h1{display:block;font-family:"Poppins",sans-serif;font-weight:800;font-size:clamp(24px,3vw,38px);line-height:1.18;color:#1b1619;margin:4px 0 12px;text-wrap:balance}
+.h6h1 b{color:var(--gold-dark)}
+.h6open .welcome{font-size:clamp(16px,1.7vw,19px);color:#444;font-weight:500}
+.proofstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1100px;margin:30px auto 0}
+.pq{background:#fff;border:1px solid #e6dccb;border-radius:var(--r);padding:14px 16px;box-shadow:0 10px 26px rgba(0,0,0,.05)}
+.pq p{margin:0;font-size:14.5px;color:#1b1619;font-style:italic}.pq small{color:#777;font-size:12px}
+.feat{display:flex;align-items:center;gap:18px;justify-content:center;flex-wrap:wrap;margin:26px auto 0;max-width:1100px}
+.feat span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#777;font-weight:700;white-space:nowrap}
+.feat img{max-width:820px;width:100%;filter:invert(1) brightness(.2);opacity:.8}
+@media(max-width:900px){.proofstrip{grid-template-columns:1fr}}
 .hero{min-height:0;display:block;padding-block:clamp(36px,5vw,64px) clamp(40px,5vw,70px);background:radial-gradient(1100px 600px at 50% 0,rgba(240,213,122,.55),rgba(240,213,122,.12) 50%,transparent 72%),linear-gradient(180deg,#fffdf9,#f7f0e4)}
 .hero .wrap{display:block;max-width:1180px}
 .dust{display:none}
@@ -336,7 +346,8 @@ footer{color:#777;border-top:1px solid #efe6d6}footer a{color:#777}
   <div class="h6open">
     <p class="pre">You're invited</p>
     <div class="brand"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png" alt="Inner Circle Membership"></div>
-    <p class="welcome">Forbes saved you a seat. <b>Come be in the room with her every single week</b>, with the people who think bigger, speak bolder and finally get their YES.</p>
+    <h1 class="h6h1">This is the room where your pitch gets fixed, your momentum stays, and your YES gets easier. <b>Every week. With Forbes.</b></h1>
+    <p class="welcome">Forbes saved you a seat. Come be in the room with her, with the people who think bigger, speak bolder and finally get their YES.</p>
     <div class="sigline"><span>With love,</span><img src="img/logo-signature-white.png" alt="Forbes Riley"></div>
   </div>
   <div class="stage">
@@ -358,6 +369,12 @@ footer{color:#777;border-top:1px solid #efe6d6}footer a{color:#777}
   <div class="bam6"><span class="word">BAM.</span><span class="t"><b>You're in the room with Forbes herself.</b><small>$23,780 of access &middot; only opens four times a year &middot; no contracts, cancel anytime</small></span><span class="price"><s>Normally $5,000</s><b>$1,500 / yr</b></span></div>
   <div class="h6btns"><button class="btn big" data-q>YES, I want in. Check if I qualify</button><a class="btn ghost big" href="#stack">Show me everything</a></div>
   <div class="h6trust"><span>No contracts, cancel anytime</span><span>Pitch Practice Pods every Wednesday</span><span>Intentionally small</span></div>
+  <div class="proofstrip">
+    <div class="pq"><p>"Highly recommend membership. Keeps you connected to Forbes always."</p><small>Member</small></div>
+    <div class="pq"><p>"More than a community. We're a family that fully supports each other."</p><small>Member</small></div>
+    <div class="pq"><p>"The last Wednesday Breakthrough session is a highlight."</p><small>Jan Allen, member</small></div>
+  </div>
+  <div class="feat"><span>Forbes has been featured on</span><img src="img/book/featured-logos.png" alt="NBC, FOX Business, Shark Tank, QVC, HSN, ESPN, TLC, ABC"></div>
 </div></section>
 
 <section id="week"><div class="wrap">

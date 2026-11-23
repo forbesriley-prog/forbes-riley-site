@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Forbes Riley | Keynote Speaker, the Queen of Pitch</title>
+<meta name="description" content="Book Dr. Forbes Riley for your stage: the $2.5 billion live-TV host and Queen of Pitch. Keynotes and workshops where the audience leaves with a skill, not a feeling.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book Forbes Riley | Keynote Speaker, the Queen of Pitch">
+<meta property="og:description" content="The $2.5 billion host. Keynotes that leave your audience with a skill, not a feeling.">
+<meta property="og:image" content="https://site.forbesrileyhq.com/img/keynote-stage.jpg">
+<meta property="og:url" content="https://site.forbesrileyhq.com/speaker.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Allura&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--ink:#111;--muted:#444;--line:#e6e6e6;--gold:#f0d57a;--gold-deep:#d4a73c;--gold-dark:#9a7320;--gold-band:#f3d873;--body:"Poppins","Helvetica Neue",Arial,sans-serif;--script:"Allura",cursive;--r:6px;--wrap:1100px}
+*{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3{font-weight:800;letter-spacing:-.01em;margin:0;line-height:1.12;text-wrap:balance}p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.narrow{max-width:820px;margin-left:auto;margin-right:auto}.center{text-align:center}.section{padding-block:60px}
+.u{text-decoration:underline;text-underline-offset:4px}
+.btn{position:relative;display:inline-block;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:20px;padding:18px 34px;border-radius:var(--r);text-decoration:none;text-align:center;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;box-shadow:0 8px 24px rgba(212,167,60,.35),inset 0 -3px 0 rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;overflow:hidden}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(212,167,60,.5),inset 0 -3px 0 rgba(0,0,0,.18)}
+.btn small{display:block;font-size:12px;letter-spacing:.06em;font-weight:600;text-transform:none;margin-top:4px;opacity:.85}
+.btn::after{content:"";position:absolute;top:-20%;left:-80%;width:40%;height:140%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%{left:-80%}100%{left:130%}}
+.cta{text-align:center;margin-top:30px}.cta .btn{min-width:min(520px,100%)}.cta .note{display:block;margin-top:10px;font-size:14px;color:var(--muted)}.dark .cta .note,.covercost .cta .note{color:#cfcfcf}
+.hero{background:var(--black);color:#fff;padding-block:28px 50px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/book/studio-25b.jpg) center/cover;opacity:.12;filter:grayscale(1)}
+.hero .wrap{position:relative}
+.ribbon{display:table;margin:0 auto 10px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:13px;padding:8px 22px;border-radius:999px;box-shadow:0 10px 24px rgba(212,167,60,.35)}
+.order .bs{text-align:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold-dark);margin:0 0 6px}
+.bk .medal{position:absolute;left:-60px;bottom:-30px;width:130px;height:130px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.5));z-index:4;animation:medalbob 5s ease-in-out infinite}
+@keyframes medalbob{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
+.order .medal2{position:absolute;top:-36px;left:-26px;width:112px;height:112px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));z-index:3}
+@media (max-width:860px){.order .medal2{width:90px;height:90px;top:-28px;left:-10px}.bk .medal{width:100px;height:100px;left:-40px}}
+.band .bandseal{width:120px;height:120px}
+.bk .bsr{position:absolute;left:-6px;top:16px;background:var(--gold-deep);color:#1b1619;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:5px 10px 5px 12px;border-radius:0 999px 999px 0;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.hero .pre{text-align:center;font-weight:600;font-size:17px;color:#ddd;margin:0 0 6px}
+.hero h1{text-align:center;font-size:clamp(34px,5.4vw,58px);color:#fff}
+.hero .sub{text-align:center;font-weight:700;font-size:clamp(17px,1.9vw,22px);max-width:980px;margin:14px auto 0;color:#f3f3f3;line-height:1.35}
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:start;margin-top:36px}
+.hero .lead{font-size:20px;line-height:1.45;color:#eee;text-align:center}
+.hero .lead b{display:block;margin-top:14px;font-size:22px;color:var(--gold);font-weight:800}
+.vid{position:relative;margin-top:18px;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.6);aspect-ratio:16/9}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.order{background:#fff;color:var(--ink);border-radius:10px;padding:22px 24px 24px;box-shadow:0 30px 70px rgba(0,0,0,.5);position:relative}
+.order h3{text-align:center;font-size:30px;line-height:1.1;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--gold-deep)}
+.order .ship{text-align:center;font-size:14px;color:var(--muted);margin:10px 0 14px;line-height:1.4}
+.order ul{list-style:none;padding:0;margin:0 0 18px}.order li{position:relative;padding-left:18px;font-size:15px;margin-bottom:10px;line-height:1.4}.order li::before{content:"-";position:absolute;left:4px;color:var(--gold-dark);font-weight:800}.order li b{font-weight:800}
+.steps{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:14px}
+.steps div{padding:10px 12px;font-size:12px;line-height:1.2;display:flex;gap:10px;align-items:center;color:#777;background:#f6f6f6}.steps div b{font-size:22px;color:#bbb;font-weight:800}.steps div.on{background:#fff;color:var(--ink)}.steps div.on b{color:var(--gold-dark)}.steps small{display:block;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:10px}
+.field{border:1px solid #ddd;border-radius:6px;padding:12px 14px;margin-bottom:10px;color:#9a9a9a;font-size:15px;background:#fff}
+.order .btn{width:100%;font-size:18px;padding:16px 18px}
+.order .fine{font-size:12px;color:#666;text-align:center;margin:12px 0 0;line-height:1.45}.order .lock{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dark);margin-top:8px}
+.crickets{background:#fff;padding-block:50px 20px}.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.framed{border-radius:14px;box-shadow:0 24px 50px rgba(0,0,0,.2);width:100%;height:auto;animation:floaty 8s ease-in-out infinite}.framed.side{float:right;width:42%;margin:0 0 14px 24px}@media (max-width:860px){.twocol{grid-template-columns:1fr}.framed.side{float:none;width:100%;margin:0 0 16px}}.crickets h2{font-size:clamp(26px,3vw,36px);text-align:center}.crickets h2 em{font-style:normal;color:var(--gold-dark)}.crickets p{text-align:center;font-size:19px}.crickets .punch{font-weight:800;font-size:22px;margin-top:10px}.crickets .pink{color:var(--gold-dark);font-weight:800;font-style:italic}
+.band{background:var(--gold-band);color:#111;text-align:center;padding:26px 16px}.band .bandseal{width:92px;height:92px;margin:0 auto 10px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.25))}
+.band h2{font-size:clamp(22px,2.8vw,34px);text-transform:uppercase;letter-spacing:.02em}.band blockquote{margin:12px auto 0;max-width:900px;font-size:clamp(18px,2vw,24px);font-weight:600;font-style:italic}.band cite{display:block;font-style:normal;font-weight:800;margin-top:6px;font-size:16px}.band .stars{font-size:22px;letter-spacing:3px}
+.covercost{background:var(--black);color:#fff;position:relative;overflow:hidden}.covercost::before{content:"";position:absolute;inset:0;background:url(img/readers-collage.jpg) center/cover;opacity:.08}.covercost .wrap{position:relative}
+.cc{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}.cc .photo{align-self:start;position:sticky;top:16px}.covercost .after{margin-top:40px;padding-top:34px;border-top:1px solid rgba(240,213,122,.25)}.covercost .after h3{font-size:22px;margin:0 0 10px;color:#fff}.covercost .after p{color:#e8e8e8}.covercost .after .so{color:#fff}.vault{margin-top:28px}.vault .vk{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 4px;text-align:center}.vault .vt{font-weight:800;font-size:20px;color:#fff;margin:0 0 12px;text-align:center}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.vid.mini{aspect-ratio:16/9;border-radius:10px;overflow:hidden;position:relative;background:#000;box-shadow:0 12px 26px rgba(0,0,0,.5)}.vid.mini .play{width:46px;height:46px;font-size:18px}.vid.mini .ch{position:absolute;left:8px;top:8px;background:var(--gold-deep);color:#1b1619;font-weight:800;font-size:13px;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.playlink{position:relative;display:block;width:100%;margin:12px 0 0;border-radius:12px;overflow:hidden;aspect-ratio:21/9;background:#000;border:1px solid rgba(240,213,122,.45);box-shadow:0 16px 36px rgba(0,0,0,.5);text-decoration:none;color:#fff}.playlink img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;transition:transform .5s,opacity .3s}.playlink:hover img{transform:scale(1.05);opacity:.5}.playlink .pl{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(18px,1.9vw,24px);padding:16px;text-shadow:0 2px 12px rgba(0,0,0,.8)}.playlink .pl b{width:56px;height:56px;border-radius:50%;background:var(--gold-deep);color:#1b1619;display:flex;align-items:center;justify-content:center;font-size:20px;padding-left:4px;margin-bottom:10px;box-shadow:0 10px 24px rgba(0,0,0,.5)}.playlink .pl small{display:block;font-size:13px;font-weight:600;color:var(--gold);margin-top:6px;letter-spacing:.06em}
+.vault .plum{max-height:520px;width:auto;margin:30px auto 0;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7));animation:floaty 8s ease-in-out infinite 2s}.cc .photo img{max-height:720px;width:auto;margin:0 auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7));animation:floaty 8s ease-in-out infinite}
+.cc h2{font-size:clamp(26px,3vw,38px);color:var(--gold)}.cc h3{font-size:22px;margin:22px 0 8px;color:#fff}.cc p{color:#e8e8e8}.cc .lede{font-size:19px;color:#fff}
+.list{list-style:none;padding:0;margin:0}.list li{position:relative;padding-left:36px;margin-bottom:12px;font-size:17px}.list li::before{content:"";position:absolute;left:0;top:3px;width:24px;height:24px;border-radius:50%;background:var(--gold-deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231b1619' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");background-size:16px;background-position:center;background-repeat:no-repeat}.list li b{font-weight:800}
+.cc .so{font-weight:800;font-style:italic;text-decoration:underline;text-underline-offset:4px;font-size:19px;margin-top:18px;color:#fff}
+.proof{background:#fff}.proof .k,.bonuses .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-size:14px;margin:0 0 6px}.proof h2{text-align:center;font-size:clamp(24px,3vw,36px)}
+.rwrap{overflow:hidden;margin-top:26px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rtrack{display:flex;gap:12px;width:max-content;animation:rroll 80s linear infinite}.rtrack.b{animation-direction:reverse;animation-duration:95s;margin-top:12px}.rwrap:hover .rtrack{animation-play-state:paused}
+.rtrack img{width:160px;height:160px;object-fit:cover;border-radius:10px;border:1px solid #eee;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .35s}.rtrack img:nth-child(odd){transform:rotate(-2deg)}.rtrack img:nth-child(even){transform:rotate(2deg)}.rtrack img:hover{transform:scale(1.08) rotate(0)}
+@keyframes rroll{to{transform:translateX(-50%)}}
+.story{background:#fff}.story .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:start}
+.hihead{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px}.hihead .sigimg{margin:0}.story .hi{font-size:26px;font-weight:700;margin:0 0 10px}.sigimg{height:74px;width:auto;margin:0 0 16px}
+.story .script{font-family:var(--script);font-weight:400;font-size:clamp(44px,5vw,66px);line-height:1;color:var(--ink);margin-bottom:6px}.story h2{font-size:clamp(24px,2.8vw,34px);margin-bottom:14px}.story p{font-size:17px;color:#333}.story .punch{font-size:22px;font-weight:800;color:var(--ink);margin:18px 0}
+.story .photo{float:left;width:min(46%,380px);margin:6px 26px 10px 0;border-radius:10px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.2)}.story .photo img{width:100%;height:auto}
+.story .side{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-self:start}.story .side img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .35s}.story .side img:hover{transform:scale(1.04) rotate(-1deg)}
+.next{background:#fff;text-align:center}.next .k{font-weight:800;font-size:20px;color:#333;margin:0}.next h2{font-size:clamp(28px,3.6vw,46px);color:var(--gold-dark);margin:6px 0 24px}
+.next .vid{max-width:860px;margin:0 auto 10px;aspect-ratio:16/9}
+.next .who{font-weight:700;color:#333;margin:12px 0 0}
+.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;text-align:left;max-width:980px;margin:30px auto 0}.roles div{background:#faf7ef;border:1px solid #efe4c2;border-radius:8px;padding:14px 16px;font-size:16px;transition:transform .25s,box-shadow .25s}.roles div:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.1)}.roles div b{color:var(--gold-dark)}
+.bonuses{background:#fff}.bonuses h2{text-align:center;font-size:clamp(26px,3.4vw,42px)}.bonuses .lede{text-align:center;font-size:18px;color:#333;max-width:760px;margin:10px auto 0}
+.bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}.bonus{border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s}.bonus:hover{transform:translateY(-4px);box-shadow:0 24px 44px rgba(0,0,0,.12)}
+.bonus .tag{display:inline-block;background:var(--black);color:var(--gold);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;padding:6px 12px;border-radius:999px;margin-bottom:10px}.bonus h3{font-size:21px;margin-bottom:4px}.bonus .sub{font-weight:600;color:#333;margin-bottom:8px;font-size:15px}.bonus p{font-size:15px;color:#444;margin:0}
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin-top:40px}.stack img{max-height:440px;width:auto;margin:0 auto;filter:drop-shadow(0 24px 34px rgba(0,0,0,.3));animation:floaty 8s ease-in-out infinite}
+.total{border:2px solid var(--gold-deep);border-radius:10px;padding:22px 24px;background:#fffdf5}.total div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #eee;font-size:15px}.total div span:last-child{font-weight:800;white-space:nowrap}.total .tot{border:0;font-size:19px;font-weight:800;padding-top:14px}.total .tot span:last-child{font-size:28px;color:var(--gold-dark)}
+.copy{background:#fff}.copy h2{font-size:clamp(26px,3.2vw,40px);text-align:center;margin-bottom:16px}.copy h2 em{font-style:normal;color:var(--gold-dark)}.copy p{font-size:18px}.copy .big{font-weight:800;font-size:20px}
+.why{list-style:none;padding:0;margin:14px 0 0}.why li{position:relative;padding-left:34px;margin-bottom:12px;font-size:17px}.why li::before{content:"\2605";position:absolute;left:4px;color:var(--gold-deep);font-weight:800}
+.stockpill{display:inline-block;border:2px solid var(--gold-deep);color:var(--gold-dark);border-radius:999px;padding:7px 16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-bottom:12px}
+.ps .sig{font-family:var(--script);font-size:56px;line-height:1;margin:6px 0 0;color:var(--ink)}
+.faq{background:#faf7ef}.faq h2{text-align:center;font-size:clamp(24px,3vw,34px);margin-bottom:18px}.faq details{border-bottom:1px solid #e6dcc0;padding:16px 0}.faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq summary::after{content:"+";color:var(--gold-dark);font-size:24px;line-height:1}.faq details[open] summary::after{content:"\2013"}.faq details p{margin:10px 0 0;color:#444;font-size:16px}
+.bio{background:var(--black);color:#fff}.bio .grid{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center}.bio img{max-height:420px;width:auto;margin:0 auto;filter:drop-shadow(0 24px 34px rgba(0,0,0,.6));-webkit-box-reflect:below -4px linear-gradient(transparent 78%,rgba(255,255,255,.14))}.biopic{position:relative}.bioseal{position:absolute;right:-6px;bottom:10px;width:120px;height:120px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.6))}
+.bio h3{font-size:24px;color:var(--gold);margin-bottom:10px}.bio p{color:#ddd;font-size:16px}
+footer{background:#000;color:#aaa;padding:34px 0 60px;text-align:center;font-size:13px}footer img{height:48px;width:auto;margin:0 auto 12px}footer a{color:var(--gold)}footer .disc{max-width:800px;margin:14px auto 0;font-size:12px;line-height:1.6;color:#777}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(10,10,10,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(240,213,122,.35);display:none;z-index:20}.sticky .btn{width:100%;padding:14px;font-size:15px;white-space:nowrap;letter-spacing:.02em}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn::after,.cc .photo img,.stack img,.rtrack{animation:none}}
+@media (max-width:860px){body{font-size:16px;padding-bottom:78px}.section{padding-block:44px}.two,.cc,.story .grid,.bgrid,.stack,.bio .grid,.roles{grid-template-columns:1fr}.hero{padding-block:22px 36px}.hero h1{font-size:clamp(30px,8vw,40px)}.hero .sub{font-size:16px}.hero .lead{font-size:17px}.two{margin-top:22px;gap:26px}.cc .photo{position:static}.cc .photo img{max-height:420px}.story .photo{float:none;width:100%;max-width:420px;margin:0 auto 18px}.story .hi{text-align:center}.story .sigimg{margin:0 auto 16px}.story h2{text-align:center}.story .side{grid-template-columns:repeat(3,1fr)}.cta .btn{min-width:0;width:100%;font-size:16px;padding:16px 18px}.bio img{-webkit-box-reflect:none;max-height:320px}.sticky{display:block}}
+
+.leaders{background:var(--black);color:#fff}.leaders .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:14px;margin:0 0 6px}.leaders h2{text-align:center;font-size:clamp(24px,3vw,36px)}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.lead{background:linear-gradient(180deg,#1a1a1a,#0d0d0d);border:1px solid rgba(240,213,122,.35);border-radius:14px;padding:22px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.4);transition:transform .25s,box-shadow .25s}
+.lead:hover{transform:translateY(-5px);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 30px rgba(240,213,122,.15)}
+.lead img{width:150px;height:150px;object-fit:cover;object-position:top;border-radius:50%;margin:0 auto 14px;border:3px solid var(--gold-deep);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.lead h3{font-size:22px;color:#fff}.lead .role{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:4px 0 12px}
+.lead blockquote{margin:0;font-size:15px;line-height:1.55;color:#e6e6e6;font-style:italic}.lead blockquote b{color:#fff;font-style:normal}
+@media (max-width:860px){.lgrid{grid-template-columns:1fr}}
+.sales{background:#fff;text-align:center}.sales .k{font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-size:14px;margin:0 0 6px}.sales h2{font-size:clamp(24px,3vw,36px);max-width:900px;margin:0 auto}
+.sales .arrow{font-size:44px;line-height:.6;color:#111;margin:14px 0 6px}
+.sales .collage{width:100%;height:auto;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.22);transform:rotate(-1deg);transition:transform .4s}.sales .collage:hover{transform:rotate(0) scale(1.01)}
+.seemore{display:block;margin:14px auto 0;background:none;border:2px solid var(--gold-deep);color:var(--gold-dark);font:800 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:12px 20px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}.seemore:hover{background:var(--gold-deep);color:#1b1619}.covercost .seemore{color:var(--gold)}.covercost .seemore:hover{color:#1b1619}.vgrid.more{margin-top:10px}.tgrid.more{margin-top:16px}
+.vsub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold-dark);margin:0 0 12px}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,300px));justify-content:center;gap:22px}
+.pgrid .vid.tall{aspect-ratio:9/16;border-radius:22px;overflow:hidden;position:relative;background:#000;border:1px solid rgba(240,213,122,.45);box-shadow:0 24px 50px rgba(0,0,0,.3)}
+.pgrid .vid.tall img{object-fit:cover}.pgrid .vid.tall video{object-fit:cover}
+.pgrid .who small{display:block;font-weight:500;font-style:italic;color:#555;font-size:14px;margin-top:2px}
+@media (max-width:860px){.pgrid{grid-template-columns:1fr 1fr;gap:12px}.pgrid .vid.tall{border-radius:16px}}
+/* video tiles */
+.phonevid{position:relative;width:100%;max-width:320px;margin:22px auto 0;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.6);border:1px solid rgba(240,213,122,.4)}.phonevid iframe,.phonevid video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.phonevid .snd{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(10,10,10,.8);border:1px solid rgba(240,213,122,.5);color:var(--gold);font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;z-index:2}
+.phonevid.sound .snd{display:none}
+@keyframes wiggle{0%,80%,100%{transform:translateY(0) rotate(0)}84%{transform:translateY(-4px) rotate(-1.2deg) scale(1.03)}88%{transform:translateY(0) rotate(1.2deg) scale(1.03)}92%{transform:translateY(-3px) rotate(-.6deg)}96%{transform:translateY(0) rotate(0)}}
+.btn{animation:wiggle 4.2s ease-in-out infinite}.cta .btn{animation-delay:1s}.order .btn{animation-delay:2s}
+@media (prefers-reduced-motion:reduce){.btn{animation:none}}
+.vcap{text-align:center;color:#ddd;font-size:14px;margin:12px 0 0}.vcap em{color:var(--gold);font-style:normal;font-weight:700}
+.vid{cursor:pointer}.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}.vid.local img{object-fit:contain;background:#000}.vid img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(10,10,10,.75);border:2px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px;padding-left:6px;transition:transform .25s,background .25s}
+.vid:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(212,167,60,.95);color:#111}
+.vid .tagline{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff;font-weight:800;font-size:clamp(15px,1.6vw,20px);text-shadow:0 2px 10px rgba(0,0,0,.8);line-height:1.25}
+.vid .tagline span{display:block;color:var(--gold);font-weight:600;font-size:.85em}
+.hero .vid .tagline span{display:inline;font-size:1em;font-weight:800}
+.vid.on .play,.vid.on .tagline{display:none}
+.tv{background:#fff}.tv .k{text-align:center;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-size:14px;margin:0 0 6px}.tv h2{text-align:center;font-size:clamp(24px,3vw,36px)}
+.tvgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.tvgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}.tgrid .vid{margin:0;box-shadow:0 16px 36px rgba(0,0,0,.2)}
+@media (max-width:860px){.tvgrid{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:1fr 1fr}}
+
+/* ===== floating 3D book: cover lifts, a gold YES! pops out ===== */
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:22px}
+.book3d{perspective:1400px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;min-height:400px;position:relative;padding-top:10px}
+.bk{position:relative;width:210px;aspect-ratio:2/3;transform-style:preserve-3d;animation:bob 6s ease-in-out infinite;cursor:pointer}
+.bk .pages{position:absolute;inset:3px 0 3px 6px;background:repeating-linear-gradient(180deg,transparent 0 22px,rgba(0,0,0,.06) 22px 23px),linear-gradient(90deg,#efece4,#fff 30%,#f1eee6);background-position:0 70px,0 0;transform:translateZ(-16px);border-radius:2px 6px 6px 2px;box-shadow:0 30px 50px rgba(0,0,0,.65)}
+.bk .edge{position:absolute;top:3px;bottom:3px;right:-8px;width:12px;background:repeating-linear-gradient(180deg,#f7f5ef 0 2px,#d9d5ca 2px 3px);transform:rotateY(90deg) translateZ(-4px);transform-origin:left}
+.bk .cv{position:absolute;inset:0;transform-origin:left center;transition:transform .9s cubic-bezier(.5,0,.2,1);border-radius:2px 6px 6px 2px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.55);background:#fff}
+.bk .cv img{width:100%;height:100%;object-fit:cover}
+.bk .cv::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.22),transparent 45%);pointer-events:none}
+.bk.open .cv{transform:rotateY(-42deg)}
+.bk .medal{transition:opacity .35s,transform .35s}.bk.open .medal{opacity:0;transform:scale(.6)}
+.bk .yes{position:absolute;right:4px;top:30%;width:136px;height:136px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff3b0,#f0d57a 45%,#b8860b);color:#1b1619;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:54px;line-height:1;letter-spacing:-.02em;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 6px rgba(255,255,255,.9),0 0 50px rgba(240,213,122,.6);transform:translate(10px,30px) scale(0) rotate(-20deg);opacity:0;transition:transform .55s cubic-bezier(.2,1.5,.3,1),opacity .2s;transform-origin:center;z-index:3}
+.bk .yes small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-top:4px}
+.bk.open .yes{transform:translate(18px,-78px) scale(.92) rotate(8deg);opacity:1}
+.bk .ray{position:absolute;right:30px;top:38%;width:4px;height:26px;border-radius:2px;background:var(--gold);opacity:0;transform-origin:50% 90px;z-index:2}
+.bk.open .ray{animation:ray .9s ease-out .25s}
+@keyframes ray{0%{opacity:0;transform:rotate(var(--a)) translateY(0) scaleY(.3)}30%{opacity:1}100%{opacity:0;transform:rotate(var(--a)) translateY(-70px) scaleY(1.2)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotateY(-22deg) rotateX(5deg)}50%{transform:translateY(-14px) rotateY(-28deg) rotateX(7deg)}}
+.book3d .hint{text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.showcase .phonevid{margin:0 auto;max-width:250px;width:100%}
+@media (max-width:860px){.showcase{grid-template-columns:1fr}.book3d{min-height:360px}.bk{width:180px}}
+/* ===== pop-ups: real proof, bottom left ===== */
+.toast{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;gap:12px;align-items:center;background:#fff;color:#111;border-radius:12px;padding:10px 14px 10px 10px;box-shadow:0 20px 50px rgba(0,0,0,.35);border:1px solid #eee;max-width:340px;transform:translateY(30px);opacity:0;transition:transform .5s cubic-bezier(.2,1.2,.3,1),opacity .4s;pointer-events:none}
+.toast.show{transform:none;opacity:1;pointer-events:auto}
+.toast img{width:54px;height:54px;border-radius:8px;object-fit:cover;flex:none}
+.toast .t{font-size:13px;line-height:1.35}.toast .t b{display:block;font-size:14px}
+.toast .t span{color:var(--gold-dark);font-weight:700}
+.toast .x{position:absolute;top:4px;right:8px;border:0;background:none;font-size:16px;cursor:pointer;color:#999}
+@media (max-width:860px){.toast{bottom:84px;left:10px;right:10px;max-width:none}}
+@media (prefers-reduced-motion:reduce){.bk{animation:none}}
+
+.featured{background:#0d0d0d;padding:22px 0 26px;text-align:center}.featured .k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#bbb;margin:0 0 12px}.featured img{width:100%;max-width:1100px;margin:0 auto;filter:brightness(0) invert(1);opacity:.85}
+.order .trusted{width:100%;margin:12px auto 0}
+.inside{background:linear-gradient(180deg,#120a0a,#0a0a0a);color:#fff;text-align:center}.inside h2{font-size:clamp(26px,3.4vw,42px);color:#fff}
+.igrid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:26px;align-items:center;margin-top:34px}
+.icol{display:grid;gap:18px}.icard{background:#fff;color:#111;border-radius:14px;padding:22px 20px;font-weight:800;font-size:19px;text-align:left;box-shadow:0 20px 40px rgba(0,0,0,.45);position:relative;padding-left:52px;transition:transform .25s}.icard:hover{transform:translateY(-4px)}
+.icard::before{content:"";position:absolute;left:18px;top:24px;width:22px;height:22px;border-radius:50%;background:var(--gold-deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231b1619' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");background-size:14px;background-position:center;background-repeat:no-repeat}
+.ibook{perspective:1400px;position:relative}.goldpad{position:absolute;left:12%;right:12%;top:6%;bottom:8%;border-radius:28px;background:radial-gradient(circle at 30% 20%,#f6e3a1,#d4a73c 55%,#9a7320);box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-4deg)}.ibook img{position:relative}.ibook img{max-height:520px;width:auto;margin:0 auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.7));animation:bookturn 9s ease-in-out infinite}
+@keyframes bookturn{0%,100%{transform:rotateY(-18deg) translateY(0)}50%{transform:rotateY(18deg) translateY(-14px)}}
+.proof .group{width:100%;border-radius:14px;margin:26px auto 14px;box-shadow:0 30px 60px rgba(0,0,0,.25)}.proof .shush{width:100%;max-width:980px;margin:0 auto 10px}
+.bonuses .stackimg{width:100%;max-width:900px;margin:22px auto 6px;filter:drop-shadow(0 24px 40px rgba(0,0,0,.2));animation:floaty 8s ease-in-out infinite}
+.exit{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:60;padding:16px}.exit.on{display:flex}
+.exbox{position:relative;background:#fff;color:#111;border-radius:14px;max-width:560px;width:100%;padding:0 28px 26px;text-align:center;box-shadow:0 40px 90px rgba(0,0,0,.6);animation:popin .35s cubic-bezier(.2,1.3,.3,1)}
+@keyframes popin{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+.exstripe{height:18px;margin:0 -28px 22px;border-radius:14px 14px 0 0;background:repeating-linear-gradient(135deg,#d4a73c 0 16px,#b8860b 16px 32px)}
+.exbox h2{font-size:clamp(28px,5vw,44px);color:var(--gold-dark);letter-spacing:-.01em}.exbox p{font-size:18px;margin:12px 0 10px}.exbox img{max-height:200px;width:auto;margin:0 auto 14px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.3))}.exbox .btn{width:100%}
+.exx{position:absolute;top:26px;right:14px;border:0;background:none;font-size:28px;cursor:pointer;color:#999}.exno{display:block;margin:12px auto 0;border:0;background:none;color:#888;text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
+@media (max-width:860px){.hihead{flex-direction:column;align-items:center;gap:4px}.hihead .sigimg{height:60px}.toast{max-width:300px;left:auto;right:10px;bottom:82px;padding:8px 12px 8px 8px}.toast img{width:44px;height:44px}.toast .t{font-size:12px}.cc .photo{position:static}.igrid{grid-template-columns:1fr}.ibook img{max-height:380px}.icard{font-size:17px}}
+.urgbar{background:#0a0a0a;color:#eee;text-align:center;font-size:13px;padding:9px 14px;border-bottom:1px solid rgba(240,213,122,.35);letter-spacing:.02em}.urgbar b{color:var(--gold)}.urgbar a{color:var(--gold);font-weight:800;text-decoration:underline;text-underline-offset:3px;margin-left:6px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#e4232b;margin:0 7px 1px 0;box-shadow:0 0 0 0 rgba(228,35,43,.6);animation:ping 1.6s ease-out infinite;vertical-align:middle}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(228,35,43,.6)}100%{box-shadow:0 0 0 10px rgba(228,35,43,0)}}
+.order .avail{text-align:center;font-size:12px;font-weight:700;color:#8a1c1c;margin:0 0 8px;letter-spacing:.04em}
+@media (max-width:860px){.urgbar{font-size:12px}.urgbar a{display:block;margin:4px 0 0}}
+.order .seal{position:absolute;top:-52px;right:-18px;width:92px;height:92px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));z-index:3}
+@keyframes sealspin{to{transform:rotate(360deg)}}
+@media (max-width:860px){.order .seal{width:70px;height:70px;top:-40px;right:-6px}}
+[hidden]{display:none!important}
+
+
+/* speaker page bits */
+.form{display:grid;gap:10px}.form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#777;margin:0 0 4px}
+.form input,.form select,.form textarea{width:100%;border:1px solid #ddd;border-radius:6px;padding:11px 12px;font:inherit;font-size:15px;color:#111;background:#fff}
+.form textarea{min-height:84px;resize:vertical}
+.form .sent{display:none;background:#fffdf5;border:1px solid var(--gold-deep);border-radius:8px;padding:12px;font-size:14px;text-align:center}
+.talks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.talk{position:relative;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid rgba(240,213,122,.4);box-shadow:0 30px 60px rgba(0,0,0,.5);background:radial-gradient(90% 60% at 100% 100%,rgba(212,167,60,.28),transparent 65%),linear-gradient(165deg,#05040f,#0e0b22 55%,#161029)}
+.talk .pt{position:absolute;left:18px;right:18px;top:20px;z-index:2;font-weight:800;font-size:clamp(17px,1.5vw,24px);line-height:1.02;text-transform:uppercase;letter-spacing:.02em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.talk .pt em{display:block;font-style:normal;font-size:1.3em;color:var(--gold)}
+.talk img{position:absolute;right:-4%;bottom:0;width:96%;max-height:68%;object-fit:contain;object-position:bottom right;z-index:1;filter:drop-shadow(0 20px 30px rgba(0,0,0,.6))}
+.talk p{position:absolute;left:18px;right:18px;bottom:14px;z-index:2;margin:0;font-size:13px;color:#ddd;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.fmt{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.fmt div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.fmt h3{font-size:20px;margin-bottom:6px}.fmt p{font-size:15px;color:#444;margin:0}.fmt .t{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold-dark);margin:0 0 6px}
+.photos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.18)}
+@media (max-width:860px){.form .row{grid-template-columns:1fr}.talks,.fmt{grid-template-columns:1fr 1fr}.photos{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="urgbar"><span class="dot"></span><b>Now booking 2027.</b> A handful of keynote dates a month. <a href="#book">Check availability &raquo;</a></div>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="ribbon">&#9733; $2.5 Billion Host &middot; Queen of Pitch &#9733;</p>
+    <p class="pre">For conferences, sales kickoffs, corporate events and summits&hellip;</p>
+    <h1>Give Your Audience A Skill, Not A Feeling</h1>
+    <p class="sub">Book The Host Behind $2.5 Billion In Live-TV Sales To Teach Your Room The One Skill That Pays Every Day: <em>How To Pitch And Get A YES.</em></p>
+    <div class="two">
+      <div>
+        <p class="lead">Most keynotes get a standing ovation and are forgotten by lunch.<br><br>Forbes&rsquo; rooms walk out with a 7-second hook, a WHY in one sentence and reps they did before they left the chair.<b>That&rsquo;s a talk that moves the numbers.</b></p>
+        <div class="vid yt" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg" alt="Forbes Riley sizzle reel"><div class="play">&#9654;</div><div class="tagline">Watch the <span>sizzle reel</span>, 90 seconds</div></div>
+      </div>
+      <div class="order rv" id="book">
+        <img class="seal" src="img/book/seal-sm.png" alt="Forbes Riley, Pitch Queen seal">
+        <p class="bs">Keynotes &middot; Workshops &middot; Emcee</p>
+        <p class="avail"><span class="dot"></span>Limited 2027 dates &middot; In person and virtual</p>
+        <h3>Check Availability</h3>
+        <p class="ship">Tell us about the event and the team comes right back to you.</p>
+        <form class="form" id="bookform" novalidate>
+          <div class="row"><div><label for="name">Full name *</label><input id="name" name="name" required></div><div><label for="date">Event date</label><input id="date" name="date" placeholder="e.g. March 2027"></div></div>
+          <div class="row"><div><label for="org">Organization or event *</label><input id="org" name="org" required></div><div><label for="size">Audience size</label><input id="size" name="size" placeholder="e.g. 300"></div></div>
+          <div class="row"><div><label for="fmt">Format</label><select id="fmt" name="fmt"><option>In person</option><option>Virtual</option><option>Hybrid</option><option>Not sure yet</option></select></div><div><label for="budget">Speaker budget</label><select id="budget" name="budget"><option>Prefer to discuss</option><option>Under $10,000</option><option>$10,000 to $25,000</option><option>$25,000 to $50,000</option><option>$50,000+</option></select></div></div>
+          <div class="row"><div><label for="type">Event type</label><select id="type" name="type"><option>Keynote</option><option>Workshop or pitch intensive</option><option>Sales kickoff</option><option>Conference or summit</option><option>Panel</option><option>Emcee or live host</option></select></div><div><label for="email">Email *</label><input id="email" name="email" type="email" required></div></div>
+          <div><label for="msg">Your audience and what you need</label><textarea id="msg" name="msg"></textarea></div>
+          <button class="btn" type="submit">Check Forbes&rsquo; availability &raquo;<small>No obligation. The team replies within one business day.</small></button>
+          <p class="sent" id="sent">Thanks. Your email app opened with the inquiry ready to send. If it didn&rsquo;t, write to <b>assistant@theforbesfactor.com</b>.</p>
+        </form>
+        <span class="lock">&#128274; Private. Never shared.</span>
+        <img class="trusted" src="img/book/trusted-strip.png" alt="Trusted by 107,217+ entrepreneurs">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="wrap"><p class="k">Forbes Riley has been featured on</p><img src="img/book/featured-logos.png" alt="NBC, CBS, ABC, FOX, HSN, ESPN, TLC and more"></div>
+</section>
+
+<section class="crickets">
+  <div class="wrap twocol">
+  <div class="rv">
+    <h2>Ever book a speaker<br><em>and get a nice talk?</em></h2>
+    <p style="margin-top:16px">Big name, good stories, warm applause&hellip; and on Monday nobody on the team does anything differently.</p>
+    <p class="punch">The problem isn&rsquo;t your event.</p>
+    <p class="punch" style="margin-top:0">It&rsquo;s what the audience takes home.</p>
+    <p>Forbes doesn&rsquo;t do inspiration without instruction. Every keynote is built on the system behind <span class="pink">$2.5 billion in live-TV sales</span>, and every room practises it before she leaves the stage.</p>
+    <p>Hooks. Patterns. Objections. The close. Taught by the woman who had to get a YES from strangers, on live television, thousands of times.</p>
+    <div class="cta"><a class="btn" href="#book">Check availability for my event</a><span class="note">In person or virtual, 20 minutes to a full day</span></div>
+  </div>
+  <img class="framed rv" src="img/keynote-stage.jpg" alt="Forbes Riley on stage">
+  </div>
+</section>
+
+<section class="band">
+  <img class="bandseal" src="img/book/seal-sm.png" alt="">
+  <h2>The most profitable skill on the planet, taught live</h2>
+  <blockquote>&ldquo;She radiates and communicates in a way I&rsquo;ve never seen before. A true blessing to behold.&rdquo;</blockquote>
+  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <cite>Les Brown</cite>
+</section>
+
+<section class="section leaders">
+  <div class="wrap">
+    <p class="k rv">What people who&rsquo;ve shared a stage with her say</p>
+    <h2 class="rv">About Forbes Riley</h2>
+    <div class="lgrid">
+      <div class="lead rv"><img src="img/cut/les-forbes.png" alt="Les Brown with Forbes Riley"><h3>Les Brown</h3><p class="role">Legendary motivational speaker</p><blockquote>&ldquo;She radiates and communicates in a way I&rsquo;ve never seen before. <b>A true blessing to behold.</b>&rdquo;</blockquote></div>
+      <div class="lead rv"><img src="img/book/studio-25b.jpg" alt="Forbes Riley on set"><h3>Joe Theismann</h3><p class="role">NFL Hall of Fame</p><blockquote>&ldquo;Forbes brings energy and professionalism to her work. <b>In all my years in television, she is the best I have been around.</b>&rdquo;</blockquote></div>
+      <div class="lead rv"><img src="img/cut/florence-forbes.png" alt="Florence Henderson with Forbes Riley"><h3>Florence Henderson</h3><p class="role">Television icon</p><blockquote>&ldquo;Funny, smart, gutsy and talented. <b>If you want the job done right, go see Forbes.</b>&rdquo;</blockquote></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tv">
+  <div class="wrap">
+    <p class="k rv">Watch her on stage</p>
+    <h2 class="rv">The pitch, taught on live TV</h2>
+    <div class="tvgrid rv">
+      <div class="vid yt" data-yt="t9WmijohgwI"><img src="https://i.ytimg.com/vi/t9WmijohgwI/hqdefault.jpg" alt="KTLA 5" loading="lazy"><div class="play">&#9654;</div><div class="tagline">KTLA 5<span>How to pitch like a pro</span></div></div>
+      <div class="vid yt" data-yt="MN1NUCTi7Eg"><img src="https://i.ytimg.com/vi/MN1NUCTi7Eg/hqdefault.jpg" alt="Body by Jake and Forbes Riley" loading="lazy"><div class="play">&#9654;</div><div class="tagline">With Body by Jake<span>The $500 million FitTV story</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section inside">
+  <div class="wrap">
+    <h2 class="rv">Signature keynotes</h2>
+    <p class="lede rv" style="color:#ddd;text-align:center;max-width:760px;margin:10px auto 0">Each one is 20 to 60 minutes, customised to your audience, and ends with the room doing the thing, not just hearing about it.</p>
+    <div class="talks">
+      <div class="talk rv"><div class="pt">The Power of<em>YES</em></div><img src="img/cut/arms-up.png" alt=""><p>Why every result in your life is downstream of one pitch, and how to get the yes you&rsquo;ve been missing.</p></div>
+      <div class="talk rv"><div class="pt">Pitch<em>Secrets</em></div><img src="img/book/stool-book.png" alt=""><p>The 7-second hook and the three pitch patterns behind $2.5 billion in sales, taught live.</p></div>
+      <div class="talk rv"><div class="pt">The Human<em>Advantage</em></div><img src="img/cut/mic.png" alt=""><p>In a world of AI and scripts, the person who can connect in a sentence wins. Here&rsquo;s how.</p></div>
+      <div class="talk rv"><div class="pt">Reinvent<em>Yourself</em></div><img src="img/book/gold-jacket.png" alt=""><p>Broadway, live TV, a $500 million brand from the back of a car. The reinvention playbook, with reps.</p></div>
+    </div>
+    <div class="cta rv"><a class="btn" href="#book">Bring one of these to my stage<small>Keynote, half day or full day</small></a></div>
+  </div>
+</section>
+
+<section class="section covercost">
+  <div class="wrap">
+    <div class="cc">
+      <div class="photo rv"><img src="img/book/red-director-2.png" alt="Forbes Riley in red in her director's chair"></div>
+      <div class="rv">
+        <h2>What your room walks out with</h2>
+        <h3>Not a feeling. A skill they use on Monday.</h3>
+        <p class="lede">Forbes hosted on the biggest live shopping networks in the world, where you get seconds to earn a yes and no second take. She turned that into a teachable system, and your audience learns it on your stage.</p>
+        <h3>By the end of the keynote, every person has:</h3>
+        <ul class="list">
+          <li><b>A 7-second hook</b> that answers &ldquo;What do you do?&rdquo; with &ldquo;Tell me more.&rdquo;</li>
+          <li><b>Their WHY in one sentence</b>, said out loud to a stranger in the room.</li>
+          <li><b>Confidence as posture</b>, the physical reset she uses before every live segment.</li>
+          <li><b>A way to sell without sounding salesy</b>, built on the patterns that sold $2.5 billion.</li>
+          <li><b>Reps</b>. They pitch, get corrected and pitch again before they leave the chair.</li>
+        </ul>
+        <div class="cta"><a class="btn" href="#book">Check availability &raquo;</a><span class="note">Keynote, workshop, sales kickoff or emcee</span></div>
+      </div>
+    </div>
+    <div class="narrow after rv">
+      <h3>Formats</h3>
+      <div class="fmt">
+        <div><p class="t">20 to 60 min</p><h3>Keynote</h3><p>The Power of YES, Pitch Secrets, The Human Advantage or Reinvent Yourself, customised to your audience.</p></div>
+        <div><p class="t">Half or full day</p><h3>Pitch Intensive</h3><p>Hands-on workshop. Every attendee leaves with a finished pitch they&rsquo;ve delivered and had coached.</p></div>
+        <div><p class="t">Live</p><h3>Emcee &amp; Host</h3><p>Thirty years of live television. She keeps the energy up, the schedule tight and the room awake.</p></div>
+        <div><p class="t">Anywhere</p><h3>Virtual</h3><p>From her studio with broadcast-quality sound and picture, interactive from the first minute.</p></div>
+      </div>
+      <div class="cta"><a class="btn" href="#book">Check availability &raquo;</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section proof">
+  <div class="wrap">
+    <p class="k rv">On stage</p>
+    <h2 class="rv">Rooms that left with a pitch</h2>
+    <img class="group rv" src="img/book/group-forbesd.jpg" alt="A room full of attendees in I Forbes'd It shirts">
+    <div class="photos rv">
+      <img src="img/event-speaking-hand.jpg" alt="Forbes Riley speaking"><img src="img/event-audience.jpg" alt="Audience at a Forbes Riley event"><img src="img/event-ffl-stage.jpg" alt="Forbes Riley on stage"><img src="img/event-garden-talk.jpg" alt="Forbes Riley giving a talk">
+      <img src="img/event-ffl-crowd.jpg" alt="Crowd at a Forbes Riley event"><img src="img/event-hug.jpg" alt="Forbes Riley with an attendee"><img src="img/event-garden-crowd.jpg" alt="Garden event crowd"><img src="img/event-ffl-group.jpg" alt="Group photo with Forbes Riley">
+    </div>
+  </div>
+</section>
+
+<section class="section story">
+  <div class="wrap">
+    <div class="hihead rv"><p class="hi">Hi, I&rsquo;m</p><img class="sigimg" src="img/logo-signature-black.png" alt="Forbes Riley"></div>
+    <div class="grid">
+      <div class="rv">
+        <div class="photo"><img src="img/book/chair-hat.jpg" alt="Forbes Riley"></div>
+        <h2>I&rsquo;ve spent my career getting a YES from strangers, live, with the clock running.</h2>
+        <p>Broadway first. Then thirty years hosting on the biggest live shopping networks in the world, where I sold more than $2.5 billion of products, live, with no second take.</p>
+        <p>Live TV teaches you one thing fast: you have seconds to earn attention, and no second take. So I broke the pitch down into patterns anyone can learn, and I started teaching it, to more than 80,000 people in my masterclass.</p>
+        <p class="punch">I don&rsquo;t want your audience to feel inspired. I want them to leave with something they can do.</p>
+        <p>That&rsquo;s the promise of every keynote: a skill, practised in the room, that pays the next time they open their mouth.</p>
+        <div class="cta"><a class="btn" href="#book">Check availability &raquo;</a></div>
+      </div>
+      <div class="side rv">
+        <img src="img/book/forbesd-wall.jpg" alt="Forbes Riley with the audience wall"><img src="img/book/studio-25b.jpg" alt="Forbes Riley on set"><img src="img/book/desk-two-books.jpg" alt="Forbes Riley at the desk"><img src="img/book/forbesd-tee-book.jpg" alt="Forbes Riley in the I Forbes'd It tee">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section next">
+  <div class="wrap">
+    <p class="k rv">Forbes has already changed rooms for thousands of business owners, speakers and entrepreneurs.</p>
+    <h2 class="rv">The question is, is <span class="u">YOUR</span> room next?</h2>
+    <p class="vsub rv">Attendees, in their own words</p>
+    <div class="tgrid rv">
+      <div><div class="vid yt" data-yt="NN47u2VvsWI"><img src="https://i.ytimg.com/vi/NN47u2VvsWI/hqdefault.jpg" alt="Tracey Callahan" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Tracey Callahan</p></div>
+      <div><div class="vid yt" data-yt="VGXqBuEDGtE"><img src="https://i.ytimg.com/vi/VGXqBuEDGtE/hqdefault.jpg" alt="Tami Forster" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Tami Forster</p></div>
+      <div><div class="vid yt" data-yt="BOHLyUQxfQ4"><img src="https://i.ytimg.com/vi/BOHLyUQxfQ4/hqdefault.jpg" alt="Sandy Austin" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Sandy Austin</p></div>
+      <div><div class="vid yt" data-yt="0KguSY402w0"><img src="https://i.ytimg.com/vi/0KguSY402w0/hqdefault.jpg" alt="Mahmood Omaid" loading="lazy"><div class="play">&#9654;</div></div><p class="who">Mahmood Omaid</p></div>
+    </div>
+    <div class="cta rv"><a class="btn" href="#book">Check availability for my event &raquo;</a></div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrap narrow rv">
+    <h2>Questions bookers ask</h2>
+    <details><summary>How long is a keynote?</summary><p>Twenty to sixty minutes, your call. Workshops run a half or full day. Every talk is customised to your audience after a call with Forbes.</p></details>
+    <details><summary>Does she travel?</summary><p>Yes, worldwide. Travel is arranged with the team after the date is confirmed. Virtual keynotes are delivered from her broadcast studio.</p></details>
+    <details><summary>What does she need on site?</summary><p>A wireless lavalier or headset mic, a confidence monitor if there&rsquo;s a screen, and ten minutes with the AV team before doors. She brings the rest.</p></details>
+    <details><summary>Can she do a book signing or meet and greet?</summary><p>Yes. Copies of <em>Pitch Secrets A to Z</em> can be arranged for your attendees, signed on the day.</p></details>
+    <details><summary>What are the fees?</summary><p>Fees depend on format, length and location. Pick a range on the form and the team will come back with options within one business day.</p></details>
+  </div>
+</section>
+
+<section class="section bio">
+  <div class="wrap grid rv">
+    <div class="biopic"><img src="img/book/black-chin.png" alt="Dr. Forbes Riley"><img class="bioseal" src="img/book/seal-sm.png" alt=""></div>
+    <div>
+      <h3>About Dr. Forbes Riley</h3>
+      <p>Dr. Forbes Riley is a global expert in communication, sales and performance. Known as the Queen of Pitch, she has generated $2.5 billion in sales, reached more than 80 countries on live TV and hosted two national talk shows.</p>
+      <p>A USA TODAY bestselling author, TV host and award-winning coach, she now teaches entrepreneurs, sales teams and speakers to get to YES.</p>
+      <div class="cta" style="text-align:left"><a class="btn" href="#book">Check availability &raquo;</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-signature-gold.png" alt="Forbes Riley">
+    <div>Owned and operated by Forbes Riley Media. &copy; 2026 Forbes Riley. All rights reserved. &middot; <a href="index.html">forbesriley.com</a> &middot; <a href="mailto:assistant@theforbesfactor.com">assistant@theforbesfactor.com</a> &middot; <a href="book.html">The book</a></div>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn" href="#book">Check availability</a></div>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}else{
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4000);
+  try{ document.querySelectorAll('.yt').forEach(function(el){ el.addEventListener('click',function(){ var id=el.getAttribute('data-yt'); if(!id) return; var f=document.createElement('iframe'); f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0'; f.allow='autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen=true; f.title=el.querySelector('img').alt; el.innerHTML=''; el.appendChild(f); el.classList.add('on') }) }) }catch(e){}
+  try{ var f=document.getElementById('bookform'); f.addEventListener('submit',function(e){ e.preventDefault(); if(!f.checkValidity()){ f.reportValidity(); return } var g=function(id){return (f.elements[id].value||'').trim()};
+    var body=['Name: '+g('name'),'Event date: '+g('date'),'Organization / event: '+g('org'),'Audience size: '+g('size'),'Format: '+g('fmt'),'Budget: '+g('budget'),'Event type: '+g('type'),'Email: '+g('email'),'','About the audience:',g('msg')].join('\n');
+    document.getElementById('sent').style.display='block';
+    location.href='mailto:assistant@theforbesfactor.com?subject='+encodeURIComponent('Speaking inquiry: '+g('org'))+'&body='+encodeURIComponent(body) }) }catch(e){}
+})();
+</script>
+</body>
+</html>

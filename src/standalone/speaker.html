@@ -101,15 +101,53 @@ footer{padding:36px 0;text-align:center;color:#777;font-size:13px}
 footer a{color:#777}
 @media(max-width:900px){.top nav{display:none}.top .btn{font-size:13px;padding:10px 14px;white-space:nowrap}.top img{height:40px}.split,.band .split{grid-template-columns:1fr}.split.rev>:first-child{order:0}.band .pic{min-height:360px}.stats{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:1fr}.tp{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.fmt{grid-template-columns:1fr 1fr}.form{grid-template-columns:1fr}}
 @media(max-width:560px){.tp,.fmt{grid-template-columns:1fr}}
+
+/* ===== cutouts doing work ===== */
+.hero2{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#f7f3ec);padding:40px 0 0}
+.hero2 .wrap{position:relative;min-height:clamp(520px,60vw,760px)}
+.hero2 .big{position:absolute;left:0;right:0;top:34%;transform:translateY(-50%);font-family:var(--serif);font-weight:700;font-size:clamp(70px,15vw,220px);line-height:.9;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px rgba(27,22,25,.22);text-align:center;pointer-events:none;user-select:none;white-space:nowrap}
+.hero2 .big b{display:block;color:rgba(27,22,25,.06);-webkit-text-stroke:0}
+.hero2 .arch{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:clamp(300px,36vw,520px);height:clamp(420px,54vw,760px);border-radius:300px 300px 0 0;background:linear-gradient(180deg,var(--gold-band),var(--gold) 60%,#b8862b)}
+.hero2 .forbes{position:absolute;left:50%;bottom:-2px;transform:translateX(-52%);height:clamp(440px,58vw,800px);width:auto;z-index:2;filter:drop-shadow(-20px 20px 30px rgba(0,0,0,.25))}
+.hero2 .tag{position:absolute;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;box-shadow:0 10px 24px rgba(0,0,0,.08);z-index:3;white-space:nowrap}
+.hero2 .tag b{color:var(--gold-dark)}
+.hero2 .t1{left:6%;top:30%}.hero2 .t2{right:6%;top:26%}.hero2 .t3{left:10%;top:58%}.hero2 .t4{right:8%;top:62%}
+.hero2 .lead{position:absolute;left:0;right:0;top:0;text-align:center;z-index:3}
+.hero2 .lead .pill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--ink);padding:6px 14px;border-radius:999px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.hero2 .lead h1{color:var(--ink);font-size:clamp(28px,3.4vw,44px);font-weight:600}
+.hero2 .cta{position:absolute;left:0;right:0;bottom:28px;text-align:center;z-index:3}
+.hero2 .cta .btn{box-shadow:0 14px 30px rgba(0,0,0,.18)}
+/* black band: she breaks out of the top */
+.band{overflow:visible;margin-top:120px;position:relative}
+.band .split{grid-template-columns:.9fr 1.1fr}
+.band .pic{background:none;min-height:420px;position:relative}
+.band .pic img{position:absolute;left:8%;bottom:0;height:calc(100% + 110px);width:auto;max-width:none;filter:drop-shadow(0 20px 30px rgba(0,0,0,.5))}
+.band .txt h3{color:#fff;font-size:clamp(24px,2.6vw,32px);margin-bottom:14px}
+/* topics header with her leaning in */
+.topics .wrap{position:relative}
+.topics .lean{position:absolute;right:-20px;top:-120px;height:260px;width:auto;z-index:2;filter:drop-shadow(0 16px 24px rgba(0,0,0,.25))}
+.topics{overflow:visible;padding-top:70px}
+/* form section: peeking in */
+.book{position:relative;overflow:hidden}
+.book .peek{position:absolute;left:-40px;bottom:0;height:min(520px,70%);width:auto;opacity:.95;filter:drop-shadow(0 0 40px rgba(240,213,122,.25));pointer-events:none}
+.book .wrap{position:relative;z-index:1}
+@media(max-width:900px){.hero2 .wrap{min-height:560px}.hero2 .big{font-size:18vw;top:30%}.hero2 .forbes{height:420px}.hero2 .tag{display:none}.band{margin-top:80px}.band .pic{min-height:300px}.band .pic img{height:calc(100% + 70px);left:50%;transform:translateX(-50%)}.topics .lean{display:none}.book .peek{display:none}}
 </style>
 </head>
 <body>
 
 <div class="wrap top"><a href="https://site.forbesrileyhq.com/"><img src="img/logo-signature-black.png" alt="Forbes Riley"></a><nav><a href="#about">About</a><a href="#topics">Keynotes</a><a href="#stages">Stages</a><a href="#formats">Formats</a><a href="#book">Contact</a></nav><a class="btn" href="#book">How Forbes can help you &rsaquo;</a></div>
 
-<div class="banner"><div class="wrap">
-  <div><span class="pill">Keynotes &middot; Workshops &middot; Emcee</span><h1>Speaking<br>Engagements</h1><p class="sub">Dr. Forbes Riley, the Queen of Pitch. The host behind $2.5 billion in live-TV sales, on your stage.</p></div>
-  <a class="btn line" href="#book">Check availability &rsaquo;</a>
+<div class="hero2"><div class="wrap">
+  <div class="lead"><span class="pill">Keynotes &middot; Workshops &middot; Emcee</span><h1>Book the host behind $2.5 billion in live-TV sales</h1></div>
+  <div class="big">QUEEN<b>of PITCH</b></div>
+  <div class="arch"></div>
+  <span class="tag t1"><b>$2.5B</b> sold live, no second take</span>
+  <span class="tag t2"><b>USA TODAY</b> bestselling author</span>
+  <span class="tag t3"><b>80+</b> countries on live TV</span>
+  <span class="tag t4"><b>Two</b> national talk shows</span>
+  <img class="forbes" src="img/px/cut-f25.png" alt="Dr. Forbes Riley">
+  <div class="cta"><a class="btn" href="#book">Check availability &rsaquo;</a></div>
 </div></div>
 
 <section class="ignite"><div class="wrap">
@@ -129,8 +167,9 @@ footer a{color:#777}
 </div></section>
 
 <div class="band"><div class="split">
-  <div class="pic" role="img" aria-label="Dr. Forbes Riley"></div>
+  <div class="pic"><img src="img/px/cut-f15.png" alt="Dr. Forbes Riley"></div>
   <div class="txt">
+    <h3>She doesn't just teach it. She lived it.</h3>
     <p>Dr. Forbes Riley is not only the Queen of Pitch, she is one of the most successful live television hosts of all time.</p>
     <p>A pioneer of the live shopping and infomercial industry, she launched Fit-TV with Jake Steinfeld, hosted two national talk shows and ESPN's X-Games, and was inducted into the National Fitness Hall of Fame in 2010.</p>
     <p>Today she is an internationally acclaimed, in-demand speaker and a USA TODAY bestselling author, addressing audiences from Fortune 100 companies to entrepreneurial gatherings around the world.</p>
@@ -166,6 +205,7 @@ footer a{color:#777}
 </div></section>
 
 <section class="topics" id="topics"><div class="wrap">
+  <img class="lean" src="img/px/cut-f33.png" alt="">
   <h2>Forbes' most requested keynotes</h2>
   <div class="tp">
     <article><img src="img/keynote-stage.jpg" alt=""><div class="b"><h3>The Power of YES</h3><p>Why every result in your life is downstream of one pitch, and how to get the yes you've been missing.</p></div></article>
@@ -200,7 +240,7 @@ footer a{color:#777}
   </div>
 </div></section>
 
-<section class="book" id="book"><div class="wrap">
+<section class="book" id="book"><img class="peek" src="img/px/cut-f05.png" alt=""><div class="wrap">
   <h2>Check Forbes' availability</h2>
   <p class="lede">Tell us about the event and the team will come right back to you with a fit, a date and a plan. Prefer email? assistant@theforbesfactor.com</p>
   <form class="form" id="bookform">

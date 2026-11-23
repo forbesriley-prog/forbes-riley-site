@@ -6,7 +6,7 @@
 <title>Forbes Riley Brand Kit</title>
 <meta name="description" content="Logos, colours, type, photo rules, voice and the facts we use. One page for anyone who makes anything with the Forbes Riley name on it.">
 <meta name="robots" content="noindex">
-<link rel="icon" type="image/png" href="img/favicon.png?v=424666">
+<link rel="icon" type="image/png" href="img/favicon.png?v=425164">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Allura&family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap">
 <style>
@@ -84,6 +84,29 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--ink);font-weight:700;padding:10px 16px;border-radius:var(--r);opacity:0;transition:.25s;pointer-events:none;z-index:9}
 .toast.on{opacity:1;transform:translateX(-50%)}
 html,body{overflow-x:hidden}@media(max-width:820px){.hero .wrap,.type{grid-template-columns:1fr}.hero .sig{max-width:360px}.scale div{flex-wrap:wrap;gap:4px 16px}.scale span:first-child{min-width:100%}}
+.ladder{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:28px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;position:relative;min-width:0}
+.step .n{position:absolute;top:-12px;left:14px;background:linear-gradient(180deg,var(--gold-band),var(--gold-deep));color:var(--ink);font-weight:800;font-size:12px;padding:3px 10px;border-radius:999px}
+.step h3{margin:6px 0 2px}.step .price{color:var(--gold);font-weight:800;font-size:22px}.step p{font-size:14px;color:var(--muted);margin:6px 0 8px}.step a{font-size:13px;font-weight:600;word-break:break-all}
+.vocab{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
+.vocab div{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0}.vocab b{color:var(--gold);display:block;margin-bottom:4px}.vocab span{font-size:14px;color:var(--muted)}
+.beats{counter-reset:b;margin:28px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.beats li{counter-increment:b;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px 14px 56px;position:relative}
+.beats li:before{content:counter(b);position:absolute;left:16px;top:12px;font-weight:800;font-size:22px;color:var(--gold)}
+.friends{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:24px}
+.friends figure{margin:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel)}
+.friends img{width:100%;aspect-ratio:4/3;object-fit:cover}.friends figcaption{font-size:12px;color:var(--muted);padding:8px 10px}
+.tbank{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:28px}
+.tbank blockquote{margin:0;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold-deep);border-radius:var(--r);padding:16px 18px;font-size:15px}
+.tbank blockquote footer{margin-top:8px;font-size:13px;color:var(--muted)}.tbank footer b{color:var(--gold)}
+.recipe{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:28px}
+.recipe ol{margin:8px 0 0;padding-left:20px;font-size:14px;color:#ddd}.recipe ol li{margin-bottom:4px}
+.audit{display:grid;gap:18px;grid-template-columns:1fr 1fr;margin-top:28px}
+.audit .card h3{margin-bottom:10px}
+.vids{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:28px}
+.vids a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--text)}
+.vids img{width:100%;aspect-ratio:16/9;object-fit:cover}.vids .t{padding:10px 12px;font-size:14px;font-weight:600}.vids .t small{display:block;color:var(--muted);font-weight:400;font-size:12px}
+@media(max-width:820px){.audit{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -93,13 +116,13 @@ html,body{overflow-x:hidden}@media(max-width:820px){.hero .wrap,.type{grid-templ
     <p class="k">Brand kit &middot; 2026</p>
     <h1>Forbes Riley<br>Brand Kit</h1>
     <p class="lede">Everything you need to make something with the Forbes Riley name on it and have it look like it came from us. Logos, colours, type, photo rules, voice and the facts we use.</p>
-    <div class="btns"><a class="btn" href="downloads/forbes-riley-brand-kit.zip">Download the logo pack</a><a class="btn ghost" href="#voice">Bios and taglines</a></div>
+    <div class="btns"><a class="btn" href="downloads/forbes-riley-brand-kit.zip">Download the logo pack</a><a class="btn ghost" href="downloads/Forbes-Riley-Speaker-Sheet.pdf">Speaker sheet PDF</a><a class="btn ghost" href="#voice">Bios and taglines</a></div>
   </div>
-  <img class="sig" src="img/logo-signature-gold.png?v=424666" alt="Forbes Riley signature in gold" width="1404" height="589">
+  <img class="sig" src="img/logo-signature-gold.png?v=425164" alt="Forbes Riley signature in gold" width="1404" height="589">
 </div></section>
 
 <nav class="nav"><div class="wrap">
-  <a href="#logos">Logos</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#photo">Photos</a><a href="#voice">Voice &amp; bios</a><a href="#facts">Facts</a><a href="#rules">Rules</a><a href="#links">Links &amp; handles</a>
+  <a href="#logos">Logos</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#photo">Photos</a><a href="#voice">Voice &amp; bios</a><a href="#vocab">Frameworks</a><a href="#story">Story</a><a href="#offers">Offers</a><a href="#proof">Proof</a><a href="#facts">Facts</a><a href="#recipes">Page recipes</a><a href="#media">Video &amp; files</a><a href="#rules">Rules</a><a href="#links">Links &amp; contacts</a>
 </div></nav>
 
 <section id="logos"><div class="wrap">
@@ -107,14 +130,14 @@ html,body{overflow-x:hidden}@media(max-width:820px){.hero .wrap,.type{grid-templ
   <h2>The signature is the logo</h2>
   <p class="lede">Gold on black is the main look. Black on white for print and documents, white on dark photos. The monogram is for small spaces: favicons, profile pictures, watermarks, stamps.</p>
   <div class="grid">
-    <div class="card"><div class="stage"><img src="img/logo-signature-gold.png?v=424666" alt="Signature, gold"></div><h3>Signature &middot; gold</h3><p class="meta">Main logo. Dark backgrounds only. PNG, transparent, 1404 &times; 589.</p><a class="dl" href="img/logo-signature-gold.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage light"><img src="img/logo-signature-black.png?v=424666" alt="Signature, black"></div><h3>Signature &middot; black</h3><p class="meta">Print, letterhead, one-sheets, anything on white or cream.</p><a class="dl" href="img/logo-signature-black.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage"><img src="img/white-signature.png?v=424666" alt="Signature, white"></div><h3>Signature &middot; white</h3><p class="meta">Over photos and video. Large file, 2240 &times; 1014.</p><a class="dl" href="img/white-signature.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage"><img src="img/logo-monogram-gold.png?v=424666" alt="FR monogram, gold"></div><h3>Monogram &middot; gold</h3><p class="meta">Profile pictures, favicons, watermarks, lower thirds.</p><a class="dl" href="img/logo-monogram-gold.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage light"><img src="img/logo-monogram-black.png?v=424666" alt="FR monogram, black"></div><h3>Monogram &middot; black</h3><p class="meta">Same uses, on white.</p><a class="dl" href="img/logo-monogram-black.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage"><img src="img/cut/seal.png?v=424666" alt="Forbes Riley Pitch Queen gold seal"></div><h3>Pitch Queen seal</h3><p class="meta">A sticker, not a logo. Corners of sales pages, certificates, stamps of approval. Never spins, never covers text.</p><a class="dl" href="img/cut/seal.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage"><img src="img/book/medal-sm.png?v=424666" alt="USA TODAY bestseller medal"></div><h3>USA TODAY bestseller medal</h3><p class="meta">Only next to Pitch Secrets A to Z. Keep it small.</p><a class="dl" href="img/book/medal-sm.png?v=424666" download>Download PNG</a></div>
-    <div class="card"><div class="stage light"><img src="img/logo-forbes-factor.jpg?v=424666" alt="Forbes Factor logo"></div><h3>Forbes Factor</h3><p class="meta">The coaching and events brand. Use with the signature, not instead of it.</p><a class="dl" href="img/logo-forbes-factor.jpg?v=424666" download>Download JPG</a></div>
+    <div class="card"><div class="stage"><img src="img/logo-signature-gold.png?v=425164" alt="Signature, gold"></div><h3>Signature &middot; gold</h3><p class="meta">Main logo. Dark backgrounds only. PNG, transparent, 1404 &times; 589.</p><a class="dl" href="img/logo-signature-gold.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage light"><img src="img/logo-signature-black.png?v=425164" alt="Signature, black"></div><h3>Signature &middot; black</h3><p class="meta">Print, letterhead, one-sheets, anything on white or cream.</p><a class="dl" href="img/logo-signature-black.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage"><img src="img/white-signature.png?v=425164" alt="Signature, white"></div><h3>Signature &middot; white</h3><p class="meta">Over photos and video. Large file, 2240 &times; 1014.</p><a class="dl" href="img/white-signature.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage"><img src="img/logo-monogram-gold.png?v=425164" alt="FR monogram, gold"></div><h3>Monogram &middot; gold</h3><p class="meta">Profile pictures, favicons, watermarks, lower thirds.</p><a class="dl" href="img/logo-monogram-gold.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage light"><img src="img/logo-monogram-black.png?v=425164" alt="FR monogram, black"></div><h3>Monogram &middot; black</h3><p class="meta">Same uses, on white.</p><a class="dl" href="img/logo-monogram-black.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage"><img src="img/cut/seal.png?v=425164" alt="Forbes Riley Pitch Queen gold seal"></div><h3>Pitch Queen seal</h3><p class="meta">A sticker, not a logo. Corners of sales pages, certificates, stamps of approval. Never spins, never covers text.</p><a class="dl" href="img/cut/seal.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage"><img src="img/book/medal-sm.png?v=425164" alt="USA TODAY bestseller medal"></div><h3>USA TODAY bestseller medal</h3><p class="meta">Only next to Pitch Secrets A to Z. Keep it small.</p><a class="dl" href="img/book/medal-sm.png?v=425164" download>Download PNG</a></div>
+    <div class="card"><div class="stage light"><img src="img/logo-forbes-factor.jpg?v=425164" alt="Forbes Factor logo"></div><h3>Forbes Factor</h3><p class="meta">The coaching and events brand. Use with the signature, not instead of it.</p><a class="dl" href="img/logo-forbes-factor.jpg?v=425164" download>Download JPG</a></div>
   </div>
   <div class="rule">
     <div class="card"><b>Clear space.</b> Leave the height of the capital R free on every side. Nothing touches the signature.</div>
@@ -178,12 +201,12 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
   <h2>Cut her out. Put her on the stage.</h2>
   <p class="lede">Forbes is always a cutout on black with a gold glow behind her, never a framed studio photo in a box. Red, gold, white and black outfits work. Big expressions, arms up, pointing, mid-laugh. Crowd and stage shots for proof.</p>
   <div class="photos">
-    <figure><img src="img/cut/red-chair.png?v=424666" alt="Forbes in red" loading="lazy"><figcaption>Red: the favourite</figcaption></figure>
-    <figure><img src="img/cut/az-arms-gold.png?v=424666" alt="Forbes in gold, arms out" loading="lazy"><figcaption>Gold, arms out</figcaption></figure>
-    <figure><img src="img/cut/black-crossed.png?v=424666" alt="Forbes in black, arms crossed" loading="lazy"><figcaption>Black, arms crossed</figcaption></figure>
-    <figure><img src="img/cut/mic.png?v=424666" alt="Forbes with a microphone" loading="lazy"><figcaption>On the mic</figcaption></figure>
-    <figure><img src="img/cut/gold-crossed.png?v=424666" alt="Forbes in gold, arms crossed" loading="lazy"><figcaption>Gold, arms crossed</figcaption></figure>
-    <figure><img src="img/cut/book-hold.png?v=424666" alt="Forbes holding Pitch Secrets A to Z" loading="lazy"><figcaption>With the book</figcaption></figure>
+    <figure><img src="img/cut/red-chair.png?v=425164" alt="Forbes in red" loading="lazy"><figcaption>Red: the favourite</figcaption></figure>
+    <figure><img src="img/cut/az-arms-gold.png?v=425164" alt="Forbes in gold, arms out" loading="lazy"><figcaption>Gold, arms out</figcaption></figure>
+    <figure><img src="img/cut/black-crossed.png?v=425164" alt="Forbes in black, arms crossed" loading="lazy"><figcaption>Black, arms crossed</figcaption></figure>
+    <figure><img src="img/cut/mic.png?v=425164" alt="Forbes with a microphone" loading="lazy"><figcaption>On the mic</figcaption></figure>
+    <figure><img src="img/cut/gold-crossed.png?v=425164" alt="Forbes in gold, arms crossed" loading="lazy"><figcaption>Gold, arms crossed</figcaption></figure>
+    <figure><img src="img/cut/book-hold.png?v=425164" alt="Forbes holding Pitch Secrets A to Z" loading="lazy"><figcaption>With the book</figcaption></figure>
   </div>
   <div class="rule">
     <div class="card"><ul class="do"><li>Cutout on black, soft gold radial glow behind her</li><li>Red, gold, white or black outfits</li><li>Stage, crowd and readers-holding-the-book shots as proof</li><li>Real event photos, real readers, real names</li></ul></div>
@@ -192,13 +215,14 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
 </div></section>
 
 <section id="voice"><div class="wrap">
-  <p class="k">05 &middot; Voice, taglines and bios</p>
+  <p class="k">05 &middot; Voice, names and bios</p>
   <h2>Confident, warm, specific. Sell the result, not the feeling.</h2>
   <p class="quote">The Queen of Pitch</p>
   <div class="rule">
-    <div class="card"><b>Taglines we use.</b><br>The Queen of Pitch &middot; The $2.5 Billion Host &middot; Turn every pitch into a YES &middot; Give your audience a skill, not a feeling &middot; Pitch Secrets A to Z</div>
-    <div class="card"><b>How we write.</b><br>Short sentences. Numbers, not adjectives. "You" more than "we". Say what the room walks out with. One ask per page. Urgency is real (dates, seats), never fake.</div>
-    <div class="card"><b>What we do not say.</b><br>No "TEDx". No SpinGym in a speaking bio. No "thirty years" at the top of anything for creators. No made-up names on testimonials.</div>
+    <div class="card"><b>Her name and title.</b><br>"Dr. Forbes Riley" the first time on a page, "Forbes" after that. Her title is <b>the Queen of Pitch</b>. Retire "Queen of Infomercials" and the stacked job titles ("Celebrity TV Host, Motivational Speaker, High Performance Success &amp; Results Coach"). One title, said once.</div>
+    <div class="card"><b>Taglines we use.</b><br>The Queen of Pitch &middot; The $2.5 Billion Host &middot; Turn every pitch into a YES &middot; Give your audience a skill, not a feeling &middot; Pitch better, earn more &middot; "Tell me more."</div>
+    <div class="card"><b>How we write.</b><br>Short sentences. Numbers, not adjectives. "You" more than "we". Say what they walk out with. One ask per page. Urgency is real (a date, a seat count, a print run), never a fake countdown that resets.</div>
+    <div class="card"><b>What we do not say.</b><br>No "TEDx". No SpinGym in a speaking bio. No "thirty years" at the top of anything for creators. No made-up names on testimonials. No "Queen of Infomercials". No asterisks on the $2.5 billion.</div>
   </div>
   <div class="bios">
     <div class="card"><p class="k">One line</p><p data-copy>Dr. Forbes Riley, the Queen of Pitch: the host behind $2.5 billion in live-TV sales, USA TODAY bestselling author of Pitch Secrets A to Z, and the keynote speaker who gives your audience a skill, not a feeling.</p><button class="copybtn">Copy</button></div>
@@ -207,10 +231,93 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
   </div>
 </div></section>
 
+<section id="vocab"><div class="wrap">
+  <p class="k">06 &middot; Frameworks and vocabulary</p>
+  <h2>Her words. Use them exactly, every time.</h2>
+  <p class="lede">These names are the product. Capitalise them the same way on every page, and never rename one to sound fresh.</p>
+  <div class="vocab">
+    <div><b>The 7-Second Hook</b><span>Answers "What do you do?" with "Tell me more." The first thing every room learns.</span></div>
+    <div><b>The 3 Pitch Patterns</b><span>The patterns behind $2.5 billion in live sales. Taught live, never fully listed on a sales page.</span></div>
+    <div><b>Instant Clarity Technique</b><span>Explain what you do in one sentence, even if it is complicated.</span></div>
+    <div><b>Your WHY in one sentence</b><span>Said out loud to a stranger in the room. The emotional half of the pitch.</span></div>
+    <div><b>Confidence as posture</b><span>The physical reset she does before every live segment.</span></div>
+    <div><b>Sell without sounding salesy</b><span>The promise under every offer. Use the phrase, not a synonym.</span></div>
+    <div><b>Hot seat coaching</b><span>Live pitch transformations on the spot. The signature moment of the masterclass and keynotes.</span></div>
+    <div><b>One Minute to Millions</b><span>The fill-in-the-blanks intro template. Book bonus 1.</span></div>
+    <div><b>The YES Files</b><span>Ten real recorded pitch transformations. Book bonus 2.</span></div>
+    <div><b>The Action Vault</b><span>The implementation hub behind the book. Book bonus 3.</span></div>
+    <div><b>Pitch Secrets A to Z</b><span>The book. Always the full name with "A to Z", never "Pitch Secrets book".</span></div>
+    <div><b>Get to YES</b><span>The outcome word. YES is always capitals when it is the result.</span></div>
+    <div><b>Reps</b><span>They pitch, get corrected and pitch again before they leave the chair. What makes a Forbes room different.</span></div>
+    <div><b>Forbes'd it</b><span>Community slang for a pitch that got fixed live. Fine in social, not in a bio.</span></div>
+  </div>
+</div></section>
+
+<section id="story"><div class="wrap">
+  <p class="k">07 &middot; The story</p>
+  <h2>The beats we tell, in this order</h2>
+  <p class="lede">Every "about" and every origin video uses these. Pick three for a short page, all of them for a long one. Nothing else goes in without Forbes signing off.</p>
+  <ol class="beats">
+    <li><b>Long Island, a teenager.</b> Her dad, an inventor, lost part of his hand in an accident. Bills piled up.</li>
+    <li><b>At 16 she entered a pageant for the scholarship, not the crown.</b> She won. "You can change your life, no matter where you start."</li>
+    <li><b>Hollywood said no, again and again.</b> She kept going. Broadway first.</li>
+    <li><b>Live TV.</b> Thirty years hosting on the biggest live shopping networks in the world, with no second take. More than $2.5 billion of products sold.</li>
+    <li><b>Jack LaLanne, Montel, Fit-TV, X-Games, two talk shows.</b> The names and rooms that prove it (see Facts for the numbers we use).</li>
+    <li><b>She broke the pitch down into patterns anyone can learn.</b> The 7-Second Hook, the 3 Pitch Patterns, the masterclass, the book.</li>
+    <li><b>The promise.</b> "I don't want your audience to feel inspired. I want them to leave with something they can do."</li>
+  </ol>
+  <p class="k" style="margin-top:34px">People she has shared a stage with</p>
+  <div class="friends">
+    <figure><img src="img/friends-george-foreman.jpg?v=425164" alt="Forbes with George Foreman" loading="lazy"><figcaption>George Foreman</figcaption></figure>
+    <figure><img src="img/friends-kevin-harrington-panel.jpg?v=425164" alt="Forbes with Kevin Harrington" loading="lazy"><figcaption>Kevin Harrington, Shark Tank</figcaption></figure>
+    <figure><img src="img/friends-les-brown.jpg?v=425164" alt="Forbes with Les Brown" loading="lazy"><figcaption>Les Brown</figcaption></figure>
+    <figure><img src="img/friends-jane-fonda.jpg?v=425164" alt="Forbes with Jane Fonda" loading="lazy"><figcaption>Jane Fonda</figcaption></figure>
+    <figure><img src="img/g-florence.jpg?v=425164" alt="Forbes with Florence Henderson" loading="lazy"><figcaption>Florence Henderson</figcaption></figure>
+    <figure><img src="img/event-ffl-stage.jpg?v=425164" alt="Forbes on stage at Forbes Factor Live" loading="lazy"><figcaption>Forbes Factor Live</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="offers"><div class="wrap">
+  <p class="k">08 &middot; Offers and the ladder</p>
+  <h2>Every offer, its price and where it lives</h2>
+  <p class="lede">Free first, then $27, then the book, then the programmes, then the stage. Every page sells one step and points to the next. Prices and names below are what the live pages say today.</p>
+  <div class="ladder">
+    <div class="step"><span class="n">1 &middot; Free</span><h3>Pitch Secrets Masterclass</h3><div class="price">Free seat</div><p>Live on Zoom, Sundays 5 PM ET. The 7-Second Hook, the 3 Pitch Patterns, hot seat coaching, a gift worth $500 for registering.</p><a href="https://www.pitchsecretstraining.com/">pitchsecretstraining.com</a></div>
+    <div class="step"><span class="n">2 &middot; Entry</span><h3>Elevator Pitch 2.0</h3><div class="price">$27</div><p>The Elevator Pitch Blueprint, workbook, step-by-step videos, community, certificate, plus the masterclass. Framed against a $497 price.</p><a href="https://www.pitchsecretstraining.com/ep2sm">pitchsecretstraining.com/ep2sm</a></div>
+    <div class="step"><span class="n">3 &middot; The book</span><h3>Pitch Secrets A to Z</h3><div class="price">$29 + free US shipping</div><p>240 pages, USA TODAY bestseller, 4 bonuses: One Minute to Millions, The YES Files, the Action Vault, the Book Holders Pitch Workshop. Framed against $99.</p><a href="https://pitchsecretsbook.com">pitchsecretsbook.com</a> &middot; <a href="https://site.forbesrileyhq.com/book.html">our page</a></div>
+    <div class="step"><span class="n">4 &middot; Programmes</span><h3>Pitch Mastery &middot; Next Level Your Sales &middot; Next Level Speaker &middot; Inner Circle</h3><div class="price">Price on application</div><p>The paid cohorts and the private circle. Sold on calls and inside the masterclass, not from a public price page. Confirm current names and prices with Katrina before quoting.</p></div>
+    <div class="step"><span class="n">5 &middot; Live events</span><h3>Momentum X &middot; Forbes Factor Live</h3><div class="price">Ticketed</div><p>The in-person rooms. Group photos, readers with the book and stage shots all come from here.</p><a href="https://site.forbesrileyhq.com/events.html">Events page</a></div>
+    <div class="step"><span class="n">6 &middot; Speaking</span><h3>Keynotes, Pitch Intensive, Emcee, Virtual</h3><div class="price">Fee by enquiry</div><p>Four signature keynotes. Lead with the 90-second reel and the speaker sheet.</p><a href="https://site.forbesrileyhq.com/speaker.html">site.forbesrileyhq.com/speaker.html</a></div>
+    <div class="step"><span class="n">7 &middot; Brands</span><h3>UGC and on-camera for brands</h3><div class="price">Rate card</div><p>"$2.5 billion sold on camera. Now for your brand." The GRWM and launch videos are the samples.</p><a href="https://site.forbesrileyhq.com/ugc.html">site.forbesrileyhq.com/ugc.html</a></div>
+    <div class="step"><span class="n">Also</span><h3>Forbes Factor Podcast &middot; Pitch With Passion Challenge</h3><div class="price">Free</div><p>Both are on the link-in-bio page. The challenge runs on KingSumo; the podcast link is the one on forbesriley.com.</p><a href="https://forbesriley.com">forbesriley.com</a></div>
+  </div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <p class="k">09 &middot; Proof bank</p>
+  <h2>Real people, real names, real rooms</h2>
+  <p class="lede">Use these as they are. Every quote needs a name; add a title or organisation when we have one. Nothing anonymous, nothing invented.</p>
+  <div class="tbank">
+    <blockquote>"She radiates and communicates in a way I've never seen before. A true blessing to behold."<footer><b>Les Brown</b>, legendary motivational speaker</footer></blockquote>
+    <blockquote>"Forbes brings energy and professionalism to her work. In all my years in television, she is the best I have been around."<footer><b>Joe Theismann</b>, NFL Hall of Fame</footer></blockquote>
+    <blockquote>"Funny, smart, gutsy and talented. If you want the job done right, go see Forbes."<footer><b>Florence Henderson</b>, television icon</footer></blockquote>
+    <blockquote>"A powerful playbook for the two things that determine your success: how you think and how you speak."<footer><b>Jeff Hoffman</b>, on Pitch Secrets A to Z</footer></blockquote>
+    <blockquote>"I have been to many classes on the power of the pitch and media mastery, and I have to say Forbes Riley is one of the best."<footer><b>Rhonda Sher</b>, via LinkedIn</footer></blockquote>
+    <blockquote>"This has been the best 2.75 hours spent on an improvement workshop in a very long time."<footer><b>Tanya Rand</b>, masterclass attendee</footer></blockquote>
+    <blockquote>"What a remarkable class. So much valuable information, motivation and creative ways to move forward."<footer><b>Marilyn Pierce</b>, masterclass attendee</footer></blockquote>
+    <blockquote>"Forbes, I've been watching you all of my life. To be in the room with you is off the chain."<footer><b>Forrest Lamb</b>, masterclass attendee</footer></blockquote>
+  </div>
+  <div class="rule">
+    <div class="card"><b>Video proof.</b> Jeremy, Andrea and Stacy's book testimonials (vertical), the Momentum X readers, Glen, Andrew, Chris, Nicole, Tracey, Tami, Sandy and Mahmood on YouTube. All linked on the book page.</div>
+    <div class="card"><b>Photo proof.</b> Readers holding the book, the Momentum X group shot, the #MadeASale collage, stage and crowd shots. Pixieset galleries: the Dec 2025 studio shoot and both Momentum X cohorts (ask Katrina for the links).</div>
+    <div class="card"><b>Never again.</b> "Samantha J." and "Mark B." are not real people. They come off anything they are still on.</div>
+  </div>
+</div></section>
+
 <section id="facts"><div class="wrap">
-  <p class="k">06 &middot; The facts we use</p>
+  <p class="k">10 &middot; The facts we use</p>
   <h2>Same numbers everywhere</h2>
-  <p class="lede">These are the figures on the site today. The ones marked "confirming" are being checked with Forbes before they go in any pitch or application. Until then use the figure shown.</p>
+  <p class="lede">These are the figures on the site today. The ones marked "confirming" are being checked with Forbes before they go in any pitch or application. Until then use the figure shown. The current landing pages say 80,000 in one place and 45,743 in another: that is exactly what this board is here to stop.</p>
   <div class="facts">
     <div class="fact"><b>$2.5B</b><span>in live-TV sales</span></div>
     <div class="fact"><b>80+</b><span>countries reached</span></div>
@@ -220,12 +327,54 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
     <div class="fact"><b>2010</b><span>National Fitness Hall of Fame</span><em>confirming who granted</em></div>
     <div class="fact"><b>ERA Moxie</b><span>Best Female Presenter, multiple wins</span><em>confirming 2007, 2010, 2013</em></div>
     <div class="fact"><b>80,000</b><span>masterclass students (site)</span><em>confirming: Forbes says 42,000+</em></div>
+    <div class="fact"><b>240</b><span>pages in Pitch Secrets A to Z, 4 bonuses</span></div>
+    <div class="fact"><b>$500M</b><span>Fit-TV, launched with Jake Steinfeld, sold to FOX</span></div>
     <div class="fact"><b>61,000</b><span>SpinGym units sold in 24 hours (product story only, not speaking)</span></div>
+    <div class="fact"><b>Dr.</b><span>honorary doctorate and Presidential Lifetime Achievement Award</span><em>confirming who granted</em></div>
   </div>
 </div></section>
 
+<section id="recipes"><div class="wrap">
+  <p class="k">11 &middot; Page recipes</p>
+  <h2>How a Forbes page is built</h2>
+  <p class="lede">Same bones every time, so a visitor who has seen one page knows how to read the next. The book page is the reference build.</p>
+  <div class="recipe">
+    <div class="card"><h3>Sales page</h3><ol><li>Urgency bar (real date or stock)</li><li>Ribbon: USA TODAY bestseller / the proof line</li><li>H1 promise + one sub line</li><li>Video or 3D product left, order card right</li><li>Featured-on logos</li><li>"Does this sound familiar?" problem</li><li>Industry leaders (3)</li><li>Proof: readers, rooms, #MadeASale</li><li>What's inside</li><li>Bonus stack with total value</li><li>Hi, I'm Forbes</li><li>Vertical video testimonials</li><li>FAQ</li><li>Sticky buy button, exit pop-up</li></ol></div>
+    <div class="card"><h3>Webinar / masterclass page</h3><ol><li>Date, time, "live on Zoom", one register button</li><li>H1: what they will master, not "the secret"</li><li>Forbes cutout, red or gold, on black</li><li>Featured-on logos</li><li>What you'll master (6 bullets, her vocabulary)</li><li>Hot seat coaching promise</li><li>3 named testimonials</li><li>Who it's for</li><li>Register again, same button, same words</li></ol></div>
+    <div class="card"><h3>Link in bio</h3><ol><li>Signature logo, gold</li><li>"The Queen of Pitch" + "$2.5 billion in live-TV sales"</li><li>At most 6 buttons, gold, in ladder order: masterclass, book, speaking, podcast, EP 2.0, challenge</li><li>Social icons</li><li>No personal email on the page</li></ol></div>
+    <div class="card"><h3>Speaker page</h3><ol><li>"Now booking" bar</li><li>H1: a skill, not a feeling</li><li>Reel left, availability form right</li><li>Featured-on logos</li><li>Leaders who have shared her stage</li><li>Four signature keynotes</li><li>What the room walks out with + formats</li><li>Rooms and crowd photos</li><li>Attendee videos, booker FAQ, bio</li></ol></div>
+  </div>
+  <p class="k" style="margin-top:40px">What the current landing pages get wrong, and what ours do instead</p>
+  <div class="audit">
+    <div class="card"><h3>Current pages (pitchsecretstraining.com, pitchsecretsbook.com, forbesriley.com)</h3><ul class="dont"><li>Five or more typefaces on one page (Montserrat, Poppins, Inter, Roboto, Oswald, DM Serif, Open Sans)</li><li>Red, lime green, yellow, orange, navy and bright blue buttons on the same page</li><li>A broken video player at the top of the Elevator Pitch page</li><li>"Two TEDx talks" and "Queen of Infomercials" still in the copy</li><li>80,000 students on one page, 45,743 on the next</li><li>Asterisks on the $2.5 billion, stacked job titles, a personal Gmail on the link page</li><li>Fake countdowns that reset, "rumours are true" headers</li></ul></div>
+    <div class="card"><h3>Ours</h3><ul class="do"><li>Poppins only, 800 and 400, Allura for one flourish</li><li>Gold on black, one button colour, text on gold is ink</li><li>A video that plays, with a poster frame, in the hero</li><li>Bios from this page, numbers from the Facts board</li><li>One count for students, everywhere</li><li>No asterisks, one title, business emails only</li><li>Real dates, real stock, real names</li></ul></div>
+  </div>
+</div></section>
+
+<section id="media"><div class="wrap">
+  <p class="k">12 &middot; Video and files</p>
+  <h2>The assets everyone asks for</h2>
+  <div class="vids">
+    <a href="https://www.youtube.com/watch?v=t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/hqdefault.jpg" alt="Speaker reel" loading="lazy"><div class="t">Speaker reel, 90 s<small>Lead with this. YouTube t52E3asvjsw</small></div></a>
+    <a href="video/launch.mp4"><img src="img/book/launch-poster.jpg?v=425164" alt="Book launch video" loading="lazy"><div class="t">Book launch video<small>Hero of the book page</small></div></a>
+    <a href="video/grwm-hotel.mp4"><img src="img/book/red-director-2.png?v=425164" alt="GRWM video" loading="lazy"><div class="t">GRWM hotel, captions<small>UGC sample, vertical</small></div></a>
+    <a href="video/jeremy-book.mp4"><img src="img/book/jeremy-poster.jpg?v=425164" alt="Jeremy testimonial" loading="lazy"><div class="t">Jeremy on the book<small>Vertical testimonial</small></div></a>
+    <a href="https://www.youtube.com/playlist?list=PLWB2CxjnPxcveMFwUc0FzIm7EzoZbBJVy"><img src="https://i.ytimg.com/vi/G_JyU1ngHFY/hqdefault.jpg" alt="Pitch Vault playlist" loading="lazy"><div class="t">Pitch Vault playlist<small>The A to Z lesson clips</small></div></a>
+    <a href="https://www.youtube.com/@ForbesRileyFANpage"><img src="https://i.ytimg.com/vi/1EgGbxn5Wwg/hqdefault.jpg" alt="TV appearances" loading="lazy"><div class="t">TV appearances<small>Studio 5, Great Day, KTLA, Good Day Alabama</small></div></a>
+  </div>
+  <div class="links">
+    <a href="downloads/Forbes-Riley-Speaker-Sheet.pdf"><b>Speaker sheet (PDF)</b><small>Two pages, Letter, for bookers and applications</small></a>
+    <a href="downloads/forbes-riley-brand-kit.zip"><b>Logo pack (ZIP)</b><small>Signatures, monograms, seal, medal, Forbes Factor, FFL, colours.txt</small></a>
+    <a href="img/book/book-3d.png?v=425164"><b>Book, 3D cover (PNG)</b><small>Transparent, for any page</small></a>
+    <a href="img/book/featured-logos.png?v=425164"><b>Featured-on strip (PNG)</b><small>NBC, FOX Business, Shark Tank, Grant Cardone, QVC, HSN, ESPN, TLC, ABC, E!</small></a>
+    <a href="img/book/usa-today-bestseller.png?v=425164"><b>USA TODAY bestseller badge</b><small>Only next to the book</small></a>
+    <a href="img/keynote-stage.jpg?v=425164"><b>Keynote stage photo</b><small>The on-stage shot for press</small></a>
+  </div>
+  <p style="margin-top:18px;color:var(--muted);font-size:14px">Still missing from the kit: a 300 dpi approved headshot, and the "As Seen On" logo files with written permission. Both are with Forbes.</p>
+</div></section>
+
 <section id="rules"><div class="wrap">
-  <p class="k">07 &middot; Rules of the house</p>
+  <p class="k">13 &middot; Rules of the house</p>
   <h2>Ten things that keep it looking like us</h2>
   <div class="rule">
     <div class="card"><ul class="do"><li>Gold on black, white type</li><li>One hero, one ask, one button colour</li><li>Real proof: readers, rooms, names with titles and organisations</li><li>Fill the row. No blank space, no half-empty grids</li><li>Phone first. Every page checked at phone width before it ships</li></ul></div>
@@ -234,19 +383,26 @@ body{font-family:"Poppins","Helvetica Neue",Arial,sans-serif}  .script{font-fami
 </div></section>
 
 <section id="links"><div class="wrap">
-  <p class="k">08 &middot; Links and handles</p>
+  <p class="k">14 &middot; Links, handles and contacts</p>
   <h2>Where things live</h2>
   <div class="links">
     <a href="https://site.forbesrileyhq.com/speaker.html"><b>Speaker page</b><small>site.forbesrileyhq.com/speaker.html</small></a>
     <a href="https://site.forbesrileyhq.com/book.html"><b>Pitch Secrets A to Z</b><small>site.forbesrileyhq.com/book.html</small></a>
     <a href="https://site.forbesrileyhq.com/ugc.html"><b>UGC for brands</b><small>site.forbesrileyhq.com/ugc.html</small></a>
-    <a href="https://pitchsecretsbook.com"><b>Buy the book</b><small>pitchsecretsbook.com</small></a>
+    <a href="https://pitchsecretsbook.com"><b>Book checkout</b><small>pitchsecretsbook.com</small></a>
+    <a href="https://www.pitchsecretstraining.com/"><b>Sunday masterclass</b><small>pitchsecretstraining.com</small></a>
+    <a href="https://forbesriley.com"><b>Link in bio</b><small>forbesriley.com (legal pages live here too)</small></a>
     <a href="https://www.instagram.com/forbes_riley/"><b>Instagram</b><small>@forbes_riley</small></a>
     <a href="https://www.tiktok.com/@forbesriley"><b>TikTok</b><small>@forbesriley</small></a>
-    <a href="https://www.youtube.com/@forbesriley"><b>YouTube</b><small>@forbesriley</small></a>
+    <a href="https://www.youtube.com/@forbesriley"><b>YouTube</b><small>@forbesriley (fan page: @ForbesRileyFANpage)</small></a>
     <a href="https://www.facebook.com/ForbesRileyFanPage"><b>Facebook</b><small>ForbesRileyFanPage</small></a>
     <a href="mailto:assistant@theforbesfactor.com"><b>Booking and press</b><small>assistant@theforbesfactor.com</small></a>
-    <a href="https://www.youtube.com/watch?v=t52E3asvjsw"><b>Speaker reel</b><small>Lead with this one, 90 seconds</small></a>
+    <a href="mailto:support@teamforbesriley.com"><b>Orders and support</b><small>support@teamforbesriley.com</small></a>
+  </div>
+  <div class="rule">
+    <div class="card"><b>Company.</b> Forbes Riley Media, MJR Dominion LLC. Terms, privacy, refund, disclaimer and affiliate policies are on forbesriley.com and every sales page links to them in the footer.</div>
+    <div class="card"><b>Which email where.</b> Bookings, press and applications: assistant@theforbesfactor.com. Customers and orders: support@teamforbesriley.com. Her personal Gmail never goes on a public page.</div>
+    <div class="card"><b>Speaker reel.</b> YouTube t52E3asvjsw, 90 seconds. It is the one to send bookers; the TV appearances playlist is the back-up.</div>
   </div>
 </div></section>
 

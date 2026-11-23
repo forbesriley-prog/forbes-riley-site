@@ -189,8 +189,11 @@ footer a{color:var(--muted);margin:0 6px}
 .wall figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:13px;font-weight:600;opacity:0;transform:translateY(8px);transition:.3s}
 .wall figure:hover figcaption{opacity:1;transform:none}
 @media(hover:none){.wall figcaption{opacity:1;transform:none}}
-.inc .card .art{display:none}
-.inc .card .photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r);margin-bottom:14px}
+.inc .card .photo{display:none}
+.inc .card .art,.card .art{display:block;width:100%;max-width:none;margin:0 auto 18px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7))}
+.artwrap{position:relative;margin:-6px -6px 10px}
+.artwrap:before{content:"";position:absolute;left:10%;right:10%;bottom:6%;height:40%;background:radial-gradient(ellipse at 50% 100%,rgba(240,213,122,.35),transparent 70%);filter:blur(6px)}
+.artwrap img{position:relative}
 .letter.collapsed{max-height:620px;overflow:hidden}
 .letter .more{position:absolute;left:0;right:0;bottom:0;padding:80px 0 22px;background:linear-gradient(transparent,#fff 55%);text-align:center;border-radius:0 0 var(--r) var(--r)}
 .letter:not(.collapsed) .more{display:none}
@@ -208,7 +211,7 @@ footer a{color:var(--muted);margin:0 6px}
     <h1>Hang with Forbes every week. Be in the group.</h1>
     <p class="sub">This is the room where Forbes' people stay close to her, keep their momentum and get their pitch fixed, live. Here's what you get the day you join:</p>
     <div class="gets">
-      <div class="get"><img src="img/virtual-studio.jpg" alt=""><div><b>Live with Forbes every week</b><small>52 Inner Circle LIVE calls a year</small></div></div>
+      <div class="get"><img src="img/ic/live.png" alt="" style="object-fit:contain;background:#000"><div><b>Live with Forbes every week</b><small>52 Inner Circle LIVE calls a year</small></div></div>
       <div class="get"><img src="img/ic/breakthru.png" alt=""><div><b>12 BREAKTHRU sessions led by Forbes</b><small>Her most personal, powerful process, members only</small></div></div>
       <div class="get"><img src="img/coaching-2.jpg" alt=""><div><b>Your pitch reviewed by her team</b><small>Submit a video, get insider feedback, go again</small></div></div>
       <div class="get"><img src="img/ugc/momentum-x.jpg" alt=""><div><b>The private group</b><small>A global circle of entrepreneurs who lift each other</small></div></div>
@@ -305,16 +308,16 @@ footer a{color:var(--muted);margin:0 6px}
   <p class="k rv">What's included</p>
   <h2 class="rv">The perfect set of live events and tools to help you achieve your goals</h2>
   <div class="inc">
-    <div class="card rv"><img class="photo" src="img/virtual-studio.jpg" alt="Inner Circle LIVE"><h3>Inner Circle LIVE (52x)</h3><p class="sub">Weekly calls with the Inner Circle community</p><p>Connect, learn, pitch, and grow alongside Forbes and a community of driven entrepreneurs every single week with 52 themed LIVE calls full of actionable coaching, real practice, and real connection.</p>
+    <div class="card rv"><div class="artwrap"><img class="art" src="img/ic/live.png" alt="Inner Circle LIVE"></div><h3>Inner Circle LIVE (52x)</h3><p class="sub">Weekly calls with the Inner Circle community</p><p>Connect, learn, pitch, and grow alongside Forbes and a community of driven entrepreneurs every single week with 52 themed LIVE calls full of actionable coaching, real practice, and real connection.</p>
       <p class="k" style="margin:10px 0 6px">Organized into actionable session types</p>
       <div class="types"><div><b>Networking &amp; Business</b>Meet and do business with like-minded people</div><div><b>Topic Tuesdays</b>Join live hot-topic convos on what's working now</div><div><b>Solutions Hot Seats</b>Get solutions to your most pressing roadblocks</div><div><b>Momentum Mapping</b>Map the next 90 days and leave with a plan</div><div><b>+ Social Media Review</b>Expert social media marketers review your profiles for ultimate optimization</div></div>
       <span class="val">$5,200 value</span></div>
-    <div class="card rv"><img class="photo" src="img/coaching-2.jpg" alt="Pitch Video Reviews"><h3>Pitch Video Reviews</h3><p class="sub">Get your pitch reviewed by professionals</p><p>Submit your pitch video and get powerful, insider feedback from Forbes Riley's expert team. We'll fine-tune your delivery, boost your confidence, and help you turn every pitch into a resounding "YES!"</p>
+    <div class="card rv"><div class="artwrap"><img class="art" src="img/ic/review.png" alt="Pitch Video Reviews"></div><h3>Pitch Video Reviews</h3><p class="sub">Get your pitch reviewed by professionals</p><p>Submit your pitch video and get powerful, insider feedback from Forbes Riley's expert team. We'll fine-tune your delivery, boost your confidence, and help you turn every pitch into a resounding "YES!"</p>
       <p class="k" style="margin:10px 0 6px">Perfect Pitch feedback loop</p>
       <div class="steps"><span><b>1</b>Attend live Pitch Practice Pods</span><span><b>2</b>Submit your pitch for review</span><span><b>3</b>Get feedback from Forbes' experts</span><span><b>4</b>Improve your pitch and try again</span></div>
       <span class="val">$6,000 value</span></div>
-    <div class="card rv"><img class="photo" src="img/book/studio-25b.jpg" alt="Elevate Course Hub"><h3>Elevate Course Hub</h3><p class="sub">A treasure chest of specially curated courses designed to propel your growth</p><p>Inside the Inner Circle, you'll unlock on-demand access to Forbes' exclusive Course Hub. A curated vault of business, branding, and monetization trainings designed to meet you where you are&hellip; and get you where you're going.</p><span class="val">$4,500 value</span></div>
-    <div class="card rv"><img class="photo" src="img/g-event-group.jpg" alt="Community access"><h3>Community Access</h3><p class="sub">Connect, grow, and get real support from people on the same journey</p><p>Join our private Facebook community where you can connect with like-minded individuals, get feedback, share your progress, and gain ongoing support from peers.</p><span class="val">Priceless</span></div>
+    <div class="card rv"><div class="artwrap"><img class="art" src="img/ic/hub.png" alt="Elevate Course Hub"></div><h3>Elevate Course Hub</h3><p class="sub">A treasure chest of specially curated courses designed to propel your growth</p><p>Inside the Inner Circle, you'll unlock on-demand access to Forbes' exclusive Course Hub. A curated vault of business, branding, and monetization trainings designed to meet you where you are&hellip; and get you where you're going.</p><span class="val">$4,500 value</span></div>
+    <div class="card rv"><div class="artwrap"><img class="art" src="img/ic/community.png" alt="Community access"></div><h3>Community Access</h3><p class="sub">Connect, grow, and get real support from people on the same journey</p><p>Join our private Facebook community where you can connect with like-minded individuals, get feedback, share your progress, and gain ongoing support from peers.</p><span class="val">Priceless</span></div>
   </div>
 </div></section>
 
@@ -341,7 +344,7 @@ footer a{color:var(--muted);margin:0 6px}
         <p>This is more than just weekly practice. It's your path to mastering the art of the pitch. Not only will you build confidence, but you'll also gain momentum that drives real business results. The skills you develop in Pitch Practice Pods set you apart, transforming a good pitch into a winning one.</p>
         <span class="val">$580 value</span>
       </div>
-      <img src="img/workshop.jpg" alt="Pitch Practice Pods" style="border-radius:6px">
+      <div class="artwrap"><img class="art" src="img/ic/pods.png" alt="Pitch Practice Pods"></div>
     </div>
     <div class="pods3">
       <div><b>Weekly live Zoom sessions</b>Access a powerful weekly Zoom call. For 90 action-packed minutes, you'll practice your pitch, get real-time feedback, refine your delivery, and perfect your message in a supportive, high-energy environment.</div>
@@ -384,11 +387,10 @@ footer a{color:var(--muted);margin:0 6px}
     <p>Click below to check if you qualify today.</p>
     <p>To your success,</p>
     <p class="sig">Forbes Riley</p>
-    <p style="margin-top:18px"><b>P.S.</b> If you're the type who skips to the bottom, fine. But don't miss the video below. Watch it now, before this window closes.</p>
+    <p style="margin-top:18px"><b>P.S.</b> If you're the type who skips to the bottom, fine. Just don't miss the BREAKTHRU. Twelve a year, led by me, only inside the Inner Circle.</p>
     <div class="cta"><button class="btn" data-q>Click to check if you qualify</button></div>
     <div class="more"><button class="btn ghost" id="readmore" style="color:#9a7320;border-color:#d4a73c">Read the whole letter</button></div>
   </div>
-  <div class="vid rv" data-yt="t52E3asvjsw"><img src="https://i.ytimg.com/vi/t52E3asvjsw/maxresdefault.jpg" alt="Watch Forbes"><div class="play">&#9654;</div><div class="cap">Watch it now</div></div>
 </div></section>
 
 <section id="join"><div class="wrap">

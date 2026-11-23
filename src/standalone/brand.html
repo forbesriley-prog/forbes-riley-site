@@ -83,7 +83,7 @@ pre{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
 footer{padding:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--ink);font-weight:700;padding:10px 16px;border-radius:var(--r);opacity:0;transition:.25s;pointer-events:none;z-index:9}
 .toast.on{opacity:1;transform:translateX(-50%)}
-@media(max-width:820px){.hero .wrap,.type{grid-template-columns:1fr}.hero .sig{max-width:360px}}
+html,body{overflow-x:hidden}@media(max-width:820px){.hero .wrap,.type{grid-template-columns:1fr}.hero .sig{max-width:360px}.scale div{flex-wrap:wrap;gap:4px 16px}.scale span:first-child{min-width:100%}}
 </style>
 </head>
 <body>
@@ -157,8 +157,8 @@ footer{padding:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var
       <p class="spec">Turn every pitch into a YES.</p>
       <p class="meta">Poppins 800 &middot; headlines, numbers, buttons</p>
       <div class="scale">
-        <div><span>H1</span><strong style="font-size:40px;font-weight:800">Give your audience a skill</strong></div>
-        <div><span>H2</span><strong style="font-size:28px;font-weight:800">What your room walks out with</strong></div>
+        <div><span>H1</span><strong style="font-size:clamp(26px,3vw,40px);font-weight:800">Give your audience a skill</strong></div>
+        <div><span>H2</span><strong style="font-size:clamp(20px,2.2vw,28px);font-weight:800">What your room walks out with</strong></div>
         <div><span>Label</span><span class="k" style="margin:0">Keynotes &middot; Workshops &middot; Emcee</span></div>
         <div><span>Body</span><span style="font-weight:400">Forbes' rooms walk out with a 7-second hook, a WHY in one sentence and reps they did before they left the chair.</span></div>
         <div><span>Button</span><span class="btn" style="padding:10px 16px;font-size:14px">Check availability</span></div>

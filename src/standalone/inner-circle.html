@@ -126,6 +126,38 @@ footer a{color:var(--muted);margin:0 6px}
 .rv{opacity:0;transform:translateY(14px);transition:.6s}.rv.in{opacity:1;transform:none}
 @media(max-width:820px){.inc,.bonus,.bt,.price{grid-template-columns:1fr}.pods3{grid-template-columns:1fr}.types{grid-template-columns:1fr}.hero .pre{font-size:38px}}
 
+
+/* v4 hero: epic + inviting */
+.hero{min-height:100svh;display:flex;align-items:center;padding-block:clamp(40px,5vw,70px);background:radial-gradient(1100px 600px at 70% 20%,rgba(240,213,122,.22),transparent 60%),radial-gradient(800px 500px at 15% 90%,rgba(240,213,122,.12),transparent 60%),var(--black)}
+.dust{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 12% 30%,rgba(240,213,122,.9),transparent 60%),radial-gradient(1.5px 1.5px at 28% 70%,rgba(240,213,122,.8),transparent 60%),radial-gradient(2px 2px at 45% 15%,rgba(255,240,180,.9),transparent 60%),radial-gradient(1.5px 1.5px at 62% 55%,rgba(240,213,122,.8),transparent 60%),radial-gradient(2.5px 2.5px at 78% 25%,rgba(255,240,180,.9),transparent 60%),radial-gradient(1.5px 1.5px at 88% 80%,rgba(240,213,122,.8),transparent 60%),radial-gradient(2px 2px at 35% 90%,rgba(240,213,122,.7),transparent 60%),radial-gradient(1.5px 1.5px at 55% 40%,rgba(255,240,180,.7),transparent 60%),radial-gradient(2px 2px at 8% 60%,rgba(240,213,122,.6),transparent 60%),radial-gradient(1.5px 1.5px at 93% 45%,rgba(240,213,122,.7),transparent 60%);background-size:100% 100%;animation:drift 18s linear infinite;opacity:.9}
+.dust.b{animation-duration:26s;animation-direction:reverse;transform:scale(1.4);opacity:.5}
+@keyframes drift{0%{transform:translateY(0)}100%{transform:translateY(-60px)}}
+.hero .wrap{position:relative;z-index:1}
+.hero .open{grid-column:1/-1;text-align:center;margin-bottom:10px}
+.hero .open .pre{font-family:var(--script);font-size:clamp(54px,8vw,104px);color:var(--gold);line-height:.95;margin:0;background:linear-gradient(90deg,#9a7320,#f6e3a1 35%,#d4a73c 50%,#f6e3a1 65%,#9a7320);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite;filter:drop-shadow(0 10px 30px rgba(240,213,122,.35))}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.hero .open .brand{justify-content:center;margin:4px 0 10px}
+.hero .open .brand img{height:64px}.hero .open .brand .crescent{height:96px}
+.hero .open .welcome{font-size:clamp(19px,2.3vw,26px);color:#fff;font-weight:500;max-width:860px;margin:6px auto 0;line-height:1.4}
+.hero .open .welcome b{color:var(--gold);font-weight:800}
+.hero .open .sigline{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;color:var(--muted);font-size:14px}
+.hero .open .sigline img{height:44px;opacity:.95}
+.hero h1{display:none}
+.hero .want{font-size:clamp(20px,2.2vw,26px);margin:10px 0 12px;color:var(--gold)}
+.youget li{padding:11px 14px}.youget b{font-size:16px}
+.bam .word{font-size:52px}
+.fan{min-height:620px;perspective:1200px}
+.fan .cut{max-height:660px;right:-10px}
+.fan .lap{width:70%;transform-style:preserve-3d}
+.fan .l1{left:-8%;top:-2%;transform:rotateY(14deg) rotate(-5deg)}
+.fan .l2{left:0;top:32%;transform:rotateY(14deg) rotate(2deg)}
+.fan .l3{left:-8%;top:64%;width:56%;transform:rotateY(14deg) rotate(-2deg)}
+.fan:hover .lap{transform:rotateY(0) rotate(0) scale(1.03)}
+.fan .tag{left:0;bottom:0;font-size:14px;padding:10px 16px}
+.hero .btns .btn.big{font-size:19px;padding:20px 36px}
+.trust{margin-top:14px}
+@media(max-width:860px){.hero{min-height:0}.hero .open .brand img{height:48px}.hero .open .brand .crescent{height:72px}.fan{min-height:460px}.fan .cut{max-height:460px}.fan .lap{width:62%}}
+
 /* v3 hero: the pitch */
 .hero .wrap{grid-template-columns:1fr 1fr;gap:26px}
 .invite{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--gold-band),var(--gold-deep));color:var(--ink);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:13px;padding:8px 16px;border-radius:999px;margin-bottom:14px;box-shadow:0 10px 30px rgba(240,213,122,.35)}
@@ -234,11 +266,16 @@ footer a{color:var(--muted);margin:0 6px}
 
 <div class="urgbar"><span class="dot"></span><b>Membership is by invitation only.</b> The Inner Circle opens just <b>four times a year</b> and seats are limited.</div>
 
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="dust"></div><div class="dust b"></div><div class="wrap">
+  <div class="open">
+    <p class="pre">You're invited</p>
+    <div class="brand"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png" alt="Inner Circle Membership"></div>
+    <p class="welcome">Forbes saved you a seat. <b>Come be in the room with her every single week</b>, with the people who think bigger, speak bolder and finally get their YES.</p>
+    <div class="sigline"><span>With love,</span><img src="img/logo-signature-white.png" alt="Forbes Riley"></div>
+  </div>
   <div>
-    <span class="invite">&#9733; You're invited</span>
     <h1><span class="scr">Forbes Riley's</span>Inner Circle</h1>
-    <p class="want">Want in? Here's what you get the day you join:</p>
+    <p class="want">Want in? The day you join, you get:</p>
     <ul class="youget">
       <li><span class="ck">&#10003;</span><span><b>LIVE with Forbes every week</b><small>52 Inner Circle LIVE calls a year</small></span><span class="v">$5,200</span></li>
       <li><span class="ck">&#10003;</span><span><b>12 BREAKTHRU sessions led by Forbes herself</b><small>Her most personal, powerful process. Members only.</small></span><span class="v">$12,000</span></li>
@@ -247,7 +284,7 @@ footer a{color:var(--muted);margin:0 6px}
       <li><span class="ck">&#10003;</span><span><b>Pitch Practice Pods every Wednesday</b><small>90 minutes of reps, 5 PM EST</small></span><span class="v">$580</span></li>
       <li><span class="ck">&#10003;</span><span><b>The private group + social media review</b><small>A global circle that lifts each other</small></span><span class="v">$1,000</span></li>
     </ul>
-    <div class="bam"><span class="word">BAM.</span><span><b>You're in the room with Forbes herself.</b><small>$23,780 of access &middot; opens four times a year &middot; no contracts</small></span><span class="price"><s>Normally $5,000</s><b>$1,500 / yr</b></span></div>
+    <div class="bam"><span class="word">BAM.</span><span><b>You're in the room with Forbes herself.</b><small>$23,780 of access &middot; only opens four times a year &middot; no contracts, cancel anytime</small></span><span class="price"><s>Normally $5,000</s><b>$1,500 / yr</b></span></div>
     <div class="btns"><button class="btn big" data-q>Check if you qualify</button><a class="btn ghost big" href="#stack">See everything you get</a></div>
   </div>
   <div class="fan">
@@ -256,7 +293,7 @@ footer a{color:var(--muted);margin:0 6px}
     <img class="lap l2" src="img/ic/review.png" alt="Pitch Video Review">
     <img class="lap l3" src="img/ic/hub.png" alt="Elevate Course Hub">
     <img class="cut" src="img/px/cut-f25.png" alt="Dr. Forbes Riley">
-    <span class="tag">Look what's inside &#8594;</span>
+    <span class="tag">&#9733; This is what's waiting for you</span>
   </div>
 </div></section>
 

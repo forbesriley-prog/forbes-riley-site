@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Forbes Riley's Inner Circle | Black Friday Invitation</title>
 <meta name="description" content="By invitation only. Be in the room with Forbes Riley every week: 52 LIVE calls, 12 BREAKTHRU sessions led by Forbes, your pitch reviewed by her team, the Elevate Course Hub and Pitch Practice Pods. Black Friday: a year for $1,500.">
-<link rel="icon" type="image/png" href="img/favicon.png?v=480589">
+<link rel="icon" type="image/png" href="img/favicon.png?v=480961">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap">
 <style>
@@ -73,14 +73,15 @@ p{margin:0}
 .vid{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;border:1px solid rgba(240,213,122,.45);box-shadow:0 40px 100px rgba(0,0,0,.7),0 0 80px rgba(240,213,122,.12);background:#000}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid .cover{position:absolute;inset:0;z-index:3;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.vid .door{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(180deg,#1c1c1f,#07070a);transition:transform 1.1s cubic-bezier(.6,0,.2,1)}
-.vid .door.l{left:0;border-right:1px solid rgba(240,213,122,.5)}.vid .door.r{right:0;border-left:1px solid rgba(240,213,122,.5)}
-.vid .door:after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 50%,rgba(240,213,122,.14),transparent 70%)}
-.vid .vseal{position:absolute;left:50%;top:50%;width:clamp(90px,14vw,150px);transform:translate(-50%,-50%);filter:drop-shadow(0 14px 30px rgba(0,0,0,.7));transition:transform .5s,opacity .4s;z-index:2}
+.vid .door{position:absolute;top:0;bottom:0;width:50%;background:#000 url(img/ic/vframe.jpg?v=480961) no-repeat;background-size:200% 100%;transition:transform 1.1s cubic-bezier(.6,0,.2,1)}
+.vid .door.l{left:0;background-position:left center}.vid .door.r{right:0;background-position:right center}
+.vid .door:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.1) 45%,rgba(0,0,0,.82))}
+.vid .vplay{position:absolute;left:50%;top:44%;width:clamp(74px,9vw,104px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.35);border:2px solid rgba(240,213,122,.9);backdrop-filter:blur(10px);box-shadow:0 0 0 10px rgba(240,213,122,.12),0 20px 50px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;transition:transform .5s,opacity .4s;z-index:2;animation:pulse 2.2s ease-in-out infinite}
+.vid .vplay i{width:0;height:0;border-left:clamp(22px,2.6vw,30px) solid var(--gold);border-top:clamp(13px,1.6vw,18px) solid transparent;border-bottom:clamp(13px,1.6vw,18px) solid transparent;margin-left:6px}
 .vid .vtxt{position:absolute;left:0;right:0;bottom:clamp(16px,5%,40px);text-align:center;z-index:2;transition:opacity .4s}
-.vid .vtxt h3{font-size:clamp(20px,2.6vw,30px);margin:4px 0 12px}
+.vid .vtxt h3{font-size:clamp(22px,2.8vw,34px);margin:4px 0 0;text-shadow:0 4px 20px rgba(0,0,0,.6)}
 .vid .cover.open .door.l{transform:translateX(-102%)}.vid .cover.open .door.r{transform:translateX(102%)}
-.vid .cover.open .vseal{transform:translate(-50%,-50%) scale(.2);opacity:0}.vid .cover.open .vtxt{opacity:0}
+.vid .cover.open .vplay{transform:translate(-50%,-50%) scale(.2);opacity:0}.vid .cover.open .vtxt{opacity:0}
 .vid .cover.open{pointer-events:none}
 .promo p{text-align:center;color:#999;margin-top:12px;font-size:14px}
 /* inside: the list and the crown jewel */
@@ -335,7 +336,7 @@ footer a{color:#999;margin:0 6px}
 <body>
 
 <div class="bar"><div class="wrap">
-  <div class="brand"><img src="img/ic/crescent.png?v=480589" alt="Inner Circle"><span>Forbes Riley's Inner Circle</span></div>
+  <div class="brand"><img src="img/ic/crescent.png?v=480961" alt="Inner Circle"><span>Forbes Riley's Inner Circle</span></div>
   <div class="sale"><span class="txt"><span class="tag">Sale</span> <s>$5,000</s> <b>$1,500</b> a year &middot; ends in</span><span class="cd" id="cd"><span>--</span><span>--</span><span>--</span><span>--</span></span></div>
   <button class="btn" data-q>Get it NOW</button>
 </div></div>
@@ -344,10 +345,10 @@ footer a{color:#999;margin:0 6px}
 <div id="invite" hidden>
   <div class="env" id="env" role="button" aria-label="Open your invitation" tabindex="0">
     <div class="back"></div>
-    <div class="card"><img class="logo" src="img/ic/logo.svg" alt="Forbes Riley's"><div class="inv">You're invited.</div><p>To a seat in Forbes' private circle: live with her every week, 12 BREAKTHRUs a year, your pitch reviewed by her team.</p><p><b>Black Friday only: a year for $1,500.</b></p><img class="cres" src="img/ic/crescent.png?v=480589" alt="Inner Circle"></div>
+    <div class="card"><img class="logo" src="img/ic/logo.svg" alt="Forbes Riley's"><div class="inv">You're invited.</div><p>To a seat in Forbes' private circle: live with her every week, 12 BREAKTHRUs a year, your pitch reviewed by her team.</p><p><b>Black Friday only: a year for $1,500.</b></p><img class="cres" src="img/ic/crescent.png?v=480961" alt="Inner Circle"></div>
     <div class="front"></div>
     <div class="flap"></div>
-    <img class="seal" src="img/cut/seal.png?v=480589" alt="Forbes Riley, Pitch Queen">
+    <img class="seal" src="img/cut/seal.png?v=480961" alt="Forbes Riley, Pitch Queen">
   </div>
   <div class="acts"><button class="btn lg" id="invopen">Open your invitation</button><button class="skip" id="invskip">Skip</button></div>
   <p class="who">Dr. Forbes Riley &middot; Inner Circle &middot; Black Friday 2026</p>
@@ -355,13 +356,13 @@ footer a{color:#999;margin:0 6px}
 <section class="hero">
   <div class="light"></div><div class="ring"></div><div class="ring r2"></div>
   <div class="copy">
-    <div class="lockup"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png?v=480589" alt="Inner Circle"><span><i></i> By invitation only &middot; Black Friday 2026</span></div>
+    <div class="lockup"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png?v=480961" alt="Inner Circle"><span><i></i> By invitation only &middot; Black Friday 2026</span></div>
     <h1>Be in the room<br>with Forbes. <span class="gold">Every week.</span></h1>
     <div class="perks"><span><i></i>Live with Forbes, every week</span><span><i></i>12 BREAKTHRUs a year</span><span><i></i>Your pitch + socials reviewed</span><span><i></i>A circle that has your back</span></div>
     <div class="dealline"><span class="tag">Black Friday sale</span><s>$5,000 a year</s><b>$1,500</b><em>Save $3,500 &middot; this weekend only</em></div>
     <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="#inside">See what's inside</a></div>
   </div>
-  <img class="forbes" src="img/px/cut-new-05.png?v=480589" alt="Dr. Forbes Riley making a heart">
+  <img class="forbes" src="img/px/cut-new-05.png?v=480961" alt="Dr. Forbes Riley making a heart">
   <div class="scrollhint">Scroll</div>
 </section>
 
@@ -374,7 +375,7 @@ footer a{color:#999;margin:0 6px}
     <button class="qa rv d3" data-a><span class="qq">You want Forbes herself. Not another course.</span><span class="a"><b>12 BREAKTHRUs a year, led by Forbes.</b> Live, in the room, members only.</span></button>
   </div>
   <div class="tally rv"><span id="tally">Tap the ones that are true.</span><button class="btn" data-q>YES, that's me</button></div>
-  <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://player.vimeo.com/video/890473160?dnt=1&title=0&byline=0&portrait=0&autoplay=1" src="about:blank" title="Inside the Inner Circle" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><img class="vseal" src="img/cut/seal.png?v=480589" alt=""><div class="vtxt"><p class="k">A message from Forbes</p><h3>You have an invitation.</h3><span class="btn">Open it</span></div></div></div><p>Two minutes inside the Inner Circle.</p></div>
+  <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://player.vimeo.com/video/890473160?dnt=1&title=0&byline=0&portrait=0&autoplay=1" src="about:blank" title="Inside the Inner Circle" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><div class="vplay"><i></i></div><div class="vtxt"><p class="k">A message from Forbes &middot; 2 min</p><h3>Open your invitation.</h3></div></div></div><p>Two minutes inside the Inner Circle.</p></div>
 </div></section>
 
 <section class="white" id="inside"><div class="wrap">
@@ -392,7 +393,7 @@ footer a{color:#999;margin:0 6px}
     <p class="tease">But the real reason people join, and the reason they stay, has nothing to do with your pitch...</p>
     <button class="btn show" id="jewelbtn">Show me</button>
     <div class="reveal">
-      <img src="img/ic/room.jpg?v=480589" alt="Forbes Riley in the room with Inner Circle members">
+      <img src="img/ic/room.jpg?v=480961" alt="Forbes Riley in the room with Inner Circle members">
       <div><p class="k">The heart of it</p><h3>It's the room. It's the people.</h3><p>A community of entrepreneurs who meet with Forbes every week, cheer each other on and hold each other to it. You are never building alone again. And once a month Forbes leads BREAKTHRU live for the whole circle: twelve a year, included.</p><span class="val">12 BREAKTHRUs &middot; $12,000 value</span></div>
     </div>
   </div>
@@ -401,19 +402,19 @@ footer a{color:#999;margin:0 6px}
 
   <div class="feature rv">
     <div><h3>LIVE with Forbes, 52 times a year.</h3><p>Every single week: Networking &amp; Business, Topic Tuesdays, Solutions Hot Seats, Momentum Mapping. Real coaching, real practice, real connection. Plus an expert social media review of your profiles.</p><span class="val">$5,200 value</span></div>
-    <div class="device"><img src="img/ic/live.png?v=480589" alt="Inner Circle LIVE"></div>
+    <div class="device"><img src="img/ic/live.png?v=480961" alt="Inner Circle LIVE"></div>
   </div>
   <div class="feature flip rv">
     <div><h3>Your pitch, reviewed by her team.</h3><p>Submit your pitch video and get insider feedback from Forbes Riley's expert team. Attend the Pods, submit, get notes, improve, go again. Until it's a resounding YES.</p><span class="val">$500 value</span></div>
-    <div class="device"><img src="img/ic/review.png?v=480589" alt="Pitch Video Review"></div>
+    <div class="device"><img src="img/ic/review.png?v=480961" alt="Pitch Video Review"></div>
   </div>
   <div class="feature rv">
     <div><h3>The Elevate Course Hub.</h3><p>Forbes' whole vault of business, branding and monetization trainings, on demand. Designed to meet you where you are and get you where you're going.</p><span class="val">$4,500 value</span></div>
-    <div class="device"><img src="img/ic/hub.png?v=480589" alt="Elevate Course Hub"></div>
+    <div class="device"><img src="img/ic/hub.png?v=480961" alt="Elevate Course Hub"></div>
   </div>
 
   <div class="pods rv">
-    <div class="podhead"><img src="img/ic/pods.png?v=480589" alt="Pitch Practice Pods"><div><p class="k">Every Wednesday &middot; 5 PM EST &middot; 90 minutes</p><h3>Accountability and practice, every single week.</h3><p>This is more than weekly practice. It's your path to mastering the art of the pitch: you build confidence, you build momentum, and the momentum drives real business results. The skills you sharpen in the Pods turn a good pitch into a winning one.</p></div></div>
+    <div class="podhead"><img src="img/ic/pods.png?v=480961" alt="Pitch Practice Pods"><div><p class="k">Every Wednesday &middot; 5 PM EST &middot; 90 minutes</p><h3>Accountability and practice, every single week.</h3><p>This is more than weekly practice. It's your path to mastering the art of the pitch: you build confidence, you build momentum, and the momentum drives real business results. The skills you sharpen in the Pods turn a good pitch into a winning one.</p></div></div>
     <div class="pillars">
       <div class="pillar"><div class="ico"><div class="heads"><i></i><i></i><i></i></div></div><h4>Weekly live Zoom sessions</h4><p>Ninety action-packed minutes. You practice your pitch, get real-time feedback, refine your delivery and perfect it.</p></div>
       <div class="pillar"><div class="ico"><div class="loop"><span>PITCH</span><span>FEEDBACK</span><span>REFINE</span></div></div><h4>A constant feedback loop</h4><p>Give and receive valuable, actionable feedback that helps you fine-tune your pitch, find the gaps and progress faster.</p></div>
@@ -433,12 +434,12 @@ footer a{color:#999;margin:0 6px}
   <div class="head rv"><span class="badge">&#9733; Black Friday bonuses</span><h2>Four gifts. Tap to unwrap.</h2><p class="sub">They come with your seat this weekend. Go on, open them.</p></div>
   <div class="stage">
   <div class="gifts">
-    <div class="gift rv" data-gift><div class="art"><img src="img/ic/room.jpg?v=480589" alt="Forbes with the Inner Circle"></div><div class="txt"><h3>12 BREAKTHRUs with the whole circle</h3><p>Once a month Forbes leads her most personal, powerful process live for the community. Not a recording, not a stand-in.</p><span class="v">$12,000 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 1</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
-    <div class="gift rv d1" data-gift><div class="art"><img src="img/ic/pods.png?v=480589" alt="Pitch Practice Pods"></div><div class="txt"><h3>Pitch Practice Pods</h3><p>Every Wednesday at 5 PM EST. 90 minutes of reps with live feedback, plus your member dashboard and guides.</p><span class="v">$580 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 2</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
-    <div class="gift rv d2" data-gift><div class="art"><img src="img/ic/community.png?v=480589" alt="The private group"></div><div class="txt"><h3>The private group</h3><p>A global circle of entrepreneurs who lift each other. Feedback, progress, support, every day.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 3</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
-    <div class="gift rv d3" data-gift><div class="art"><img src="img/ic/social.png?v=480589" alt="Social media review"></div><div class="txt"><h3>Social media review</h3><p>Expert marketers review your profiles for ultimate optimization, so you show up with clarity and confidence.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 4</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv" data-gift><div class="art"><img src="img/ic/room.jpg?v=480961" alt="Forbes with the Inner Circle"></div><div class="txt"><h3>12 BREAKTHRUs with the whole circle</h3><p>Once a month Forbes leads her most personal, powerful process live for the community. Not a recording, not a stand-in.</p><span class="v">$12,000 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 1</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv d1" data-gift><div class="art"><img src="img/ic/pods.png?v=480961" alt="Pitch Practice Pods"></div><div class="txt"><h3>Pitch Practice Pods</h3><p>Every Wednesday at 5 PM EST. 90 minutes of reps with live feedback, plus your member dashboard and guides.</p><span class="v">$580 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 2</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv d2" data-gift><div class="art"><img src="img/ic/community.png?v=480961" alt="The private group"></div><div class="txt"><h3>The private group</h3><p>A global circle of entrepreneurs who lift each other. Feedback, progress, support, every day.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 3</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv d3" data-gift><div class="art"><img src="img/ic/social.png?v=480961" alt="Social media review"></div><div class="txt"><h3>Social media review</h3><p>Expert marketers review your profiles for ultimate optimization, so you show up with clarity and confidence.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 4</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
   </div>
-  <div class="host rv"><img class="point" src="img/px/cut-new-01.png?v=480589" alt="Dr. Forbes Riley pointing up at the gifts"></div>
+  <div class="host rv"><img class="point" src="img/px/cut-new-01.png?v=480961" alt="Dr. Forbes Riley pointing up at the gifts"></div>
   </div>
 
   <div class="stack rv" id="stack">
@@ -473,7 +474,7 @@ footer a{color:#999;margin:0 6px}
       <button class="btn lg" data-q>YES, I want in. Check if I qualify</button>
       <p class="fine">Membership is by invitation. Three quick questions, then the team confirms your seat.</p>
     </div>
-    <div class="side rv d1"><img class="bundle" src="img/ic/bundle.png?v=480589" alt="Everything inside the Inner Circle"><p>Not sure? <a href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call with the Success Advisor</a></p></div>
+    <div class="side rv d1"><img class="bundle" src="img/ic/bundle.png?v=480961" alt="Everything inside the Inner Circle"><p>Not sure? <a href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call with the Success Advisor</a></p></div>
   </div>
 </div></section>
 
@@ -498,13 +499,13 @@ footer a{color:#999;margin:0 6px}
     <div class="q"><p>"This is a wonderful family. We are able to learn from the youngest of us and move forward."</p><small>Member</small></div>
     <div class="q"><p>"Inner Circle is outstanding. We get the most updated training every week and the last Wednesday Breakthrough session is a highlight."</p><small>Jan Allen, member</small></div>
   </div></div>
-  <div class="logos rv"><p class="k">Forbes has been featured on</p><img src="img/book/featured-logos.png?v=480589" alt="NBC, FOX Business, Shark Tank, QVC, HSN, ESPN, TLC, ABC"></div>
+  <div class="logos rv"><p class="k">Forbes has been featured on</p><img src="img/book/featured-logos.png?v=480961" alt="NBC, FOX Business, Shark Tank, QVC, HSN, ESPN, TLC, ABC"></div>
 </div></section>
 
 <section class="white" style="padding-top:0"><div class="wrap">
   <div class="center rv"><p class="k">From the desk of Forbes Riley</p><h2>Why I built it.</h2></div>
   <div class="letter rv collapsed" id="letterbox">
-    <div class="head"><img src="img/px/avatar.jpg?v=480589" alt="Dr. Forbes Riley"><div><b>Dr. Forbes Riley</b><small>Re: Your personal invitation to my Inner Circle</small></div></div>
+    <div class="head"><img src="img/px/avatar.jpg?v=480961" alt="Dr. Forbes Riley"><div><b>Dr. Forbes Riley</b><small>Re: Your personal invitation to my Inner Circle</small></div></div>
     <p>Dear Entrepreneur,</p>
     <p>This is my official invitation. Please read carefully because what I'm about to share with you is something very special.</p>
     <p>By now, you've already seen what happens when you get exposed to my world. Maybe you were in the room during my Pitch Secrets Masterclass, went through my course or showed up to one of my live trainings. You've felt the surge of momentum that comes from being around people who think bigger, speak bolder, and finally step into their greatness.</p>
@@ -518,7 +519,7 @@ footer a{color:#999;margin:0 6px}
     <p>If you've been procrastinating, feeling stuck, self-sabotaging, or losing momentum, this is tailor-made for you. It's not just training, it's the mindset reset you've been waiting for. If you're stuck, stalling, or drifting off course, this is where we fix it. <b>Not someday. Now.</b></p>
     <p>Membership is by invitation only, and this is your invitation. Seats are limited and we make sure you're the right fit, because I like to keep this group positive, ambitious and intentionally small so every member gets personal attention and genuine connection.</p>
     <p>To your success,</p>
-    <img class="sig" src="img/logo-signature-white.png?v=480589" alt="Forbes Riley">
+    <img class="sig" src="img/logo-signature-white.png?v=480961" alt="Forbes Riley">
     <div class="more"><button class="btn ghost" id="readmore" style="color:#1b1619;border-color:#d4a73c;background:#fff">Read the whole letter</button></div>
   </div>
   <div class="faq rv">
@@ -530,7 +531,7 @@ footer a{color:#999;margin:0 6px}
 </div></section>
 
 <section class="final"><div class="wrap fwrap">
-  <img class="callme" src="img/px/cut-new-06.png?v=480589" alt="">
+  <img class="callme" src="img/px/cut-new-06.png?v=480961" alt="">
   <div class="rv"><p class="k" style="color:var(--gold)">Black Friday sale &middot; ends Sunday night</p><h2>Get it NOW.</h2><p class="sub">Normally $5,000 a year. This weekend, $1,500 for a year in the room with Forbes and the circle. By invitation, intentionally small, no contracts.</p>
   <div class="dealline"><span class="tag">Save $3,500</span><s>$5,000</s><b>$1,500</b><em>ends in</em><span class="cd" id="cd2"></span></div>
   <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call first</a></div></div>
@@ -601,7 +602,7 @@ footer a{color:#999;margin:0 6px}
   /* countdown to the end of Black Friday weekend (Mon Nov 30 2026, 11:59 PM ET) */
   try{var end=new Date('2026-12-01T04:59:00Z').getTime(),cd=document.getElementById('cd');function tick(){var d=Math.max(0,end-Date.now());var s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60;var html='<span>'+dd+'d</span><span>'+hh+'h</span><span>'+mm+'m</span><span>'+ss+'s</span>';cd.innerHTML=html;var c2=document.getElementById('cd2');if(c2)c2.innerHTML=html}tick();setInterval(tick,1000)}catch(e){}
   /* week */
-  try{var days=[['Monday','Networking & Business','Meet and do business with like-minded people. Members pitch what they need, who they know and what they can offer.','img/ic/live.png?v=480589'],['Tuesday','Topic Tuesday','Live hot-topic conversations on what is working right now: offers, social, AI, sales conversations.','img/ic/live.png?v=480589'],['Wednesday, 5 PM EST','Pitch Practice Pods','Ninety minutes of reps. You pitch, you get coached, you pitch again. Then submit your video for the expert review.','img/ic/pods.png?v=480589'],['Thursday','Solutions Hot Seats and Momentum Mapping','Get solutions to your most pressing roadblocks, then map the next 90 days so the momentum does not leak.','img/ic/review.png?v=480589'],['Last session of the month','BREAKTHRU with Forbes','Forbes leads her most personal, powerful process live for the whole circle. Twelve a year, all included.','img/ic/breakthru.jpg?v=480589']];var wb=document.querySelectorAll('#week button');function showDay(i){wb.forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-d')===i)});var d=days[i];document.getElementById('wt').textContent=d[0];document.getElementById('wh').textContent=d[1];document.getElementById('wp').textContent=d[2];document.getElementById('wi').src=d[3]}wb.forEach(function(b){b.addEventListener('click',function(){showDay(+b.getAttribute('data-d'))})});showDay(0)}catch(e){}
+  try{var days=[['Monday','Networking & Business','Meet and do business with like-minded people. Members pitch what they need, who they know and what they can offer.','img/ic/live.png?v=480961'],['Tuesday','Topic Tuesday','Live hot-topic conversations on what is working right now: offers, social, AI, sales conversations.','img/ic/live.png?v=480961'],['Wednesday, 5 PM EST','Pitch Practice Pods','Ninety minutes of reps. You pitch, you get coached, you pitch again. Then submit your video for the expert review.','img/ic/pods.png?v=480961'],['Thursday','Solutions Hot Seats and Momentum Mapping','Get solutions to your most pressing roadblocks, then map the next 90 days so the momentum does not leak.','img/ic/review.png?v=480961'],['Last session of the month','BREAKTHRU with Forbes','Forbes leads her most personal, powerful process live for the whole circle. Twelve a year, all included.','img/ic/breakthru.jpg?v=480961']];var wb=document.querySelectorAll('#week button');function showDay(i){wb.forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-d')===i)});var d=days[i];document.getElementById('wt').textContent=d[0];document.getElementById('wh').textContent=d[1];document.getElementById('wp').textContent=d[2];document.getElementById('wi').src=d[3]}wb.forEach(function(b){b.addEventListener('click',function(){showDay(+b.getAttribute('data-d'))})});showDay(0)}catch(e){}
   /* marquee duplicate */
   try{var tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML}catch(e){}
   try{var lb=document.getElementById('letterbox');document.getElementById('readmore').addEventListener('click',function(){lb.classList.remove('collapsed')})}catch(e){}

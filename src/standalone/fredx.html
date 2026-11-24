@@ -74,6 +74,20 @@ p{color:var(--soft);font-size:clamp(16px,1.3vw,19px)}
 .vc .vw{padding:0 18px 18px;font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:860px){.vgrid,.vgrid.three{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.vgrid,.vgrid.three{grid-template-columns:1fr}}
+#invite .invvid{display:none;position:relative;width:min(92vw,960px);aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;border:1px solid rgba(240,213,122,.5);box-shadow:0 40px 120px rgba(0,0,0,.9),0 0 90px rgba(240,213,122,.2);animation:tkin .7s cubic-bezier(.2,.8,.2,1) both}
+#invite .invvid iframe{width:100%;height:100%;border:0;display:block}
+#invite .vclose{position:absolute;right:10px;top:10px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.6);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:none}
+#invite .more,#invite .look{display:none}
+#invite.watch .passcard,#invite.watch h2,#invite.watch #openinv,#invite.watch .k:not(.look){display:none}
+#invite.watch .invvid{display:block}
+#invite.big .more{display:inline-flex;animation:morein .7s cubic-bezier(.2,1.4,.3,1) both,glowpulse 2.2s 1s ease-in-out infinite;font-size:clamp(20px,2.6vw,30px);padding:22px 44px}
+#invite.big .look{display:block;cursor:pointer;animation:fadein 1s .4s both}
+@keyframes morein{from{opacity:0;transform:scale(.4) translateY(40px)}to{opacity:1;transform:none}}
+@media(max-height:760px){#invite.watch .invvid{width:min(92vw,calc((100svh - 230px)*1.7778))}}
+#invite.docked{inset:auto;left:0;top:0;width:0;height:0;padding:0;background:none;overflow:visible;pointer-events:none;gap:0}
+#invite.docked>*:not(.invvid){display:none!important}
+#invite.docked .invvid{position:fixed;right:16px;bottom:16px;width:min(340px,calc(100vw - 32px));display:block;pointer-events:auto;z-index:81;animation:tkin .5s both;box-shadow:0 30px 80px rgba(0,0,0,.8),0 0 0 1px rgba(240,213,122,.4)}
+#invite.docked .vclose{display:grid;place-items:center}
 /* opening ticket */
 #invite{position:fixed;inset:0;z-index:100;background:radial-gradient(60% 50% at 50% 60%,rgba(212,167,60,.22),transparent 70%),#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:20px;transition:opacity .9s,visibility .9s}
 #invite[hidden]{display:none}
@@ -95,10 +109,10 @@ p{color:var(--soft);font-size:clamp(16px,1.3vw,19px)}
 /* hero */
 .hero{min-height:calc(100svh - 64px);display:flex;align-items:center;padding-block:clamp(50px,6vw,90px);overflow:hidden}
 .hero .bg{position:absolute;inset:0;z-index:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.38;transform:scale(1.06);animation:kb 18s ease-in-out infinite alternate}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.5;transform:scale(1.06);animation:kb 18s ease-in-out infinite alternate}
 @keyframes kb{to{transform:scale(1)}}
 .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,.25) 40%,#000 100%),radial-gradient(60% 50% at 50% 70%,rgba(212,167,60,.22),transparent 70%)}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:30px;align-items:center;max-width:980px}
 .hero .logo3d{max-width:620px;margin:0 0 10px -2%}
 .hero .date{display:inline-flex;align-items:center;gap:12px;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(14px);border-radius:var(--p);padding:10px 16px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2)}
 .hero .date i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold);animation:blink 1.6s ease-in-out infinite}
@@ -151,7 +165,7 @@ p{color:var(--soft);font-size:clamp(16px,1.3vw,19px)}
 .dp{display:none;background:var(--glass);border:1px solid var(--gold);border-radius:var(--r);overflow:hidden;grid-template-columns:.9fr 1.1fr;box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .dp.on{display:grid;animation:fadein .5s}
 @keyframes fadein{from{opacity:0;transform:translateY(10px)}}
-.dp img{width:100%;height:100%;min-height:360px;object-fit:cover}
+
 .dp .tx{padding:34px 32px;display:flex;flex-direction:column;gap:12px}
 .dp .when{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .dp h3{font-size:clamp(24px,2.6vw,32px);color:var(--wh)}
@@ -161,8 +175,16 @@ p{color:var(--soft);font-size:clamp(16px,1.3vw,19px)}
 @keyframes popli{to{opacity:1;transform:none}}
 .dp li:before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:linear-gradient(180deg,#f3d873,#d4a73c)}
 .dp li:after{content:"";position:absolute;left:7px;top:6.5px;width:5px;height:10px;border:solid #111;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
-@media(max-width:900px){.cal{grid-template-columns:1fr 1fr}.dayt.quiet{display:none}.dp.on{grid-template-columns:1fr}.dp img{min-height:200px;max-height:240px}}
+@media(max-width:900px){.cal{grid-template-columns:1fr 1fr}.dayt.quiet{display:none}.dp.on{grid-template-columns:1fr}.dp .mos{min-height:0;grid-template-rows:200px 120px}}
 @media(max-width:480px){.cal{grid-template-columns:1fr}.dayt{min-height:0}}
+.dp .mos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;min-height:420px}
+.dp .mos img{width:100%;height:100%;object-fit:cover;min-height:0}
+.dp .mos .big{grid-column:1/3;grid-row:1}
+.dp .mos img:nth-child(2),.dp .mos img:nth-child(3){grid-row:2}
+.dayt.pic{overflow:hidden;position:relative;opacity:1}
+.dayt.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;z-index:0}
+.dayt.pic b,.dayt.pic span,.dayt.pic small{position:relative;z-index:1}
+.dayt.pic:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.85));z-index:0}
 /* hosts */
 .hosts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .host{background:var(--glass);border:1px solid var(--glassb);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:240px 1fr}
@@ -259,6 +281,9 @@ footer .cards img{height:22px}
 <h2>Your pass to the <span class="gl">FRedX stage.</span></h2>
 <button class="btn lg glow" id="openinv">Open my invitation</button>
 <button class="skip" id="skipinv">Skip</button>
+<div class="invvid" id="invvid"><iframe id="invframe" src="about:blank" title="Welcome to FRedX from Forbes Riley" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><button class="vclose" id="vclose" aria-label="Close the video">&times;</button></div>
+<button class="btn lg glow more" id="invmore">YES! Secure my seat · $2,997</button>
+<p class="k look" id="invlook">or keep watching and look around ↓</p>
 </div>
 
 <div class="bar"><div class="wrap">
@@ -278,7 +303,6 @@ footer .cards img{height:22px}
 <p class="date rv in d4" id="datepill" style="margin:26px 0 0"><i></i> <span id="datetxt">Next FRedX: January 28–30, 2027 · Forbes’ studio, St. Pete, Florida · more dates coming soon</span></p>
 <div class="cd rv in d4" id="cd" style="margin-top:18px" aria-label="Countdown to FRedX"></div>
 </div>
-<div class="cut rv in d2"><img src="img/px/cut-new-02.png" alt="Forbes Riley with a microphone"></div>
 </div>
 </section>
 
@@ -306,18 +330,18 @@ footer .cards img{height:22px}
 <div class="wrap">
 <div class="center rv"><p class="k">Three powerful days · tap a day to open it</p><h2>Everything you get, day by day.</h2><p class="sub">Open each day and see all of it. Nothing here is a maybe.</p></div>
 <div class="cal rv" style="margin-top:40px">
-<div class="dayt quiet"><b>Wed Jan 27</b><span>Fly in</span><small>Tampa International</small></div>
+<div class="dayt quiet pic"><img src="img/fredx/flyin.webp" alt=""><b>Wed Jan 27</b><span>Fly in</span><small>Tampa International</small></div>
 <button class="dayt" data-d="1"><b>Thu Jan 28 · Day 1</b><span>Your road to success from stage</span><small><i>8</i> things inside</small><em>Open</em></button>
 <button class="dayt" data-d="2"><b>Fri Jan 29 · Day 2</b><span>Take the stage</span><small><i>9</i> things inside</small><em>Open</em></button>
 <button class="dayt" data-d="3"><b>Sat Jan 30 · Day 3</b><span>Branding photo shoot</span><small><i>7</i> things inside</small><em>Open</em></button>
-<div class="dayt quiet"><b>Sun Jan 31</b><span>Fly home</span><small>With the goods</small></div>
+<div class="dayt quiet pic"><img src="img/fredx/flyhome.webp" alt=""><b>Sun Jan 31</b><span>Fly home</span><small>With the goods</small></div>
 </div>
 <div class="dayp" id="dayp">
-<div class="dp" data-p="1"><img src="img/fredx/workshop.webp" alt="The FRedX workshop room"><div class="tx"><p class="when">Day 1 · Thursday, January 28, 2027 · all day</p><h3>Your road to success from stage</h3><ul>
+<div class="dp" data-p="1"><div class="mos"><img class="big" src="img/fredx/d1-a.webp" alt="A speaker on the FRedX stage during training"><img src="img/fredx/d1-b.webp" alt=""><img src="img/fredx/d1-c.webp" alt=""></div><div class="tx"><p class="when">Day 1 · Thursday, January 28, 2027 · all day</p><h3>Your road to success from stage</h3><ul>
 <li>Forbes’ high-impact speaker training, live in the room</li><li>The Pitch Like a Pro formula, so you can sell from stage</li><li>Live coaching from Forbes Riley on your message</li><li>Pitch your business in front of a supportive audience</li><li>Makenna’s session: the art of closing from stage, even when you are told “no pitching”</li><li>Your talk sharpened for tomorrow’s filming</li><li>Catered lunch</li><li>Your exclusive FRedX swag bag</li></ul></div></div>
-<div class="dp" data-p="2"><img src="img/fredx/onstage-1.webp" alt="An attendee on the FRedX stage"><div class="tx"><p class="when">Day 2 · Friday, January 29, 2027 · all day</p><h3>Take the stage and learn from others</h3><ul>
+<div class="dp" data-p="2"><div class="mos"><img class="big" src="img/fredx/d2-a.webp" alt="The multi-camera monitor wall filming a FRedX talk"><img src="img/fredx/d2-b.webp" alt=""><img src="img/fredx/d2-c.webp" alt=""></div><div class="tx"><p class="when">Day 2 · Friday, January 29, 2027 · all day</p><h3>Take the stage and learn from others</h3><ul>
 <li>Your five minutes on the FRedX stage, under real lights</li><li>Professionally filmed from multiple angles</li><li>Professionally photographed on stage</li><li>Coached by Forbes, live, after your talk</li><li>Learn from every other talk in the room</li><li>Priceless bonus: pitch live inside Forbes Riley’s private Mastermind, to real entrepreneurs who could become partners, clients or investors</li><li>Catered lunch</li><li>Surprise Friday night party</li><li>The FRedX award show</li></ul></div></div>
-<div class="dp" data-p="3"><img src="img/fredx/studio.webp" alt="Forbes Riley's studio with cameras and lights"><div class="tx"><p class="when">Day 3 · Saturday, January 30, 2027 · all day</p><h3>Branding photo shoot day</h3><ul>
+<div class="dp" data-p="3"><div class="mos"><img class="big" src="img/fredx/d3-a.webp" alt="Cameras and lights on a speaker in the studio"><img src="img/fredx/d3-b.webp" alt=""><img src="img/fredx/d3-c.webp" alt=""></div><div class="tx"><p class="when">Day 3 · Saturday, January 30, 2027 · all day</p><h3>Branding photo shoot day</h3><ul>
 <li>Your branding photo shoot with an award-winning photographer</li><li>Professional lighting, posing direction and photography</li><li>Brand images that represent you at your best, everywhere online</li><li>Your on-camera testimonial filmed in the studio</li><li>The FRedX Success Playbook</li><li>Catered lunch</li><li>After the event: your professionally edited speaking reel, delivered</li></ul></div></div>
 </div>
 </div>
@@ -330,7 +354,7 @@ footer .cards img{height:22px}
 <div class="host rv"><div class="pic"><img src="img/fredx/forbes-circle.webp" alt="Forbes Riley"></div><div class="tx"><h3>Forbes Riley</h3><p class="role">The Queen of Pitch</p><p>Celebrity TV host and one of the world’s most influential high-performance success coaches. Known globally as the Queen of Pitch, Forbes has sold more than $2.5 billion in products on television with her own communication and persuasion methods. With decades on major networks and stages worldwide, she has helped tens of thousands of entrepreneurs unlock their voice, master their message and turn their story into a business asset.</p></div></div>
 <div class="host rv d1"><div class="pic"><img src="img/fredx/makenna-circle.webp" alt="Makenna Riley"></div><div class="tx"><h3>Makenna Riley</h3><p class="role">Branding strategist · CEO, The GSD Company</p><p>Next-gen branding strategist and CEO of The GSD Company, where she has served more than 5,000 students. She co-founded a seven-figure coaching business at 17 and has since partnered with The Forbes Factor, impacting over 40,000 entrepreneurs. Makenna has shared the stage with Les Brown, Sharon Lechter and Forbes Riley. At FRedX she brings strategic clarity, creative vision and next-level branding to help you master the art of closing from stage, even when you are told “no pitching.”</p></div></div>
 </div>
-<div class="hostpic rv d2"><img src="img/fredx/forbes-makenna-red.webp" alt="Forbes and Makenna celebrating on the FRedX stage"><img src="img/fredx/backdrop-stage.webp" alt="The FRedX stage with Forbes and Makenna backdrops"></div>
+<div class="hostpic rv d2"><img src="img/fredx/forbes-makenna-red.webp" alt="Forbes and Makenna celebrating on the FRedX stage"><img src="img/fredx/hosts-screens.webp" alt="Forbes and Makenna on stage in front of the FRedX screens"></div>
 </div>
 </section>
 
@@ -395,14 +419,14 @@ footer .cards img{height:22px}
 <div class="wrap">
 <div class="center rv"><p class="k">The room</p><h2>What it feels like.</h2></div>
 <div class="gal rv" style="margin-top:36px">
-<img class="a" src="img/fredx/forbes-lights.webp" alt="Forbes on stage with the audience holding up phone lights">
+<img class="a" src="img/fredx/finale.webp" alt="Forbes with the whole FRedX room, arms up">
 <img src="img/fredx/forbes-banner.webp" alt="Forbes in front of the FRedX banner">
 <img src="img/fredx/award.webp" alt="Forbes presenting a certificate at the award show">
 <img src="img/fredx/group-stage.webp" alt="Attendees on the FRedX stage with Forbes">
-<img src="img/fredx/team-shirts.webp" alt="The FRedX crowd in matching shirts">
+<img src="img/fredx/cert.webp" alt="Forbes presenting a FRedX certificate">
 <img class="a" src="img/fredx/onstage-2.webp" alt="An attendee taking the FRedX stage">
-<img src="img/fredx/forbes-letters.webp" alt="Forbes in front of the FRedX letters">
-<img src="img/fredx/entrance.webp" alt="The entrance to Forbes Riley's studio">
+<img src="img/fredx/boas.webp" alt="Forbes and Makenna in feather boas at the party">
+<img src="img/fredx/party.webp" alt="The Friday night party">
 </div>
 </div>
 </section>
@@ -470,9 +494,18 @@ footer .cards img{height:22px}
   document.querySelectorAll('.vc').forEach(function(c){c.addEventListener('click',function(){var id=c.getAttribute('data-id'),th=c.querySelector('.th');if(th.querySelector('iframe'))return;document.querySelectorAll('.vc .th iframe').forEach(function(f){var t=f.parentNode;f.remove();t.querySelectorAll('[hidden]').forEach(function(x){x.hidden=false})});th.querySelectorAll('img,.dur,.pl').forEach(function(x){x.hidden=true});var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;f.title=c.querySelector('.vt').textContent;th.appendChild(f)})});
   var vc=document.getElementById('vidcover');if(vc){function openVid(){var v=vc.parentNode,f=v.querySelector('iframe');if(f.getAttribute('src')==='about:blank')f.src=f.getAttribute('data-src');v.classList.add('open')}vc.addEventListener('click',openVid);vc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openVid()}})}
   var inv=document.getElementById('invite');try{var seen=sessionStorage.getItem('fx-invite'),force=/[?&]invite=1/.test(location.search);if(!seen||force){inv.hidden=false;document.body.style.overflow='hidden'}}catch(e){inv.hidden=false}
-  function confetti(x,y,n){for(var i=0;i<n;i++){var d=document.createElement('i');var c=['#f6e3a1','#d4a73c','#fff','#b8902e'][i%4];d.style.cssText='position:fixed;left:'+x+'px;top:'+y+'px;width:9px;height:14px;background:'+c+';z-index:101;pointer-events:none;border-radius:2px;transform:rotate('+(Math.random()*360)+'deg)';document.body.appendChild(d);var a=Math.random()*Math.PI*2,v=240+Math.random()*420,dx=Math.cos(a)*v,dy=Math.sin(a)*v-280;d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+dx+'px,'+(dy+600)+'px) rotate('+(Math.random()*720-360)+'deg)',opacity:0}],{duration:1600+Math.random()*900,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=function(){d.remove()};setTimeout(function(){if(d.parentNode)d.remove()},2800)}}
+  function confetti(x,y,n){for(var i=0;i<n;i++){(function(k){var d=document.createElement('i');var c=['#f6e3a1','#d4a73c','#fff','#b8902e'][k%4];d.style.cssText='position:fixed;left:'+x+'px;top:'+y+'px;width:9px;height:14px;background:'+c+';z-index:101;pointer-events:none;border-radius:2px;transform:rotate('+(Math.random()*360)+'deg)';document.body.appendChild(d);var a=Math.random()*Math.PI*2,v=240+Math.random()*420,dx=Math.cos(a)*v,dy=Math.sin(a)*v-280;try{d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+dx+'px,'+(dy+600)+'px) rotate('+(Math.random()*720-360)+'deg)',opacity:0}],{duration:1600+Math.random()*900,easing:'cubic-bezier(.2,.8,.3,1)'})}catch(e){}setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},2600)})(i)}}
   function closeInv(){try{sessionStorage.setItem('fx-invite','1')}catch(e){}inv.classList.add('off');document.body.style.overflow=''}
-  var oi=document.getElementById('openinv');if(oi){oi.addEventListener('click',function(){var r=oi.getBoundingClientRect();confetti(r.left+r.width/2,r.top,180);setTimeout(closeInv,450)})}
+  var oi=document.getElementById('openinv'),invframe=document.getElementById('invframe'),invmore=document.getElementById('invmore'),invlook=document.getElementById('invlook'),vclose=document.getElementById('vclose'),stage=0,shown=false,ended=false;
+  function ytcmd(f){try{invframe.contentWindow.postMessage(JSON.stringify({event:'command',func:f,args:[]}),'*')}catch(e){}}
+  function showMore(){if(shown)return;shown=true;inv.classList.add('big');try{var r=invmore.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2,140)}catch(e){}}
+  function dock(){if(stage!==1||ended)return closeInv();try{sessionStorage.setItem('fx-invite','1')}catch(e){}inv.classList.remove('big');inv.classList.add('docked');document.body.style.overflow=''}
+  function undock(){if(!inv.classList.contains('docked'))return;ytcmd('pauseVideo');inv.classList.remove('docked');inv.classList.add('off');setTimeout(function(){invframe.src='about:blank'},500)}
+  if(oi){oi.addEventListener('click',function(){var r=oi.getBoundingClientRect();confetti(r.left+r.width/2,r.top,180);stage=1;inv.classList.add('watch');invframe.src='https://www.youtube-nocookie.com/embed/Fe4B7sTRhuc?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&playsinline=1';invframe.addEventListener('load',function(){try{invframe.contentWindow.postMessage(JSON.stringify({event:'listening',id:1,channel:'widget'}),'*')}catch(e){}});setTimeout(showMore,14000)})}
+  addEventListener('message',function(e){if(!/youtube/.test(e.origin))return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d)}catch(_){return}if(!d||!d.info)return;if(typeof d.info.currentTime==='number'&&d.info.currentTime>=11)showMore();if(d.info.playerState===0){ended=true;if(inv.classList.contains('docked'))undock();else{inv.classList.remove('watch');inv.classList.add('big')}}});
+  if(invmore)invmore.addEventListener('click',function(){dock();var el=document.getElementById('seats');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'})});
+  if(invlook)invlook.addEventListener('click',function(){dock();window.scrollTo({top:0,behavior:'instant'})});
+  if(vclose)vclose.addEventListener('click',undock);
   var tk=document.getElementById('tk');if(tk)tk.addEventListener('click',function(){oi.click()});
   var si=document.getElementById('skipinv');if(si)si.addEventListener('click',closeInv);
 })();

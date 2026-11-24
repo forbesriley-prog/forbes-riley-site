@@ -289,6 +289,7 @@ section{padding-block:clamp(80px,10vw,140px)}
 .host:before{content:"";position:absolute;left:50%;top:-6%;width:150%;height:110%;transform:translateX(-50%);background:radial-gradient(45% 60% at 50% 100%,rgba(240,213,122,.32),transparent 72%);pointer-events:none}
 .host:after{content:"";position:absolute;left:0;right:0;bottom:-26px;height:70px;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,rgba(240,213,122,.6),transparent 70%);filter:blur(10px);pointer-events:none}
 .bf .point{position:relative;z-index:2;width:100%;height:auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.75));animation:hang 5s ease-in-out infinite}
+@keyframes drift{0%{transform:translate(-50%,0) rotate(-2deg)}20%{transform:translate(calc(-50% + 22px),-14px) rotate(3deg)}40%{transform:translate(calc(-50% + 8px),10px) rotate(-3deg)}60%{transform:translate(calc(-50% - 24px),-10px) rotate(2deg)}80%{transform:translate(calc(-50% - 10px),12px) rotate(-1deg)}100%{transform:translate(-50%,0) rotate(-2deg)}}
 @keyframes hang{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
 .bf .wrap{padding-bottom:40px}
 @media(max-width:900px){.stage{padding-right:0}.host{display:none}.bf .head{text-align:center;margin:0 auto}.bf .head .sub{text-align:center;margin:16px auto 0}}
@@ -331,7 +332,7 @@ section{padding-block:clamp(80px,10vw,140px)}
 /* the value ledger */
 .stack{max-width:820px;margin:clamp(90px,11vw,140px) auto 0;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(18px);border-radius:var(--r);padding:clamp(54px,7vw,80px) clamp(22px,4vw,40px) clamp(22px,4vw,40px);position:relative}
 .stack:before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:linear-gradient(90deg,#b8902e,#f6e3a1 50%,#b8902e);border-radius:var(--r) var(--r) 0 0}
-.stack .bow{position:absolute;left:50%;top:-74px;transform:translateX(-50%);width:clamp(170px,24vw,240px);z-index:3;filter:drop-shadow(0 20px 30px rgba(0,0,0,.7));pointer-events:none;animation:hang 5s ease-in-out infinite}
+.stack .bow{position:absolute;left:50%;top:-74px;transform:translateX(-50%);width:clamp(170px,24vw,240px);z-index:3;filter:drop-shadow(0 20px 30px rgba(0,0,0,.7));pointer-events:none;animation:drift 11s ease-in-out infinite;will-change:transform}
 .ledger .amt{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .ledger .fr{display:none;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-style:normal;font-weight:800;font-size:11px;letter-spacing:.14em;border-radius:8px;padding:3px 9px;animation:numpop .45s cubic-bezier(.2,1.6,.3,1)}
 .ledger li.free b{text-decoration:line-through;color:#8a8a8a}.ledger li.free .fr{display:inline-block}

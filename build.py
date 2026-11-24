@@ -85,3 +85,7 @@ for name, text in sources:
 print("built", len(sources), "pages")
 
 print("->", OUT)
+
+# GoHighLevel paste kit for the Inner Circle page (dist/ghl/)
+import subprocess
+subprocess.run([sys.executable, "tools/make-ghl.py"], check=True)

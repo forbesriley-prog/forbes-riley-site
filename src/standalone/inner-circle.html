@@ -25,7 +25,7 @@ p{margin:0}
 .sub{font-size:clamp(19px,2.2vw,26px);color:var(--mute);font-weight:500;max-width:760px;margin:16px auto 0;text-align:center}
 .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:700;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;box-shadow:0 18px 50px rgba(212,167,60,.35);transition:transform .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 26px 60px rgba(212,167,60,.5)}
-.btn.ghost{background:var(--glass);color:#fff;border:1px solid var(--glassb);box-shadow:none;backdrop-filter:blur(14px)}
+.btn.ghost{background:rgba(240,213,122,.06);color:var(--gold);border:1px solid rgba(240,213,122,.55);box-shadow:none;backdrop-filter:blur(14px)}.btn.ghost:hover{background:rgba(240,213,122,.14);box-shadow:0 16px 40px rgba(212,167,60,.25)}
 .btn.lg{font-size:19px;padding:20px 36px}
 /* the invitation */
 #invite{position:fixed;inset:0;z-index:100;background:radial-gradient(60% 50% at 50% 62%,rgba(240,213,122,.22),transparent 70%),#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:20px;transition:opacity .9s,visibility .9s}
@@ -58,11 +58,11 @@ p{margin:0}
 #confetti{position:fixed;inset:0;z-index:200;pointer-events:none}
 /* pitch flip: does this sound like you */
 .flip{background:var(--bk2);position:relative}
-.youwrap{display:grid;grid-template-columns:1.55fr .85fr;gap:30px;align-items:end;margin-top:40px}
+.youwrap{display:grid;grid-template-columns:1.55fr .85fr;gap:30px;align-items:stretch;margin-top:28px}
 .qs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .sit{position:relative;display:flex;justify-content:center;align-items:flex-end;align-self:stretch}
 .sit:before{content:"";position:absolute;left:5%;right:5%;bottom:-18px;height:60px;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,rgba(240,213,122,.55),transparent 70%);filter:blur(10px)}
-.sit img{position:relative;width:100%;max-width:460px;height:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.7))}
+.sit img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:auto;height:auto;max-width:100%;max-height:140%;filter:drop-shadow(0 30px 50px rgba(0,0,0,.7))}
 .qa{text-align:left;font:inherit;color:#fff;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(16px);border-radius:var(--r);padding:26px 26px 26px 72px;cursor:pointer;position:relative;transition:border-color .35s,background .35s,transform .35s;min-height:140px}
 .qa:hover{transform:translateY(-3px)}
 .qa:before{content:"";position:absolute;left:24px;top:28px;width:30px;height:30px;border-radius:50%;border:2px solid rgba(240,213,122,.6);transition:.3s;box-sizing:border-box}
@@ -169,6 +169,21 @@ p{margin:0}
 .perks span{display:inline-flex;align-items:center;gap:9px;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(14px);border-radius:999px;padding:9px 16px 9px 10px;font-size:15px;font-weight:600;color:#fff}
 .perks i{width:22px;height:22px;border-radius:50%;background:linear-gradient(180deg,#f6e3a1,#d4a73c);position:relative;flex:none}
 .perks i:after{content:"";position:absolute;left:8px;top:4px;width:5px;height:9px;border:solid #1b1619;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+/* slide to unlock the sale */
+.unlock{position:relative;display:flex;align-items:center;justify-content:center;margin:18px auto 0;width:min(100%,560px);min-height:56px;border-radius:999px;background:rgba(0,0,0,.5);border:1px solid rgba(240,213,122,.45);backdrop-filter:blur(14px);touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:pointer;overflow:hidden}
+.unlock .hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-left:var(--kw,196px);font-size:14px;font-weight:600;letter-spacing:.02em;background:linear-gradient(90deg,#8a8a8a 0%,#8a8a8a 40%,#fff 50%,#8a8a8a 60%,#8a8a8a 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 2.4s linear infinite;transition:opacity .2s}
+.unlock .hint i{font-style:normal;margin-left:6px;letter-spacing:-.05em}
+@keyframes shine{from{background-position:200% 0}to{background-position:-200% 0}}
+.unlock .deal{display:none;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:8px 60px 8px 18px;font-size:15px;color:#ddd;opacity:0;transform:translateY(6px);transition:opacity .5s .25s,transform .5s .25s}
+.unlock .deal s{color:#999}.unlock .deal b{color:var(--gold);font-size:22px;letter-spacing:-.02em}.unlock .deal em{font-style:normal;color:#bbb;font-size:13px}
+.unlock .knob{position:absolute;top:50%;left:4px;transform:translateY(-50%);height:46px;width:var(--kw,196px);border-radius:999px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:grab;box-shadow:0 6px 18px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.6);transition:left .55s cubic-bezier(.2,.8,.2,1),width .45s .1s;white-space:nowrap}
+.unlock .knob:active{cursor:grabbing}
+.unlock .knob .arr{width:8px;height:8px;border-right:2px solid #1b1619;border-bottom:2px solid #1b1619;transform:rotate(-45deg);flex:none}
+.unlock.drag .knob{transition:none}
+.unlock.on{cursor:default}.unlock.on .hint{opacity:0}.unlock.on .deal{display:flex;opacity:1;transform:none}
+.unlock.on .knob{left:calc(100% - 50px);width:46px;cursor:default}
+.unlock.on .knob span{display:none}.unlock.on .knob .arr{width:7px;height:13px;transform:rotate(45deg) translate(-1px,-2px);border-width:0 2px 2px 0}
+@media(max-width:480px){.unlock{--kw:160px}.unlock .hint{font-size:13px}.unlock .deal{gap:10px;padding-right:54px}.unlock .deal b{font-size:20px}}
 .dealline{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:18px;background:rgba(0,0,0,.5);border:1px solid rgba(240,213,122,.45);backdrop-filter:blur(14px);border-radius:999px;padding:8px 18px 8px 8px;font-size:15px;color:#ddd}
 .dealline .tag{background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:7px 12px}
 .dealline s{color:#999}.dealline b{color:var(--gold);font-size:22px;letter-spacing:-.02em}.dealline em{font-style:normal;color:#bbb;font-size:13px}
@@ -344,7 +359,7 @@ footer a{color:#999;margin:0 6px}
 <div class="bar"><div class="wrap">
   <div class="brand"><img src="img/ic/crescent.png" alt="Inner Circle"><span>Forbes Riley's Inner Circle</span></div>
   <div class="sale"><span class="txt"><span class="tag">Sale</span> <s>$5,000</s> <b>$1,500</b> a year &middot; ends in</span><span class="cd" id="cd"><span>--</span><span>--</span><span>--</span><span>--</span></span></div>
-  <button class="btn" data-q>Get it NOW</button>
+  <button class="btn" data-q>YES! I want Forbes in my corner</button>
 </div></div>
 
 <canvas id="confetti"></canvas>
@@ -366,8 +381,8 @@ footer a{color:#999;margin:0 6px}
     <div class="lockup"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png" alt="Inner Circle"><span><i></i> By invitation only &middot; Black Friday 2026</span></div>
     <h1>Be in the room<br>with Forbes. <span class="gold">Every week.</span></h1>
     <div class="perks"><span><i></i>Live with Forbes, every week</span><span><i></i>12 BREAKTHRUs a year</span><span><i></i>Your pitch + socials reviewed</span><span><i></i>A circle that has your back</span></div>
-    <div class="dealline"><span class="tag">Black Friday sale</span><s>$5,000 a year</s><b>$1,500</b><em>Save $3,500 &middot; this weekend only</em></div>
-    <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="#inside">See what's inside</a></div>
+    <div class="unlock" id="unlock" role="button" tabindex="0" aria-label="Slide to unlock the Black Friday sale"><span class="hint">Slide to unlock the sale <i>&rsaquo;&rsaquo;&rsaquo;</i></span><div class="deal"><s>$5,000 a year</s><b>$1,500</b><em>Save $3,500 &middot; this weekend only</em></div><div class="knob"><span>Black Friday sale</span><i class="arr"></i></div></div>
+    <div class="cta"><button class="btn lg" data-q>YES! I want Forbes in my corner</button><a class="btn ghost lg" href="#inside">Show me everything I get</a></div>
   </div>
   <img class="forbes" src="img/px/cut-new-05.png" alt="Dr. Forbes Riley making a heart">
   <div class="scrollhint">Scroll</div>
@@ -385,7 +400,7 @@ footer a{color:#999;margin:0 6px}
   <div class="sit rv"><img src="img/px/cut-new-08.png" alt="Dr. Forbes Riley sitting, listening"></div>
   </div>
   <div class="tally rv"><span id="tally">Tap the ones that are true.</span><button class="btn" data-q>YES, that's me</button></div>
-  <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://www.youtube-nocookie.com/embed/t52E3asvjsw?autoplay=1&rel=0&modestbranding=1" src="about:blank" title="Meet Dr. Forbes Riley" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><div class="vplay"><i></i></div><div class="vtxt"><p class="k">Who is Forbes Riley? &middot; 2 min</p><h3>Meet the woman you'll be in the room with.</h3></div></div></div><p>The $2.5 billion host. The Queen of Pitch. Your host every week.</p></div>
+  <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://www.youtube-nocookie.com/embed/Zq9AQ547gSw?autoplay=1&rel=0&modestbranding=1" src="about:blank" title="Meet Dr. Forbes Riley" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><div class="vplay"><i></i></div><div class="vtxt"><p class="k">The Forbes Riley story &middot; 4 min</p><h3>Meet the woman you'll be in the room with.</h3></div></div></div><p>The $2.5 billion host. The Queen of Pitch. Your host every week.</p></div>
 </div></section>
 
 <section class="white" id="inside"><div class="wrap">
@@ -464,7 +479,7 @@ footer a{color:#999;margin:0 6px}
       <li><span>12 BREAKTHRUs led by Forbes</span><b data-amt="12000">$0</b></li>
     </ul>
     <div class="total"><span>Total value</span><b id="tot">$0</b></div>
-    <div class="pay"><span>Black Friday price</span><b>$1,500</b><em>That is 6% of the value. Normally $5,000 a year. Get it NOW.</em></div>
+    <div class="pay"><span>Black Friday price</span><b>$1,500</b><em>That is 6% of the value. Normally $5,000 a year. Say YES this weekend.</em></div>
   </div>
 
   <div class="price">
@@ -542,9 +557,9 @@ footer a{color:#999;margin:0 6px}
 
 <section class="final"><div class="wrap fwrap">
   <img class="callme" src="img/px/cut-new-06.png" alt="">
-  <div class="rv"><p class="k" style="color:var(--gold)">Black Friday sale &middot; ends Sunday night</p><h2>Get it NOW.</h2><p class="sub">Normally $5,000 a year. This weekend, $1,500 for a year in the room with Forbes and the circle. By invitation, intentionally small, no contracts.</p>
+  <div class="rv"><p class="k" style="color:var(--gold)">Black Friday sale &middot; ends Sunday night</p><h2>Don't buy more stuff.<br>Buy yourself a better year.</h2><p class="sub">Normally $5,000 a year. This weekend, $1,500 for a year in the room with Forbes and the circle. By invitation, intentionally small, no contracts.</p>
   <div class="dealline"><span class="tag">Save $3,500</span><s>$5,000</s><b>$1,500</b><em>ends in</em><span class="cd" id="cd2"></span></div>
-  <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call first</a></div></div>
+  <div class="cta"><button class="btn lg" data-q>YES! I want Forbes in my corner</button><a class="btn ghost lg" href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call first</a></div></div>
 </div></section>
 
 <footer><div class="wrap">Owned and operated by Forbes Riley Media, MJR Dominion LLC. &copy; 2026<br><a href="https://forbesriley.com/terms-of-service">Terms</a> | <a href="https://forbesriley.com/privacy">Privacy</a> | <a href="https://forbesriley.com/refund-policy">Refunds</a> | <a href="https://forbesriley.com/disclaimer">Disclaimer</a> | <a href="https://forbesriley.com/affiliate-policy">Affiliates</a></div></footer>
@@ -573,6 +588,18 @@ footer a{color:#999;margin:0 6px}
 
 <script>
 (function(){
+  /* slide to unlock the Black Friday sale */
+  try{(function(){var u=document.getElementById('unlock');if(!u)return;var k=u.querySelector('.knob'),x=0,sx=0,drag=false,moved=false,max=0,done=false;
+    function unlock(){if(done)return;done=true;drag=false;u.classList.remove('drag');k.style.left='';u.classList.add('on');try{var rc=u.getBoundingClientRect();confetti(rc.right-30,rc.top+rc.height/2,120,1.6)}catch(e){}try{if(window.dataLayer)window.dataLayer.push({event:'deal_unlock'})}catch(e){}}
+    function setx(v){x=Math.max(0,Math.min(max,v));k.style.left=(4+x)+'px';u.querySelector('.hint').style.opacity=Math.max(0,1-x/max*1.8)}
+    k.addEventListener('pointerdown',function(e){if(done)return;max=u.clientWidth-k.offsetWidth-8;drag=true;moved=false;sx=e.clientX;u.classList.add('drag');try{k.setPointerCapture(e.pointerId)}catch(_){}});
+    k.addEventListener('pointermove',function(e){if(!drag)return;var d=e.clientX-sx;if(Math.abs(d)>6)moved=true;setx(d)});
+    function up(){if(!drag)return;drag=false;u.classList.remove('drag');if(x>max*.6)unlock();else{x=0;k.style.left='';u.querySelector('.hint').style.opacity=''}}
+    k.addEventListener('pointerup',up);k.addEventListener('pointercancel',up);
+    u.addEventListener('click',function(){if(!moved)unlock()});
+    u.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='ArrowRight'){e.preventDefault();unlock()}});
+    try{new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&!done){setTimeout(function(){if(!done&&!drag){k.style.transition='left .5s';k.style.left='34px';setTimeout(function(){if(!done&&!drag){k.style.left='';setTimeout(function(){k.style.transition=''},500)}},500)}},1800)}})},{threshold:.5}).observe(u)}catch(e){}
+  })()}catch(e){}
   /* confetti: gold, cream and white, from a point */
   var confetti=(function(){var c=document.getElementById('confetti'),x=c.getContext('2d'),ps=[],run=false,cols=['#f6e3a1','#d4a73c','#fff','#9a7320','#fffdf0'];
     function size(){c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;x.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}size();addEventListener('resize',size);

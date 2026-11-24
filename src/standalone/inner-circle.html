@@ -30,6 +30,8 @@ p{margin:0}
 /* the invitation */
 #invite{position:fixed;inset:0;z-index:100;background:radial-gradient(60% 50% at 50% 62%,rgba(240,213,122,.22),transparent 70%),#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:20px;transition:opacity .9s,visibility .9s}
 #invite.off{opacity:0;visibility:hidden;pointer-events:none}
+#invite .shh{position:absolute;left:max(2vw,calc(50% - 760px));bottom:0;height:min(78vh,760px);width:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.8));animation:envin 1.4s .2s cubic-bezier(.2,.7,.2,1) both;pointer-events:none}
+@media(max-width:1180px){#invite .shh{display:none}}
 #invite[hidden]{display:none}
 #invite .who{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;opacity:.9}
 .env{--w:min(92vw,560px,calc((100svh - 150px) * .88));position:relative;width:var(--w);aspect-ratio:1.6;cursor:pointer;transition:margin-top 1.1s .5s cubic-bezier(.2,.7,.2,1);animation:envin 1.2s cubic-bezier(.2,.7,.2,1) both}
@@ -56,7 +58,11 @@ p{margin:0}
 #confetti{position:fixed;inset:0;z-index:200;pointer-events:none}
 /* pitch flip: does this sound like you */
 .flip{background:var(--bk2);position:relative}
-.qs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.youwrap{display:grid;grid-template-columns:1.55fr .85fr;gap:30px;align-items:end;margin-top:40px}
+.qs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sit{position:relative;display:flex;justify-content:center;align-items:flex-end;align-self:stretch}
+.sit:before{content:"";position:absolute;left:5%;right:5%;bottom:-18px;height:60px;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,rgba(240,213,122,.55),transparent 70%);filter:blur(10px)}
+.sit img{position:relative;width:100%;max-width:460px;height:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.7))}
 .qa{text-align:left;font:inherit;color:#fff;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(16px);border-radius:var(--r);padding:26px 26px 26px 72px;cursor:pointer;position:relative;transition:border-color .35s,background .35s,transform .35s;min-height:140px}
 .qa:hover{transform:translateY(-3px)}
 .qa:before{content:"";position:absolute;left:24px;top:28px;width:30px;height:30px;border-radius:50%;border:2px solid rgba(240,213,122,.6);transition:.3s;box-sizing:border-box}
@@ -133,7 +139,7 @@ p{margin:0}
 .day .t{margin-top:auto;font-size:12px;color:var(--mute2);background:var(--paper);border-radius:999px;padding:4px 10px;align-self:flex-start}
 .day.star{background:#0b0b0d;color:#fff}.day.star p{color:#bbb}.day.star .d{color:var(--gold)}.day.star .t{background:rgba(240,213,122,.15);color:var(--gold)}
 .plus{margin-top:14px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;border-radius:16px;padding:18px 22px;font-weight:600;text-align:center;font-size:17px}
-@media(max-width:900px){.qs{grid-template-columns:1fr}.jewel .reveal{grid-template-columns:1fr}.podhead{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.cal{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.youwrap{grid-template-columns:1fr}.sit{display:none}.qs{grid-template-columns:1fr}.jewel .reveal{grid-template-columns:1fr}.podhead{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.cal{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.cal{grid-template-columns:1fr}}
 /* top glass bar */
 .bar{position:sticky;top:0;z-index:30;background:rgba(0,0,0,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -343,6 +349,7 @@ footer a{color:#999;margin:0 6px}
 
 <canvas id="confetti"></canvas>
 <div id="invite" hidden>
+  <img class="shh" src="img/px/cut-new-07.png" alt="">
   <div class="env" id="env" role="button" aria-label="Open your invitation" tabindex="0">
     <div class="back"></div>
     <div class="card"><img class="logo" src="img/ic/logo.svg" alt="Forbes Riley's"><div class="inv">You're invited.</div><p>To a seat in Forbes' private circle: live with her every week, 12 BREAKTHRUs a year, your pitch reviewed by her team.</p><p><b>Black Friday only: a year for $1,500.</b></p><img class="cres" src="img/ic/crescent.png" alt="Inner Circle"></div>
@@ -368,11 +375,14 @@ footer a{color:#999;margin:0 6px}
 
 <section class="flip" id="you"><div class="wrap">
   <div class="center rv"><p class="k">Be honest</p><h2>Does this sound like you?</h2><p class="sub">Tap every one that's true.</p></div>
+  <div class="youwrap">
   <div class="qs">
     <button class="qa rv" data-a><span class="qq">You know your business has a next step. You just can't see it from where you're standing.</span><span class="a"><b>Momentum Mapping, every week.</b> The next 90 days, mapped, with people who will ask you about it.</span></button>
     <button class="qa rv d1" data-a><span class="qq">You need accountability. The kind that notices when you don't show up.</span><span class="a"><b>Pods on Wednesday. Hot Seats on Thursday.</b> A circle that expects you, and a team that checks in.</span></button>
     <button class="qa rv d2" data-a><span class="qq">You're tired of building alone and can't find business owners who think like you.</span><span class="a"><b>A tight-knit, global circle.</b> Member challenges, group activities and real relationships, every day.</span></button>
     <button class="qa rv d3" data-a><span class="qq">You want Forbes herself. Not another course.</span><span class="a"><b>12 BREAKTHRUs a year, led by Forbes.</b> Live, in the room, members only.</span></button>
+  </div>
+  <div class="sit rv"><img src="img/px/cut-new-08.png" alt="Dr. Forbes Riley sitting, listening"></div>
   </div>
   <div class="tally rv"><span id="tally">Tap the ones that are true.</span><button class="btn" data-q>YES, that's me</button></div>
   <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://www.youtube-nocookie.com/embed/t52E3asvjsw?autoplay=1&rel=0&modestbranding=1" src="about:blank" title="Meet Dr. Forbes Riley" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><div class="vplay"><i></i></div><div class="vtxt"><p class="k">Who is Forbes Riley? &middot; 2 min</p><h3>Meet the woman you'll be in the room with.</h3></div></div></div><p>The $2.5 billion host. The Queen of Pitch. Your host every week.</p></div>

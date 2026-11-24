@@ -1,6 +1,8 @@
-# Inner Circle Black Friday page: handoff (Nov 23, 2026)
+# Inner Circle Black Friday page: handoff (updated Nov 24, 2026)
 
-Live: https://site.forbesrileyhq.com/inner-circle.html (add `?invite=1` to see the opening envelope again)
+Live: https://site.forbesrileyhq.com/inner-circle.html
+
+**Nov 24, 2026: the refactor from branch `inner-circle-cro` is LIVE** (Katrina: "deploy it"). Sections 11-21 below describe the OLD page (envelope, gifts, ledger) and are kept for history. The live page is the 14-section version: static hero ("You're too talented to still be stuck."), $1,500 annual only, lifetime card hidden behind `CFG.lifetimeEnabled`, one deadline in `CFG` (Mon Nov 30 2026 11:59 PM ET, still unconfirmed), checkout URLs empty so the button opens the 3-question application, GA4/GTM id still to paste at the marked comment, `icPurchase()` for confirmation pages. QA captures: `marketing/qa/inner-circle/`.
 Source: `src/standalone/inner-circle.html` (one self-contained file: CSS, HTML, JS). Build with `python3 build.py`, copy `dist` to `docs`, commit, push to `main`. GitHub Pages serves `docs`. Takes 1-3 minutes to go live.
 Replaces: https://forbesrileymembership.com/your-invitation
 Brand rules: `marketing/FORBES-RILEY-BRAND-BRIEF.md` and https://site.forbesrileyhq.com/brand.html
@@ -23,7 +25,7 @@ Forbes is APPLE. Big, a brand, frosted, hip, gold, sleek. This is her private gr
 ## Numbers used (from the old page)
 Values: LIVE $5,200; Pitch Video Review $500; Course Hub $4,500; Pods $580; Social Media Review $500; private group $500; 12 BREAKTHRUs $12,000. Total $23,780. "Normal price $5,000" is the old page's claim. Black Friday price $1,500 is Katrina's. Countdown ends Mon Nov 30, 2026 11:59 PM ET (assumed, not confirmed).
 
-## CRO pass (Nov 23 night, branch `inner-circle-cro`, NOT published)
+## CRO pass (Nov 23 night, branch `inner-circle-cro`; merged and published Nov 24)
 Hero "You're too talented to still be stuck." with ?h=a/b/c variants, campaign line "Don't buy more stuff. Buy yourself a better year.", two plans ($1,500 year / $3,000 lifetime) with a `CHECKOUT` config in the script (fill the two URLs and the buttons go to checkout), tracking layer (dataLayer/gtag events + UTMs; paste a GA4/GTM id at the marked comment), WebP images (12.3 MB -> 1.3 MB), palette per the brief, the `.flip` class clash fixed (that was the real "black on black"). To publish: merge the branch, `python3 build.py`, copy dist to docs, push.
 
 ## Still needs a human decision

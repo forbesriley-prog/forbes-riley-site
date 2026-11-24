@@ -16,18 +16,19 @@ p{margin:0;line-height:1.42}
 .top img{height:.85in}
 .pill{font-size:8pt;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#1b1619;background:linear-gradient(180deg,#f3d873,#d4a73c);padding:6pt 13pt;border-radius:4pt}
 /* hero */
-.hero{display:grid;grid-template-columns:1.12fr .88fr;gap:.15in;align-items:end;margin-top:.08in;position:relative;min-height:2.75in}
-.hero .cut{position:relative;height:2.75in;display:flex;align-items:flex-end;justify-content:center}
-.hero .cut::before{content:"";position:absolute;left:0;right:0;bottom:-.15in;height:70%;background:radial-gradient(ellipse at 50% 100%,rgba(240,213,122,.5),transparent 68%)}
-.hero .cut img{position:relative;height:3.0in;margin-bottom:-.15in;filter:drop-shadow(0 .15in .25in rgba(0,0,0,.75))}
+.hero{display:block;margin-top:.08in;position:relative;min-height:2.95in}
+.hero .txt{max-width:3.95in;position:relative;z-index:1}
+.hero .cut{position:absolute;right:-.15in;top:0;width:3.75in;height:3.09in;overflow:hidden;z-index:0}
+.hero .cut::before{content:"";position:absolute;left:5%;right:5%;top:.3in;bottom:-.4in;background:radial-gradient(ellipse at 50% 70%,rgba(240,213,122,.42),transparent 65%)}
+.hero .cut img{position:absolute;right:.05in;top:0;height:7.2in;filter:drop-shadow(0 .1in .2in rgba(0,0,0,.7))}
 .hero .cut .name{position:absolute;right:0;bottom:.05in;font-family:"Allura",cursive;font-size:22pt;color:#f0d57a;line-height:1}
 h1{font-size:36pt;line-height:.98;font-weight:800;margin:3pt 0 7pt;color:#fff;letter-spacing:-.01em}
 .hero .tag{font-size:12pt;font-weight:600;color:#fff;line-height:1.35;margin:0 0 7pt}
 .hero .tag i{color:#f0d57a;font-style:normal}
 .hero .sub{font-size:9.4pt;color:#d6d6d6;line-height:1.45;max-width:4.2in}
-.hero .line{margin-top:7pt;border-left:2.5pt solid #d4a73c;padding:2pt 0 2pt 9pt;font-family:"Allura",cursive;font-size:17.5pt;white-space:nowrap;color:#f0d57a;line-height:1.05}
+.hero .line{margin-top:9pt;border-left:2.5pt solid #d4a73c;padding:2pt 0 2pt 9pt;font-family:"Allura",cursive;font-size:19pt;max-width:3.6in;color:#f0d57a;line-height:1.05}
 /* gold band */
-.band{margin-top:.14in;display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(180deg,#f3d873,#d4a73c);border-radius:5pt;padding:8pt 4pt;color:#1b1619;position:relative}
+.band{margin-top:.14in;position:relative;z-index:2;box-shadow:0 -.08in .3in rgba(0,0,0,.55);display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(180deg,#f3d873,#d4a73c);border-radius:5pt;padding:8pt 4pt;color:#1b1619;position:relative}
 .band div{text-align:center;padding:0 3pt;border-left:1px solid rgba(27,22,25,.22)}
 .band div:first-child{border-left:0}
 .band b{display:block;font-size:15.5pt;font-weight:800;line-height:1;letter-spacing:-.01em}
@@ -79,10 +80,10 @@ h1{font-size:36pt;line-height:.98;font-weight:800;margin:3pt 0 7pt;color:#fff;le
 .shared{font-size:8pt;color:#bbb;margin-top:6pt;line-height:1.4}
 .shared b{color:#fff;font-weight:600}
 .photos{display:grid;grid-template-columns:1fr 1fr;gap:6pt;margin-top:8pt}
-.photos img{width:100%;height:.85in;object-fit:cover;border-radius:5pt;display:block;border:1px solid #2a2a2a}
-.quote{margin-top:.14in;background:#131313;border:1px solid #262626;border-left:3pt solid #d4a73c;border-radius:5pt;padding:9pt 12pt;display:grid;grid-template-columns:auto 1fr;gap:10pt;align-items:center}
+.photos img{width:100%;height:.8in;object-fit:cover;border-radius:5pt;display:block;border:1px solid #2a2a2a}
+.quote{margin-top:.1in;background:#131313;border:1px solid #262626;border-left:3pt solid #d4a73c;border-radius:5pt;padding:7pt 11pt;display:grid;grid-template-columns:auto 1fr;gap:10pt;align-items:center}
 .quote .mark{font-family:"Allura",cursive;font-size:40pt;color:#d4a73c;line-height:.6;margin-top:8pt}
-.quote p{font-size:8.4pt;color:#f2f2f2;font-style:italic;line-height:1.42}
+.quote p{font-size:8pt;color:#f2f2f2;font-style:italic;line-height:1.42}
 .quote small{display:block;font-size:7.6pt;letter-spacing:.16em;text-transform:uppercase;color:#f0d57a;font-weight:700;margin-top:4pt;font-style:normal}
 .logos{position:absolute;left:.55in;right:.55in;bottom:1.12in;display:flex;align-items:center;gap:10pt;border-top:1px solid #2a2a2a;padding-top:7pt}
 .logos .k{margin:0;white-space:nowrap}
@@ -91,6 +92,7 @@ h1{font-size:36pt;line-height:.98;font-weight:800;margin:3pt 0 7pt;color:#fff;le
 .bookbar .big small{display:block;font-size:6.8pt;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.8}
 .bookbar .big b{display:block;font-size:15pt;white-space:nowrap;font-weight:800;line-height:1.05;letter-spacing:-.01em}
 .bookbar div small{display:block;font-size:6.6pt;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.75}
+.bookbar a{color:inherit;text-decoration:none}
 .bookbar div b{display:block;font-size:8.6pt;font-weight:700;line-height:1.2;overflow-wrap:normal;word-break:normal}
 </style></head><body>
 
@@ -98,14 +100,13 @@ h1{font-size:36pt;line-height:.98;font-weight:800;margin:3pt 0 7pt;color:#fff;le
   <div class="glow"></div><div class="glow2"></div>
   <div class="top"><img src="file:///Users/katrinayoung/Downloads/forbes-riley-site/src/img/logo-signature-gold.png" alt="Forbes Riley"><span class="pill">Keynote speaker &middot; The Queen of Pitch</span></div>
   <div class="hero">
-    <div>
+    <div class="txt">
       <p class="k">Four keynotes &middot; one speaker</p>
       <h1>The Power<br>of <span class="gold">YES.</span></h1>
-      <p class="tag">Dr. Forbes Riley transforms the way people <i>communicate, lead, sell and succeed.</i></p>
-      <p class="sub">The host behind $2.5 billion in live-TV sales. Thirty years on air taught her you have seconds to earn a room. She teaches your audience to use them.</p>
-      <p class="line">Audiences don&rsquo;t just leave motivated. They leave equipped.</p>
+      <p class="tag">Dr. Forbes Riley transforms the way people <i>communicate, lead, sell and succeed.</i> Thirty years of live TV. $2.5 billion sold. No second take.</p>
+            <p class="line">Audiences don&rsquo;t just leave motivated. They leave equipped.</p>
     </div>
-    <div class="cut"><img src="file:///Users/katrinayoung/Downloads/forbes-riley-site/src/img/px/cut-new-01.png" alt="Dr. Forbes Riley"></div>
+    <div class="cut"><img src="file:///Users/katrinayoung/Downloads/forbes-riley-site/src/img/px/cut-new-09.png" alt="Dr. Forbes Riley"></div>
   </div>
   <div class="band">
     <div><b>$2.5B+</b><span>in product sales worldwide</span></div>
@@ -184,14 +185,15 @@ h1{font-size:36pt;line-height:.98;font-weight:800;margin:3pt 0 7pt;color:#fff;le
       <div class="chips"><span class="g">Grant Cardone&rsquo;s 10X Growth Con</span><span class="g">NAWBO</span><span class="g">Ryan Pineda&rsquo;s stage</span><span>Building Success Summit</span><span>Ignite Las Vegas</span><span>LEAP Los Angeles</span><span>Million Dollar Weekend</span><span>Real Summits GSD</span><span>Miracle-Ear</span><span>Achieve, Denver</span><span>The Wealth Summit, Toronto</span><span>Momentum X</span><span>Forbes Factor Live</span><span>Fortune 100 sales teams</span></div>
       <p class="shared">Shared stages with <b>Les Brown, Mel Robbins, Jay Shetty, George Foreman, Kevin Harrington</b> and <b>Jane Fonda</b>.</p>
       <div class="quote"><span class="mark">&ldquo;</span><div><p>If you are looking for a speaker who can transform your audience and create value, so that they leave your presence feeling better about themselves but talking about you, Forbes Riley will deliver for you.</p><small>Les Brown</small></div></div>
+      <div class="quote" style="margin-top:6pt"><span class="mark">&ldquo;</span><div><p>In all my years in television, she is the best I have been around.</p><small>Joe Theismann, NFL Hall of Fame</small></div></div>
     </div>
   </div>
-  <div class="logos"><p class="k">As seen on</p><img src="file:///Users/katrinayoung/Downloads/forbes-riley-site/src/img/book/featured-logos.png" alt="NBC, CBS, FOX Business, Shark Tank, QVC, HSN, ESPN, TLC, ABC"></div>
+  <div class="logos"><p class="k">As seen on</p><span style="order:3;font-size:7.4pt;color:#bbb;white-space:nowrap;margin-left:6pt">@forbes_riley &middot; @forbesriley</span><img src="file:///Users/katrinayoung/Downloads/forbes-riley-site/src/img/book/featured-logos.png" alt="NBC, CBS, FOX Business, Shark Tank, QVC, HSN, ESPN, TLC, ABC"></div>
   <div class="bookbar">
     <div class="big"><small>Booking inquiries</small><b>Book Forbes</b></div>
-    <div><small>Email</small><b>assistant@theforbesfactor.com</b></div>
-    <div><small>Speaker page</small><b>site.forbesrileyhq.com<wbr>/speak</b></div>
-    <div><small>Speaker reel</small><b>youtu.be<wbr>/t52E3asvjsw</b></div>
+    <div><small>Email</small><b><a href="mailto:assistant@theforbesfactor.com">assistant@theforbesfactor.com</a></b></div>
+    <div><small>Speaker page</small><b><a href="https://site.forbesrileyhq.com/speak">site.forbesrileyhq.com<wbr>/speak</a></b></div>
+    <div><small>Speaker reel</small><b><a href="https://www.youtube.com/watch?v=t52E3asvjsw">youtu.be<wbr>/t52E3asvjsw</a></b></div>
   </div>
 </div>
 </body></html>

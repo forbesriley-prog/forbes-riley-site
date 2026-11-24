@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Forbes Riley's Inner Circle | Black Friday Invitation</title>
 <meta name="description" content="By invitation only. Be in the room with Forbes Riley every week: 52 LIVE calls, 12 BREAKTHRU sessions led by Forbes, your pitch reviewed by her team, the Elevate Course Hub and Pitch Practice Pods. Black Friday: a year for $1,500.">
@@ -9,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap">
 <style>
-:root{--bk:#000;--bk2:#0b0b0d;--wh:#fff;--paper:#f5f5f7;--ink:#1d1d1f;--mute:#86868b;--mute2:#6e6e73;--gold:#f0d57a;--gold2:#d4a73c;--gold3:#9a7320;--glass:rgba(255,255,255,.08);--glassb:rgba(255,255,255,.18);--r:22px;--font:"Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+:root{color-scheme:only light;--bk:#000;--bk2:#0b0b0d;--wh:#fff;--paper:#f5f5f7;--ink:#1d1d1f;--mute:#86868b;--mute2:#6e6e73;--gold:#f0d57a;--gold2:#d4a73c;--gold3:#9a7320;--glass:rgba(255,255,255,.08);--glassb:rgba(255,255,255,.18);--r:22px;--font:"Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bk);color:var(--wh);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden}
 img{max-width:100%;display:block}
@@ -71,6 +72,16 @@ p{margin:0}
 .promo{margin-top:clamp(40px,6vw,70px);max-width:960px;margin-left:auto;margin-right:auto}
 .vid{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;border:1px solid rgba(240,213,122,.45);box-shadow:0 40px 100px rgba(0,0,0,.7),0 0 80px rgba(240,213,122,.12);background:#000}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .cover{position:absolute;inset:0;z-index:3;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.vid .door{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(180deg,#1c1c1f,#07070a);transition:transform 1.1s cubic-bezier(.6,0,.2,1)}
+.vid .door.l{left:0;border-right:1px solid rgba(240,213,122,.5)}.vid .door.r{right:0;border-left:1px solid rgba(240,213,122,.5)}
+.vid .door:after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 50%,rgba(240,213,122,.14),transparent 70%)}
+.vid .vseal{position:absolute;left:50%;top:50%;width:clamp(90px,14vw,150px);transform:translate(-50%,-50%);filter:drop-shadow(0 14px 30px rgba(0,0,0,.7));transition:transform .5s,opacity .4s;z-index:2}
+.vid .vtxt{position:absolute;left:0;right:0;bottom:clamp(16px,5%,40px);text-align:center;z-index:2;transition:opacity .4s}
+.vid .vtxt h3{font-size:clamp(20px,2.6vw,30px);margin:4px 0 12px}
+.vid .cover.open .door.l{transform:translateX(-102%)}.vid .cover.open .door.r{transform:translateX(102%)}
+.vid .cover.open .vseal{transform:translate(-50%,-50%) scale(.2);opacity:0}.vid .cover.open .vtxt{opacity:0}
+.vid .cover.open{pointer-events:none}
 .promo p{text-align:center;color:#999;margin-top:12px;font-size:14px}
 /* inside: the list and the crown jewel */
 .get{list-style:none;padding:0;margin:40px auto 0;max-width:820px;display:grid;gap:12px}
@@ -82,7 +93,7 @@ p{margin:0}
 .jewel:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 180deg,transparent,rgba(240,213,122,.22),transparent 30%);animation:spin 10s linear infinite;pointer-events:none}
 .jewel>*{position:relative}
 .jewel .tease{font-size:clamp(20px,2.6vw,30px);font-weight:600;max-width:760px;margin:0 auto;line-height:1.3}
-.jewel .reveal{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:center;text-align:left;max-height:0;opacity:0;overflow:hidden;transition:max-height 1.2s cubic-bezier(.2,.7,.2,1),opacity .9s .3s,margin .9s}
+.jewel .reveal{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;text-align:left;max-height:0;opacity:0;overflow:hidden;transition:max-height 1.2s cubic-bezier(.2,.7,.2,1),opacity .9s .3s,margin .9s}
 .jewel.open .reveal{max-height:900px;opacity:1;margin-top:30px}
 .jewel .reveal img{width:100%;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
 .jewel .reveal h3{font-size:clamp(28px,3.4vw,44px)}
@@ -124,12 +135,12 @@ p{margin:0}
 @media(max-width:900px){.qs{grid-template-columns:1fr}.jewel .reveal{grid-template-columns:1fr}.podhead{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.cal{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.cal{grid-template-columns:1fr}}
 /* top glass bar */
-.bar{position:sticky;top:0;z-index:30;background:rgba(0,0,0,.55);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{position:sticky;top:0;z-index:30;background:rgba(0,0,0,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
 .bar .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
 .bar .brand img{height:30px;width:auto}
-.bar .bf{display:flex;align-items:center;gap:12px;font-size:13px;color:#ddd}
-.bar .bf b{color:var(--gold)}
+.bar .sale{display:flex;align-items:center;gap:12px;font-size:13px;color:#ddd}
+.bar .sale b{color:var(--gold)}.bar .sale s{color:#888}.bar .sale .tag{background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;font-size:11px;letter-spacing:.1em;border-radius:999px;padding:3px 9px;text-transform:uppercase}
 .bar .cd{display:flex;gap:6px;font-variant-numeric:tabular-nums}
 .bar .cd span{background:var(--glass);border:1px solid var(--glassb);border-radius:8px;padding:2px 8px;min-width:38px;text-align:center}
 .bar .btn{padding:9px 16px;font-size:14px;box-shadow:none}
@@ -147,6 +158,10 @@ p{margin:0}
 .hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
 .hero h1{max-width:1000px;margin:0 auto}
 .hero .sub{margin-top:10px;font-size:clamp(17px,1.9vw,22px)}
+.dealline{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:18px;background:rgba(0,0,0,.5);border:1px solid rgba(240,213,122,.45);backdrop-filter:blur(14px);border-radius:999px;padding:8px 18px 8px 8px;font-size:15px;color:#ddd}
+.dealline .tag{background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:7px 12px}
+.dealline s{color:#999}.dealline b{color:var(--gold);font-size:22px;letter-spacing:-.02em}.dealline em{font-style:normal;color:#bbb;font-size:13px}
+.final .dealline{margin:18px 0 0}.final .dealline .cd{display:flex;gap:6px;font-variant-numeric:tabular-nums}.final .dealline .cd span{background:var(--glass);border:1px solid var(--glassb);border-radius:8px;padding:2px 8px;min-width:38px;text-align:center;font-weight:700;color:#fff}
 .hero .cta{margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .hero .forbes{position:relative;z-index:2;height:min(50svh,600px);-webkit-mask-image:linear-gradient(#000 74%,transparent 99%);mask-image:linear-gradient(#000 74%,transparent 99%);width:auto;max-width:92vw;object-fit:contain;filter:drop-shadow(0 40px 60px rgba(0,0,0,.8));margin:6px 0 -2px;transform-origin:bottom center;animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(60px) scale(.96)}to{opacity:1;transform:none}}
@@ -191,7 +206,6 @@ section{padding-block:clamp(80px,10vw,140px)}
 .host:before{content:"";position:absolute;left:50%;top:-6%;width:150%;height:110%;transform:translateX(-50%);background:radial-gradient(45% 60% at 50% 100%,rgba(240,213,122,.32),transparent 72%);pointer-events:none}
 .host:after{content:"";position:absolute;left:0;right:0;bottom:-26px;height:70px;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,rgba(240,213,122,.6),transparent 70%);filter:blur(10px);pointer-events:none}
 .bf .point{position:relative;z-index:2;height:min(82vh,840px);max-height:100%;width:auto;transform:scaleX(-1);filter:drop-shadow(0 40px 50px rgba(0,0,0,.75))}
-.bf .refl{position:absolute;left:50%;top:100%;height:min(82vh,840px);width:auto;transform:translateX(-50%) scale(-1,-1);transform-origin:center top;opacity:.28;-webkit-mask-image:linear-gradient(#000 0,transparent 32%);mask-image:linear-gradient(#000 0,transparent 32%);pointer-events:none;z-index:1}
 .bf .wrap{padding-bottom:40px}
 @media(max-width:900px){.stage{grid-template-columns:1fr}.host{display:none}.bf .head{text-align:center;margin:0 auto}.bf .head .sub{text-align:center;margin:16px auto 0}}
 .gifts{display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative;z-index:3}
@@ -226,13 +240,24 @@ section{padding-block:clamp(80px,10vw,140px)}
 .gift .sparks i{position:absolute;left:50%;top:46%;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0}
 .gift.open .sparks i{animation:spark 1.1s ease-out forwards}
 @keyframes spark{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+/* the value ledger */
+.stack{max-width:820px;margin:clamp(50px,7vw,90px) auto 0;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(18px);border-radius:var(--r);padding:clamp(22px,4vw,40px)}
+.ledger{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:4px}
+.ledger li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:17px;opacity:0;transform:translateX(-14px);transition:opacity .5s,transform .5s}
+.ledger li.in{opacity:1;transform:none}
+.ledger b{color:var(--gold);font-variant-numeric:tabular-nums;font-size:19px;white-space:nowrap}
+.total{display:flex;justify-content:space-between;align-items:center;padding:18px 0 6px;font-size:20px;font-weight:700}
+.total b{font-size:clamp(30px,4vw,46px);color:#fff;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pay{margin-top:14px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;border-radius:16px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-weight:700;font-size:17px}
+.pay b{font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:1}
+.pay em{font-style:normal;font-weight:600;width:100%;font-size:15px;opacity:.85}
 /* price */
 .price{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-top:clamp(50px,7vw,90px)}
 .pcard{background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(20px);border-radius:28px;padding:34px;position:relative;overflow:hidden}
 .pcard:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 180deg,transparent,rgba(240,213,122,.25),transparent 30%);animation:spin 9s linear infinite;pointer-events:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 .pcard>*{position:relative}
-.pcard .was{color:#888;font-size:16px}.pcard .was s{color:#aaa}
+.pcard .was{color:#888;font-size:16px}.pcard .was s{color:#aaa}.savetag{display:inline-block;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:7px 14px;margin-bottom:10px}
 .pcard .now{font-size:clamp(64px,8vw,110px);font-weight:800;letter-spacing:-.05em;line-height:1;margin:6px 0 4px}
 .pcard .per{color:#bbb;font-size:16px}
 .pcard ul{list-style:none;padding:0;margin:22px 0 24px;display:grid;gap:9px}
@@ -298,7 +323,7 @@ footer a{color:#999;margin:0 6px}
 .qbox label{font-size:12px;color:#666;display:block;margin:0 0 4px}
 .qbox .fine{font-size:12px;color:#777}
 .qbox .k{margin-bottom:6px}
-@media(max-width:900px){.hero .forbes{height:auto;width:min(96vw,520px)}.feature,.feature.flip,.price,.weekpanel{grid-template-columns:1fr}.feature.flip>:first-child{order:0}.stats{grid-template-columns:1fr 1fr}.week{grid-template-columns:1fr 1fr}.bar .bf .txt{display:none}.hero .forbes{height:min(62svh,620px)}.hero .copy{top:70px}.q{flex-basis:300px}}
+@media(max-width:900px){.hero .forbes{height:auto;width:min(96vw,520px)}.feature,.feature.flip,.price,.weekpanel{grid-template-columns:1fr}.feature.flip>:first-child{order:0}.stats{grid-template-columns:1fr 1fr}.week{grid-template-columns:1fr 1fr}.bar .sale .txt{display:none}.hero .forbes{height:min(62svh,620px)}.hero .copy{top:70px}.q{flex-basis:300px}}
 @media(max-width:560px){.gifts{grid-template-columns:1fr}.gift{min-height:420px}.bar .cd{display:none}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero .forbes{animation:none}.marq .track{animation:none}}
 </style>
@@ -307,8 +332,8 @@ footer a{color:#999;margin:0 6px}
 
 <div class="bar"><div class="wrap">
   <div class="brand"><img src="img/ic/crescent.png" alt="Inner Circle"><span>Forbes Riley's Inner Circle</span></div>
-  <div class="bf"><span class="txt"><b>Black Friday.</b> A year with Forbes for $1,500.</span><span class="cd" id="cd"><span>--</span><span>--</span><span>--</span><span>--</span></span></div>
-  <button class="btn" data-q>Check if I qualify</button>
+  <div class="sale"><span class="txt"><span class="tag">Sale</span> <s>$5,000</s> <b>$1,500</b> a year &middot; ends in</span><span class="cd" id="cd"><span>--</span><span>--</span><span>--</span><span>--</span></span></div>
+  <button class="btn" data-q>Get it NOW</button>
 </div></div>
 
 <canvas id="confetti"></canvas>
@@ -328,8 +353,9 @@ footer a{color:#999;margin:0 6px}
   <div class="copy">
     <div class="lockup"><img src="img/ic/logo.svg" alt="Forbes Riley's"><img class="crescent" src="img/ic/crescent.png" alt="Inner Circle"><span><i></i> By invitation only &middot; Black Friday 2026</span></div>
     <h1>Be in the room<br>with Forbes. <span class="gold">Every week.</span></h1>
-    <p class="sub">Her private circle. 52 live calls a year, 12 BREAKTHRU sessions led by Forbes herself, your pitch reviewed by her team. This weekend, a year for $1,500.</p>
-    <div class="cta"><button class="btn lg" data-q>YES, I want in</button><a class="btn ghost lg" href="#inside">See what's inside</a></div>
+    <p class="sub">Her private community of entrepreneurs who meet with her every week. 52 live calls, 12 BREAKTHRUs led by Forbes, your pitch and your socials reviewed by her team.</p>
+    <div class="dealline"><span class="tag">Black Friday sale</span><s>$5,000 a year</s><b>$1,500</b><em>Save $3,500 &middot; this weekend only</em></div>
+    <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="#inside">See what's inside</a></div>
   </div>
   <img class="forbes" src="img/px/cut-new-05.png" alt="Dr. Forbes Riley making a heart">
   <div class="scrollhint">Scroll</div>
@@ -344,7 +370,7 @@ footer a{color:#999;margin:0 6px}
     <button class="qa rv d3" data-a><span class="qq">You want Forbes herself. Not another course.</span><span class="a"><b>12 BREAKTHRUs a year, led by Forbes.</b> Live, in the room, members only.</span></button>
   </div>
   <div class="tally rv"><span id="tally">Tap the ones that are true.</span><button class="btn" data-q>YES, that's me</button></div>
-  <div class="promo rv"><div class="vid"><iframe src="https://player.vimeo.com/video/890473160?dnt=1&title=0&byline=0&portrait=0" title="Inside the Inner Circle" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><p>Two minutes inside the Inner Circle.</p></div>
+  <div class="promo rv"><div class="vid" id="vid"><iframe data-src="https://player.vimeo.com/video/890473160?dnt=1&title=0&byline=0&portrait=0&autoplay=1" src="about:blank" title="Inside the Inner Circle" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="cover" id="vidcover" role="button" tabindex="0" aria-label="Open the message from Forbes"><div class="door l"></div><div class="door r"></div><img class="vseal" src="img/cut/seal.png" alt=""><div class="vtxt"><p class="k">A message from Forbes</p><h3>You have an invitation.</h3><span class="btn">Open it</span></div></div></div><p>Two minutes inside the Inner Circle.</p></div>
 </div></section>
 
 <section class="white" id="inside"><div class="wrap">
@@ -359,11 +385,11 @@ footer a{color:#999;margin:0 6px}
     <li class="rv d6"><i></i><span>Forbes' team inside the group every day. Ask, get answered, keep going.</span></li>
   </ul>
   <div class="jewel rv" id="jewel">
-    <p class="tease">But the true heart of the Inner Circle, the reason most people join, the crown jewel of this entire experience...</p>
+    <p class="tease">But the real reason people join, and the reason they stay, has nothing to do with your pitch...</p>
     <button class="btn show" id="jewelbtn">Show me</button>
     <div class="reveal">
-      <img src="img/ic/breakthru.jpg" alt="BREAKTHRU with Forbes Riley">
-      <div><p class="k">The crown jewel</p><h3>BREAKTHRU, led by Forbes herself.</h3><p>Once a month, Forbes leads her most personal, powerful process live for members only. Not a recording, not a stand-in. Twelve a year, all included with your seat.</p><span class="val">$12,000 value</span></div>
+      <img src="img/ic/room.jpg" alt="Forbes Riley in the room with Inner Circle members">
+      <div><p class="k">The heart of it</p><h3>It's the room. It's the people.</h3><p>A community of entrepreneurs who meet with Forbes every week, cheer each other on and hold each other to it. You are never building alone again. And once a month Forbes leads BREAKTHRU live for the whole circle: twelve a year, included.</p><span class="val">12 BREAKTHRUs &middot; $12,000 value</span></div>
     </div>
   </div>
 
@@ -402,18 +428,34 @@ footer a{color:#999;margin:0 6px}
 <section class="bf" id="gifts"><div class="wrap">
   <div class="head rv"><span class="badge">&#9733; Black Friday bonuses</span><h2>Four gifts. Tap to unwrap.</h2><p class="sub">They come with your seat this weekend. Go on, open them.</p></div>
   <div class="stage">
-  <div class="host rv"><img class="point" src="img/px/cut-new-01.png" alt="Dr. Forbes Riley pointing up at the gifts"><img class="refl" src="img/px/cut-new-01.png" alt=""></div>
+  <div class="host rv"><img class="point" src="img/px/cut-new-01.png" alt="Dr. Forbes Riley pointing up at the gifts"></div>
   <div class="gifts">
-    <div class="gift rv" data-gift><div class="art"><img src="img/ic/breakthru.jpg" alt="BREAKTHRU"></div><div class="txt"><h3>12 BREAKTHRU sessions</h3><p>Led by Forbes herself. Her most personal, powerful process, once a month, members only. The crown jewel.</p><span class="v">$12,000 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 1</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv" data-gift><div class="art"><img src="img/ic/room.jpg" alt="Forbes with the Inner Circle"></div><div class="txt"><h3>12 BREAKTHRUs with the whole circle</h3><p>Once a month Forbes leads her most personal, powerful process live for the community. Not a recording, not a stand-in.</p><span class="v">$12,000 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 1</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
     <div class="gift rv d1" data-gift><div class="art"><img src="img/ic/pods.png" alt="Pitch Practice Pods"></div><div class="txt"><h3>Pitch Practice Pods</h3><p>Every Wednesday at 5 PM EST. 90 minutes of reps with live feedback, plus your member dashboard and guides.</p><span class="v">$580 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 2</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
     <div class="gift rv d2" data-gift><div class="art"><img src="img/ic/community.png" alt="The private group"></div><div class="txt"><h3>The private group</h3><p>A global circle of entrepreneurs who lift each other. Feedback, progress, support, every day.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 3</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
-    <div class="gift rv d3" data-gift><div class="art"><img src="img/ic/review.png" alt="Social media review"></div><div class="txt"><h3>Social media review</h3><p>Expert marketers review your profiles for ultimate optimization, so you show up with clarity and confidence.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 4</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
+    <div class="gift rv d3" data-gift><div class="art"><img src="img/ic/social.png" alt="Social media review"></div><div class="txt"><h3>Social media review</h3><p>Expert marketers review your profiles for ultimate optimization, so you show up with clarity and confidence.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 4</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
   </div>
+  </div>
+
+  <div class="stack rv" id="stack">
+    <div class="center"><p class="k">Add it up</p><h2>High value. Low cost.</h2><p class="sub">Everything in your seat, at the prices these are sold for on their own.</p></div>
+    <ul class="ledger">
+      <li><span>Inner Circle LIVE, 52 weekly sessions</span><b data-amt="5200">$0</b></li>
+      <li><span>Expert Pitch Video Review</span><b data-amt="6000">$0</b></li>
+      <li><span>The Elevate Course Hub</span><b data-amt="4500">$0</b></li>
+      <li><span>Pitch Practice Pods, every Wednesday</span><b data-amt="580">$0</b></li>
+      <li><span>Professional Social Media Review</span><b data-amt="500">$0</b></li>
+      <li><span>The private community</span><b data-amt="500">$0</b></li>
+      <li><span>12 BREAKTHRUs led by Forbes</span><b data-amt="12000">$0</b></li>
+    </ul>
+    <div class="total"><span>Total value</span><b id="tot">$0</b></div>
+    <div class="pay"><span>Black Friday price</span><b>$1,500</b><em>That is 6% of the value. Normally $5,000 a year. Get it NOW.</em></div>
   </div>
 
   <div class="price">
     <div class="pcard rv">
-      <p class="was">Everything above, normally <s>$5,000</s> a year</p>
+      <p class="was"><span class="savetag">Black Friday sale &middot; save $3,500</span></p>
+      <p class="was">Normally <s>$5,000</s> a year. This weekend:</p>
       <div class="now"><span class="gold">$1,500</span></div>
       <p class="per">for the whole year &middot; Black Friday weekend only &middot; no contracts, cancel anytime</p>
       <ul>
@@ -438,7 +480,7 @@ footer a{color:#999;margin:0 6px}
     <div class="day rv d1"><span class="d">Tuesday</span><h4>Topic Tuesday</h4><p>Live hot-topic conversations on what is working right now: offers, social, AI, sales conversations.</p><span class="t">Live on Zoom</span></div>
     <div class="day rv d2"><span class="d">Wednesday &middot; 5 PM EST</span><h4>Pitch Practice Pods</h4><p>Ninety minutes of reps. You pitch, you get coached, you pitch again. Then submit your video for the expert review.</p><span class="t">Accountability</span></div>
     <div class="day rv d3"><span class="d">Thursday</span><h4>Solutions Hot Seats &amp; Momentum Mapping</h4><p>Get solutions to your most pressing roadblocks, then map the next 90 days so the momentum does not leak.</p><span class="t">Live on Zoom</span></div>
-    <div class="day star rv d4"><span class="d">Last session of the month</span><h4>BREAKTHRU with Forbes</h4><p>The crown jewel. Forbes leads her most personal, powerful process live for members only. Twelve a year.</p><span class="t">Forbes herself</span></div>
+    <div class="day star rv d4"><span class="d">Last session of the month</span><h4>BREAKTHRU with Forbes</h4><p>Forbes leads her most personal, powerful process live for the whole circle. Twelve a year.</p><span class="t">Forbes herself</span></div>
   </div>
   <div class="plus rv">Plus, every day: member challenges, group activities, and Forbes' team answering you inside the private group.</div>
 </div></section>
@@ -485,8 +527,9 @@ footer a{color:#999;margin:0 6px}
 
 <section class="final"><div class="wrap fwrap">
   <img class="callme" src="img/px/cut-new-06.png" alt="">
-  <div class="rv"><p class="k" style="color:var(--gold)">Your seat is waiting</p><h2>Come be in the room.</h2><p class="sub">A year with Forbes for $1,500, this weekend only. By invitation, intentionally small, no contracts.</p>
-  <div class="cta"><button class="btn lg" data-q>YES, I want in. Check if I qualify</button><a class="btn ghost lg" href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call first</a></div></div>
+  <div class="rv"><p class="k" style="color:var(--gold)">Black Friday sale &middot; ends Sunday night</p><h2>Get it NOW.</h2><p class="sub">Normally $5,000 a year. This weekend, $1,500 for a year in the room with Forbes and the circle. By invitation, intentionally small, no contracts.</p>
+  <div class="dealline"><span class="tag">Save $3,500</span><s>$5,000</s><b>$1,500</b><em>ends in</em><span class="cd" id="cd2"></span></div>
+  <div class="cta"><button class="btn lg" data-q>Get it NOW</button><a class="btn ghost lg" href="https://api.leadconnectorhq.com/widget/bookings/advisor-strategyzre8nw" target="_blank" rel="noopener">Book a call first</a></div></div>
 </div></section>
 
 <footer><div class="wrap">Owned and operated by Forbes Riley Media, MJR Dominion LLC. &copy; 2026<br><a href="https://forbesriley.com/terms-of-service">Terms</a> | <a href="https://forbesriley.com/privacy">Privacy</a> | <a href="https://forbesriley.com/refund-policy">Refunds</a> | <a href="https://forbesriley.com/disclaimer">Disclaimer</a> | <a href="https://forbesriley.com/affiliate-policy">Affiliates</a></div></footer>
@@ -542,12 +585,19 @@ footer a{color:#999;margin:0 6px}
   }catch(e){}
   /* does this sound like you: tap to say yes, the tally talks back */
   try{var qas=[].slice.call(document.querySelectorAll('[data-a]')),tally=document.getElementById('tally'),msgs=['Tap the ones that are true.','One is reason enough.','Two. You are closer than you think.','Three. This was built for you.','All four. Welcome home.'];qas.forEach(function(q){q.addEventListener('click',function(){q.classList.toggle('yes');var n=qas.filter(function(x){return x.classList.contains('yes')}).length;tally.textContent=msgs[n];if(n===4){try{var rc=tally.getBoundingClientRect();confetti(rc.left+rc.width/2,rc.top,120,1.6)}catch(e){}}})})}catch(e){}
-  /* the crown jewel: tap, or it opens by itself once you have read the tease */
+  /* the ledger adds itself up as you watch */
+  try{var st=document.getElementById('stack'),lines=[].slice.call(st.querySelectorAll('.ledger li')),tot=document.getElementById('tot'),sum=0;function money(n){return '$'+Math.round(n).toLocaleString('en-US')}
+    function runLine(i){if(i>=lines.length)return;var li=lines[i],b=li.querySelector('b'),amt=+b.getAttribute('data-amt'),s0=performance.now(),base=sum;li.classList.add('in');(function f(n){var k=Math.min(1,(n-s0)/700);k=1-Math.pow(1-k,3);b.textContent=money(amt*k);tot.textContent=money(base+amt*k);if(k<1)requestAnimationFrame(f);else{sum=base+amt;setTimeout(function(){runLine(i+1)},120)}})(s0)}
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){so.unobserve(e.target);runLine(0)}})},{threshold:.35});so.observe(st);
+    setTimeout(function(){if(sum===0&&!lines[0].classList.contains('in')){lines.forEach(function(l){l.classList.add('in');var b=l.querySelector('b');b.textContent=money(+b.getAttribute('data-amt'))});tot.textContent='$23,780'}},9000)}catch(e){}
+  /* the video opens like an invitation: doors part, seal breaks, Forbes starts talking */
+  try{var vc=document.getElementById('vidcover'),vf=document.querySelector('#vid iframe');function openVid(){if(vc.classList.contains('open'))return;vc.classList.add('open');vf.src=vf.getAttribute('data-src');try{var rc=vc.getBoundingClientRect();confetti(rc.left+rc.width/2,rc.top+rc.height/2,160,2)}catch(e){}}vc.addEventListener('click',openVid);vc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openVid()}})}catch(e){}
+  /* the heart of it: tap, or it opens by itself once you have read the tease */
   try{var jw=document.getElementById('jewel');function openJewel(){if(jw.classList.contains('open'))return;jw.classList.add('open');try{var rc=jw.getBoundingClientRect();confetti(rc.left+rc.width/2,rc.top+80,140,1.8)}catch(e){}}document.getElementById('jewelbtn').addEventListener('click',openJewel);var jo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){jo.unobserve(e.target);setTimeout(openJewel,2600)}})},{threshold:.6});jo.observe(jw)}catch(e){}
   /* countdown to the end of Black Friday weekend (Mon Nov 30 2026, 11:59 PM ET) */
-  try{var end=new Date('2026-12-01T04:59:00Z').getTime(),cd=document.getElementById('cd');function tick(){var d=Math.max(0,end-Date.now());var s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60;cd.innerHTML='<span>'+dd+'d</span><span>'+hh+'h</span><span>'+mm+'m</span><span>'+ss+'s</span>'}tick();setInterval(tick,1000)}catch(e){}
+  try{var end=new Date('2026-12-01T04:59:00Z').getTime(),cd=document.getElementById('cd');function tick(){var d=Math.max(0,end-Date.now());var s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60;var html='<span>'+dd+'d</span><span>'+hh+'h</span><span>'+mm+'m</span><span>'+ss+'s</span>';cd.innerHTML=html;var c2=document.getElementById('cd2');if(c2)c2.innerHTML=html}tick();setInterval(tick,1000)}catch(e){}
   /* week */
-  try{var days=[['Monday','Networking & Business','Meet and do business with like-minded people. Members pitch what they need, who they know and what they can offer.','img/ic/live.png'],['Tuesday','Topic Tuesday','Live hot-topic conversations on what is working right now: offers, social, AI, sales conversations.','img/ic/live.png'],['Wednesday, 5 PM EST','Pitch Practice Pods','Ninety minutes of reps. You pitch, you get coached, you pitch again. Then submit your video for the expert review.','img/ic/pods.png'],['Thursday','Solutions Hot Seats and Momentum Mapping','Get solutions to your most pressing roadblocks, then map the next 90 days so the momentum does not leak.','img/ic/review.png'],['Last session of the month','BREAKTHRU with Forbes','The crown jewel. Forbes leads her most personal, powerful process live for members only. Twelve a year, all included.','img/ic/breakthru.jpg']];var wb=document.querySelectorAll('#week button');function showDay(i){wb.forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-d')===i)});var d=days[i];document.getElementById('wt').textContent=d[0];document.getElementById('wh').textContent=d[1];document.getElementById('wp').textContent=d[2];document.getElementById('wi').src=d[3]}wb.forEach(function(b){b.addEventListener('click',function(){showDay(+b.getAttribute('data-d'))})});showDay(0)}catch(e){}
+  try{var days=[['Monday','Networking & Business','Meet and do business with like-minded people. Members pitch what they need, who they know and what they can offer.','img/ic/live.png'],['Tuesday','Topic Tuesday','Live hot-topic conversations on what is working right now: offers, social, AI, sales conversations.','img/ic/live.png'],['Wednesday, 5 PM EST','Pitch Practice Pods','Ninety minutes of reps. You pitch, you get coached, you pitch again. Then submit your video for the expert review.','img/ic/pods.png'],['Thursday','Solutions Hot Seats and Momentum Mapping','Get solutions to your most pressing roadblocks, then map the next 90 days so the momentum does not leak.','img/ic/review.png'],['Last session of the month','BREAKTHRU with Forbes','Forbes leads her most personal, powerful process live for the whole circle. Twelve a year, all included.','img/ic/breakthru.jpg']];var wb=document.querySelectorAll('#week button');function showDay(i){wb.forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-d')===i)});var d=days[i];document.getElementById('wt').textContent=d[0];document.getElementById('wh').textContent=d[1];document.getElementById('wp').textContent=d[2];document.getElementById('wi').src=d[3]}wb.forEach(function(b){b.addEventListener('click',function(){showDay(+b.getAttribute('data-d'))})});showDay(0)}catch(e){}
   /* marquee duplicate */
   try{var tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML}catch(e){}
   try{var lb=document.getElementById('letterbox');document.getElementById('readmore').addEventListener('click',function(){lb.classList.remove('collapsed')})}catch(e){}

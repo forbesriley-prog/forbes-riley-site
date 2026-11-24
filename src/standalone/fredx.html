@@ -109,16 +109,16 @@ p{color:var(--soft);font-size:clamp(16px,1.3vw,19px)}
 /* hero */
 .hero{min-height:calc(100svh - 64px);display:flex;align-items:center;padding-block:clamp(50px,6vw,90px);overflow:hidden}
 .hero .bg{position:absolute;inset:0;z-index:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.5;transform:scale(1.06);animation:kb 18s ease-in-out infinite alternate}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.42;transform:scale(1.06);animation:kb 18s ease-in-out infinite alternate}
 @keyframes kb{to{transform:scale(1)}}
-.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,.25) 40%,#000 100%),radial-gradient(60% 50% at 50% 70%,rgba(212,167,60,.22),transparent 70%)}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:30px;align-items:center;max-width:980px}
-.hero .logo3d{max-width:620px;margin:0 0 10px -2%}
+.hero .bg:after{content:"";position:absolute;inset:0;background:radial-gradient(55% 60% at 50% 55%,rgba(0,0,0,.72),rgba(0,0,0,.35) 60%,rgba(0,0,0,.2)),linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.15) 40%,#0a0a0a 100%),radial-gradient(60% 50% at 50% 75%,rgba(240,213,122,.18),transparent 70%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:30px;align-items:center;max-width:1000px;text-align:center}.hero .wrap>div{display:flex;flex-direction:column;align-items:center}
+.hero .logo3d{max-width:640px;margin:0 auto 10px}
 .hero .date{display:inline-flex;align-items:center;gap:12px;background:var(--glass);border:1px solid var(--glassb);backdrop-filter:blur(14px);border-radius:var(--p);padding:10px 16px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2)}
 .hero .date i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold);animation:blink 1.6s ease-in-out infinite}
 @keyframes blink{50%{opacity:.3}}
-.hero .lead{font-size:clamp(18px,1.7vw,23px);color:#e8e4d8;max-width:620px;margin-top:20px}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.hero .lead{font-size:clamp(18px,1.7vw,23px);color:#e8e4d8;max-width:720px;margin:20px auto 0}
+.hero .cta{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;align-items:center;justify-content:center}
 .hero .seats{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .hero .cut{position:relative;justify-self:end;width:100%;max-width:520px;filter:drop-shadow(0 40px 60px rgba(0,0,0,.8));mask-image:linear-gradient(180deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 78%,transparent)}
 .hero .cut img{width:100%}
@@ -301,7 +301,7 @@ footer .cards img{height:22px}
 <p class="lead rv in d2">Three days. A real stage, real lights, Forbes in your corner. You leave with a professionally edited speaking reel, a branding photo shoot and the confidence of a leader people listen to.</p>
 <div class="cta rv in d3"><a class="btn lg glow" href="#seats">Secure my seat · $2,997</a><span class="seats">Only 30 spots</span></div>
 <p class="date rv in d4" id="datepill" style="margin:26px 0 0"><i></i> <span id="datetxt">Next FRedX: January 28–30, 2027 · Forbes’ studio, St. Pete, Florida · more dates coming soon</span></p>
-<div class="cd rv in d4" id="cd" style="margin-top:18px" aria-label="Countdown to FRedX"></div>
+<div class="cd rv in d4" id="cd" style="margin-top:18px;justify-content:center" aria-label="Countdown to FRedX"></div>
 </div>
 </div>
 </section>
@@ -354,7 +354,7 @@ footer .cards img{height:22px}
 <div class="host rv"><div class="pic"><img src="img/fredx/forbes-circle.webp" alt="Forbes Riley"></div><div class="tx"><h3>Forbes Riley</h3><p class="role">The Queen of Pitch</p><p>Celebrity TV host and one of the world’s most influential high-performance success coaches. Known globally as the Queen of Pitch, Forbes has sold more than $2.5 billion in products on television with her own communication and persuasion methods. With decades on major networks and stages worldwide, she has helped tens of thousands of entrepreneurs unlock their voice, master their message and turn their story into a business asset.</p></div></div>
 <div class="host rv d1"><div class="pic"><img src="img/fredx/makenna-circle.webp" alt="Makenna Riley"></div><div class="tx"><h3>Makenna Riley</h3><p class="role">Branding strategist · CEO, The GSD Company</p><p>Next-gen branding strategist and CEO of The GSD Company, where she has served more than 5,000 students. She co-founded a seven-figure coaching business at 17 and has since partnered with The Forbes Factor, impacting over 40,000 entrepreneurs. Makenna has shared the stage with Les Brown, Sharon Lechter and Forbes Riley. At FRedX she brings strategic clarity, creative vision and next-level branding to help you master the art of closing from stage, even when you are told “no pitching.”</p></div></div>
 </div>
-<div class="hostpic rv d2"><img src="img/fredx/forbes-makenna-red.webp" alt="Forbes and Makenna celebrating on the FRedX stage"><img src="img/fredx/hosts-screens.webp" alt="Forbes and Makenna on stage in front of the FRedX screens"></div>
+<div class="hostpic rv d2"><img src="img/fredx/forbes-makenna-red.webp" alt="Forbes and Makenna celebrating on the FRedX stage"><img src="img/fredx/hosts-laugh.webp" alt="Forbes and Makenna laughing together on the FRedX stage"></div>
 </div>
 </section>
 
@@ -425,7 +425,7 @@ footer .cards img{height:22px}
 <img src="img/fredx/group-stage.webp" alt="Attendees on the FRedX stage with Forbes">
 <img src="img/fredx/cert.webp" alt="Forbes presenting a FRedX certificate">
 <img class="a" src="img/fredx/onstage-2.webp" alt="An attendee taking the FRedX stage">
-<img src="img/fredx/boas.webp" alt="Forbes and Makenna in feather boas at the party">
+<img src="img/fredx/book.webp" alt="An attendee holding up Pitch Secrets A to Z">
 <img src="img/fredx/party.webp" alt="The Friday night party">
 </div>
 </div>
@@ -495,19 +495,20 @@ footer .cards img{height:22px}
   var vc=document.getElementById('vidcover');if(vc){function openVid(){var v=vc.parentNode,f=v.querySelector('iframe');if(f.getAttribute('src')==='about:blank')f.src=f.getAttribute('data-src');v.classList.add('open')}vc.addEventListener('click',openVid);vc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openVid()}})}
   var inv=document.getElementById('invite');try{var seen=sessionStorage.getItem('fx-invite'),force=/[?&]invite=1/.test(location.search);if(!seen||force){inv.hidden=false;document.body.style.overflow='hidden'}}catch(e){inv.hidden=false}
   function confetti(x,y,n){for(var i=0;i<n;i++){(function(k){var d=document.createElement('i');var c=['#f6e3a1','#d4a73c','#fff','#b8902e'][k%4];d.style.cssText='position:fixed;left:'+x+'px;top:'+y+'px;width:9px;height:14px;background:'+c+';z-index:101;pointer-events:none;border-radius:2px;transform:rotate('+(Math.random()*360)+'deg)';document.body.appendChild(d);var a=Math.random()*Math.PI*2,v=240+Math.random()*420,dx=Math.cos(a)*v,dy=Math.sin(a)*v-280;try{d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+dx+'px,'+(dy+600)+'px) rotate('+(Math.random()*720-360)+'deg)',opacity:0}],{duration:1600+Math.random()*900,easing:'cubic-bezier(.2,.8,.3,1)'})}catch(e){}setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},2600)})(i)}}
-  function closeInv(){try{sessionStorage.setItem('fx-invite','1')}catch(e){}inv.classList.add('off');document.body.style.overflow=''}
+  function stopVid(){try{var f=document.getElementById('invframe');if(f&&f.getAttribute('src')!=='about:blank'){try{f.contentWindow.postMessage(JSON.stringify({event:'command',func:'stopVideo',args:[]}),'*')}catch(e){}f.src='about:blank'}}catch(e){}}
+  function closeInv(){try{sessionStorage.setItem('fx-invite','1')}catch(e){}stopVid();inv.classList.add('off');document.body.style.overflow=''}
   var oi=document.getElementById('openinv'),invframe=document.getElementById('invframe'),invmore=document.getElementById('invmore'),invlook=document.getElementById('invlook'),vclose=document.getElementById('vclose'),stage=0,shown=false,ended=false;
   function ytcmd(f){try{invframe.contentWindow.postMessage(JSON.stringify({event:'command',func:f,args:[]}),'*')}catch(e){}}
   function showMore(){if(shown)return;shown=true;inv.classList.add('big');try{var r=invmore.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2,140)}catch(e){}}
   function dock(){if(stage!==1||ended)return closeInv();try{sessionStorage.setItem('fx-invite','1')}catch(e){}inv.classList.remove('big');inv.classList.add('docked');document.body.style.overflow=''}
-  function undock(){if(!inv.classList.contains('docked'))return;ytcmd('pauseVideo');inv.classList.remove('docked');inv.classList.add('off');setTimeout(function(){invframe.src='about:blank'},500)}
+  function undock(){if(!inv.classList.contains('docked'))return;stopVid();inv.classList.remove('docked');inv.classList.add('off')}
   if(oi){oi.addEventListener('click',function(){var r=oi.getBoundingClientRect();confetti(r.left+r.width/2,r.top,180);stage=1;inv.classList.add('watch');invframe.src='https://www.youtube-nocookie.com/embed/Fe4B7sTRhuc?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&playsinline=1';invframe.addEventListener('load',function(){try{invframe.contentWindow.postMessage(JSON.stringify({event:'listening',id:1,channel:'widget'}),'*')}catch(e){}});setTimeout(showMore,14000)})}
   addEventListener('message',function(e){if(!/youtube/.test(e.origin))return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d)}catch(_){return}if(!d||!d.info)return;if(typeof d.info.currentTime==='number'&&d.info.currentTime>=11)showMore();if(d.info.playerState===0){ended=true;if(inv.classList.contains('docked'))undock();else{inv.classList.remove('watch');inv.classList.add('big')}}});
   if(invmore)invmore.addEventListener('click',function(){dock();var el=document.getElementById('seats');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'})});
   if(invlook)invlook.addEventListener('click',function(){dock();window.scrollTo({top:0,behavior:'instant'})});
   if(vclose)vclose.addEventListener('click',undock);
   var tk=document.getElementById('tk');if(tk)tk.addEventListener('click',function(){oi.click()});
-  var si=document.getElementById('skipinv');if(si)si.addEventListener('click',closeInv);
+  var si=document.getElementById('skipinv');if(si)si.addEventListener('click',function(){stopVid();closeInv()});
 })();
 </script>
 </body>

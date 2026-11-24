@@ -23,6 +23,9 @@ Forbes is APPLE. Big, a brand, frosted, hip, gold, sleek. This is her private gr
 ## Numbers used (from the old page)
 Values: LIVE $5,200; Pitch Video Review $500; Course Hub $4,500; Pods $580; Social Media Review $500; private group $500; 12 BREAKTHRUs $12,000. Total $23,780. "Normal price $5,000" is the old page's claim. Black Friday price $1,500 is Katrina's. Countdown ends Mon Nov 30, 2026 11:59 PM ET (assumed, not confirmed).
 
+## CRO pass (Nov 23 night, branch `inner-circle-cro`, NOT published)
+Hero "You're too talented to still be stuck." with ?h=a/b/c variants, campaign line "Don't buy more stuff. Buy yourself a better year.", two plans ($1,500 year / $3,000 lifetime) with a `CHECKOUT` config in the script (fill the two URLs and the buttons go to checkout), tracking layer (dataLayer/gtag events + UTMs; paste a GA4/GTM id at the marked comment), WebP images (12.3 MB -> 1.3 MB), palette per the brief, the `.flip` class clash fixed (that was the real "black on black"). To publish: merge the branch, `python3 build.py`, copy dist to docs, push.
+
 ## Still needs a human decision
 - Confirm $1,500 and the end date/time.
 - Which video in the "Meet Forbes" slot: speaker reel (current) or the Inner Circle Promo.

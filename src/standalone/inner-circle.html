@@ -93,7 +93,7 @@ p{margin:0}
 .jewel:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 180deg,transparent,rgba(240,213,122,.22),transparent 30%);animation:spin 10s linear infinite;pointer-events:none}
 .jewel>*{position:relative}
 .jewel .tease{font-size:clamp(20px,2.6vw,30px);font-weight:600;max-width:760px;margin:0 auto;line-height:1.3}
-.jewel .reveal{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;text-align:left;max-height:0;opacity:0;overflow:hidden;transition:max-height 1.2s cubic-bezier(.2,.7,.2,1),opacity .9s .3s,margin .9s}
+.jewel .reveal{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;text-align:left;max-height:0;opacity:0;overflow:hidden;transition:max-height 1.2s cubic-bezier(.2,.7,.2,1),opacity .9s .3s,margin .9s}
 .jewel.open .reveal{max-height:900px;opacity:1;margin-top:30px}
 .jewel .reveal img{width:100%;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
 .jewel .reveal h3{font-size:clamp(28px,3.4vw,44px)}
@@ -203,13 +203,13 @@ section{padding-block:clamp(80px,10vw,140px)}
 .bf .point{position:absolute;left:-30px;top:-20px;height:380px;width:auto;z-index:2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
 @media(max-width:1100px){.bf .point{display:none}}
 .bf .badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#f6e3a1,#d4a73c);color:#1b1619;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;padding:10px 18px;border-radius:999px;margin-bottom:20px}
-.bf .head{max-width:760px}
-.bf .head .sub{margin-left:0;text-align:left}
-.stage{display:grid;grid-template-columns:minmax(240px,.75fr) 2.2fr;gap:clamp(24px,4vw,60px);align-items:end;margin-top:30px}
+.bf .head{max-width:760px;margin-left:auto;text-align:right}
+.bf .head .sub{margin-right:0;text-align:right}
+.stage{display:grid;grid-template-columns:2.2fr minmax(240px,.75fr);gap:clamp(24px,4vw,60px);align-items:end;margin-top:30px}
 .host{position:relative;align-self:stretch;display:flex;align-items:flex-end;justify-content:center}
 .host:before{content:"";position:absolute;left:50%;top:-6%;width:150%;height:110%;transform:translateX(-50%);background:radial-gradient(45% 60% at 50% 100%,rgba(240,213,122,.32),transparent 72%);pointer-events:none}
 .host:after{content:"";position:absolute;left:0;right:0;bottom:-26px;height:70px;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,rgba(240,213,122,.6),transparent 70%);filter:blur(10px);pointer-events:none}
-.bf .point{position:relative;z-index:2;height:min(82vh,840px);max-height:100%;width:auto;transform:scaleX(-1);filter:drop-shadow(0 40px 50px rgba(0,0,0,.75))}
+.bf .point{position:relative;z-index:2;height:min(82vh,840px);max-height:100%;width:auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.75))}
 .bf .wrap{padding-bottom:40px}
 @media(max-width:900px){.stage{grid-template-columns:1fr}.host{display:none}.bf .head{text-align:center;margin:0 auto}.bf .head .sub{text-align:center;margin:16px auto 0}}
 .gifts{display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative;z-index:3}
@@ -432,13 +432,13 @@ footer a{color:#999;margin:0 6px}
 <section class="bf" id="gifts"><div class="wrap">
   <div class="head rv"><span class="badge">&#9733; Black Friday bonuses</span><h2>Four gifts. Tap to unwrap.</h2><p class="sub">They come with your seat this weekend. Go on, open them.</p></div>
   <div class="stage">
-  <div class="host rv"><img class="point" src="img/px/cut-new-01.png" alt="Dr. Forbes Riley pointing up at the gifts"></div>
   <div class="gifts">
     <div class="gift rv" data-gift><div class="art"><img src="img/ic/room.jpg" alt="Forbes with the Inner Circle"></div><div class="txt"><h3>12 BREAKTHRUs with the whole circle</h3><p>Once a month Forbes leads her most personal, powerful process live for the community. Not a recording, not a stand-in.</p><span class="v">$12,000 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 1</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
     <div class="gift rv d1" data-gift><div class="art"><img src="img/ic/pods.png" alt="Pitch Practice Pods"></div><div class="txt"><h3>Pitch Practice Pods</h3><p>Every Wednesday at 5 PM EST. 90 minutes of reps with live feedback, plus your member dashboard and guides.</p><span class="v">$580 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 2</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
     <div class="gift rv d2" data-gift><div class="art"><img src="img/ic/community.png" alt="The private group"></div><div class="txt"><h3>The private group</h3><p>A global circle of entrepreneurs who lift each other. Feedback, progress, support, every day.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 3</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
     <div class="gift rv d3" data-gift><div class="art"><img src="img/ic/social.png" alt="Social media review"></div><div class="txt"><h3>Social media review</h3><p>Expert marketers review your profiles for ultimate optimization, so you show up with clarity and confidence.</p><span class="v">$500 value</span></div><div class="wrapper"></div><i class="rb v"></i><i class="rb h"></i><div class="bow"><i></i></div><span class="tag">Gift 4</span><span class="tap">Tap to unwrap</span><div class="sparks"></div></div>
   </div>
+  <div class="host rv"><img class="point" src="img/px/cut-new-01.png" alt="Dr. Forbes Riley pointing up at the gifts"></div>
   </div>
 
   <div class="stack rv" id="stack">

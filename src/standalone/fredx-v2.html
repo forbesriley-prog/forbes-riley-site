@@ -116,6 +116,22 @@ p{color:var(--soft);font-size:clamp(16px,1.2vw,18px)}
 .spokes{margin-top:50px;border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,4vw,48px);background:var(--bk2)}
 .spokes svg{width:100%;height:auto;display:block;max-width:760px;margin:0 auto}
 .spokes p{text-align:center;margin-top:18px;font-size:15px}
+.port{position:relative;aspect-ratio:760/520;max-width:760px;margin:0 auto}
+.port svg{position:absolute;inset:0;width:100%;height:100%}
+.port .lines line{opacity:.45;transition:opacity .3s,stroke-width .3s}
+.port .lines line.on{opacity:1;stroke-width:3;stroke-dasharray:none;filter:drop-shadow(0 0 6px rgba(216,180,108,.8))}
+.port .core{position:absolute;left:50%;top:50%;width:23%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:2px solid var(--gold);background:var(--bk);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;transition:box-shadow .3s}
+.port .core.on{box-shadow:0 0 50px rgba(216,180,108,.35)}
+.port .ct{font-size:clamp(18px,2.8vw,26px);font-weight:800;color:var(--gold);line-height:1}
+.port .cs{font-size:clamp(9px,1.3vw,12px);letter-spacing:.18em;text-transform:uppercase;color:var(--ivory);margin-top:6px;line-height:1.3;max-width:90%}
+.port .node{position:absolute;transform:translate(-50%,-50%);min-width:clamp(96px,22%,180px);min-height:44px;padding:10px 12px;background:var(--bk2);border:1px solid rgba(216,180,108,.5);border-radius:var(--r);color:var(--ivory);font:inherit;font-weight:700;font-size:clamp(11px,1.6vw,16px);line-height:1.2;cursor:pointer;transition:background .25s,border-color .25s,transform .25s,color .25s}
+.port .node:hover,.port .node.on{background:var(--gold);color:#1a1408;border-color:var(--gold);transform:translate(-50%,-50%) scale(1.06)}
+.pdetail{position:relative;max-width:620px;margin:22px auto 0;min-height:96px}
+.pd{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s;text-align:center;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);background:var(--bk)}
+.pd.on{opacity:1;visibility:visible;position:relative;transition:opacity .35s,visibility 0s}
+.pd b{display:block;color:var(--gold);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+.pd p{color:var(--ivory);font-size:16px}
+@media(max-width:700px){.port{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}.port svg,.port .core{display:none}.port .node{position:static;transform:none;width:100%}.port .node:hover,.port .node.on{transform:none}}
 /* transformation */
 .trans .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
 .trans .col{border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,3vw,40px)}
@@ -325,21 +341,13 @@ footer a{color:var(--soft);text-decoration:none}
 <div><p class="n">04</p><h3>Business positioning and strategies for leveraging your message</h3><p>The Pitch Like a Pro formula, Makenna’s session on closing from stage, even when you are told “no pitching”, and the FRedX Success Playbook to take home.</p><span class="when">During the three days, playbook to keep</span></div>
 </div>
 <div class="spokes rv">
-<svg viewBox="0 0 760 520" aria-label="Where your FRedX assets go: speaker website, event planners, social media, speaker one-sheet, media and podcasts, client outreach" role="img">
-<g stroke="#D8B46C" stroke-dasharray="4 6" stroke-width="1.5" fill="none"><line x1="380" y1="200" x2="380" y2="80"/><line x1="380" y1="320" x2="380" y2="440"/><line x1="300" y1="225" x2="190" y2="150"/><line x1="460" y1="225" x2="570" y2="150"/><line x1="300" y1="295" x2="190" y2="370"/><line x1="460" y1="295" x2="570" y2="370"/></g>
-<circle cx="380" cy="260" r="88" fill="#090909" stroke="#D8B46C" stroke-width="2"/>
-<g font-family="Poppins, Arial, sans-serif" text-anchor="middle" fill="#F5F1E8">
-<text x="380" y="252" font-size="26" font-weight="800" fill="#D8B46C">FRedX</text><text x="380" y="276" font-size="12" letter-spacing="2">YOUR SPEAKER</text><text x="380" y="292" font-size="12" letter-spacing="2">PORTFOLIO</text>
-<g font-size="16" font-weight="600">
-<rect x="290" y="28" width="180" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="380" y="53">Speaker</text><text x="380" y="74">website</text>
-<rect x="30" y="112" width="190" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="125" y="137">Client</text><text x="125" y="158">outreach</text>
-<rect x="540" y="112" width="190" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="635" y="137">Event</text><text x="635" y="158">planners</text>
-<rect x="30" y="350" width="190" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="125" y="375">Media &amp;</text><text x="125" y="396">podcasts</text>
-<rect x="540" y="350" width="190" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="635" y="375">Social</text><text x="635" y="396">media</text>
-<rect x="290" y="440" width="180" height="60" rx="6" fill="#101010" stroke="#D8B46C" stroke-opacity=".5"/><text x="380" y="465">Speaker</text><text x="380" y="486">one-sheet</text>
-</g></g>
-</svg>
-<p>Your talk video and branding photographs feed every one of these. That is what the three days are for.</p>
+<div class="port" id="port">
+<svg viewBox="0 0 760 520" aria-hidden="true" focusable="false"><g stroke="#D8B46C" stroke-dasharray="4 6" stroke-width="1.5" fill="none" class="lines"><line data-k="web" x1="380" y1="200" x2="380" y2="60"/><line data-k="sheet" x1="380" y1="320" x2="380" y2="460"/><line data-k="clients" x1="300" y1="225" x2="150" y2="150"/><line data-k="planners" x1="460" y1="225" x2="610" y2="150"/><line data-k="media" x1="300" y1="295" x2="150" y2="370"/><line data-k="social" x1="460" y1="295" x2="610" y2="370"/></g></svg>
+<div class="core"><span class="ct">FRedX</span><span class="cs" id="coretxt">Your speaker portfolio</span></div>
+<button class="node" type="button" data-k="web" style="left:50%;top:8%" aria-pressed="false">Speaker website</button><button class="node" type="button" data-k="planners" style="left:86%;top:28%" aria-pressed="false">Event planners</button><button class="node" type="button" data-k="social" style="left:86%;top:72%" aria-pressed="false">Social media</button><button class="node" type="button" data-k="sheet" style="left:50%;top:92%" aria-pressed="false">Speaker one-sheet</button><button class="node" type="button" data-k="media" style="left:14%;top:72%" aria-pressed="false">Media & podcasts</button><button class="node" type="button" data-k="clients" style="left:14%;top:28%" aria-pressed="false">Client outreach</button>
+</div>
+<div class="pdetail" id="pdetail"><div class="pd" data-k="web"><b>Speaker website</b><p>Your edited talk as the hero video, three branding portraits, and a page that answers “can this person hold a room?” before anyone has to ask.</p></div><div class="pd" data-k="planners"><b>Event planners</b><p>Planners book from footage. You send a link to your five-minute talk filmed on a real stage, not a phone clip from a Zoom call.</p></div><div class="pd" data-k="social"><b>Social media</b><p>One five-minute talk cuts into a month of clips, and the branding photos carry every profile you have.</p></div><div class="pd" data-k="sheet"><b>Speaker one-sheet</b><p>Your headshot, your talk topics and a link to your video on one page. Everything on it comes from the three days.</p></div><div class="pd" data-k="media"><b>Media & podcasts</b><p>Hosts want to see you speak before they say yes. Your talk and your photos are the pitch.</p></div><div class="pd" data-k="clients"><b>Client outreach</b><p>Send the video instead of a brochure. Your story, told well, in front of a room, does the selling.</p></div></div>
+<p>Three days of production. Assets you can use for years. Hover or tap a spoke.</p>
 </div>
 </div>
 </section>
@@ -501,6 +509,11 @@ footer a{color:var(--soft);text-decoration:none}
   var more=[['saFpPofO7k4','From Unimaginable Loss to Unshakable Strength','Vickie Menendez'],['65EZb40BUFo','From “Why Me?” to “Why Not Me?”','Helen Bundschu'],['ZNoROgBpjXE','Stop Playing Small','Sheila Miller Nelson'],['9IWW_-uVLTg','From Heartbreak to Hope','Cindy Hipolito'],['awuNrwk-ZoM','You’re Not Stupid, You’re Just Wired Differently','Mitzi Beach'],['cg9_qX_UBRA','From Surviving Abuse to Finding Purpose','Heather Pasmore'],['RxDmtgZC6p4','Born Without Limits','Stacy McCosky'],['d9R2goO7eEs','From Fear to Fearless','Carla Hooker'],['N9rcmCmAFAc','From Self-Hate to Self-Love','Hortencia Silfa'],['oOD1HVGRSZY','From the Courtroom to the Stage','David Block'],['swjIsDEW0NM','One Decision Away from a New Life','Jan Janzen'],['-gfjmkKKiPc','From Hurt to Healing','Jan Allen'],['OlCkWUDV760','She Didn’t Break, She Became Radiant','Catherine Chadwick'],['3vsreULCEbg','Why Did This Happen to Me… or for Me?','Darian Stewart'],['yQQs2C1QPws','Finding Joy in the Journey','Sheryl Maize']];
   var rail=document.getElementById('morerail'),built=false;
   rail.closest('details').addEventListener('toggle',function(){if(built||!this.open)return;built=true;more.forEach(function(v){var b=document.createElement('button');b.className='vc';b.type='button';b.setAttribute('aria-label','Play '+v[2]+': '+v[1]);b.innerHTML='<span class="th"><img src="https://i.ytimg.com/vi/'+v[0]+'/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span><b>'+v[1]+'</b><span>'+v[2]+'</span>';b.addEventListener('click',function(){var th=b.querySelector('.th');if(th.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+v[0]+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';f.title=v[1];f.allow='autoplay; fullscreen; picture-in-picture';th.appendChild(f);track('video_play',{video:v[0]})});rail.appendChild(b)})});
+  // portfolio spokes
+  var port=document.getElementById('port');if(port){var nodes=port.querySelectorAll('.node'),lines=port.querySelectorAll('line'),core=port.querySelector('.core'),ct=document.getElementById('coretxt'),pds=document.querySelectorAll('.pd'),order=['web','planners','social','sheet','media','clients'],idx=0,auto=null,touched=false;
+  function pick(k){nodes.forEach(function(n){var on=n.getAttribute('data-k')===k;n.classList.toggle('on',on);n.setAttribute('aria-pressed',on?'true':'false')});lines.forEach(function(l){l.classList.toggle('on',l.getAttribute('data-k')===k)});pds.forEach(function(d){d.classList.toggle('on',d.getAttribute('data-k')===k)});core.classList.add('on');var n=port.querySelector('.node[data-k="'+k+'"]');if(n)ct.textContent=n.textContent}
+  nodes.forEach(function(n){['mouseenter','focus','click'].forEach(function(ev){n.addEventListener(ev,function(){touched=true;clearInterval(auto);pick(n.getAttribute('data-k'));track('portfolio_spoke',{spoke:n.getAttribute('data-k')})})})});
+  var pio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!touched&&!auto){pick(order[0]);auto=setInterval(function(){idx=(idx+1)%order.length;pick(order[idx])},2800);pio.disconnect()}})},{threshold:.5});pio.observe(port)}
   // tracking on CTAs
   document.querySelectorAll('[data-track]').forEach(function(a){a.addEventListener('click',function(){track(a.getAttribute('data-track'))})});
   // sticky mobile CTA once the hero CTA has scrolled away, hidden while the enroll card is on screen
